@@ -125,9 +125,6 @@
         </li>
         <li><a href="https://plus.google.com/u/0/108785452021940174807/posts" target="_blank"
             class="gplus"></a></li>
-        <%--
-        <li><a href="https://plus.google.com/b/105500167792879378506/105500167792879378506/posts"
-            target="_blank" class="gplus"></a></li>--%>
         <li><a href="https://www.youtube.com/southerntravels" target="_blank" class="yt"></a>
         </li>
         <li><a href="#" class="quick_link linkqck"></a></li>
@@ -148,10 +145,6 @@
                     by Ministry of Tourism
                 </div>
             
-            <%--<div onclick="showNotice();" title="Corona Update" id="coronaUpdateAnchorId" class="blink-text" data-toggle="modal" data-target="#coronaUpdate" rel="noreferrer" 
-                style="position: relative;width: 45px;height: 40px;border-radius: 25px;background-color: #ed1c24;margin-left: 465px;margin-top: 17px;">
-                <a onclick="showNotice();" style="color: white;font-size: 9px;top: 10px;left: 2px;font-weight: 700;line-height: 10px;position: absolute;text-align: center;" 
-                for="">CORONA<br>Updates</a></div>--%>
             </div>
           <div class="pull-right">
           
@@ -163,7 +156,6 @@
           </div>
           
           <div class="header_enquiry">
-          <%--<a href="#" class="commonbtn quick_link linkqck"><i class="fa fa-envelope"></i> Send Enquiry</a>--%>
           <a href="Enquiryform.aspx" class="commonbtn" target="_blank"><i class="fa fa-envelope"></i> Send Enquiry</a>
           </div>
           <div id="lang" class="langwrap hideonmobile">
@@ -242,9 +234,7 @@
                 <div class="downloadbtn posrel navwrap bgnone"><a href="#" class="commonbtn dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">e-Brochure <span class="caret"></span></a>
              
                 <ul class="dropdown-menu">
-                    <%--<li><a href="https://www.southerntravelsindia.com/flipbook/Domestic/index.html" target=_blank>Domestic e-Brochure</a></li>--%>
                     <li><a href="https://www.southerntravelsindia.com/flipbook/Domestic/Domestic_2019.pdf" target=_blank>Domestic e-Brochure</a></li>
-                   <%--<li><a href="https://www.southerntravelsindia.com/flipbook/International/Index.html" target="_blank">International e-Brochure</a></li>--%>
                    <li><a href="https://www.southerntravelsindia.com/flipbook/International/Complete_International_Brochure-2020.pdf" target="_blank">International e-Brochure</a></li>
                   </ul>
              
@@ -326,7 +316,6 @@
                  <div class="dropdown-menu dropdown-big">
                  <div class="row">
                       <div class="col-md-3"> 
-                        <!-- <h3 class="title"><span>Indian Tours</span></h3> -->
                         <ul class="nav-list">
                             <li><a href="HolidayPackages.aspx?ORG=Andaman&Code=19" class="link-navimg1">Andaman</a></li>
                             <li><a href="HolidayPackages.aspx?ORG=Bhutan&Code=28" class="link-navimg2">Bhutan</a></li>
@@ -348,7 +337,6 @@
                         </ul>
                       </div>
                       <div class="col-md-3 paddingleft0"> 
-                        <!-- <h3 class="title"><span>Indian Tours</span></h3> -->
                         <ul class="nav-list">
                         <li><a href="HolidayPackages.aspx?ORG=North East&Code=29" class="link-navimg15">North East</a></li>
                         <li><a href="HolidayPackages.aspx?ORG=North India&Code=1" class="link-navimg16">North India</a></li>
@@ -400,7 +388,6 @@
                  <div class="dropdown-menu dropdown-big dropdownintl">
                  <div class="row">
                       <div class="col-md-5"> 
-                        <!-- <h3 class="title"><span>Indian Tours</span></h3> -->
                         <ul class="nav-list">
                              
                              <li><a href="IntItenaryDetails.aspx?TourId=155&ofr=2" class="link-navimg1">Thailand, Malaysia & Singapore - 10D/9N</a></li>
@@ -430,7 +417,6 @@
                 	     </div>
                          
                          <div class="col-md-3 paddingleft0 paddingright0"> 
-                        <!-- <h3 class="title"><span>Indian Tours</span></h3> -->
                         <ul class="nav-list">
                            <li><a href="IntItenaryDetails.aspx?TourId=197&ofr=2" class="link-navimg21">Best Of Swiss with Paris – 7D/6N</a></li>
                             <li><a href="IntItenaryDetails.aspx?TourId=187&ofr=2" class="link-navimg11">South Africa - 9D/8N</a></li>
@@ -488,9 +474,7 @@
                     
                   </div>
               </li>
-              <%--<li>
-                <a href="/International-Packages.aspx" runat="server" id="MainMINTC">International<br /><span class="smalltext">(Customized Holidays)</span></a>
-              </li>--%>
+            
                <li class="dropdown"> 
                
                 <a href="/International-GroupDeparture.aspx" runat="server" id="MainMINTC" class="dropdown-toggle" data-toggle="dropdown" role="button" 
@@ -499,7 +483,6 @@
                  <div class="dropdown-menu dropdown-big">
                  <div class="row">
                       <div class="col-md-3"> 
-                        <!-- <h3 class="title"><span>Indian Tours</span></h3> -->
                         <ul class="nav-list">
                             <li><a href="International-Packages.aspx?ORG=Africa&Code=35&off=1" class="link-navimg1">Africa</a></li>
                             <li><a href="International-Packages.aspx?ORG=America Canada&Code=47&off=1" class="link-navimg2">America Canada</a></li>
@@ -514,7 +497,6 @@
                         </ul>
                       </div>
                       <div class="col-md-3 paddingleft0"> 
-                        <!-- <h3 class="title"><span>Indian Tours</span></h3> -->
                         <ul class="nav-list">
                         <li><a href="International-Packages.aspx?ORG=Hong Kong Macau&Code=45&off=1" class="link-navimg6">Hong Kong Macau</a></li>
                             <li><a href="International-Packages.aspx?ORG=Japan China Korea Taiwan&Code=41&off=1" class="link-navimg7">Japan China Korea Taiwan</a></li>

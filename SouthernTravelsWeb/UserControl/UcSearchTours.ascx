@@ -290,11 +290,12 @@
 
         });
     </script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script type="text/javascript">
     function valid() {
         if (document.getElementById('<%=TxtCountryStateCity.ClientID  %>').value == "") {
-            alert('Please enter Tours, City.');
+            Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Please enter Tours, City.', confirmButtonColor: '#f2572b' });
             document.getElementById('<%=TxtCountryStateCity.ClientID  %>').focus();
             return false;
         }

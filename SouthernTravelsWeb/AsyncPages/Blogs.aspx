@@ -1,4 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UcBlog.ascx.cs" Inherits="SouthernTravelsWeb.UserControl.UcBlog" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Blogs.aspx.cs" Inherits="SouthernTravelsWeb.AsyncPages.Blogs" %>
+
+
  <asp:Repeater ID="repBlog" runat="server" >
    <HeaderTemplate>
      	  <div class="row">
@@ -27,4 +29,4 @@
     </div>
    </FooterTemplate>
  
- </asp:Repeater>    
+ </asp:Repeater>  

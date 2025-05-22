@@ -2,13 +2,13 @@
 /* **************** Stpl Loader CSS START HERE ***************************** */
 .loadingModal {
     display: none;
-    position: fixed;
-    z-index: 9999999999999;
+    position: absolute; /* Change from fixed to absolute */
+    z-index: 9999;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 153%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 20%, rgba(255,255,255,0) 100%);
 }
 
     .loadingModal::before {
@@ -30,6 +30,7 @@
         transform: rotate(360deg);
     }
 }
+
 
 
 .Spinner {

@@ -443,11 +443,13 @@ namespace SouthernTravelsWeb.BLL
                                 TourID = reader.GetInt32(reader.GetOrdinal("RowID")),
                                 TourNo = reader.GetInt32(reader.GetOrdinal("TourNo")),
                                 TourName = reader.GetString(reader.GetOrdinal("TourName")),
-                                StartLocation = reader.GetString(reader.GetOrdinal("Tour_Short_Key")), // adjust if you want another
+                                Tour_Short_Key = reader.GetString(reader.GetOrdinal("Tour_Short_Key")), // adjust if you want another
                                 EndLocation = reader.GetString(reader.GetOrdinal("FullTourName")),
                                 DurationDays = reader.GetInt32(reader.GetOrdinal("TourSequence")),   // as example
-                                Price = reader.GetDecimal(reader.GetOrdinal("MinCost")),
+                                MinCost = reader.GetDecimal(reader.GetOrdinal("MinCost")),
                                 TourType = reader.GetString(reader.GetOrdinal("TourGoingOn")),
+                                TourGoingOn = reader.GetString(reader.GetOrdinal("TourGoingOn")),
+                                DepartureWeekDays = reader.GetString(reader.GetOrdinal("DepartureWeekDays")),
                                 ImageUrl = null,    // SP doesn’t return ImageUrl; set if you extend SP
                                 Description = reader.GetString(reader.GetOrdinal("Remarks")),
                                 IsFeatured = false    // SP doesn’t return this; omit or extend

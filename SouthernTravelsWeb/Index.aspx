@@ -4,9 +4,9 @@
 <%@ Register Src="UserControl/UcHeaderEndUser.ascx" TagPrefix="UCHeader" TagName="UCHeaderEndUser" %>
 <%@ Register Src="UserControl/UcFooterEndUser.ascx" TagPrefix="UCFooter" TagName="UCFooterEndUser" %>
 <%@ Register Src="UserControl/UcFixedTourList.ascx" TagPrefix="UCTourList" TagName="UCFixedTour" %>
-<%@ Register Src="UserControl/UcNewsNotification.ascx" TagPrefix="uc1" TagName="UcNewsNotification" %>
+<%--<%@ Register Src="UserControl/UcNewsNotification.ascx" TagPrefix="uc1" TagName="UcNewsNotification" %>--%>
 <%@ Register Src="UserControl/UcImageStrip.ascx" TagPrefix="uc3" TagName="UCImageStrip" %>
-<%@ Register Src="UserControl/UcBlog.ascx" TagName="ucBlog" TagPrefix="uc2" %>
+<%--<%@ Register Src="UserControl/UcBlog.ascx" TagName="ucBlog" TagPrefix="uc2" %>--%>
 
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml"  itemtype="https://schema.org/WebSite">
@@ -136,12 +136,12 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
 
     <!-- Page Load Modal -->
     <script defer>
-        $(document).ready(function () {
-            loadingModal.show();
-            $(window).on('load', function () {
-                loadingModal.hide();
-            });
-        });
+        //$(document).ready(function () {
+        //    loadingModal.show();
+        //    $(window).on('load', function () {
+        //        loadingModal.hide();
+        //    });
+        //});
     </script>
        <style>
         .modal-backdrop.ni
@@ -482,7 +482,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
     <!-- Header End -->
     <!-- Main Content Start -->
-   <uc1:UcNewsNotification ID="UcNewsNotification1" runat="server" fldNewsType="News" />
+<%--   <uc1:UcNewsNotification ID="UcNewsNotification1" runat="server" fldNewsType="News" />--%>
+        <section id="latestnews">
+              <div class="container-fluid">
+                <div class="row displaytable">
+                  <div class="col-lg-2 col-md-2 displaycol bgnews valignmid">
+                    <div class="inner text-center pull-right">
+                      <img src="/Assets/images/icon-news.png" loading="lazy" />
+                      <p>Latest<br>News</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-10 col-md-10 displaycol bgnewsdetail valignmid">
+                    <div class="inner">
+                      <div class="news-wrapper" style="position: relative;">
+                        <div id="newsLoader" class="loadingModal"></div>
+
+                        <div class="marqueewrap" id="newsContent" style="display:none;">
+                          <div id="nt-example1-container">
+                            <ul id="nt-example1"></ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+</section>
+
   <!-- Latest News Content -->
 
    
@@ -910,21 +936,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+
+<%--Blogs Section--%>
 <section id="blog" style="padding-bottom: 7px">
   <div class="container">
-   <div class="row subheadrow">
+    <div class="row subheadrow">
       <div class="col-md-12 text-center">
-        <p><img src="Assets/images/dbl-line-left-gray.png" loading="lazy"/></p>
+        <p><img src="Assets/images/dbl-line-left-gray.png" loading="lazy" /></p>
         <h2 class="title">Latest from our <span>blogs</span></h2>
-        <p><img src="Assets/images/dbl-line-right-gray.png" loading="lazy"/></p>
+        <p><img src="Assets/images/dbl-line-right-gray.png" loading="lazy" /></p>
       </div>
     </div>
-    
-    <!----- User control ---------->
-  <uc2:ucBlog ID="ucBlog1" runat="server" fldBlogCount = "3" />    
-    
+
+    <div class="blog-wrapper" style="position: relative;">
+      <div id="blogLoader" class="loadingModal"></div>
+      <div id="blogContent" style="display:none;"></div>
+    </div>
   </div>
 </section>
+
+
     <div>
         <div class="modal fade" id="modal-package">
         <div class="popup__inner">
@@ -1056,14 +1087,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Footer Start -->
     <script src="Assets/js/jquery.newsTicker.js"></script>
     <script>
-
-        var nt_example1 = $('#nt-example1').newsTicker({
-            row_height: 32,
-            max_rows: 3,
-            duration: 4000,
-            prevButton: $('#nt-example1-prev'),
-            nextButton: $('#nt-example1-next')
+        $(document).ready(function () {
+            $('#blogLoader').show(); 
+            $.ajax({
+                url: 'AsyncPages/Blogs.aspx',
+                type: 'GET',
+                success: function (response) {
+                    $('#blogLoader').fadeOut(); 
+                    $('#blogContent').html(response).fadeIn(); 
+                }
+            });
         });
+        $(document).ready(function () {
+            $('#newsLoader').show();
+
+            $.ajax({
+                url: 'AsyncPages/News.aspx',
+                type: 'GET',
+                success: function (response) {
+                
+
+                    $('#newsLoader').fadeOut();
+                    $('#nt-example1').html(response);
+                    $('#newsContent').fadeIn();
+
+                    $('#nt-example1').newsTicker({
+                        row_height: 32,
+                        max_rows: 3,
+                        duration: 4000,
+                        prevButton: $('#nt-example1-prev'),
+                        nextButton: $('#nt-example1-next')
+                    });
+                }
+            });
+        });
+
 
     </script>
     <script type="text/javascript" defer>
