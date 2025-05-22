@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D62A124D-6760-405A-B8B3-F8FFDF49F9F2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SouthernTravelsWeb</RootNamespace>
+    <AssemblyName>SouthernTravelsWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44350</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ASPEMAILLib, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Bin\ASPEMAILLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Assets\css\animate.css" />
+    <Content Include="Assets\css\bootstrap-datepicker.css" />
+    <Content Include="Assets\css\bootstrap-select.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\font-awesome.css" />
+    <Content Include="Assets\css\myStyle.css" />
+    <Content Include="Assets\css\owl-carousel\owl.carousel.css" />
+    <Content Include="Assets\css\owl-carousel\owl.theme.css" />
+    <Content Include="Assets\css\query-ui.css" />
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\js\bootstrap-datepicker.js" />
+    <Content Include="Assets\js\bootstrap-select.min.js" />
+    <Content Include="Assets\js\bootstrap.min.js" />
+    <Content Include="Assets\js\jquery-2.2.0.min.js" />
+    <Content Include="Assets\js\jquery-scrolltofixed.js" />
+    <Content Include="Assets\js\jquery-ui.js" />
+    <Content Include="Assets\js\jquery.newsTicker.js" />
+    <Content Include="Assets\js\language.js" />
+    <Content Include="Assets\js\myJs.js" />
+    <Content Include="Assets\js\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Car-Coach-Rental.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="HolidayPackages.aspx" />
+    <Content Include="HotelsInIndia.aspx" />
+    <Content Include="HtmlPages\SouthernTravels.htm" />
+    <Content Include="Index.aspx" />
+    <Content Include="India-Tour-Packages.aspx" />
+    <Content Include="IntItenaryDetails.aspx" />
+    <Content Include="JpegImage.aspx" />
+    <Content Include="LFC-Home.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="FetchRecordsHandler.ashx" />
+    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.0.js" />
+    <Content Include="Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="HtmlPages\SouthernTravelHotels.htm" />
+    <Content Include="UserControl\UcBlog.ascx" />
+    <Content Include="UserControl\UcBlogInnerPages.ascx" />
+    <Content Include="UserControl\UcCarCoachRental.ascx" />
+    <Content Include="UserControl\UcFixedTourList.ascx" />
+    <Content Include="UserControl\UcFlightSearch.ascx" />
+    <Content Include="UserControl\UcFooterEndUser.ascx" />
+    <Content Include="UserControl\UcHeaderEndUser.ascx" />
+    <Content Include="UserControl\UcHolidaySearch.ascx" />
+    <Content Include="UserControl\UcHotelInIndia.ascx" />
+    <Content Include="UserControl\UcHotelInSouthern.ascx" />
+    <Content Include="UserControl\UcImageStrip.ascx" />
+    <Content Include="UserControl\UcIntLeftUC.ascx" />
+    <Content Include="UserControl\UcMatchingTour.ascx" />
+    <Content Include="UserControl\UcNewsNotification.ascx" />
+    <Content Include="UserControl\UcNewsUpdateShow.ascx" />
+    <Content Include="UserControl\UCPaymentOptionNetBanking.ascx" />
+    <Content Include="UserControl\UcPrintMailSms.ascx" />
+    <Content Include="UserControl\UcQuickSearch.ascx" />
+    <Content Include="UserControl\UcSearchTours.ascx" />
+    <Content Include="UserControl\UcSpecialTourSearch.ascx" />
+    <Content Include="UserControl\UcTourCostIncludeExcIude.ascx" />
+    <Content Include="UserControl\UcTourGallery.ascx" />
+    <Content Include="UserControl\UcTourInfo.ascx" />
+    <Content Include="UserControl\UcTourItinerary.ascx" />
+    <Content Include="UserControl\UcTourLink.ascx" />
+    <Content Include="UserControl\UcTourShortInfo.ascx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BLL\clsBLL.cs" />
+    <Compile Include="BLL\ClsCommon.cs" />
+    <Compile Include="BLL\DataLib.cs" />
+    <Compile Include="Car-Coach-Rental.aspx.cs">
+      <DependentUpon>Car-Coach-Rental.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Car-Coach-Rental.aspx.designer.cs">
+      <DependentUpon>Car-Coach-Rental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CaptchaImage.cs" />
+    <Compile Include="DAL\DbObjects\StoredProcedures.cs" />
+    <Compile Include="DAL\DbObjects\Functions.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ClsBlog.cs" />
+    <Compile Include="DTO\GetTourItinerary_Meal_spResult.cs" />
+    <Compile Include="DTO\GetTourList_By_Start_RegionResult.cs" />
+    <Compile Include="DTO\GetTourPlaceInfo_SPResult.cs" />
+    <Compile Include="DTO\MealPlan.cs" />
+    <Compile Include="DTO\TourItenerary_SPResult.cs" />
+    <Compile Include="DTO\TourModel.cs" />
+    <Compile Include="FetchRecordsHandler.ashx.cs">
+      <DependentUpon>FetchRecordsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HolidayPackages.aspx.cs">
+      <DependentUpon>HolidayPackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HolidayPackages.aspx.designer.cs">
+      <DependentUpon>HolidayPackages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HotelsInIndia.aspx.cs">
+      <DependentUpon>HotelsInIndia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HotelsInIndia.aspx.designer.cs">
+      <DependentUpon>HotelsInIndia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="India-Tour-Packages.aspx.cs">
+      <DependentUpon>India-Tour-Packages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="India-Tour-Packages.aspx.designer.cs">
+      <DependentUpon>India-Tour-Packages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IntItenaryDetails.aspx.cs">
+      <DependentUpon>IntItenaryDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IntItenaryDetails.aspx.designer.cs">
+      <DependentUpon>IntItenaryDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JpegImage.aspx.cs">
+      <DependentUpon>JpegImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JpegImage.aspx.designer.cs">
+      <DependentUpon>JpegImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LFC-Home.aspx.cs">
+      <DependentUpon>LFC-Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LFC-Home.aspx.designer.cs">
+      <DependentUpon>LFC-Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcBlog.ascx.cs">
+      <DependentUpon>UcBlog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcBlog.ascx.designer.cs">
+      <DependentUpon>UcBlog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcBlogInnerPages.ascx.cs">
+      <DependentUpon>UcBlogInnerPages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcBlogInnerPages.ascx.designer.cs">
+      <DependentUpon>UcBlogInnerPages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCarCoachRental.ascx.cs">
+      <DependentUpon>UcCarCoachRental.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCarCoachRental.ascx.designer.cs">
+      <DependentUpon>UcCarCoachRental.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcFixedTourList.ascx.cs">
+      <DependentUpon>UcFixedTourList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcFixedTourList.ascx.designer.cs">
+      <DependentUpon>UcFixedTourList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcFlightSearch.ascx.cs">
+      <DependentUpon>UcFlightSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcFlightSearch.ascx.designer.cs">
+      <DependentUpon>UcFlightSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcFooterEndUser.ascx.cs">
+      <DependentUpon>UcFooterEndUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcFooterEndUser.ascx.designer.cs">
+      <DependentUpon>UcFooterEndUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcHeaderEndUser.ascx.cs">
+      <DependentUpon>UcHeaderEndUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcHeaderEndUser.ascx.designer.cs">
+      <DependentUpon>UcHeaderEndUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcHolidaySearch.ascx.cs">
+      <DependentUpon>UcHolidaySearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcHolidaySearch.ascx.designer.cs">
+      <DependentUpon>UcHolidaySearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcHotelInIndia.ascx.cs">
+      <DependentUpon>UcHotelInIndia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcHotelInIndia.ascx.designer.cs">
+      <DependentUpon>UcHotelInIndia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcHotelInSouthern.ascx.cs">
+      <DependentUpon>UcHotelInSouthern.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcHotelInSouthern.ascx.designer.cs">
+      <DependentUpon>UcHotelInSouthern.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcImageStrip.ascx.cs">
+      <DependentUpon>UcImageStrip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcImageStrip.ascx.designer.cs">
+      <DependentUpon>UcImageStrip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcIntLeftUC.ascx.cs">
+      <DependentUpon>UcIntLeftUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcIntLeftUC.ascx.designer.cs">
+      <DependentUpon>UcIntLeftUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcMatchingTour.ascx.cs">
+      <DependentUpon>UcMatchingTour.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcMatchingTour.ascx.designer.cs">
+      <DependentUpon>UcMatchingTour.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcNewsNotification.ascx.cs">
+      <DependentUpon>UcNewsNotification.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcNewsNotification.ascx.designer.cs">
+      <DependentUpon>UcNewsNotification.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcNewsUpdateShow.ascx.cs">
+      <DependentUpon>UcNewsUpdateShow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcNewsUpdateShow.ascx.designer.cs">
+      <DependentUpon>UcNewsUpdateShow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCPaymentOptionNetBanking.ascx.cs">
+      <DependentUpon>UCPaymentOptionNetBanking.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCPaymentOptionNetBanking.ascx.designer.cs">
+      <DependentUpon>UCPaymentOptionNetBanking.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcPrintMailSms.ascx.cs">
+      <DependentUpon>UcPrintMailSms.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcPrintMailSms.ascx.designer.cs">
+      <DependentUpon>UcPrintMailSms.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcQuickSearch.ascx.cs">
+      <DependentUpon>UcQuickSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcQuickSearch.ascx.designer.cs">
+      <DependentUpon>UcQuickSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcSearchTours.ascx.cs">
+      <DependentUpon>UcSearchTours.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcSearchTours.ascx.designer.cs">
+      <DependentUpon>UcSearchTours.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcSpecialTourSearch.ascx.cs">
+      <DependentUpon>UcSpecialTourSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcSpecialTourSearch.ascx.designer.cs">
+      <DependentUpon>UcSpecialTourSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTourCostIncludeExcIude.ascx.cs">
+      <DependentUpon>UcTourCostIncludeExcIude.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTourCostIncludeExcIude.ascx.designer.cs">
+      <DependentUpon>UcTourCostIncludeExcIude.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTourGallery.ascx.cs">
+      <DependentUpon>UcTourGallery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTourGallery.ascx.designer.cs">
+      <DependentUpon>UcTourGallery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTourInfo.ascx.cs">
+      <DependentUpon>UcTourInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTourInfo.ascx.designer.cs">
+      <DependentUpon>UcTourInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTourItinerary.ascx.cs">
+      <DependentUpon>UcTourItinerary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTourItinerary.ascx.designer.cs">
+      <DependentUpon>UcTourItinerary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTourLink.ascx.cs">
+      <DependentUpon>UcTourLink.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTourLink.ascx.designer.cs">
+      <DependentUpon>UcTourLink.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTourShortInfo.ascx.cs">
+      <DependentUpon>UcTourShortInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTourShortInfo.ascx.designer.cs">
+      <DependentUpon>UcTourShortInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Assets\fonts\" />
+    <Folder Include="Assets\images\" />
+    <Folder Include="Utility\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.0.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50541</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44350/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

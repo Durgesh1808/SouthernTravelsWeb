@@ -1,0 +1,66 @@
+/*!
+ * Lightbox for Bootstrap 3 by @ashleydw
+ * https://github.com/ashleydw/lightbox
+ *
+ * License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
+ */
+
+.ekko-lightbox-container {
+  position: relative;
+  padding: 0 15px;
+}
+
+.ekko-lightbox-nav-overlay {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  /*height: 100%;*/
+  display: block!important
+}
+
+.ekko-lightbox-nav-overlay a {
+  z-index: 100;
+  display: block;
+  width: auto;
+  height: 100%;
+  font-size: 30px;
+  color: #666;
+  opacity: .5;
+  text-decoration: none!important;
+  filter: dropshadow(color=#000000, offx=2, offy=2);
+  -webkit-transition: opacity 0.5s;
+     -moz-transition: opacity 0.5s;
+       -o-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+}
+
+.ekko-lightbox-nav-overlay a:empty {
+  width: 49%;
+}
+
+.ekko-lightbox a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.ekko-lightbox .glyphicon-menu-left {
+  left: -15px;
+  float: left;
+  padding-left: 0;
+  text-align: left;
+
+}
+
+.ekko-lightbox .glyphicon-menu-right {
+  right: -15px;
+  float: right;
+  padding-right: 0;
+  text-align: right;
+}
+
+.ekko-lightbox .modal-footer {
+  text-align: left;
+}
+

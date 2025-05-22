@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Widget</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css" />
+
+    <!-- Bootstrap and Plugin Styles -->
+    <link href="/Assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Assets/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="/Assets/css/style.css" rel="stylesheet" />
+    <link href="/Assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="/Assets/css/query-ui.css" rel="stylesheet" />
+    <link href="/Assets/images/flight_folder/StyleSheet.css" rel="stylesheet" />
+    <link href="/Assets/images/flight_folder/JQuery_UI.css" rel="stylesheet" />
+
+    <!-- jQuery (only one version, loaded first) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap and Plugins -->
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/bootstrap-select.min.js"></script>
+    <script src="/Assets/js/jquery-ui.js"></script>
+    <script src="/Assets/images/flight_folder/flightJs.js"></script>
+
+    <!-- Initialize SelectPicker after DOM loads -->
+    <script>
+        $(document).ready(function () {
+            $('select.form-control').selectpicker({
+                style: 'btn-info',
+                size: 4
+            });
+        });
+    </script>
+</head>
+<body class="padding0">
+    <div class="frm_otr">
+        <form id="form1" action="" method="post" target="_blank">
+            <div>
+                <input type="hidden" name="carrierOptions" />
+                <input type="hidden" name="preferredCarrier" />
+                <input type="hidden" name="isInternational" id="isInternational" />
+                <input type="hidden" name="referenceId" />
+                <input type="hidden" name="imagePath" />
+                <input type="hidden" id="showInternational" />
+                <input type="hidden" id="IsSpecialReturnAllowed" value="True" />
+                <input type="hidden" id="promotionalPlanType" name="promotionalPlanType" value="Normal" />
+                <input type="hidden" id="searchType" name="searchType" value="0" />
+                <input type="hidden" id="flightSegmentCounter" name="flightSegmentCounter" value="1" />
+                <input type="hidden" id="fdepDate" name="depDate" value="" />
+            </div>
+            <div class="frm_inr">
+                <!-- Flight form start here --->
+                <div id="Flights">
+
+                    <div class="fw_all">
+                        <div class="fgt_type">
+                            <ul>
+                                <li id="one_Way" class="selected"><a class="oneway" href="#null" id="oneWay" />Oneway</a></li>
+                                <li id="round_Trip" class=""><a class="return" href="#null" id="roundTrip" />Return</a></li>
+                                <li id="multi_Stop" class=""><a class="multicity" href="#null" id="multiStop" />Multi-city</a></li>
+                                <li id="cal_Fare" class=""><a class="air_cal" href="#null" id="calFare" />Air Calender</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div id="onewayReturnDiv">
+                        <div class="frm_row">
+                            <span class="row_lft">
+                                <label class="city_lbl">Leaving From</label>
+                                <input type="text" id="origin" class="city_inpts" name="origin" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')" />
+                            </span>
+                            <span class="row_rgt">
+                                <label class="city_lbl">Going To</label>
+                                <input class="city_inpts" type="text" id="dest" name="dest" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')" />
+                            </span>
+                        </div>
+                        <div class="frm_row" id="onewayReturnDatesDiv">
+                            <span class="row_lft">
+                                <label class="city_lbl">Departure</label>
+                                <dfn>
+                                    <input class="date_inpts" type="text" id="DepDate" name="flightdepDate" value="DD/MM/YYYY" readonly="readonly" />
+                                </dfn>
+                                <select id="#" name="#" style="display:none;">
+                                    <option value="">Any Time</option>
+                                </select>
+                            </span>
+                            <span class="row_rgt" id="retDate" style="display:none;">
+                                <label id="retText" class="city_lbl">Return</label>
+                                <dfn>
+                                    <input class="date_inpts" type="text" value="DD/MM/YYYY" id="ReturnDate" name="returnDate" readonly="readonly" />
+                                </dfn>
+
+                                <select id="Select1" name="#" style="display:none;">
+                                    <option value="">Any Time</option>
+                                </select>
+                            </span>
+                        </div>
+
+                        <div class="frm_row" id="calFareDatesDiv" style="display:none;">
+                            <span class="row_lft">
+                                <label class="city_lbl">Departure Month</label>
+                                <dfn>
+                                    <select id="DepartureMonth">
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                </dfn>
+                            </span>
+                            <span class="row_rgt">
+                                <label class="city_lbl">Departure Year</label>
+                                <dfn>
+                                    <select id="DepartureYear">
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                    </select>
+                                </dfn>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Multicity Start here --->
+                    <div class="mcity_flds" id="multiStopDiv" style=" display:none;">
+                        <div class="frm_row" id="MultiStopSegment_1">
+                            <div class="lbl_all">
+                                <span class="lft_lbl"></span>
+                                <span class="lft_lbl" style="margin-top:25px;"> Flight 1</span>
+                                <span class="mc_cln">
+                                    <label class="city_lbl"> Leaving From</label>
+                                    <input type="text" id="multiStopOrigin_1" class="city_inpts" name="multiStopOrigin_1" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')" />
+                                </span>
+
+                                <span class="mc_cln">
+                                    <label class="city_lbl"> Going To</label>
+                                    <input type="text" id="multiStopDest_1" class="city_inpts" name="multiStopDest_1" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')" />
+                                </span>
+                                <span class="Dprt_on">
+                                    <label class="city_lbl"> Depart On</label>
+                                    <input type="text" id="multiStopDepDate_1" class="date_inpts_Multi" name="multiStopDepDate_1" value="DD/MM/YYYY" readonly="readonly" style="cursor:pointer;" />
+                                </span>
+                            </div>
+
+
+
+
+                        </div>
+
+
+                        <div class="frm_row" id="MultiStopSegment_2" style="display:none;">
+                            <span class="lft_lbl" style="margin-top:6px;"> Flight 2</span>
+                            <span class="mc_cln">
+                                <input type="text" id="multiStopOrigin_2" class="city_inpts" name="multiStopOrigin_2" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')" />
+                            </span>
+                            <span class="mc_cln">
+                                <input type="text" id="multiStopDest_2" class="city_inpts" name="multiStopDest_2" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')" />
+                            </span>
+                            <span class="Dprt_on">
+                                <input type="text" id="multiStopDepDate_2" class="date_inpts_Multi" name="multiStopDepDate_2" value="DD/MM/YYYY" readonly="readonly" style="cursor:pointer;" />
+                            </span>
+                            <span class="cnl"><a href="#null" id="removeMultiStop_2"><img src="/Assets/images/flight_folder/cnl.jpg" alt="cancel" loading="lazy" /></a></span>
+                        </div>
+
+                        <div class="frm_row" id="MultiStopSegment_3" style="display:none;">
+                            <span class="lft_lbl" style="margin-top:6px;"> Flight 3</span>
+                            <span class="mc_cln">
+                                <input type="text" id="multiStopOrigin_3" class="city_inpts" name="multiStopOrigin_3" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')" />
+                            </span>
+                            <span class="mc_cln">
+                                <input type="text" id="multiStopDest_3" class="city_inpts" name="multiStopDest_3" value="Enter any city/airport" onblur="markout(this, 'Enter any city/airport')" onfocus="markin(this, 'Enter any city/airport')" />
+                            </span>
+                            <span class="Dprt_on">
+                                <input type="text" id="multiStopDepDate_3" class="date_inpts_Multi" name="multiStopDepDate_3" value="DD/MM/YYYY" readonly="readonly" style="cursor:pointer;" />
+                            </span>
+                            <span class="cnl"><a href="#null" id="removeMultiStop_3"><img src="/Assets/images/flight_folder/cnl.jpg" alt="cancel" loading="lazy" /></a></span>
+                        </div>
+
+                        <div class="frm_row" id="multi-add">
+                            <a href="#null" class="add_fgt" id="addMoreMultiStop"> + Add more flights</a>
+                        </div>
+                    </div>
+
+
+                    <div class="frm_row" id="onewayreturnform">
+                        <div class="cont_bok"> Travelers (upto 9 per Booking)</div>
+                        <span class="fl_adult">
+                            <label class="city_lbl">Adults(12+)</label>
+                            <select name="adultCount" id="adultCount">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </span>
+
+                        <span class="fl_child">
+                            <label class="city_lbl">Children(2-11)</label>
+                            <select name="childCount" id="childCount">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </span>
+
+                        <span class="fl_inf">
+                            <label class="city_lbl">Infants(0-2)</label>
+                            <select name="infantCount" id="infantCount">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </span>
+
+                        <span class="fgt_class">
+                            <label class="city_lbl">Class</label>
+                            <select name="cabinClass">
+                                <option value="0">Any</option>
+                                <option value="1">Economy</option>
+                                <option value="3">Business</option>
+                                <option value="5">First</option>
+                            </select>
+                        </span>
+                    </div>
+
+                    <div class="frm_row">
+                        <span id="errMess" class="error_box" style="display:none;">
+                            <span id="errorMessage" class="er_txt"></span>
+                        </span>
+
+                        <span class=" btn_box" id="fSearchbtn_box">
+                            <img id="flightSearch" src="/Assets/images/flight_folder/search.jpg" alt="" style=" cursor:pointer;" loading="lazy" />
+                        </span>
+                        <span class=" btn_box" id="calFareBtn_box" style="display:none;">
+                            <img id="CalendarWidget" src="/Assets/images/flight_folder/search.jpg" alt="" style=" cursor:pointer;" loading="lazy" />
+                        </span>
+                    </div>
+                </div>
+                <!-- Flight form end here --->
+            </div>
+
+        </form>
+    </div>
+    <div id="GrayBox" style="width: 100%; height: 1000px; display: block; background-color: Black;
+     position: fixed; left: 0; top: 0; display: none; opacity: 0.4; filter: alpha(opacity=40);">
+        &nbsp;
+    </div>
+    <div style="position: fixed; top: 55px; left: 0; width:100%;">
+        <div id="SplSrchBox" style="height: auto; width: 100%; float: left; background: white;
+            border: 5px outset #E66F06; display: none; padding-bottom: 30px">
+            <span style="font-size: 15px; font-weight: bold; padding: 10px; float: left; padding: 35px;">
+                We have special return fares for domestic flights. Would you like to search for
+                special return fares??
+            </span>
+            <div style="text-align: center;">
+                <span style="margin: 10px;">
+                    <img style="cursor: pointer;" id="originalSearch" src="/Assets/images/flight_folder/Continue-with-original-search.jpg"
+                         alt="Continue with original Search" loading="lazy" />
+                </span><span style="margin: 10px;">
+                    <img style="cursor: pointer;" id="specialReturnFares" src="/Assets/images/flight_folder/Search-for-special-return-fares.jpg"
+                         alt="Search for special return fares" loading="lazy" />
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

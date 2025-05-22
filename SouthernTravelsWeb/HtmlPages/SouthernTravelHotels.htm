@@ -1,0 +1,1054 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotel Widget</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css" />
+
+    <!-- CSS -->
+    <link href="/Assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Assets/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="/Assets/css/style.css" rel="stylesheet" />
+    <link href="/Assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="/Assets/css/query-ui.css" rel="stylesheet" />
+    <link href="/Assets/images/hotelWidget/hotelWidgetStyleSheet.css" rel="stylesheet" />
+    <link href="/Assets/images/hotelWidget/JQuery_UI.css" rel="stylesheet" />
+
+    <!-- JS (use only one jQuery version) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/bootstrap-select.min.js"></script>
+    <script src="/Assets/images/hotelWidget/hotelWidgetJs.js"></script>
+
+    <!-- JavaScript Function -->
+    <script>
+        function chkNumeric(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+
+        // Initialize selectpicker after DOM is ready
+        $(document).ready(function () {
+            $('select.form-control').selectpicker({
+                style: 'btn-info',
+                size: 4
+            });
+        });
+    </script>
+    <style>
+        .hl_input {
+            background: #f9f9f9 none repeat scroll 0 0;
+            border: medium none;
+            float: left;
+            height: 31px;
+            margin-left: 1px;
+            margin-right: 5px;
+            margin-top: -32px;
+            width: 61%;
+        }
+    </style>
+</head>
+<body>
+    <div id="Logo" style="display: none;">
+        <span class="fleft banklogo">
+            <img src="/Assets/images/hotelWidget/loader.gif" alt="Loader" loading="lazy" />
+        </span>
+    </div>
+    <div id="load-img" style="display: none;">
+        <div>
+            <img src="/Assets/images/hotelWidget/loader.gif" alt="Loader" loading="lazy" />
+        </div>
+    </div>
+    <form id="form1" action=""
+          target="_parent" method="post">
+        <div>
+            <input type="hidden" name="carrierOptions" />
+            <input type="hidden" name="preferredCarrier" />
+            <input type="hidden" name="isInternational" id="isInternational" />
+            <input type="hidden" name="referenceId" />
+            <input type="hidden" name="imagePath" />
+            <input type="hidden" id="showInternational" />
+            <input type="hidden" id="IsSpecialReturnAllowed" value="True" />
+            <input type="hidden" id="promotionalPlanType" name="promotionalPlanType" value="Normal" />
+            <input type="hidden" id="searchType" name="searchType" value="0" />
+            <input type="hidden" id="flightSegmentCounter" name="flightSegmentCounter" value="1" />
+        </div>
+        <div class="ach_contener">
+            <div class="left_ach">
+                <div class="form_ach">
+                    <div class="wlform_box">
+                        <div class="form_ach_in">
+                            <div id="Hotels">
+                                <div class="wlform_row">
+                                    <div id="errMessHotel" class="error_heading" style="display:none; color:Red;"></div>
+                                    <input type="hidden" name="destinationCity" id="destinationCity" />
+                                    <input type="hidden" name="destCitySelected" id="destCitySelected" value="false" />
+                                    <input type="hidden" name="isDomesticHotel" id="isDomesticHotel" value="true" />
+                                </div>
+                                <div id="selectDiv_Hotel" class="wlform_row">
+                                    <div class="hl_desti">
+                                        <label>Choose Destination</label>
+                                        <dfn>
+                                            <select class="hl_select" name="destCity" id="destCity">
+                                                <option value="Type Or Select From List" selected="selected" style="display:none;">Type Or Select From List</option>
+                                                <option value="14621|Amsterdam|Netherlands">Amsterdam,Netherlands</option>
+                                                <option value="17249|Antalya|Turkey">Antalya,Turkey</option>
+                                                <option value="9434|Athens|Greece">Athens,Greece</option>
+                                                <option value="10142|Bali|Indonesia">Bali,Indonesia</option>
+                                                <option value="16974|Bangkok|Thailand">Bangkok,Thailand</option>
+                                                <option value="3518|Barcelona|Spain">Barcelona,Spain</option>
+                                                <option value="23131|Basel|Switzerland">Basel,Switzerland</option>
+                                                <option value="23884|Beijing|China">Beijing,China</option>
+                                                <option value="13551|Beirut|Lebanon">Beirut,Lebanon</option>
+                                                <option value="1996|Berlin|Germany">Berlin,Germany</option>
+                                                <option value="24602|Brussels|Belgium"> Brussels,Belgium</option>
+                                                <option value="10085|Budapest|Hungary">Budapest,Hungary</option>
+                                                <option value="2418|Cairo|Egypt">Cairo,Egypt</option>
+                                                <option value="32443|Cape Town|South Africa">Cape Town,South Africa</option>
+                                                <option value="20491|Chicago|United States">Chicago,United States</option>
+                                                <option value="125|Cologne|Germany">Cologne,Germany</option>
+                                                <option value="13616|Colombo|Sri Lanka">Colombo,Sri Lanka</option>
+                                                <option value="2142|Copenhagen|Denmark">Copenhagen,Denmark</option>
+                                                <option value="25921|Dubai|United Arab Emirates">Dubai,United Arab Emirates</option>
+                                                <option value="32515|Durban|South Africa">Durban,South Africa</option>
+                                                <option value="27352|Dusseldorf|Germany"> Dusseldorf,Germany</option>
+                                                <option value="8030|Edinburgh|United Kingdom">Edinburgh,United Kingdom</option>
+                                                <option value="11213|Florence|Italy">Florence,Italy</option>
+                                                <option value="22753|Frankfurt|Germany">Frankfurt,Germany</option>
+                                                <option value="23435|Geneva|Switzerland">Geneva,Switzerland</option>
+                                                <option value="26698|Gold Coast|Australia">Gold Coast,Australia</option>
+                                                <option value="23960|Guangzhou|China">Guangzhou,China</option>
+                                                <option value="379|Hamburg|Germany">Hamburg,Germany</option>
+                                                <option value="9926|Hong Kong|Hong Kong">Hong Kong,Hong Kong</option>
+                                                <option value="26996|Innsbruck|Austria">Innsbruck,Austria</option>
+                                                <option value="23037|Interlaken|Switzerland">Interlaken,Switzerland</option>
+                                                <option value="17306|Istanbul|Turkey">Istanbul,Turkey</option>
+                                                <option value="32569|Johannesburg|South Africa">Johannesburg,South Africa</option>
+                                                <option value="15054|Kathmandu|Nepal">Kathmandu,Nepal</option>
+                                                <option value="14386|Kuala Lumpur|Malaysia">Kuala Lumpur,Malaysia</option>
+                                                <option value="35827|Kuwait|Kuwait">Kuwait,Kuwait</option>
+                                                <option value="14285|Langkawi|Malaysia">Langkawi,Malaysia</option>
+                                                <option value="32827|Las Vegas|United States">Las Vegas,United States</option>
+                                                <option value="34549|London|Canada">London,Canada</option>
+                                                <option value="9245|London|United Kingdom">London,United Kingdom</option>
+                                                <option value="18631|Los Angeles|United States">Los Angeles,United States</option>
+                                                <option value="23273|Lucerne|Switzerland">Lucerne,Switzerland</option>
+                                                <option value="13674|Macau|Macau">Macau,Macau</option>
+                                                <option value="3000|Madrid|Spain">Madrid,Spain</option>
+                                                <option value="14254|Mauritius|Mauritius">Mauritius,Mauritius</option>
+                                                <option value="26916|Melbourne|Australia">Melbourne,Australia</option>
+                                                <option value="11297|Milan|Italy">Milan,Italy</option>
+                                                <option value="266|Munich|Germany">Munich,Germany</option>
+                                                <option value="13443|Nairobi|Kenya">Nairobi,Kenya</option>
+                                                <option value="28985|New York|United States">New York,United States</option>
+                                                <option value="4419|Nice|France">Nice,France</option>
+                                                <option value="19533|Orlando|United States">Orlando,United States</option>
+                                                <option value="4775|Paris|France">Paris,France</option>
+                                                <option value="36773|Pattaya Beach|Thailand">Pattaya Beach,Thailand</option>
+                                                <option value="14321|Penang|Malaysia">Penang,Malaysia</option>
+                                                <option value="17093|Phuket|Thailand">Phuket,Thailand</option>
+                                                <option value="24332|Prague|Czech Republic">Prague\,Czech Republic</option>
+                                                <option value="12771|Rome|Italy">Rome,Italy</option>
+                                                <option value="27022|Salzburg|Austria">Salzburg,Austria</option>
+                                                <option value="18857|San Diego|United States">San Diego,United States</option>
+                                                <option value="18861|San Francisco|United States">San Francisco,United States</option>
+                                                <option value="23909|Shanghai|China">Shanghai,China</option>
+                                                <option value="23976|Shenzhen|China">Shenzhen,China</option>
+                                                <option value="16532|Singapore|Singapore">Singapore,Singapore</option>
+                                                <option value="34326|Sydney|Australia">Sydney,Australia</option>
+                                                <option value="13420|Tokyo|Japan">Tokyo,Japan</option>
+                                                <option value="34661|Toronto|Canada">Toronto,Canada</option>
+                                                <option value="25561|Vancouver|Canada">Vancouver,Canada</option>
+                                                <option value="11501|Venice|Italy">Venice,Italy</option>
+                                                <option value="27059|Vienna|Austria">Vienna,Austria</option>
+                                                <option value="23418|Zermatt|Switzerland">Zermatt,Switzerland</option>
+                                                <option value="23424|Zurich|Switzerland">Zurich,Switzerland</option>
+                                            </select>
+                                            <em>
+                                                <a href="#null" id="SelectListInternational">Select from List</a>
+                                            </em>
+                                            <input class="hl_input" id="city" name="city" type="text" value="Type Or Select From List" onblur="markout(this, 'Type Or Select From List')" onfocus="markin(this, 'Type Or Select From List')" />
+                                        </dfn>
+                                    </div>
+                                </div>
+                                <div class="wlform_row">
+                                    <span class="date_check">
+                                        <label>Check in</label>
+                                        <dfn>
+                                            <input class="date_inpts" type="text" id="checkInDate" name="checkInDate" value="DD/MM/YYYY" readonly="readonly" />
+                                        </dfn>
+                                    </span>
+                                    <span class="date_night">
+                                        <label>Nights</label>
+                                        <input type="text" id="night_stay" value="0" name="night_stay" maxlength="2" onkeypress="return chkNumeric(event);" />
+                                    </span>
+                                    <span class="date_check">
+                                        <label>Check out</label>
+                                        <dfn>
+                                            <input class="date_inpts" type="text" id="checkOutDate" name="checkOutDate" value="DD/MM/YYYY" readonly="readonly" />
+                                        </dfn>
+                                    </span>
+                                    <span class="date_nation">
+                                        <label> Nationality</label>
+                                        <dfn>
+                                            <select tabindex="5" name="Nationality" id="Nationality" class="width_99 hl_select">
+
+                                                <option value="Select"> Select</option>
+                                                <option value="IN"> Indian</option>
+                                                <option value="AF"> Afghan</option>
+
+                                                <option value="AL"> Albanian</option>
+
+                                                <option value="DZ"> Algerian</option>
+
+                                                <option value="AS"> American Samoan</option>
+
+                                                <option value="US"> American; US citizen</option>
+
+                                                <option value="AD"> Andorran</option>
+
+                                                <option value="AO"> Angolan</option>
+
+                                                <option value="AI"> Anguillan</option>
+
+                                                <option value="AQ"> Antarctica</option>
+
+                                                <option value="AG"> Antiguan; Barbudian</option>
+
+                                                <option value="AN"> Antillean</option>
+
+                                                <option value="AR"> Argentinian</option>
+
+                                                <option value="AM"> Armenian</option>
+
+                                                <option value="AW"> Aruban</option>
+
+                                                <option value="AU"> Australian</option>
+
+                                                <option value="AT"> Austrian</option>
+
+                                                <option value="AZ"> Azerbaijani</option>
+
+                                                <option value="BS"> Bahamian</option>
+
+                                                <option value="BH"> Bahraini</option>
+
+                                                <option value="BD"> Bangladeshi</option>
+
+                                                <option value="BB"> Barbadian</option>
+
+                                                <option value="LS"> Basotho</option>
+
+                                                <option value="BY"> Belarusian</option>
+
+                                                <option value="BE"> Belgian</option>
+
+                                                <option value="BZ"> Belizean</option>
+
+                                                <option value="BJ"> Beninese</option>
+
+                                                <option value="BM"> Bermudian</option>
+
+                                                <option value="BT"> Bhutanese</option>
+
+                                                <option value="BO"> Bolivian</option>
+
+                                                <option value="BW"> Botswanan</option>
+
+                                                <option value="BV"> Bouvet Islands</option>
+
+                                                <option value="BR"> Brazilian</option>
+
+                                                <option value="IO"> British Indian Ocean Territory</option>
+
+                                                <option value="VG"> British Virgin Islander; BV Islander</option>
+
+                                                <option value="BN"> Bruneian</option>
+
+                                                <option value="BG"> Bulgarian</option>
+
+                                                <option value="BF"> Burkinabe</option>
+
+                                                <option value="MM"> Burmese</option>
+
+                                                <option value="BI"> Burundian</option>
+
+                                                <option value="KH"> Cambodian</option>
+
+                                                <option value="CM"> Cameroonian</option>
+
+                                                <option value="CB"> Canada Buffer</option>
+
+                                                <option value="CA"> Canadian</option>
+
+                                                <option value="CV"> Cape Verdean</option>
+
+                                                <option value="KY"> Caymanian</option>
+
+                                                <option value="CF"> Central African</option>
+
+                                                <option value="TD"> Chadian</option>
+
+                                                <option value="CL"> Chilean</option>
+
+                                                <option value="CN"> Chinese</option>
+
+                                                <option value="CX"> Christmas Islander</option>
+
+                                                <option value="CC"> Cocos Islander</option>
+
+                                                <option value="CO"> Colombian</option>
+
+                                                <option value="KM"> Comorian</option>
+
+                                                <option value="CD"> congo</option>
+
+                                                <option value="CG"> Congolese</option>
+
+                                                <option value="CK"> Cook Islander</option>
+
+                                                <option value="CR"> Costa Rican</option>
+
+                                                <option value="HR"> Croat</option>
+
+                                                <option value="CU"> Cuban</option>
+
+                                                <option value="CY"> Cypriot</option>
+
+                                                <option value="CZ"> Czech</option>
+
+                                                <option value="DK"> Dane</option>
+
+                                                <option value="DJ"> Djiboutian</option>
+
+                                                <option value="DO"> Dominican</option>
+
+                                                <option value="DM"> Dominicana</option>
+
+                                                <option value="NL"> Dutchman; Dutchwoman; Netherlander</option>
+
+                                                <option value="TP"> East Timor</option>
+
+                                                <option value="EC"> Ecuadorian</option>
+
+                                                <option value="EG"> Egyptian</option>
+
+                                                <option value="AE"> Emirati</option>
+
+                                                <option value="GQ"> Equatorial Guinean</option>
+
+                                                <option value="ER"> Eritrean</option>
+
+                                                <option value="EE"> Estonian</option>
+
+                                                <option value="ET"> Ethiopian</option>
+
+                                                <option value="EU"> European Monetary Union</option>
+
+                                                <option value="FO"> Faeroese</option>
+
+                                                <option value="FK"> Falkland Islander</option>
+
+                                                <option value="FJ"> Fiji Islander</option>
+
+                                                <option value="PH"> Filipino</option>
+
+                                                <option value="FI"> Finn</option>
+
+                                                <option value="TF"> French Southern Territories</option>
+
+                                                <option value="FR"> Frenchman; Frenchwoman</option>
+
+                                                <option value="GA"> Gabonese</option>
+
+                                                <option value="GM"> Gambian</option>
+
+                                                <option value="GE"> Georgian</option>
+
+                                                <option value="DE"> German</option>
+
+                                                <option value="GH"> Ghanaian</option>
+
+                                                <option value="GI"> Gibraltarian</option>
+
+                                                <option value="GR"> Greece</option>
+
+                                                <option value="GL"> Greenlander</option>
+
+                                                <option value="GD"> Grenadian</option>
+
+                                                <option value="GP"> Guadeloupean</option>
+
+                                                <option value="GU"> Guamanian</option>
+
+                                                <option value="GT"> Guatemalan</option>
+
+                                                <option value="GF"> Guianese</option>
+
+                                                <option value="GW"> Guinea-Bissau national</option>
+
+                                                <option value="GN"> Guinean</option>
+
+                                                <option value="GY"> Guyanese</option>
+
+                                                <option value="HT"> Haitian</option>
+
+                                                <option value="HM"> Heard &amp; Mcdonald Islands</option>
+
+                                                <option value="HN"> Honduran</option>
+
+                                                <option value="HK"> Hong Kong Chinese</option>
+
+                                                <option value="HU"> Hungarian</option>
+
+                                                <option value="IS"> Icelander</option>
+
+                                                <option value="ID"> Indonesian</option>
+
+                                                <option value="IR"> Iranian</option>
+
+                                                <option value="IQ"> Iraqi</option>
+
+                                                <option value="IE"> Irishman; Irishwoman</option>
+
+                                                <option value="IL"> Israeli</option>
+
+                                                <option value="IT"> Italian</option>
+
+                                                <option value="CI"> Ivorian</option>
+
+                                                <option value="JM"> Jamaican</option>
+
+                                                <option value="JP"> Japanese</option>
+
+                                                <option value="JO"> Jordanian</option>
+
+                                                <option value="KZ"> Kazakh</option>
+
+                                                <option value="KE"> Kenyan</option>
+
+                                                <option value="KI"> Kiribatian</option>
+
+                                                <option value="KN"> Kittsian; Nevisian</option>
+
+                                                <option value="KW"> Kuwaiti</option>
+
+                                                <option value="KG"> Kyrgyz</option>
+
+                                                <option value="LA"> Lao</option>
+
+                                                <option value="LV"> Latvian</option>
+
+                                                <option value="LB"> Lebanese</option>
+
+                                                <option value="LR"> Liberian</option>
+
+                                                <option value="LY"> Libyan</option>
+
+                                                <option value="LI"> Liechtensteiner</option>
+
+                                                <option value="QL"> Lithuania (Dummy Code)</option>
+
+                                                <option value="LT"> Lithuanian</option>
+
+                                                <option value="LU"> Luxembourger</option>
+
+                                                <option value="MO"> Macanese</option>
+
+                                                <option value="MK"> Macedonia</option>
+
+                                                <option value="YT"> Mahorais</option>
+
+                                                <option value="MG"> Malagasy</option>
+
+                                                <option value="MW"> Malawian</option>
+
+                                                <option value="MY"> Malaysian</option>
+
+                                                <option value="MV"> Maldivian</option>
+
+                                                <option value="ML"> Malian</option>
+
+                                                <option value="MT"> Maltese</option>
+
+                                                <option value="MH"> Marshallese</option>
+
+                                                <option value="MQ"> Martinican</option>
+
+                                                <option value="MR"> Mauritanian</option>
+
+                                                <option value="MU"> Mauritian</option>
+
+                                                <option value="MX"> Mexican</option>
+
+                                                <option value="MB"> Mexico Buffer</option>
+
+                                                <option value="FM"> Micronesian</option>
+
+                                                <option value="MD"> Moldovan</option>
+
+                                                <option value="MC"> Monegasque</option>
+
+                                                <option value="MN"> Mongolian</option>
+
+                                                <option value="MS"> Montserratian</option>
+
+                                                <option value="MA"> Moroccan</option>
+
+                                                <option value="MZ"> Mozambican</option>
+
+                                                <option value="NA"> Namibian</option>
+
+                                                <option value="NR"> Nauruan</option>
+
+                                                <option value="NP"> Nepalese</option>
+
+                                                <option value="NC"> New Caledonian</option>
+
+                                                <option value="NZ"> New Zealander</option>
+
+                                                <option value="NI"> Nicaraguan</option>
+
+                                                <option value="NG"> Nigerian</option>
+
+                                                <option value="NE"> Nigerien</option>
+
+                                                <option value="NU"> Niuean</option>
+
+                                                <option value="NF"> Norfolk Islander</option>
+
+                                                <option value="KP"> North Korean</option>
+
+                                                <option value="MP"> Northern Mariana Islander</option>
+
+                                                <option value="NO"> Norwegian</option>
+
+                                                <option value="BA"> of Bosnia and Herzegovina</option>
+
+                                                <option value="VA"> of the Holy See (of the Vatican) </option>
+
+                                                <option value="OM"> Omani</option>
+
+                                                <option value="PK"> Pakistani</option>
+
+                                                <option value="PW"> Palauan</option>
+
+                                                <option value="PS"> Palestinian Occ. Territories</option>
+
+                                                <option value="PA"> Panamanian</option>
+
+                                                <option value="PG"> Papua New Guinean</option>
+
+                                                <option value="PY"> Paraguayan</option>
+
+                                                <option value="PE"> Peruvian</option>
+
+                                                <option value="PL"> Pole</option>
+
+                                                <option value="PF"> Polynesian</option>
+
+                                                <option value="PT"> Portuguese</option>
+
+                                                <option value="PR"> Puerto Rican</option>
+
+                                                <option value="QA"> Qatari</option>
+
+                                                <option value="RE"> Reunionese</option>
+
+                                                <option value="RO"> Romanian</option>
+
+                                                <option value="RU"> Russian</option>
+
+                                                <option value="RW"> Rwandan; Rwandese</option>
+
+                                                <option value="EH"> Sahrawi</option>
+
+                                                <option value="SH"> Saint Helenian</option>
+
+                                                <option value="LC"> Saint Lucian</option>
+
+                                                <option value="SV"> Salvadorian; Salvadoran</option>
+
+                                                <option value="WS"> Samoan</option>
+
+                                                <option value="SM"> San Marinese</option>
+
+                                                <option value="ST"> São Toméan</option>
+
+                                                <option value="SA"> Saudi Arabian</option>
+
+                                                <option value="SN"> Senegalese</option>
+
+                                                <option value="RS"> Serbian</option>
+
+                                                <option value="SC"> Seychellois</option>
+
+                                                <option value="SL"> Sierra Leonean</option>
+
+                                                <option value="SG"> Singaporean</option>
+
+                                                <option value="SK"> Slovak</option>
+
+                                                <option value="SI"> Slovene</option>
+
+                                                <option value="SB"> Solomon Islander</option>
+
+                                                <option value="SO"> Somali</option>
+
+                                                <option value="ZA"> South African</option>
+
+                                                <option value="GS"> South Georgia &amp; South Sandwich</option>
+
+                                                <option value="KR"> South Korean</option>
+
+                                                <option value="SU"> Soviet Union</option>
+
+                                                <option value="ES"> Spaniard</option>
+
+                                                <option value="LK"> Sri Lankan</option>
+
+                                                <option value="PM"> St-Pierrais; Miquelonnais</option>
+
+                                                <option value="SD"> Sudanese</option>
+
+                                                <option value="SR"> Surinamer</option>
+
+                                                <option value="SJ"> Svalbard &amp; Jan Mayen Islands</option>
+
+                                                <option value="SZ"> Swazi</option>
+
+                                                <option value="SE"> Swede</option>
+
+                                                <option value="CH"> Swiss</option>
+
+                                                <option value="SY"> Syrian</option>
+
+                                                <option value="TW"> Taiwanese</option>
+
+                                                <option value="TJ"> Tajik</option>
+
+                                                <option value="TZ"> Tanzanian</option>
+
+                                                <option value="TH"> Thai</option>
+
+                                                <option value="TG"> Togolese</option>
+
+                                                <option value="TK"> Tokelauan</option>
+
+                                                <option value="TO"> Tongan</option>
+
+                                                <option value="TT"> Trinidadian; Tobagonian</option>
+
+                                                <option value="TN"> Tunisian</option>
+
+                                                <option value="TR"> Turk</option>
+
+                                                <option value="TM"> Turkmen</option>
+
+                                                <option value="TC"> Turks and Caicos Islander</option>
+
+                                                <option value="TV"> Tuvaluan</option>
+
+                                                <option value="UM"> U.S. Minor Outlaying Islands</option>
+
+                                                <option value="UG"> Ugandan</option>
+
+                                                <option value="UA"> Ukrainian</option>
+
+                                                <option value="GB"> United Kingdom</option>
+
+                                                <option value="UY"> Uruguayan</option>
+
+                                                <option value="VI"> US Virgin Islander</option>
+
+                                                <option value="UZ"> Uzbek</option>
+
+                                                <option value="VU"> Vanuatuan</option>
+
+                                                <option value="VE"> Venezuelan</option>
+
+                                                <option value="VN"> Vietnamese</option>
+
+                                                <option value="VC"> Vincentian</option>
+
+                                                <option value="WF"> Wallisian; Futunan; Wallis and Futuna Islander</option>
+
+                                                <option value="YE"> Yemeni</option>
+
+                                                <option value="YU"> Yugoslavia</option>
+
+                                                <option value="ZM"> Zambian</option>
+
+                                                <option value="ZW"> Zimbabwean</option>
+
+                                            </select>
+                                        </dfn>
+                                    </span>
+                                </div>
+                                <div class="wlform_row">
+                                    <div class="hl_room">
+                                        <label>No. of Rooms</label>
+                                        <select name="NoOfRooms" id="NoOfRooms">
+                                            <option selected="selected" value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+
+                                        <input type="hidden" value="1" id="PrevNoOfRooms" name="PrevNoOfRooms" />
+
+                                    </div>
+                                    <div id="room-1" class="wlform_row">
+                                        <b>No. of Guests</b>
+                                        <span class="roomrow">
+                                            <b> Room 1</b>
+                                        </span>
+                                        <span class="span_l">
+                                            <label>Adults(18 + years)</label>
+                                            <select name="adtRoom-1" id="adtRoom-1">
+                                                <option selected="selected" value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                            <input type="hidden" value="0" id="PrevChildCount-1" name="PrevChildCount-1" />
+                                        </span>
+                                        <span class="span_r">
+                                            <label>Child (till 18 years)</label>
+                                            <select name="chdRoom-1" id="chdRoom-1">
+                                                <option selected="selected" value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </span>
+                                        <div id="ChildBlock-1" class="chldbox" style="display:none;">
+                                            <span id="ChildBlock-1-Child-1" style="display:none;" class="chld_age">
+                                                <label>Child 1</label>
+                                                <select id="ChildBlock-1-ChildAge-1" name="ChildBlock-1-ChildAge-1" class="chld_age_count">
+                                                    <option selected="selected" value="-1">Age?</option>
+                                                    <option value="0">&lt;1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                </select>
+                                            </span>
+                                            <span id="ChildBlock-1-Child-2" style="display:none;" class="chld_age">
+                                                <label>Child 2</label>
+                                                <select id="ChildBlock-1-ChildAge-2" name="ChildBlock-1-ChildAge-2">
+                                                    <option selected="selected" value="-1">Age?</option>
+                                                    <option value="0">&lt;1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div style="display:none;" id="room-2" class="wlform_row">
+                                        <span class="roomrow">
+                                            <b>Room 2</b>
+                                        </span>
+                                        <span class="span_l">
+                                            <label>Adults(18 + years)</label>
+                                            <select name="adtRoom-2" id="adtRoom-2">
+                                                <option selected="selected" value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                            <input type="hidden" value="0" id="PrevChildCount-2" name="PrevChildCount-2" />
+                                        </span>
+                                        <span class="span_r">
+                                            <label>Child (till 18 years)</label>
+                                            <select name="chdRoom-2" id="chdRoom-2">
+                                                <option selected="selected" value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </span>
+                                        <div class="chldbox" id="ChildBlock-2" style="display:none;">
+
+                                            <span id="ChildBlock-2-Child-1" style="display:none;" class="chld_age">
+                                                <label>Child 1</label>
+                                                <select id="ChildBlock-2-ChildAge-1" name="ChildBlock-2-ChildAge-1">
+                                                    <option selected="selected" value="-1">Age?</option>
+                                                    <option value="0">&lt;1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                </select>
+                                            </span>
+                                            <span id="ChildBlock-2-Child-2" style="display:none;" class="chld_age">
+                                                <label>Child 2</label>
+                                                <select id="ChildBlock-2-ChildAge-2" name="ChildBlock-2-ChildAge-2">
+                                                    <option selected="selected" value="-1">Age?</option>
+                                                    <option value="0">&lt;1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div style="display:none;" id="room-3" class="wlform_row">
+                                        <span class="roomrow">
+                                            <b>Room 3</b>
+                                        </span>
+                                        <span class="span_l">
+                                            <label>Adults(18 + years)</label>
+                                            <select name="adtRoom-3" id="adtRoom-3">
+                                                <option selected="selected" value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                            <input type="hidden" value="0" id="PrevChildCount-3" name="PrevChildCount-3" />
+                                        </span>
+                                        <span class="span_r">
+                                            <label>Child (till 18 years)</label>
+                                            <select name="chdRoom-3" id="chdRoom-3">
+                                                <option selected="selected" value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </span>
+                                        <div class="chldbox" id="ChildBlock-3" style="display:none;">
+
+                                            <span id="ChildBlock-3-Child-1" style="display:none;" class="chld_age">
+                                                <label>Child 1</label>
+                                                <select id="ChildBlock-3-ChildAge-1" name="ChildBlock-3-ChildAge-1">
+                                                    <option selected="selected" value="-1">Age?</option>
+                                                    <option value="0">&lt;1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                </select>
+                                            </span>
+                                            <span id="ChildBlock-3-Child-2" style="display:none;" class="chld_age">
+                                                <label>Child 2</label>
+                                                <select id="ChildBlock-3-ChildAge-2" name="ChildBlock-3-ChildAge-2">
+                                                    <option selected="selected" value="-1">Age?</option>
+                                                    <option value="0">&lt;1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div style="display:none;" id="room-4" class="wlform_row">
+                                        <span class="roomrow">
+                                            <b>Room 4</b>
+                                        </span>
+                                        <span class="span_l">
+                                            <label>Adults(18 + years)</label>
+                                            <select name="adtRoom-4" id="adtRoom-4">
+                                                <option selected="selected" value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                            <input type="hidden" value="0" id="PrevChildCount-4" name="PrevChildCount-4" />
+                                        </span>
+                                        <span class="span_r">
+                                            <label>Child (till 18 years)</label>
+                                            <select name="chdRoom-4" id="chdRoom-4">
+                                                <option selected="selected" value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </span>
+                                        <div class="chldbox" id="ChildBlock-4" style="display:none;">
+
+                                            <span id="ChildBlock-4-Child-1" style="display:none;" class="chld_age">
+                                                <label>Child 1</label>
+                                                <select id="ChildBlock-4-ChildAge-1" name="ChildBlock-4-ChildAge-1">
+                                                    <option selected="selected" value="-1">Age?</option>
+                                                    <option value="0">&lt;1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                </select>
+                                            </span>
+                                            <span id="ChildBlock-4-Child-2" style="display:none;" class="chld_age">
+                                                <label>Child 2</label>
+                                                <select id="ChildBlock-4-ChildAge-2" name="ChildBlock-4-ChildAge-2">
+                                                    <option selected="selected" value="-1">Age?</option>
+                                                    <option value="0">&lt;1</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="wlform_row">
+                                        <div class="hl_left">
+                                            <label class="hl_star_rating">Star Rating:</label>
+                                            <select name="Rating" id="Rating">
+                                                <option value="0" selected="selected">Show All</option>
+                                                <option value="1">1 Star or less</option>
+                                                <option value="2">2 Star or less</option>
+                                                <option value="3">3 Star or less</option>
+                                                <option value="4">4 Star or less</option>
+                                                <option value="5">5 Star or less</option>
+                                                <option value="6">1 Star or more</option>
+                                                <option value="7">2 Star or more</option>
+                                                <option value="8">3 Star or more</option>
+                                                <option value="9">4 Star or more</option>
+                                                <option value="10">5 Star or more</option>
+                                            </select>
+                                        </div>
+                                        <div class="hl_right">
+                                            <label class="hl_star_name">Hotel Name:</label>
+                                            <input class="hl_star" type="text" name="HotelName" id="HotelName" value="" />
+                                        </div>
+                                    </div>
+
+                                    <div class="hl_button">
+                                        <img src="/Assets/images/hotelWidget/Search_Hotels.jpg" alt="Search" style="cursor: pointer;" id="hotelSearch" loading="lazy" />
+                                    </div>
+                                </div>
+                                <!--hotels End-->
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div id="GrayBox" style="width: 100%; height: 1000px; display: block; background-color: Black;
+     position: fixed; left: 0; top: 0; display: none; opacity: 0.4; filter: alpha(opacity=40);">
+        &nbsp;
+    </div>
+
+</body>
+</html>

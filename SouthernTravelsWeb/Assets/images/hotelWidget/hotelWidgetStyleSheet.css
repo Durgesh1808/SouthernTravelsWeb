@@ -1,0 +1,185 @@
+﻿body { margin:0px; padding:0px; font-family:Arial; font-size:12px;}
+.clr{ clear:both;}
+img{ border:none;}
+p,h1,h2,h3,h4,h5,h6{ margin:0px; padding:0px;}
+.ach_contener input, .ach_contener select{padding:8px;}
+.banklogo{ float:left; width:100%; padding-bottom:10px;}
+.ach_header_otr{ float:left; width:100%;}
+.ach_header{ margin:0px auto; overflow:hidden; width:1000px;}
+.logo{ float:left; width:250px;}
+.sign_box{ float:right; width:700px; margin-top:15px;}
+.cust_sprt{ float:right;  text-align:right; background:url(../hotelWidget/lnd_phn.jpg) left center no-repeat; font-size:12px; color:#8a1a0b; padding:0 5px 0px 30px;}
+.cust_sprt span{ color:#2a2a2a;}
+
+.ach_contener{width:100%;}
+.left_ach{ width:100%; float:left;}
+/*form part css start here*/
+.form_ach{ width:100%; float:left; margin-top:0px;}
+.form_ach_in{ background:#EFEDEE; float:left; width:100%; padding:1% 2%; color:#5D5D5D;}
+#Flights, #Hotels, #Bus, #holidays{     float: left;    padding:0em 0em;    width: 99%; }
+#Hotels{width: 95%; padding-left:10px;}
+.wlform_row {    float: left;    margin-top:7px;    padding-bottom:10px;    width: 100%;}
+.roomrow{width:100%; float:left; margin-bottom: 5px}
+.wlform_bg{width:100%; float:left;color:#fff;  margin-top: 5px; padding-bottom: 6px;}
+.wlform_list{width:61.3%; float:left; margin:0px; background:#21085d;}
+.wlform_list ul{list-style:none; margin:0px; padding:0px; }
+.wlform_list ul li{ float:left; display:block; color:#363636; font-size:13px; padding:0px 0 0px 0; border-right:1px solid #c2d8f5;}
+.wlform_list ul li:first-child{ margin-left:0;}
+.wlform_list ul li a{ color:#474747; font-size:14px; padding:12px 15px 12px 40px; float:left; text-decoration:none;} 
+.wlform_list ul li a:hover{color:#fff;}
+.wlform_box{width:100%; float:left; background:url(../hotelWidget/form_bg.png) repeat; margin:0px 0 0 0; min-height:348px;}
+.travels_count{width:30%; float:left; margin-right:0%;}
+.fl_adult{width:31%; float:left;}
+.fl_child{width:33%; float:left;}
+.fl_inf{width:31%; float:left; margin-left:10px;}
+.fl_adult label, .fl_child label, .fl_inf label{   float: left; padding: 0 0 0.5em; width: 98%;}
+.fl_inf label, .fl_child label{padding-left:2px;}
+.fl_inf select, .fl_child select, .fl_adult select{width:40%;}
+.date_boxl em img, .date_boxr em img{margin:0px 0 0 -25px;}
+
+/*Hotel*/
+.hotel_left, .hl_desti{float:left; width:100%;}
+.hotel_left label{width:26%; float:left; line-height:20px; vertical-align:middle;margin-top:22px;}
+.hl_destination{width:32%; float:left; margin-left:8px;}
+.hl_desti em, .hl_desti em a{font-style:normal; font-size:11px; font-family:Arial, Sans-Serif;}
+.city_select, .city_input, .input_date{font-size:11px; padding:6px 3px;}
+.hl_left, .hl_right{width:49%; float:left;}
+.hl_room{width:90%; float:left;}
+.hl_room label{width:100%; float:left;}
+.hl_room em{width:48%; float:left; font-style:normal; padding:0 0 0 10px; font-size:11px; }
+.room_select{width:15%; float:left; margin-left:0px; border:none; padding:4px;}
+.hl_room{width:100%; float:left;}
+.wlform_row >b{float:left; width:100%; padding:5px 0;}
+.hl_room b{margin:2px 0 4px; float:left;}
+.span_l{width:50%; float:left;}
+.span_r{width:50%; float:left;}
+.span_l label{float:left; width:100%;} 
+.span_r label{float:left; width:100%;}
+.hl_agecount{float:left; width:98%; border:none; padding:4px;}
+.chld_room{width:20%; float:left;}
+.chld_room b{margin:0px;}
+.chld_age{float:left; width:40%; margin-left:10px;}
+.chld_age label{width:100%; float:left;}
+.chld_age_count{float:left; width:100%;}
+.hl_button{float:right; margin:0 20px; margin-right: 0}
+.chldbox{width:32%; float:left;}
+
+#errMess, #errMessHotel, #errMessPkg, #errMsg {
+    border: 1px solid #CCCCCC; color: #FF0000; float: left; margin-top: 5px; padding-bottom: 3px; padding-top: 3px; text-align: center; width: 100%;}
+
+
+/* form part -end--*/
+
+/*add for the flight Section*/
+
+.frm_inr{ float:left; width:96.4%; background:#F5F5F5; padding:10px 0 10px 20px; min-height:344px;}
+.fw_all{ float:left; width:100%;}
+.fgt_type{ float:left; width:100%; padding:10px 0; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+.fgt_type ul{ margin:0px; padding:0px; list-style:none;}
+.fgt_type li{ float:left; display:block; padding:6px 0; margin-left:8px;}
+.fgt_type li a{ text-decoration:none;  padding:7px 15px; color:#8a1a0b;background:#fff;  -webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.fgt_type li:hover a, .fgt_type li.selected a{ color:#fff;background:#21085d;}
+
+.frm_row{ float:left; width:99%; padding-bottom:4.5px;  margin-left:10px; margin-top:5px;}
+.row_lft{ float:left; width:49%;}
+.row_rgt{ float:right; width:49%;}
+.row_lft > label{ width:51%; line-height:16px;}
+.row_rgt > label{ width:32%; line-height:16px;}
+.multt_flight_count{   height: 26px; padding-top: 1.8em !important;}
+.multt_flight_count1{   height: 26px; padding-top: .5em !important;}
+/*city class*/
+.city_lbl{ float:left; width:98%; color:#fff; padding-bottom:.3em;}
+.city_inpts{ float:left; width:88%; background:#fff; padding:0 5px; border:solid 1px #e4e5e5; color:#535252;height:28px; margin:0;}
+#city.city_inpts{ float:left; width:40%; background:#fff; padding:0 5px; border:solid 1px #e4e5e5; color:#535252;height:28px; margin:0;}
+.city_slct{float:left; width:89.2%; background:#fff; padding:0 4px; border:solid 1px #e4e5e5; color:#535252;height:29px; margin:0;}
+/*date class*/
+.date_inpts{ float:left; width:85%; background:#f7f9f8 url(../flight_folder/cal.gif) no-repeat 98% center; padding:5px; border:solid 1px #e4e5e5; color:#535252;}
+.date_inpts_Multi{ float:left; width:90%; background:#f7f9f8 url(../hotelWidget/cal.gif) no-repeat 96px 5px; padding:0 5px; border:solid 1px #e4e5e5; color:#535252; height:28px; margin:0;}
+.cal_icon{ float:left; width:20px; margin:6px 0px 0 -20px; cursor:pointer;}
+.time_slect{float:left; width:36%; background:#f7f9f8; padding:4px; border:solid 1px #e4e5e5; color:#535252; margin-left:10px;}
+
+.hl_star_rating{ float:left; width:100%; line-height:25px;}
+.hl_star{ float:left; width:98%; padding:4px;}
+.hl_star_name{ float:left; width:100%; line-height:25px;}
+
+/*Travelers (upto 9 per Booking)*/
+.cont_bok{ float:left; width:100%; font-weight:bold; color:#fff; margin-top:10px; margin-bottom: 15px; line-height:16px;}
+.fl_adult,.fl_child,.fl_inf{width:23%; float:left; margin-right:10px;}
+.ads_slct{ float:left; width:80%; background:#f7f9f8; padding:4px; color:#535252; border:solid 1px #e4e5e5; margin:0; }
+
+.fgt_class{ float:left; width:23%;}
+.fgt_slct{float:left; width:84%; background:#f7f9f8; padding:4px; border:solid 1px #e4e5e5; color:#535252;}
+
+/*error msg*/
+.error_box{ float:left; width:65%;background: none repeat scroll 0 0 #EEEEEE;border: 1px solid #D4D4D4;border-radius: 4px 4px 4px 4px;margin-top: 10px;padding: 2px 0;text-align: center;}
+.er_txt{ color:#fe0107; font-size:11px;font-size: 12px;font-weight: bolder;}
+.btn_box{ float:right; width:32%; text-align: right;padding-right: 19px;}
+
+
+/*add for the flight end Section*/
+/*common css*/
+/*calender UI set*/
+.searching_container{ position:relative; width:100%;}
+.searching_container .inner_container{ text-align:center; width:100%; margin:28px auto; border:2px solid #8A1A0B; border-radius:8px; -ms-border-radius:8px; -webkit-border-radius:8px; box-shadow:2px 1px 5px #c0c0c0;background-color: #FFFFFF; -webkit-box-shadow: #B3B3B3 2px 2px 2px;-moz-box-shadow: #B3B3B3 2px 2px 2px; box-shadow: #B3B3B3 2px 2px 2px;}
+.searching_container .inner_container .searching_logo{ margin:30px 0;}
+.searching_container .inner_container h1{ font-size:18px; padding-bottom:11px; color:#000; display:block; margin:3px 0; display:inline; font-weight:bold;}
+.searching_container .inner_container h2{ font-size:18px; color:#000; clear:both; text-align:center;}
+.searching_container .inner_container p{ color:#fff; background:#8A1A0B; font-size:16px; float:left; width:100%; margin:30px auto; line-height:30px; font-weight:bold;}
+.searching_container .inner_container p span{ display:block; float:left; text-align:left; width:36%; border-right:1px solid #8A1A0B; line-height:29px; padding:10px 20px; margin-left:55px;}
+.searching_container .inner_container p span b{ color:#fff;}
+/******************************************************Calender UI *********************************************/
+.ui-datepicker {width: 17em;padding: .2em .2em 0;display: none;border: 1px solid #aaaaaa;background: #ffffff url(../hotelWidget/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;color: #222222;font-family: Verdana,Arial,sans-serif;font-size: 1.1em;}
+.ui-datepicker .ui-datepicker-header {background: none repeat scroll 0 0 #F6AE38;color: #FFFFFF;font-weight: bold;padding: 0.2em 0;position: relative;}
+.ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 11px; }
+.ui-widget-header .ui-icon {background-image: url("../HolidayPackageImages/add_icon.gif");}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {background: none repeat-x scroll 50% 50% #E6E6E6;border: 1px solid #D3D3D3;color: #1CB7E7;font-weight: normal;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {background: url("hotelWidget/ui-bg_glass_65_ffffff_1x400.png") repeat-x scroll 50% 50% #FBF9EE; border: 1px solid #F6AE38;color: #212121;font-weight: normal;}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{background: none repeat scroll 0 0 #FBF9EE;border: 1px solid #F6AE38;color: #363636;}
+.ui-state-hover .ui-icon, .ui-sate-focus .ui-icon{background-image: url("../HolidayPackageImages/add_icon.gif");}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{/*background: url("../HolidayPackageImages/add_icon.gif") no-repeat scroll 50% 50% transparent;*/}
+.ui-datepicker th {padding: .7em .3em;text-align: center;font-weight: bold;background-color: #E8E8E8;border-style: none none solid;border-width: 0 0 1px;border-color: #A7A7A7;}
+.ui-icon {width: 16px;height: 16px;display: block;text-indent: -99999px;overflow: hidden;background-repeat: no-repeat;}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {background: none repeat scroll 0 0 #FBF9EE;border: 1px solid #F6AE38;color: #363636;}
+.ui-widget-content .ui-icon {background-image: url(../hotelWidget/pre_next.png)/*{iconsContent}*/; }
+/*form part css end here*/
+/*common css*/
+/*calender UI set*/
+/******************************************************Calender UI *********************************************/
+.ui-datepicker {width: 17em;padding: .2em .2em 0;display: none;border: 1px solid #aaaaaa;background: #ffffff url(../hotelWidget/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;color: #222222;font-family: Verdana,Arial,sans-serif;font-size: 1.1em;}
+.ui-datepicker .ui-datepicker-header {background:#F2572B;color: #FFFFFF;font-weight: bold;padding: 0.2em 0;position: relative;}
+.ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 11px; }
+.ui-widget-header .ui-icon {background-image: url("../HolidayPackageImages/add_icon.gif");}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {background: none repeat-x scroll 50% 50% #E6E6E6;border: 1px solid #D3D3D3;color: #21085D;font-weight: normal;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {background: url("hotelWidget/ui-bg_glass_65_ffffff_1x400.png") repeat-x scroll 50% 50% #FBF9EE; border: 1px solid #8A1A0B;color: #212121;font-weight: normal;}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{background: none repeat scroll 0 0 #FBF9EE;border: 1px solid #F6AE38;color: #363636;}
+.ui-state-hover .ui-icon, .ui-sate-focus .ui-icon{background-image: url("../HolidayPackageImages/add_icon.gif");}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{/*background: url("../HolidayPackageImages/add_icon.gif") no-repeat scroll 50% 50% transparent;*/}
+.ui-datepicker th {padding: .7em .3em;text-align: center;font-weight: bold;background-color: #E8E8E8;border-style: none none solid;border-width: 0 0 1px;border-color: #A7A7A7;}
+.ui-icon {width: 16px;height: 16px;display: block;text-indent: -99999px;overflow: hidden;background-repeat: no-repeat;}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {background: none repeat scroll 0 0 #FBF9EE; border: 1px solid #E31E24;color: #363636;}
+.ui-widget-content .ui-icon {background-image: url(../hotelWidget/pre_next.png)/*{iconsContent}*/; }
+
+#errMess, #errMessHotel, #errMessPkg, #errMsg{font-size:12px; font-weight:bold;background: #C2C2C2;color: #FF0000; margin-top: 5px; padding:5px;}
+
+
+
+/*new added for hotel*/
+.date_check{ width:30%; float:left; margin-right:15px;}
+.date_check label, .date_night label, .date_nation{ width:100%; float:left; padding-bottom:3px;}
+.date_night{ width:9%; float:left; margin-right:15px;}
+.date_night input{ width:80%; font-size:11px; }
+.date_nation{ width:43%; float:left; margin-top: 10px}
+.date_nation dfn select{ width:100%; font-size:11px;}
+.hl_input{background: #f9f9f9 none repeat scroll 0 0; border: medium none; float: left;  height: 17px; margin-right: 5px; margin-top: -34px; width: 61%;}
+.hl_desti label{width:100%; float:left; padding-right:10px; padding-bottom:3px;}
+.hl_desti dfn{ float:left; width:100%;}
+.hl_select{width:68%; float:left; margin-right:5px; padding:4px;}
+.air_cdr {background: none repeat scroll 0 0 #FFFFFF;border: 0 solid #E4E5E5;color: #535252;float: left;padding: 4px;width: 92%;}
+
+@media only screen and (max-width: 480px){
+	.date_check{ width: 50%; margin-bottom: 10px}
+	.date_nation{ width: 100%}
+	.room_select{ width: auto}
+	.date_night{ width: 20%}
+	
+}

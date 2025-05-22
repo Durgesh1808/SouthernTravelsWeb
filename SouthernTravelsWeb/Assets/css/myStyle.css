@@ -1,0 +1,2253 @@
+﻿
+/* **************** Stpl Loader CSS START HERE ***************************** */
+.loadingModal {
+    display: none;
+    position: fixed;
+    z-index: 9999999999999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 153%);
+}
+
+    .loadingModal::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60px;
+        height: 60px;
+        margin: -30px 0 0 -30px;
+        border: 6px solid #ccc;
+        border-top-color: #333;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.Spinner {
+    position: fixed;
+    z-index: auto;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background: url('/Assets/Assets/images/loader.gif'), radial-gradient(ellipse at center,rgba(255,255,255,1)0%,rgba(255,255,255,1)20%,rgba(255,255,255,0)153%);
+}
+
+.loading .loadingModal {
+    display: block;
+}
+/* **************** Stpl Loader CSS END HERE ***************************** */
+
+/* **************** Stpl INLINE CSS CLASSES STARTS HERE ***************************** */
+/****************** FLOAT CSS   ******************/
+.floatLeft {
+    float: left;
+}
+
+.floatLeftImp {
+    float: left !important;
+}
+
+.floatRight {
+    float: right;
+}
+
+.floatRightImp {
+    float: right !important;
+}
+
+.float-initial {
+    float: initial;
+}
+
+.float-none {
+    float: none;
+}
+
+/****************** CURSOR CSS   ******************/
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+.cursor-not-allowed-main .round_grace_main, .cursor-not-allowed-main input,
+.cursor-not-allowed-main label, .cursor-not-allowed-main span {
+    cursor: not-allowed !important;
+}
+
+/****************** DISPLAY CSS   ******************/
+.display-none {
+    display: none;
+}
+
+.display-noneImp {
+    display: none !important;
+}
+
+.display-w-inline-box {
+    display: -webkit-inline-box;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-blockImp {
+    display: block !important;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.d-in-b {
+    display: inline-block !important;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.display-inline-flex {
+    display: inline-flex;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+.visibility-collapse {
+    visibility: collapse;
+}
+
+.align-items-s-start {
+    align-items: self-start;
+}
+
+.align-items-f-end {
+    align-items: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-s-b {
+    justify-content: space-between;
+}
+
+.justify-content-s-ar {
+    justify-content: space-around;
+}
+
+.justify-content-f-end {
+    justify-content: flex-end !important;
+}
+
+.justify-content-f-start {
+    justify-content: flex-start;
+}
+
+.webkit-box-pack-s {
+    -webkit-box-pack: start;
+}
+
+.text-align-last-l {
+    text-align-last: left;
+}
+
+.f-003em {
+    flex: 0 0 3em;
+}
+
+.f-009em {
+    flex: 0 0 9em;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-8 {
+    flex: 8;
+}
+
+.flex-wrap-w {
+    flex-wrap: wrap;
+}
+
+.opacity-09 {
+    opacity: 0.09;
+}
+/****************** POSITION CSS   ******************/
+.position-inherit {
+    position: inherit;
+}
+
+.position-static {
+    position: static;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-sticky {
+    position: sticky;
+}
+
+.position-initial {
+    position: initial;
+}
+
+.position-left-21 {
+    left: 21px;
+}
+
+.position-top-9 {
+    top: -9px;
+}
+
+/****************** COLOR CSS   ******************/
+.color-black {
+    color: black;
+}
+
+.color-blue {
+    color: blue;
+}
+
+.color-bisque {
+    color: bisque;
+}
+
+.color-red {
+    color: red;
+}
+
+.color-green {
+    color: green;
+}
+
+.color-darkgrey {
+    color: darkgrey;
+}
+
+.color-gray {
+    color: gray;
+}
+
+.color-2494be {
+    color: #2494be;
+}
+
+.color-8d8d8d {
+    color: #8d8d8d;
+}
+
+.color-bc3c42 {
+    color: #bc3c42;
+}
+
+.color-666 {
+    color: #666666;
+}
+
+.color-fff {
+    color: #fff;
+}
+
+.color-ff0000 {
+    color: #ff0000;
+}
+
+.color-333 {
+    color: #333;
+}
+
+.color-2494be {
+    color: #2494be;
+}
+
+.color-CBC9C8 {
+    color: #CBC9C8;
+}
+
+.color-3A81AA {
+    color: #3A81AA;
+}
+
+.color-a6a6a6 {
+    color: #a6a6a6;
+}
+
+.color-0069AA {
+    color: #0069AA;
+}
+/****************** BACKGROUND CSS   ******************/
+.background-fff {
+    background-color: #fff;
+}
+
+.background-w-imp {
+    background-color: white !important;
+}
+
+.background-burlywood {
+    background-color: burlywood;
+}
+
+.background-ccc {
+    background-color: #ccc;
+}
+
+.background-yellow {
+    background-color: yellow;
+}
+
+.background-lightgray {
+    background-color: lightgray;
+}
+
+.background-image-none {
+    background-image: none;
+}
+
+.background-4E37D1 {
+    background-color: #4E37D1;
+}
+
+.background-C6F7FA {
+    background-color: #C6F7FA;
+}
+
+.background-rgba25500 {
+    background-color: rgba(255,0,0);
+}
+
+.background-rgba22300 {
+    background-color: rgba(223,0,0);
+}
+
+.background-rgba18500 {
+    background-color: rgba(185,0,0);
+}
+
+.background-f7f7f7 {
+    background-color: #f7f7f7;
+}
+/****************** FONT SIZE CSS   ******************/
+.font-size-10 {
+    font-size: 10px;
+}
+
+.font-size-11 {
+    font-size: 11px;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+.font-size-13 {
+    font-size: 13px !important;
+}
+
+.font-size-15 {
+    font-size: 15px;
+}
+
+.font-size-16 {
+    font-size: 16px !important;
+}
+
+.font-size-17 {
+    font-size: 17px;
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-22 {
+    font-size: 22px;
+}
+
+.font-size-24 {
+    font-size: 24px;
+}
+
+.font-size-25 {
+    font-size: 25px;
+}
+
+.font-size-30 {
+    font-size: 30px;
+}
+
+.font-size-110 {
+    font-size: 110px;
+}
+
+.font-size-x {
+    font-size: x-small;
+}
+
+.font-size-100 {
+    font-size: 100%;
+}
+
+/****************** FONT WEIGHT CSS   ******************/
+.font-weight-200 {
+    font-weight: 200;
+}
+
+.font-weight-300 {
+    font-weight: 300;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-weight-600Imp {
+    font-weight: 600 !important;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.pointer-event-none {
+    pointer-events: none;
+}
+
+.word-break-all {
+    word-break: break-all;
+}
+/****************** WIDTH CSS   ******************/
+.width-auto {
+    width: auto;
+}
+
+.w-3em {
+    width: 3em;
+}
+
+.w-4em {
+    width: 4em;
+}
+
+.width-9em {
+    width: 9em;
+}
+
+.w-30rem {
+    width: 30rem !important;
+}
+
+.w-100rem {
+    width: 100rem !important;
+}
+
+.width-15 {
+    width: 15px;
+}
+
+.width-16 {
+    width: 16px;
+}
+
+.width-20 {
+    width: 20px;
+}
+
+.width-22 {
+    width: 22px;
+}
+
+.width-25 {
+    width: 25px !important;
+}
+
+.width-30 {
+    width: 30px;
+}
+
+.width-38 {
+    width: 38px;
+}
+
+.width-40 {
+    width: 40px;
+}
+
+.width-46 {
+    width: 46px;
+}
+
+.width-50 {
+    width: 50px;
+}
+
+.width-52 {
+    width: 52px !important;
+}
+
+.width-56 {
+    width: 56px;
+}
+
+.width-70 {
+    width: 70px !important;
+}
+
+.width-72 {
+    width: 72px;
+}
+
+.w-75 {
+    width: 75px;
+}
+
+.width-60 {
+    width: 60px;
+}
+
+.width-65 {
+    width: 65px;
+}
+
+.width-80 {
+    width: 80px;
+}
+
+.width-86 {
+    width: 86px;
+}
+
+.width-90 {
+    width: 90px !important;
+}
+
+.width-95 {
+    width: 90px;
+}
+
+.width-62 {
+    width: 62px !important;
+}
+
+.width-75 {
+    width: 75px;
+}
+
+.width-50 {
+    width: 50px;
+}
+
+.width-83 {
+    width: 83px;
+}
+
+.width-101 {
+    width: 101px !important;
+}
+
+.width-105 {
+    width: 105px;
+}
+
+.width-106 {
+    width: 106px;
+}
+
+.width-110 {
+    width: 110px !important;
+}
+
+.width-112 {
+    width: 112px;
+}
+
+.width-115 {
+    width: 115px;
+}
+
+.width-120 {
+    width: 120px !important;
+}
+
+.width-122 {
+    width: 122px;
+}
+
+.width-126 {
+    width: 126px;
+}
+
+.width-130 {
+    width: 130px !important;
+}
+
+.width-135 {
+    width: 135px;
+}
+
+.width-140 {
+    width: 140px !important;
+}
+
+.width-144 {
+    width: 144px;
+}
+
+.width-150 {
+    width: 150px !important;
+}
+
+.width-172 {
+    width: 172px !important;
+}
+
+.width-176 {
+    width: 176px !important;
+}
+
+.width-200 {
+    width: 200px !important;
+}
+
+.w-210 {
+    width: 210px !important;
+}
+
+.width-220 {
+    width: 220px !important;
+}
+
+.width-230 {
+    width: 230px;
+}
+
+.width-240 {
+    width: 240px !important;
+}
+
+.width-250 {
+    width: 250px;
+}
+
+.width-260 {
+    width: 260px !important;
+}
+
+.width-270 {
+    width: 270px !important;
+}
+
+.width-280 {
+    width: 280px !important;
+}
+
+.width-300 {
+    width: 300px !important;
+}
+
+.width-320 {
+    width: 320px !important;
+}
+
+.width-360 {
+    width: 360px;
+}
+
+.w-360 {
+    width: 360px !important;
+}
+
+.width-370 {
+    width: 370px;
+}
+
+.width-440 {
+    width: 440px !important;
+}
+
+.width-520 {
+    width: 520px !important;
+}
+
+.width-550 {
+    width: 550px !important;
+}
+
+.width-680 {
+    width: 680px;
+}
+
+.width-700 {
+    width: 700px;
+}
+
+.width-830 {
+    width: 830px;
+}
+
+.width-1200 {
+    width: 1200px;
+}
+
+.width-3000 {
+    width: 3000px;
+}
+
+.width-100-imp {
+    width: 100% !important;
+}
+
+.width-100 {
+    width: 100px !important;
+}
+
+.width-100per {
+    width: 100% !important;
+}
+
+.width-110per {
+    width: 110%;
+}
+
+.width-92per {
+    width: 92% !important;
+}
+
+.width-90per {
+    width: 90% !important;
+}
+
+.width-99per {
+    width: 99.96%;
+}
+
+.w-89pr {
+    width: 89% !important;
+}
+
+.width-84per {
+    width: 84%;
+}
+
+.width-86per {
+    width: 86% !important;
+}
+
+.width-87per {
+    width: 87%;
+}
+
+.width-80per {
+    width: 80% !important;
+}
+
+.width-72per {
+    width: 72% !important;
+}
+
+.width-70per {
+    width: 70% !important;
+}
+
+.width-65per {
+    width: 65%;
+}
+
+.width-60perImp {
+    width: 60% !important;
+}
+
+.width-54per {
+    width: 54%;
+}
+
+.width-55per {
+    width: 55% !important;
+}
+
+.width-50per {
+    width: 50%;
+}
+
+.width-50perimp {
+    width: 50% !important;
+}
+
+.width-45per {
+    width: 45%;
+}
+
+.width-45perimp {
+    width: 45% !important;
+}
+
+.w-43per {
+    width: 43% !important;
+}
+
+.w-42per {
+    width: 42% !important;
+}
+
+.width-40per {
+    width: 40% !important;
+}
+
+.width-60per {
+    width: 60%;
+}
+
+.width-48per {
+    width: 48%;
+}
+
+.width-33per {
+    width: 33% !important;
+}
+
+.width-30per {
+    width: 30% !important;
+}
+
+.width-25per {
+    width: 25% !important;
+}
+
+.w-22per {
+    width: 22% !important;
+}
+
+.width-20per {
+    width: 20% !important;
+}
+
+.width-18per-imp {
+    width: 18% !important;
+}
+
+.w-17-5pr {
+    width: 17.5% !important;
+}
+
+.width-15per {
+    width: 15% !important;
+}
+
+.width-12per {
+    width: 12% !important;
+}
+
+.width-10per {
+    width: 10% !important;
+}
+
+.width-8per {
+    width: 8% !important;
+}
+
+.width-5per {
+    width: 5% !important;
+}
+
+.width-4per {
+    width: 4% !important;
+}
+
+.width-3per {
+    width: 3% !important;
+}
+
+.w-2per {
+    width: 2% !important;
+}
+
+.width-0per {
+    width: 0%;
+}
+
+.max-width-60 {
+    max-width: 60%;
+}
+
+.max-width-18px {
+    max-width: 18px;
+}
+
+.max-width-24px {
+    max-width: 24px;
+}
+
+.max-width-50per {
+    max-width: 50%;
+}
+
+.max-width-30per {
+    max-width: 30%;
+}
+
+.max-width-100per {
+    max-width: 100%;
+}
+
+.max-width-210 {
+    max-width: 210px;
+}
+
+.max-width-300 {
+    max-width: 300px;
+}
+
+.max-width-768 {
+    max-width: 768px;
+}
+
+.max-width-1276 {
+    max-width: 1276px;
+}
+
+.min-width-518 {
+    min-width: 518px;
+}
+
+.min-width-210 {
+    min-width: 210px;
+}
+
+.min-width-150 {
+    min-width: 150px;
+}
+
+.min-width-154 {
+    min-width: 154px;
+}
+
+.min-width-160 {
+    min-width: 160px;
+}
+
+.min-width-124 {
+    min-width: 124px;
+}
+
+.min-width-112 {
+    min-width: 112px;
+}
+
+.min-width-100 {
+    min-width: 100px;
+}
+
+.min-width-93 {
+    min-width: 93px;
+}
+
+.min-width-92 {
+    min-width: 92px;
+}
+
+.min-width-90 {
+    min-width: 90px;
+}
+
+.min-width-80 {
+    min-width: 80px;
+}
+
+.min-width-72 {
+    min-width: 72px;
+}
+
+.min-width-70 {
+    min-width: 70px;
+}
+
+.min-width-60 {
+    min-width: 60px;
+}
+
+.min-width-40 {
+    min-width: 40px;
+}
+
+.min-width-36 {
+    min-width: 36px;
+}
+
+.min-width-31 {
+    min-width: 31px;
+}
+
+.min-width-30 {
+    min-width: 30px;
+}
+
+.min-width-28 {
+    min-width: 28px;
+}
+
+.min-width-200 {
+    min-width: 200px;
+}
+
+.min-width-240 {
+    min-width: 240px;
+}
+
+.min-width-310 {
+    min-width: 310px;
+}
+
+.min-width-450 {
+    min-width: 450px;
+}
+/****************** HEIGHT CSS   ******************/
+.height-20 {
+    height: 20px;
+}
+
+.height-31 {
+    height: 31px;
+}
+
+.height-34 {
+    height: 34px !important;
+}
+
+.height-40 {
+    height: 40px;
+}
+
+.height-48 {
+    height: 48px;
+}
+
+.height-50 {
+    height: 50px;
+}
+
+.height-60 {
+    height: 60px;
+}
+
+.h-90 {
+    height: 90px;
+}
+
+.height-100 {
+    height: 100px;
+}
+
+.height-140 {
+    height: 140px;
+}
+
+.height-160 {
+    height: 160px;
+}
+
+.height-350 {
+    height: 350px;
+}
+
+.height-210 {
+    height: 210px;
+}
+
+.height-200 {
+    height: 200px;
+}
+
+.height-160 {
+    height: 160px;
+}
+
+.height-175 {
+    height: 175px;
+}
+
+.height-400 {
+    height: 400px;
+}
+
+.height-500 {
+    height: 500px;
+}
+
+.height-800 {
+    height: 800px;
+}
+
+.height-74per {
+    height: 74%;
+}
+
+.height-80per {
+    height: 80%;
+}
+
+.height-100per {
+    height: 100%;
+}
+
+.height-auto {
+    height: auto !important;
+}
+
+.height-100-40 {
+    height: calc(100% - 40px);
+}
+
+.height-100-50 {
+    height: calc(100% - 50px);
+}
+
+.min-height-inherit {
+    min-height: inherit;
+}
+
+.min-h-44 {
+    min-height: 44px;
+}
+
+.min-height-75 {
+    min-height: 75px;
+}
+
+.min-height-100 {
+    min-height: 100px;
+}
+
+.max-hegith-370 {
+    max-height: 370px;
+}
+
+.max-hegith-350 {
+    max-height: 350px;
+}
+
+.max-hegith-450 {
+    max-height: 450px;
+}
+
+.min-height-60 {
+    min-height: 60px;
+}
+
+.min-h-70vh {
+    min-height: 70vh;
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+/****************** PADDING CSS   ******************/
+.padding-0 {
+    padding: 0px !important;
+}
+
+.padding-0-imp {
+    padding: 0px !important;
+}
+
+.padding-2 {
+    padding: 2px;
+}
+
+.padding-3 {
+    padding: 3px;
+}
+
+.padding-4 {
+    padding: 4px;
+}
+
+.padding-5 {
+    padding: 5px;
+}
+
+.padding-6 {
+    padding: 6px;
+}
+
+.padding-7 {
+    padding: 7px;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.padding-14 {
+    padding: 14px;
+}
+
+.padding-15 {
+    padding: 15px;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.padding-08 {
+    padding: 0 8px;
+}
+
+.padding-4-12 {
+    padding: 4px 12px;
+}
+
+.padding-10-0 {
+    padding: 10px 0px;
+}
+
+.padding-12-20 {
+    padding: 12px 20px;
+}
+
+.padding-2606 {
+    padding: 26px 0 0 6px;
+}
+
+.padding-153025 {
+    padding: 15px 30px 25px 0px;
+}
+
+.padding-4015015 {
+    padding: 40px 15px 0px 15px;
+}
+
+.padding-top-0-imp {
+    padding-top: 0px !important;
+}
+
+.padding-top-0 {
+    padding-top: 0px;
+}
+
+.padding-top-2 {
+    padding-top: 2px;
+}
+
+.padding-top-4 {
+    padding-top: 4px;
+}
+
+.padding-top-5 {
+    padding-top: 5px;
+}
+
+.padding-top-6 {
+    padding-top: 6px;
+}
+
+.padding-top-8 {
+    padding-top: 8px;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.padding-top-15 {
+    padding-top: 15px;
+}
+
+.padding-top-18 {
+    padding-top: 18px;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.padding-top-25 {
+    padding-top: 25px;
+}
+
+.padding-top-30 {
+    padding-top: 30px;
+}
+
+.padding-top-32 {
+    padding-top: 32px;
+}
+
+.padding-top-100 {
+    padding-top: 100px;
+}
+
+.padding-14-0-10 {
+    padding: 14px 0 10px 0;
+}
+
+.padding-left-2em {
+    padding-left: 2em;
+}
+
+.padding-left-0 {
+    padding-left: 0;
+}
+
+.padding-left-4 {
+    padding-left: 4px;
+}
+
+.padding-left-5 {
+    padding-left: 5px;
+}
+
+.padding-left-6Imp {
+    padding-left: 6px !important;
+}
+
+.padding-left-8 {
+    padding-left: 8px;
+}
+
+.padding-left-10 {
+    padding-left: 10px;
+}
+
+.padding-left-12 {
+    padding-left: 12px;
+}
+
+.padding-left-14 {
+    padding-left: 14px;
+}
+
+.padding-left-15 {
+    padding-left: 15px;
+}
+
+.padding-left-20 {
+    padding-left: 20px;
+}
+
+.pl-22 {
+    padding-left: 22px;
+}
+
+.padding-left-24 {
+    padding-left: 24px;
+}
+
+.padding-left-25 {
+    padding-left: 25px;
+}
+
+.padding-left-28 {
+    padding-left: 28px;
+}
+
+.padding-left-35 {
+    padding-left: 35px;
+}
+
+.padding-left-40 {
+    padding-left: 40px;
+}
+
+.padding-left-55 {
+    padding-left: 55px;
+}
+
+.padding-bottom-0 {
+    padding-bottom: 0px;
+}
+
+.padding-bottom-8 {
+    padding-bottom: 8px;
+}
+
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.padding-bottom-15 {
+    padding-bottom: 15px;
+}
+
+.padding-right-0 {
+    padding-right: 0px !important;
+}
+
+.padding-right-5 {
+    padding-right: 5px;
+}
+
+.padding-right-10 {
+    padding-right: 10px;
+}
+
+.padding-right-15 {
+    padding-right: 15px;
+}
+
+.padding-right-20 {
+    padding-right: 20px;
+}
+
+.padding-right-25 {
+    padding-right: 25px;
+}
+
+.padding-right-35 {
+    padding-right: 35px !important;
+}
+
+.padding-right-55 {
+    padding-right: 55px !important;
+}
+
+.padding-right-75 {
+    padding-right: 75px;
+}
+
+.padding-10850 {
+    padding: 10px 85px 0 0;
+}
+
+.padding-0770 {
+    padding: 0px 7px 7px 0px;
+}
+
+.padding-inline-e5 {
+    padding-inline-end: 5px;
+}
+
+.padding-0-15 {
+    padding: 0 15px;
+}
+/****************** MARGIN CSS    ******************/
+.margin-0 {
+    margin: 0px !important;
+}
+
+.margin-1em {
+    margin: 1em;
+}
+
+.margin-4imp {
+    margin: 4px !important;
+}
+
+.margin-6 {
+    margin: 6px;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+.margin-top-0 {
+    margin-top: 0px;
+}
+
+.margin-top-3 {
+    margin-top: 3px;
+}
+
+.margin-top-8 {
+    margin-top: 8px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top-6 {
+    margin-top: 6px;
+}
+
+.margin-top-15 {
+    margin-top: 15px;
+}
+
+.margin-top-16 {
+    margin-top: 16px;
+}
+
+.margin-top-18 {
+    margin-top: 18px;
+}
+
+.margin-top-21 {
+    margin-top: 21px;
+}
+
+.margin-top-22 {
+    margin-top: 22px;
+}
+
+.margin-top--15 {
+    margin-top: -15px;
+}
+
+.margin-top--10 {
+    margin-top: -10px;
+}
+
+.margin-top--23 {
+    margin-top: -23px;
+}
+
+.margin-top--27 {
+    margin-top: -27px;
+}
+
+.mtop--30 {
+    margin-top: -30px;
+}
+
+.margin-top-24 {
+    margin-top: 24px;
+}
+
+.margin-top-25 {
+    margin-top: 25px;
+}
+
+.margin-top-32 {
+    margin-top: 32px;
+}
+
+.margin-top-36 {
+    margin-top: 36px;
+}
+
+.margin-top-16rem {
+    margin-top: 16rem;
+}
+
+.margin-top-45 {
+    margin-top: 45px;
+}
+
+.margin-top-100 {
+    margin-top: 100px;
+}
+
+.margin-top--50 {
+    margin-top: -50px;
+}
+
+.margin-top--60 {
+    margin-top: -60px;
+}
+
+.margin-top--4 {
+    margin-top: -4px;
+}
+
+.margin-0-auto {
+    margin: 0px auto;
+}
+
+.margin-20-auto {
+    margin: 20px auto;
+}
+
+.margin-0060 {
+    margin: 0 0 6px 0;
+}
+
+.margin-25-0-0 {
+    margin: 25px 0 0;
+}
+
+.margin-left-1em {
+    margin-left: 1em;
+}
+
+.margin-left-3em {
+    margin-left: 3em;
+}
+
+.margin-left-0 {
+    margin-left: 0px;
+}
+
+.margin-left-3 {
+    margin-left: 3px;
+}
+
+.margin-left-4 {
+    margin-left: 4px;
+}
+
+.margin-left-5 {
+    margin-left: 5px;
+}
+
+.margin-left-8 {
+    margin-left: 8px;
+}
+
+.margin-left-10 {
+    margin-left: 10px;
+}
+
+.margin-left-15 {
+    margin-left: 15px;
+}
+
+.margin-left-32 {
+    margin-left: 32px;
+}
+
+.margin-left-46 {
+    margin-left: 46px;
+}
+
+.margin-left--12 {
+    margin-left: -12px;
+}
+
+.margin-bottom-1em {
+    margin-bottom: 1em;
+}
+
+.margin-bottom-24 {
+    margin-bottom: 24px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-25 {
+    margin-bottom: 25px;
+}
+
+.margin-bottom-12 {
+    margin-bottom: 12px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px !important;
+}
+
+.margin-bottom-8 {
+    margin-bottom: 8px;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px !important;
+}
+
+.margin-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0px;
+}
+
+.marginbottom--3 {
+    margin-bottom: -3px;
+}
+
+.margin-bottom--3 {
+    margin-bottom: -3px;
+}
+
+.margin-bottom--15 {
+    margin-bottom: -15px;
+}
+
+.mb--25 {
+    margin-bottom: -25px;
+}
+
+.margin-bottom--30 {
+    margin-bottom: -30px;
+}
+
+.margin-right-0 {
+    margin-right: 0px;
+}
+
+.margin-right-3 {
+    margin-right: 3px;
+}
+
+.margin-right-5 {
+    margin-right: 5px;
+}
+
+.m-r-10 {
+    margin-right: 10px;
+}
+
+.margin-right-14 {
+    margin-right: 14px;
+}
+
+.margin-right-15 {
+    margin-right: 15px;
+}
+
+.margin-right-18 {
+    margin-right: 18px;
+}
+
+.margin-right-50 {
+    margin-right: 50px;
+}
+
+.margin-1064 {
+    margin: -1px 0 6px 4px;
+}
+
+.margin-10-0 {
+    margin: 10px 0px;
+}
+
+.margin-34000 {
+    margin: 34px 0px 0px 0px;
+}
+
+.margin-8000 {
+    margin: 8px 0 0 0;
+}
+
+.margin-20100 {
+    margin: 2px 0 10px 0px;
+}
+
+.margin-000-3 {
+    margin: 0px 0px 0px -300px;
+}
+
+.my-15 {
+    margin: 15px 0;
+}
+
+/****************** BORDER CSS    ******************/
+.border-none {
+    border: none !important;
+}
+
+.border-none-imp {
+    border: none !important;
+}
+
+.border-2none {
+    border: 2px none;
+}
+
+.border1px-ddd {
+    border: 1px solid #ddd;
+}
+
+.border1px {
+    border: 1px solid;
+}
+
+.border1px-d2d6de {
+    border: 1px solid #d2d6de;
+}
+
+.border1px-ccc {
+    border: 1px solid #ccc;
+}
+
+.border2px-ccc {
+    border: 2px solid #ccc;
+}
+
+.border5px-ccc {
+    border: 5px solid #ccc;
+}
+
+.border-bottom-ececec {
+    border-bottom: 1px solid #ececec;
+}
+
+.border-bottom-b1b1b1 {
+    border-bottom: 1px solid #b1b1b1;
+}
+
+.border-bottom-f5f5 {
+    border-bottom: 4px solid #f5f5f5;
+}
+
+.border-bottom-n {
+    border-bottom: none;
+}
+
+.border-bottom-0 {
+    border-bottom: 0;
+}
+
+.border-ridge {
+    border-style: ridge;
+}
+
+.border-top-eee {
+    border-top: 1px solid #eee;
+}
+
+.border-collapse {
+    border-collapse: collapse;
+}
+
+.border-solid {
+    border: solid;
+}
+
+/****************** BORDER RADIUS CSS    ******************/
+.border-radius-0 {
+    border-radius: 0px;
+}
+
+.border-radius-10 {
+    border-radius: 10px;
+}
+
+.border-radius-20 {
+    border-radius: 20px;
+}
+
+
+/****************** OVERFLOW CSS    ******************/
+.overflow-y-scroll {
+    overflow-y: scroll;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-inherit {
+    overflow: inherit;
+}
+
+.overflow-initial-imp {
+    overflow: initial !important;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+/****************** CLEAR CSS    ******************/
+.clear-both {
+    clear: both;
+}
+
+
+/****************** VERTICAL ALIGN CSS    ******************/
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.v-a-mid-imp {
+    vertical-align: middle !important;
+}
+
+.vertical-align-top {
+    vertical-align: top;
+}
+
+/****************** LIST STYLE TYPE CSS    ******************/
+.list-style-circle {
+    list-style-type: circle;
+}
+
+.list-style-none {
+    list-style-type: none;
+}
+
+/****************** TEXT ALIGN CSS    ******************/
+.text-center-imp {
+    text-align: center !important;
+}
+
+.t-right {
+    text-align: right !important;
+}
+
+/****************** ZINDEX CSS    ******************/
+.z-index-99 {
+    z-index: 99;
+}
+
+.z-index-999 {
+    z-index: 999 !important;
+}
+
+.z-index-9999 {
+    z-index: 9999 !important;
+}
+/****************** WHITESPACE CSS    ******************/
+.white-space-nowrap {
+    white-space: nowrap;
+}
+
+/****************** FILTER CSS    ******************/
+
+.filter-invert22 {
+    filter: invert(22%) sepia(100%) saturate(3832%) hue-rotate(105deg) brightness(70%) contrast(107%);
+}
+
+.filter-invert36 {
+    filter: invert(36%) sepia(60%) saturate(3327%) hue-rotate(56deg) brightness(84%) contrast(90%);
+}
+/* **************** Line Height CSS ***************************** */
+.line-height-25 {
+    line-height: 25px;
+}
+
+.line-height-55 {
+    line-height: 55px;
+}
+/****************** RESIZE CSS    ******************/
+
+.resize-n {
+    resize: none;
+}
+
+.resize-b {
+    resize: both;
+}
+
+.resize-h {
+    resize: horizontal;
+}
+
+.resize-v {
+    resize: vertical;
+}
+
+.text-align-left {
+    text-align: left
+}
+
+/****************** FLEX CSS    ******************/
+.gap-10 {
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* **************** Stpl INLINE CSS CLASSES END HERE ***************************** */
+
+
+/* **************** Stpl CUSTOM CSS STARTS HERE ***************************** */
+
+.label-block label {
+    display: block;
+}
+
+.label-block .bootstrap-select {
+    width: 100%;
+}
+
+.aeetsInv-status .legand {
+    padding-top: 0 !important;
+}
+
+.runDownloadBox {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.trQuestn_comment select {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.trQuestn_comment {
+    position: relative;
+}
+
+    .trQuestn_comment img:not(.deficiency_triangle) {
+        position: absolute;
+        top: 8px;
+        left: -5px;
+    }
+
+.asset-dev-actn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.epbinder_small img {
+    width: 22px;
+}
+
+.binder-RightHeading .add_button_comman.tablelist-topform {
+    box-shadow: none;
+}
+
+.tablelist-topform .binderDocFil .dropdown-toggle {
+    border: none;
+}
+
+.top_menu .disabled .menu-sprite {
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+
+.imgPreviewBtn {
+    cursor: pointer;
+}
+
+.plus_icon_green {
+    background: url(/dist/Assets/images/details_open.png) no-repeat;
+    background-position: center;
+    min-width: 20px;
+    height: 20px;
+    background-size: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.minus_icon_red {
+    background: url(/dist/Assets/images/details_close.png) no-repeat;
+    background-position: center center;
+    min-width: 20px;
+    height: 20px;
+    background-size: 15px;
+}
+
+#partialContents .question_unsearched, #partialContents .category_unsearched {
+    display: none !important;
+}
+
+tr[isoffsiteassign="0"] .td_location {
+    pointer-events: none;
+}
+
+.show_vendor_user {
+    content: url("/dist/Assets/images/details_open.png");
+}
+
+    .show_vendor_user.open {
+        content: url("/dist/Assets/images/details_close.png");
+    }
+
+/*.offsiteDashMain.hideRow .profile_selection_type {
+    pointer-events: none;
+}*/
+
+.vendor_personnels {
+    margin-left: 30px;
+}
+
+.address_parent {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.profile_selection_type .dropdown-menu li:not(.dropdown-header) {
+    padding: inherit !important;
+}
+
+.contact_information {
+    border: 1px solid #aaa;
+    display: flex;
+    padding: 0 15px;
+    margin: 15px 0;
+}
+
+.contact_information_vendor {
+    display: block !important;
+}
+
+.contact_information .contact_information_in:first-child {
+    margin-right: 10px;
+    border-right: 1px solid #aaa;
+    padding-right: 10px;
+}
+
+.contact_information .contact_information_in {
+    width: calc(50% - 20px);
+}
+
+label.no_contact {
+    margin-left: 15px;
+}
+
+/*.parent_contact label {
+    font-weight: 500;
+}*/
+
+/*.icontact-col._border {
+    border-top: 1px solid #ccc;
+}*/
+
+.modalContactDetails-pop h3.contact_heading {
+    margin-bottom: 0px;
+    margin-top: 7px;
+    padding-left: 0;
+}
+
+.disable_user_assignments tr td:not(.cursor-pointer) {
+    opacity: .6;
+    cursor: default !important;
+    pointer-events: none;
+}
+
+.disable_user_assignments tr td.cursor-pointer {
+    opacity: 1;
+}
+
+.contact_information .form-inline label {
+    min-width: 60px;
+}
+
+.contact_information .form-inline textarea.form-control {
+    width: calc(100% - 80px);
+}
+
+/*  custom scrollbar */
+.custom-scrollbar {
+    max-height: 500px;
+    min-height: 500px;
+    overflow-y: auto;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f0f0f0;
+        border-radius: 5px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #555;
+        border-radius: 5px;
+    }
+
+.saferMatrix-body .vhighIsolated {
+    width: 180px;
+}
+
+/*.archivedEPReportTble .tableactions {
+    margin-top: -40px;
+}*/
+
+.archivedEPReportTble .epchapter-select {
+    z-index: 99;
+    padding-right: 8px;
+    /*margin-right: 210px;*/
+}
+/* **************** Stpl CUSTOM CSS END HERE ***************************** */

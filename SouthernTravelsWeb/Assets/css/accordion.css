@@ -1,0 +1,38 @@
+.accordionWrapper {
+	display:block; /*font-size: 11px; font-weight: normal; */
+}
+/*.accordionWrapper img{vertical-align:top; border:0; margin:0; padding:0;}*/
+.accordionWrapper div.title {
+	color:Aqua;/*#1c5e80;*/
+	text-decoration:none;
+	width:100%;
+	text-align:left;
+	
+}
+.accordionWrapper div.title a{text-decoration:none!important;}
+
+.accordionWrapper div.content {
+	display:none;
+	background: #eee
+}
+.accordionWrapper div.content div.title {
+	line-height: 24px;
+	height:auto;
+}
+
+.accordionWrapper Table {
+	width: 100%;
+}
+.accordionWrapper .content Table {
+	width: 100%;
+}
+.accordionWrapper .content Table .title {
+	background: none;
+	font-weight: normal;
+}
+.accordionWrapper .accordionNestedChild {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
