@@ -129,6 +129,9 @@
     <Content Include="Assets\js\language.js" />
     <Content Include="Assets\js\myJs.js" />
     <Content Include="Assets\js\owl-carousel\owl.carousel.min.js" />
+    <Content Include="AsyncPages\Blogs.aspx" />
+    <Content Include="AsyncPages\FixedTourLists.aspx" />
+    <Content Include="AsyncPages\News.aspx" />
     <Content Include="Car-Coach-Rental.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -258,6 +261,27 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="AsyncPages\Blogs.aspx.cs">
+      <DependentUpon>Blogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AsyncPages\Blogs.aspx.designer.cs">
+      <DependentUpon>Blogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AsyncPages\FixedTourLists.aspx.cs">
+      <DependentUpon>FixedTourLists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AsyncPages\FixedTourLists.aspx.designer.cs">
+      <DependentUpon>FixedTourLists.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AsyncPages\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AsyncPages\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BLL\clsBLL.cs" />
     <Compile Include="BLL\ClsCommon.cs" />
     <Compile Include="BLL\DataLib.cs" />
@@ -278,6 +302,7 @@
     <Compile Include="DAL\CaptchaImage.cs" />
     <Compile Include="DAL\DbObjects\StoredProcedures.cs" />
     <Compile Include="DAL\DbObjects\Functions.cs" />
+    <Compile Include="DAL\SqlDb.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -15,11 +15,10 @@ namespace SouthernTravelsWeb.DAL.DbObjects
         public const string GetTourS_Search_SP = "GetTourS_Search_SP";
         public const string GetSpecialTourJourneyDate_SP = "GetSpecialTourJourneyDate_SP";
         public const string GetLastJourneyDateAll_SP = "GetLastJourneyDateAll_SP";
-        public const string fnGetTourItenerary = "fnGetTourItenerary";
+        public const string TourItenerary_SP = "TourItenerary_SP";
         public const string GetTourList_By_Start_Region = "GetTourList_By_Start_Region";
         public const string GetTourListSearchWithPagging_SP = "GetTourListSearchWithPagging_SP";
         public const string GetTourItinerary_Meal_sp = "GetTourItinerary_Meal_sp";
-        public const string TourItenerary_SP = "TourItenerary_SP";
         public const string sp_GetCityDetail = "sp_GetCityDetail";
         public const string GetMetTagForTours_sp = "GetMetTagForTours_sp";
         public const string sp_tbl_intquery = "sp_tbl_intquery";

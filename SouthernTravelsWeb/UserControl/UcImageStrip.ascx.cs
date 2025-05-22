@@ -19,7 +19,6 @@ namespace SouthernTravelsWeb.UserControl
 
         TOURTYPE pvTourType;
         int pvTourID;
-        protected string connectionString;
 
         #endregion
         #region "Property(s)"
@@ -67,7 +66,6 @@ namespace SouthernTravelsWeb.UserControl
         {
             fldImgIntImagesStrip = BindTourStrip();
             litImgIntImagesStrip.Text = fldImgIntImagesStrip;
-            connectionString = ConfigurationManager.AppSettings["southernconn"];
 
         }
         #endregion
@@ -80,14 +78,17 @@ namespace SouthernTravelsWeb.UserControl
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(DataLib.getConnectionString()))
                 {
-                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.fnGetTourItenerary, conn))
+                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.TourItenerary_SP, conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@TourID", fldTourID);
-                        cmd.Parameters.AddWithValue("@TourType", Convert.ToInt32(fldTourType));
+                        cmd.Parameters.AddWithValue("@I_TourType", (int)fldTourType);
+                        cmd.Parameters.AddWithValue("@I_TourID", fldTourID);
 
+                        SqlParameter returnValue = new SqlParameter("@O_ReturnValue", SqlDbType.Int);
+                        returnValue.Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add(returnValue);
                         conn.Open();
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {

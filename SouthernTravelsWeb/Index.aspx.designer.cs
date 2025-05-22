@@ -87,15 +87,6 @@ namespace SouthernTravelsWeb
         protected global::SouthernTravelsWeb.UserControl.UcQuickSearch ucQuickSearch;
 
         /// <summary>
-        /// UcNewsNotification1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::SouthernTravelsWeb.UserControl.UcNewsNotification UcNewsNotification1;
-
-        /// <summary>
         /// ucFixedTourDelhi control.
         /// </summary>
         /// <remarks>
@@ -184,15 +175,6 @@ namespace SouthernTravelsWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::SouthernTravelsWeb.UserControl.UcImageStrip UCImageStrip5;
-
-        /// <summary>
-        /// ucBlog1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::SouthernTravelsWeb.UserControl.UcBlog ucBlog1;
 
         /// <summary>
         /// UCFooter control.
