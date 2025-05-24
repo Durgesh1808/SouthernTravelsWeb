@@ -453,14 +453,7 @@
           <li><a class="gplus" href="https://plus.google.com/b/105500167792879378506/105500167792879378506/posts">Google+</a></li>
           <li><a class="yt" href="https://www.youtube.com/southerntravels">YouTube</a></li>
         </ul>
-       <%-- <ul class="footer-social-links">
-<li><a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=https%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/facebook.png" border="0" alt="Facebook"/> Facebook</a>
-</li><li><a  href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=https%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter"/> Twitter</a>
-</li><li><a href="https://api.addthis.com/oexchange/0.8/forward/email/offer?url=https%3A%2F%2Fwww.addthis.com&pubid=ra-5073e7951ddeab53&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email"/> Email</a>
-</li><li><a href="https://api.addthis.com/oexchange/0.8/forward/print/offer?url=https%3A%2F%2Fwww.addthis.com&pubid=ra-5073e7951ddeab53&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/print.png" border="0" alt="Print"/> Print</a>
-</li><li><a href="https://www.addthis.com/bookmark.php?source=tbx32nj-1.0&v=300&url=https%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/addthis.png" border="0" alt="Addthis"/></a>
-</li></ul>
-                    <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5073e7951ddeab53"></script>--%>
+   
                     </div>
                   </div>
                 </div>
@@ -481,8 +474,8 @@
           <li><a href="News-Events.aspx">News & Media</a></li>
           <li><a href="Career.aspx">Careers</a></li>
           <li><a href="Company-Profile.aspx?Check=csr">Plant a Tree Program</a></li>
-          <li><a href="https://www.southerntravelsindia.com/flipbook/Domestic/Domestic_2019.pdf" target="_blank">Domestic e-brochure</a></li>
-          <li><a href="https://www.southerntravelsindia.com/flipbook/International/Complete_International_Brochure-2020.pdf" target="_blank">International e-brochure</a></li>
+          <li><a href="https://www.southerntravelsindia.com/flipbook/Domestic/Domestic_e-Brochure.pdf" target="_blank">Domestic e-brochure</a></li>
+          <li><a href="https://www.southerntravelsindia.com/flipbook/International/International_e-Brochure.pdf" target="_blank">International e-brochure</a></li>
           <li><a href="Company-Profile.aspx?Check=Award">Award & Accolades</a></li>
           <li><a href="CustomerLogin.aspx?LIN=1&Type=A">Agent Login</a></li>
         </ul>
@@ -553,14 +546,7 @@
 </a></li>
           <li class="footer_app_icon"><a href="https://itunes.apple.com/us/app/southern-travels/id1434666186?mt=8" target="_blank"><img src="Assets/images/icon_ios.png"   loading="lazy"/></a></li>
         </ul>
-        <%--<ul class="footer-social-links">
-<li><a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=https%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/facebook.png" border="0" alt="Facebook"/> Facebook</a>
-</li><li><a  href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=https%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter"/> Twitter</a>
-</li><li><a href="https://api.addthis.com/oexchange/0.8/forward/email/offer?url=https%3A%2F%2Fwww.addthis.com&pubid=ra-5073e7951ddeab53&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email"/> Email</a>
-</li><li><a href="https://api.addthis.com/oexchange/0.8/forward/print/offer?url=https%3A%2F%2Fwww.addthis.com&pubid=ra-5073e7951ddeab53&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/print.png" border="0" alt="Print"/> Print</a>
-</li><li><a href="https://www.addthis.com/bookmark.php?source=tbx32nj-1.0&v=300&url=https%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/addthis.png" border="0" alt="Addthis"/></a>
-</li></ul>
-                    <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5073e7951ddeab53"></script>--%>
+    
       </div>
     </div>
   </div>
@@ -788,7 +774,7 @@
         </div>
     </div>
 </div>
-<div id="back-top">
+<div id="back-top" style=" margin-bottom: 24px;">
     <a href="#top">
         <img src="Assets/images/back-top.png" loading="lazy"><br>Back to Top</div>
 

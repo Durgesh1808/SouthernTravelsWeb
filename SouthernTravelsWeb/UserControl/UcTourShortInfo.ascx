@@ -148,243 +148,6 @@
       
 </script>
 
-<script type="text/javascript">
-    //=================================================Map Display==================================================================
-    //        function ResizeMap() {
-
-
-    //            OldMapCenter = map.GetCenter();
-
-    //            //Find Browser Window Size
-
-    //            var myWidth = 0, myHeight = 0;
-
-
-    //            myWidth = document.documentElement.clientWidth;
-
-    //            myHeight = document.documentElement.clientHeight;
-    //            //alert(myHeight);
-    //            map.Resize(myWidth, myHeight);
-
-    //            map.PanToLatLong(OldMapCenter);
-    //        }
-
-
-
-    //        function GetMap() {
-
-    //            //=================================================Route Map Display==================================================================
-    //                var Route ="";
-    //                Route =document.getElementById("<%=hdGeoCode.ClientID  %>").value ;// '27.191930770874,77.9975280761719@@27.4930095672607,77.6729736328125';
-    //                var RoutepUs =document.getElementById("<%=hdRoutepUs.ClientID  %>").value ;
-    //                
-    //                
-    //                if (RoutepUs == '2') {
-    //                    var sInfo="";
-    //                    var Route2 = "";
-    //                    map = new VEMap('myMap');
-    //                    var Route1 = Route.split('@');
-    //                    var points = new Array();
-    //                    for (i = 0; i < Route1.length; i++) {
-    //                        points[i] = Route1[i];
-
-    //                    }
-    //                    var latlong = Route;
-    //                    var locs = new Array;
-    //                    var pushpins = latlong.split('@');
-    //                     var Company = document.getElementById("<%=hdCity.ClientID  %>").value;
-    //                       Company = Company.split('@');
-    //                    for (i = 0; i < pushpins.length; i++) {
-
-    //                        var items = pushpins[i].split(',');
-    //                        
-    //                        lat = parseFloat(items[0]);
-    //                        longi = parseFloat(items[1]);
-    //                        pinPosition = new VELatLong(lat, longi);
-    //                         sInfo += 'City: ' + Company[i] + '</br>' + lat + ', ' + longi;
-    //                        locs.push(pinPosition);
-
-    //                    }
-    //                    
-    //                    map.LoadMap(pinPosition, 4);
-    //                
-    //               
-
-    //                    pinPosition = new VELatLong(lat, longi);
-    //                   // locs.push(pinPosition);
-    //                    map.LoadMap(pinPosition, 8);
-
-
-    //                    shape = new VEShape(VEShapeType.Pushpin, pinPosition);
-
-    //                    
-    //                    shape.SetTitle("City Information");
-
-    //                    
-    //                    var Path = "<img alt='' src='images/pin.png' />";
-    //                    
-    //                    //shape.SetCustomIcon("<div style=' background-color:Transparent; background-image:url(" + Path + ");cursor: default;'></div> ");
-    //                    shape.SetCustomIcon("<div style='position: relative;background-color: #DD3E21;height: 25px; width: 25px;  top: -15px;  color: #fff; text-align: center; font: bold 12px Arial;cursor: pointer;' ><div style=' position: relative;top: 2px;'>1 </div>  <div style='position: relative; top: 7px; '>" + Path + " </div></div>");
-    //                    shape.SetDescription("<div id='myDiv' style='color:gray;font-family:arial;'>" + sInfo + "</div>");
-
-
-
-    //                    map.AddShape(shape);
-
-    //                }
-    //                else
-    //                {
-    //                    var Route2 = "";
-    //                    map = new VEMap('myMap');
-    //                    //window.onresize = ResizeMap;
-    //                    var Route1 = Route.split('@');
-    //                    var points = new Array();
-    //                    for (i = 0; i < Route1.length; i++) {
-    //                        points[i] = Route1[i];
-
-    //                    }
-    //                    var latlong = Route;
-    //                    var locs = new Array;
-    //                    var pushpins = latlong.split('@');
-    //                    for (i = 0; i < pushpins.length; i++) {
-
-    //                        var items = pushpins[i].split(',');
-    //                        //alert(items);
-    //                        lat = parseFloat(items[0]);
-    //                        longi = parseFloat(items[1]);
-    //                        pinPosition = new VELatLong(lat, longi);
-    //                        locs.push(pinPosition);
-
-    //                    }
-    //                    //map.onLoadMap = showContent();
-    //                    map.LoadMap();
-
-    //                    var options = new VERouteOptions();
-    //                    options.RouteOptimize = VERouteOptimize.MinimizeDistance;
-    //                   
-    //                    options.RouteCallback = ShowTurns;
-    //                    map.GetDirections(points, options);
-    //                    DoBestMap(locs);
-    //                }
-    //        }
-    //        function ShowTurns(route) {
-    //            // Unroll route and populate DIV
-    //            var legs = route.RouteLegs;
-    //            var leg = null;
-    //            var turns = null;
-
-    //           
-    //            var Path = "Images/Printpin.png";
-
-    //            var tranImg = "Images/transparent.png";
-
-    //            var Alpha = document.getElementById("<%=hdAlpha.ClientID  %>").value;
-    //            var Alpha2 = "";
-    //            var Alpha1 = Alpha.split('@');
-
-    //           
-
-    //            var count = 0;
-    //          
-    //            // Get intermediate legs
-    //            var ctr = 0;
-
-    //            var latlong =  document.getElementById("<%=hdGeoCode.ClientID  %>").value;
-    //            var ConInfo = document.getElementById("<%=hdCity.ClientID  %>").value;
-
-    //            var pushpins = latlong.split('@');
-    //            var ConInfo1 = ConInfo.split('@');
-
-    //            var Company = document.getElementById("<%=hdCity.ClientID  %>").value;
-    //            Company = Company.split('@');
-    //            
-    //            for (var i = 0; i < legs.length; i++) {
-
-    //                leg = legs[i];
-    //              
-    //                // Unroll each intermediate leg
-    //                var turn = null;  // The itinerary leg
-    //                var legDistance = null;  // The distance for this leg
-
-    //                var items = pushpins[i].split(',');
-    //                lat = parseFloat(items[0]);
-    //                longi = parseFloat(items[1]);
-
-    //                //var items1 = ConInfo1[i].split(';');
-    //                //var items2 = items1[1].split(',');
-    //                var sInfo = 'City: ' + Company[i] + '</br>' + lat + ', ' + longi;
-
-    //                //turn.Shapes.SetTitle("Contact Information");
-
-
-    //                for (var j = 0; j < leg.Itinerary.Items.length; j++) {
-
-    //                    turn = leg.Itinerary.Items[j];  // turn is a VERouteItineraryItem object
-    //                    if (count != 1) {
-
-    //                       
-    //                        //turn.Shapes.SetTitle("Contact Information");
-    //                        turn.Shape.SetCustomIcon("<div style='position: relative; background-color:Transparent; background-image:url(" + Path + "); height: 38px; width: 24px; top: -15px; color:Black; text-align: center; font: bold 12px Arial;cursor: hand;'> <div style='position: relative; top: 5px; right:1px;'>" + Alpha1[ctr] + "</div>   </div> ");
-    //                        //
-    //                        if (count == 0) {
-    //                            turn.Shape.SetTitle("City Information (Start)");
-    //                        }
-    //                        else {
-    //                            turn.Shape.SetTitle("City Information");
-    //                        }
-    //                        turn.Shape.SetDescription("<div id='myDiv' style='color:gray;font-family:arial;'>" + sInfo + "</div>");
-    //                                              
-    //                        count = 1;
-    //                    }
-    //                    else {
-    //                        turn.Shape.SetCustomIcon("<div style=' background-color:Transparent; background-image:url(" + tranImg + ");cursor: default;'></div> ");
-
-    //                    }
-
-    //                  
-    //                }
-    //                ctr = ctr + 1;
-    //                count = 2;
-    //                if (ctr == legs.length) {
-    //                    items = pushpins[legs.length].split(',');
-    //                    lat = parseFloat(items[0]);
-    //                    longi = parseFloat(items[1]);
-
-    //                    //items1 = ConInfo1[legs.length].split(';');
-    //                    //items2 = items1[1].split(',');
-    //                   //sInfo = items1[0] + '<br> ' + items2[0] + ', ' + items2[1] + ', ' + items2[2] + '</br>Company: ' + Company[legs.length] + '</br>' + lat + ', ' + longi;
-    //                     sInfo = 'City: ' + Company[legs.length] + '</br>' + lat + ', ' + longi;
-
-    //                    turn.Shape.SetCustomIcon("<div style='position: relative; background-color:Transparent; background-image:url(" + Path + "); height: 38px; width: 24px; top: -15px; color:Black; text-align: center; font: bold 12px Arial;cursor: hand;'> <div style='position: relative; top: 5px; right:1px;'>" + Alpha1[ctr] + "</div>   </div> ");
-    //                    turn.Shape.SetTitle("City Information (End)");
-    //                    turn.Shape.SetDescription("<div id='myDiv' style='color:gray;font-family:arial;'>" + sInfo + "</div>");
-    //                }
-    //            }
-
-    //        }
-    //        function virtualearth_preload() {
-
-    //            if (window.VEMap) {
-    //                return;
-    //            }
-
-
-    //            var compat_script_url = "http://ecn.dev.virtualearth.net/mapcontrol/v6.3/js/atlascompat.js";
-    //            var main_script_url = "http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3";
-
-    //            if (!(window.attachEvent)) {
-    //                $.ajax({ type: "GET", url: compat_script_url, success: function() {
-    //                    $.ajax({ type: "GET", url: main_script_url, success: function() { GetMap(); }, dataType: "script", cache: true });
-    //                }, dataType: "script", cache: true
-    //                });
-    //            } else {
-    //                $.ajax({ type: "GET", url: main_script_url, success: function() { GetMap(); }, dataType: "script", cache: true });
-    //            }
-
-
-    //        }
-    //=================================================Best Map view Display==================================================================
-</script>
 
 <script type="text/javascript">
     function PrintPage() {
@@ -417,13 +180,7 @@
                       {%>
                 <span class = "smallheadtxt">(Operated by Andhra Pradesh Tourism Development Corp. Govt. of A.P.)</span>
                 <%} %>
-                <%--<asp:Literal ID="lblCoachDetails" runat="server"></asp:Literal>BY AC VOLVO--%>
-                <%--<ul class="sharelist">
-        <li><a href="https://www.facebook.com/SouthernTravels/" target="_blank" class="fb"></a></li>
-        <li><a href="https://twitter.com/happyholidaying"  target="_blank" class="tw"></a></li>
-        <li><a href="https://plus.google.com/b/105500167792879378506/105500167792879378506/posts"  target="_blank" class="gplus"></a></li>
-        <li><a href="#" class="more"></a></li>
-        </ul>--%>
+              
                 <ul class="sharelist hideonmobile">
                     <li><a class="addthis_button_preferred_1"></a></li>
                     <li><a class="addthis_button_preferred_2"></a></li>
@@ -431,18 +188,8 @@
                     <li><a class="addthis_button_preferred_4"></a></li>
                     <li><a class="addthis_button_compact"></a></li>
                     <li><a class="addthis_counter addthis_bubble_style"></a></li></ul>
-<!-- Go to www.addthis.com/dashboard to generate a new set of sharing buttons -->
-<!-- Go to www.addthis.com/dashboard to generate a new set of sharing buttons -->
-<!-- Go to www.addthis.com/dashboard to generate a new set of sharing buttons -->
 
-<%--<ul class="sharelist  hideonmobile">
-<li><a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
-</li><li><a href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter"/></a>
-</li><li><a href="https://api.addthis.com/oexchange/0.8/forward/email/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-5073e7951ddeab53&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email"/></a>
-</li><li><a href="https://api.addthis.com/oexchange/0.8/forward/print/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-5073e7951ddeab53&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/print.png" border="0" alt="Print"/></a>
-</li><li><a href="https://www.addthis.com/bookmark.php?source=tbx32nj-1.0&v=300&url=http%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/addthis.png" border="0" alt="Addthis"/></a>
-</li></ul>--%>
-                    <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5073e7951ddeab53"></script>
+<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5073e7951ddeab53"></script>
 
                
             </h1>
@@ -606,7 +353,7 @@
 
         <script type="text/javascript">
             var PathL = "<center><img alt='' src='";
-            PathL += "Images/loader.gif'/><br/></center>";
+            PathL += "/Assets/images/loader.gif'/><br/></center>";
             document.write('<div id="loading" style="position: absolute; float: right; z-index: 2; margin-left: 110px; margin-top:100px;"> ' + PathL + '</div>');
         </script>
 
@@ -620,38 +367,7 @@
       </div>
       <%} %>
       </section>
-            <%-- <section>
-      	<div class="youmaylike">
-        <h2 class="title">You May Also <span>Like</span></h2>
-        	<!-- slider -->
-            <!-- <img src="images/youmaylike/1.jpg" class="img-responsive"> -->
-            
-             <div id="like-slider" class="owl-carousel">
-          <div class="item"> 
-          <img src="images/youmaylike/1.jpg" alt="Touch">
-            
-          </div>
-           <div class="item"> 
-         <img src="images/youmaylike/1.jpg" alt="Touch">
           
-          </div>
-          
-           <div class="item"> 
-          <img src="images/youmaylike/1.jpg" alt="Touch">
-           
-          </div>
-          
-        </div>
-            
-        </div>
-      </section>
-            <section>
-      	<div class="sploffer">
-        <h2 class="title">Hot <span>Deals</span></h2>
-        	<!-- slider -->
-            <img src="images/spl-offer.jpg" class="img-responsive">
-        </div>
-      </section>--%>
             <section>
       	<div class="latestblogs">
       	

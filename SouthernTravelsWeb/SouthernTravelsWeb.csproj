@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AgentRegistrationEnq.aspx" />
     <Content Include="Assets\css\animate.css" />
     <Content Include="Assets\css\bootstrap-datepicker.css" />
     <Content Include="Assets\css\bootstrap-select.css" />
@@ -133,6 +134,9 @@
     <Content Include="AsyncPages\FixedTourLists.aspx" />
     <Content Include="AsyncPages\News.aspx" />
     <Content Include="Car-Coach-Rental.aspx" />
+    <Content Include="Career.aspx" />
+    <Content Include="company-profile.aspx" />
+    <Content Include="contact-us.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -151,17 +155,30 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CustomerLogin.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Enquiryform.aspx" />
+    <Content Include="FAQs.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="Feedback.aspx" />
+    <Content Include="FixedTouritinerary.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HolidayPackages.aspx" />
+    <Content Include="Hotel-southern.aspx" />
+    <Content Include="HotelRegistration.aspx" />
     <Content Include="HotelsInIndia.aspx" />
+    <Content Include="HtmlPages\mailer\forgotpass.html" />
     <Content Include="HtmlPages\SouthernTravels.htm" />
     <Content Include="Index.aspx" />
     <Content Include="India-Tour-Packages.aspx" />
+    <Content Include="International-GroupDeparture.aspx" />
+    <Content Include="International-Packages.aspx" />
+    <Content Include="International-Terms-Conditions.aspx" />
     <Content Include="IntItenaryDetails.aspx" />
     <Content Include="JpegImage.aspx" />
     <Content Include="LFC-Home.aspx" />
+    <Content Include="News-Events.aspx" />
+    <Content Include="PrivacyPolicy.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -218,11 +235,17 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="site-map.aspx" />
     <Content Include="Site.Master" />
     <Content Include="HtmlPages\SouthernTravelHotels.htm" />
+    <Content Include="Terms-Conditions.aspx" />
     <Content Include="UserControl\UcBlog.ascx" />
     <Content Include="UserControl\UcBlogInnerPages.ascx" />
     <Content Include="UserControl\UcCarCoachRental.ascx" />
+    <Content Include="UserControl\UcCityWisePlaceDisplay.ascx" />
+    <Content Include="UserControl\UcCustomerLeft.ascx" />
+    <Content Include="UserControl\UcEntityImgSlider.ascx" />
+    <Content Include="UserControl\UcFarePanel.ascx" />
     <Content Include="UserControl\UcFixedTourList.ascx" />
     <Content Include="UserControl\UcFlightSearch.ascx" />
     <Content Include="UserControl\UcFooterEndUser.ascx" />
@@ -233,6 +256,7 @@
     <Content Include="UserControl\UcImageStrip.ascx" />
     <Content Include="UserControl\UcIntLeftUC.ascx" />
     <Content Include="UserControl\UcMatchingTour.ascx" />
+    <Content Include="UserControl\UcModifySearch.ascx" />
     <Content Include="UserControl\UcNewsNotification.ascx" />
     <Content Include="UserControl\UcNewsUpdateShow.ascx" />
     <Content Include="UserControl\UCPaymentOptionNetBanking.ascx" />
@@ -252,6 +276,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgentRegistrationEnq.aspx.cs">
+      <DependentUpon>AgentRegistrationEnq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentRegistrationEnq.aspx.designer.cs">
+      <DependentUpon>AgentRegistrationEnq.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -292,12 +323,40 @@
     <Compile Include="Car-Coach-Rental.aspx.designer.cs">
       <DependentUpon>Car-Coach-Rental.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Career.aspx.cs">
+      <DependentUpon>Career.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Career.aspx.designer.cs">
+      <DependentUpon>Career.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="company-profile.aspx.cs">
+      <DependentUpon>company-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="company-profile.aspx.designer.cs">
+      <DependentUpon>company-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact-us.aspx.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact-us.aspx.designer.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerLogin.aspx.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerLogin.aspx.designer.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\CaptchaImage.cs" />
     <Compile Include="DAL\DbObjects\StoredProcedures.cs" />
@@ -311,14 +370,44 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="DTO\ClsBlog.cs" />
+    <Compile Include="DTO\FeedBackHierarchy_spResult.cs" />
     <Compile Include="DTO\GetTourItinerary_Meal_spResult.cs" />
     <Compile Include="DTO\GetTourList_By_Start_RegionResult.cs" />
     <Compile Include="DTO\GetTourPlaceInfo_SPResult.cs" />
+    <Compile Include="DTO\Get_Fare_Panel_IsQuery_spResult.cs" />
     <Compile Include="DTO\MealPlan.cs" />
     <Compile Include="DTO\TourItenerary_SPResult.cs" />
     <Compile Include="DTO\TourModel.cs" />
+    <Compile Include="Enquiryform.aspx.cs">
+      <DependentUpon>Enquiryform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enquiryform.aspx.designer.cs">
+      <DependentUpon>Enquiryform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQs.aspx.cs">
+      <DependentUpon>FAQs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQs.aspx.designer.cs">
+      <DependentUpon>FAQs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FetchRecordsHandler.ashx.cs">
       <DependentUpon>FetchRecordsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FixedTouritinerary.aspx.cs">
+      <DependentUpon>FixedTouritinerary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FixedTouritinerary.aspx.designer.cs">
+      <DependentUpon>FixedTouritinerary.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -329,6 +418,20 @@
     </Compile>
     <Compile Include="HolidayPackages.aspx.designer.cs">
       <DependentUpon>HolidayPackages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel-southern.aspx.cs">
+      <DependentUpon>Hotel-southern.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel-southern.aspx.designer.cs">
+      <DependentUpon>Hotel-southern.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HotelRegistration.aspx.cs">
+      <DependentUpon>HotelRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HotelRegistration.aspx.designer.cs">
+      <DependentUpon>HotelRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="HotelsInIndia.aspx.cs">
       <DependentUpon>HotelsInIndia.aspx</DependentUpon>
@@ -351,6 +454,27 @@
     <Compile Include="India-Tour-Packages.aspx.designer.cs">
       <DependentUpon>India-Tour-Packages.aspx</DependentUpon>
     </Compile>
+    <Compile Include="International-GroupDeparture.aspx.cs">
+      <DependentUpon>International-GroupDeparture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="International-GroupDeparture.aspx.designer.cs">
+      <DependentUpon>International-GroupDeparture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="International-Packages.aspx.cs">
+      <DependentUpon>International-Packages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="International-Packages.aspx.designer.cs">
+      <DependentUpon>International-Packages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="International-Terms-Conditions.aspx.cs">
+      <DependentUpon>International-Terms-Conditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="International-Terms-Conditions.aspx.designer.cs">
+      <DependentUpon>International-Terms-Conditions.aspx</DependentUpon>
+    </Compile>
     <Compile Include="IntItenaryDetails.aspx.cs">
       <DependentUpon>IntItenaryDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -372,7 +496,28 @@
     <Compile Include="LFC-Home.aspx.designer.cs">
       <DependentUpon>LFC-Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="News-Events.aspx.cs">
+      <DependentUpon>News-Events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News-Events.aspx.designer.cs">
+      <DependentUpon>News-Events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="site-map.aspx.cs">
+      <DependentUpon>site-map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site-map.aspx.designer.cs">
+      <DependentUpon>site-map.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -386,6 +531,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Terms-Conditions.aspx.cs">
+      <DependentUpon>Terms-Conditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terms-Conditions.aspx.designer.cs">
+      <DependentUpon>Terms-Conditions.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UcBlog.ascx.cs">
       <DependentUpon>UcBlog.ascx</DependentUpon>
@@ -407,6 +559,34 @@
     </Compile>
     <Compile Include="UserControl\UcCarCoachRental.ascx.designer.cs">
       <DependentUpon>UcCarCoachRental.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCityWisePlaceDisplay.ascx.cs">
+      <DependentUpon>UcCityWisePlaceDisplay.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCityWisePlaceDisplay.ascx.designer.cs">
+      <DependentUpon>UcCityWisePlaceDisplay.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCustomerLeft.ascx.cs">
+      <DependentUpon>UcCustomerLeft.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCustomerLeft.ascx.designer.cs">
+      <DependentUpon>UcCustomerLeft.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcEntityImgSlider.ascx.cs">
+      <DependentUpon>UcEntityImgSlider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcEntityImgSlider.ascx.designer.cs">
+      <DependentUpon>UcEntityImgSlider.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcFarePanel.ascx.cs">
+      <DependentUpon>UcFarePanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcFarePanel.ascx.designer.cs">
+      <DependentUpon>UcFarePanel.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UcFixedTourList.ascx.cs">
       <DependentUpon>UcFixedTourList.ascx</DependentUpon>
@@ -477,6 +657,13 @@
     </Compile>
     <Compile Include="UserControl\UcMatchingTour.ascx.designer.cs">
       <DependentUpon>UcMatchingTour.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcModifySearch.ascx.cs">
+      <DependentUpon>UcModifySearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcModifySearch.ascx.designer.cs">
+      <DependentUpon>UcModifySearch.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UcNewsNotification.ascx.cs">
       <DependentUpon>UcNewsNotification.ascx</DependentUpon>

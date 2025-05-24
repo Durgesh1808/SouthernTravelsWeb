@@ -1,0 +1,4339 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DocumentElement>
+  <FixedFarePanel>
+    <PanelID>1</PanelID>
+    <RowID>130</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>300</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>1</SeasonID>
+    <TourName>Delhi City Tour</TourName>
+    <TourNo>11</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>2</PanelID>
+    <RowID>7222</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>300</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>2</SeasonID>
+    <TourName>Delhi City Tour</TourName>
+    <TourNo>11</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>3</PanelID>
+    <RowID>328</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>425</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>1</SeasonID>
+    <TourName>Delhi City Tour</TourName>
+    <TourNo>11</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>4</PanelID>
+    <RowID>7224</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>425</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>2</SeasonID>
+    <TourName>Delhi City Tour</TourName>
+    <TourNo>11</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>5</PanelID>
+    <RowID>131</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>300</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>1</SeasonID>
+    <TourName>Delhi City Tour</TourName>
+    <TourNo>11</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>6</PanelID>
+    <RowID>7223</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>300</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>2</SeasonID>
+    <TourName>Delhi City Tour</TourName>
+    <TourNo>11</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>7</PanelID>
+    <RowID>329</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>425</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>1</SeasonID>
+    <TourName>Delhi City Tour</TourName>
+    <TourNo>11</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>8</PanelID>
+    <RowID>7225</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>425</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>2</SeasonID>
+    <TourName>Delhi City Tour</TourName>
+    <TourNo>11</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>9</PanelID>
+    <RowID>154</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>800</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>7</SeasonID>
+    <TourName>Agra-Mathura</TourName>
+    <TourNo>13</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>10</PanelID>
+    <RowID>152</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>8</SeasonID>
+    <TourName>Agra-Mathura</TourName>
+    <TourNo>13</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>11</PanelID>
+    <RowID>7214</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>7</SeasonID>
+    <TourName>Agra-Mathura</TourName>
+    <TourNo>13</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>12</PanelID>
+    <RowID>7234</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>8</SeasonID>
+    <TourName>Agra-Mathura</TourName>
+    <TourNo>13</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>13</PanelID>
+    <RowID>155</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>800</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>7</SeasonID>
+    <TourName>Agra-Mathura</TourName>
+    <TourNo>13</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>14</PanelID>
+    <RowID>153</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>8</SeasonID>
+    <TourName>Agra-Mathura</TourName>
+    <TourNo>13</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>15</PanelID>
+    <RowID>7215</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>7</SeasonID>
+    <TourName>Agra-Mathura</TourName>
+    <TourNo>13</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>16</PanelID>
+    <RowID>7235</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>8</SeasonID>
+    <TourName>Agra-Mathura</TourName>
+    <TourNo>13</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>17</PanelID>
+    <RowID>158</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>11</SeasonID>
+    <TourName>Haridwar-Rishikesh</TourName>
+    <TourNo>14</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>18</PanelID>
+    <RowID>288</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>1000</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>12</SeasonID>
+    <TourName>Haridwar-Rishikesh</TourName>
+    <TourNo>14</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>19</PanelID>
+    <RowID>7236</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>12</SeasonID>
+    <TourName>Haridwar-Rishikesh</TourName>
+    <TourNo>14</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>20</PanelID>
+    <RowID>159</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>11</SeasonID>
+    <TourName>Haridwar-Rishikesh</TourName>
+    <TourNo>14</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>21</PanelID>
+    <RowID>289</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>1000</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>12</SeasonID>
+    <TourName>Haridwar-Rishikesh</TourName>
+    <TourNo>14</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>22</PanelID>
+    <RowID>7237</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>12</SeasonID>
+    <TourName>Haridwar-Rishikesh</TourName>
+    <TourNo>14</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>23</PanelID>
+    <RowID>221</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>13400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-07-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>May-2013 To Jul-2013</Season>
+    <SeasonID>25</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>24</PanelID>
+    <RowID>226</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>12400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-09-30T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Aug-2013 To Sep-2013</Season>
+    <SeasonID>26</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>25</PanelID>
+    <RowID>221</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>13400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>25</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>26</PanelID>
+    <RowID>220</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>13900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-07-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>May-2013 To Jul-2013</Season>
+    <SeasonID>25</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>27</PanelID>
+    <RowID>225</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>12900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-09-30T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Aug-2013 To Sep-2013</Season>
+    <SeasonID>26</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>28</PanelID>
+    <RowID>220</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>13900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>25</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>29</PanelID>
+    <RowID>222</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>12400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-07-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>May-2013 To Jul-2013</Season>
+    <SeasonID>25</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>30</PanelID>
+    <RowID>227</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>11400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-09-30T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Aug-2013 To Sep-2013</Season>
+    <SeasonID>26</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>31</PanelID>
+    <RowID>222</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>12400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>25</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>32</PanelID>
+    <RowID>224</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-07-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>May-2013 To Jul-2013</Season>
+    <SeasonID>25</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>33</PanelID>
+    <RowID>229</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-09-30T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Aug-2013 To Sep-2013</Season>
+    <SeasonID>26</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>34</PanelID>
+    <RowID>224</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>25</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>35</PanelID>
+    <RowID>223</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>17400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-07-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>May-2013 To Jul-2013</Season>
+    <SeasonID>25</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>36</PanelID>
+    <RowID>228</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>16400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-09-30T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Aug-2013 To Sep-2013</Season>
+    <SeasonID>26</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>37</PanelID>
+    <RowID>223</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>17400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>25</SeasonID>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <TourNo>21</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>38</PanelID>
+    <RowID>231</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>18900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-07-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>May-2013 To Jul-2013</Season>
+    <SeasonID>27</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>39</PanelID>
+    <RowID>236</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>17400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-09-30T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Aug-2013 To Sep-2013</Season>
+    <SeasonID>28</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>40</PanelID>
+    <RowID>231</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>18900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>27</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>41</PanelID>
+    <RowID>230</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>19400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-07-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>May-2013 To Jul-2013</Season>
+    <SeasonID>27</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>42</PanelID>
+    <RowID>235</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>18400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-09-30T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Aug-2013 To Sep-2013</Season>
+    <SeasonID>28</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>43</PanelID>
+    <RowID>230</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>19400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>27</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>44</PanelID>
+    <RowID>232</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>15900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-07-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>May-2013 To Jul-2013</Season>
+    <SeasonID>27</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>45</PanelID>
+    <RowID>237</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>14900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-09-30T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Aug-2013 To Sep-2013</Season>
+    <SeasonID>28</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>46</PanelID>
+    <RowID>232</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>15900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>27</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>47</PanelID>
+    <RowID>234</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-07-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>May-2013 To Jul-2013</Season>
+    <SeasonID>27</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>48</PanelID>
+    <RowID>239</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-09-30T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Aug-2013 To Sep-2013</Season>
+    <SeasonID>28</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>49</PanelID>
+    <RowID>234</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>27</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>50</PanelID>
+    <RowID>233</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>22400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-07-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>May-2013 To Jul-2013</Season>
+    <SeasonID>27</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>51</PanelID>
+    <RowID>238</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>21400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-09-30T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Aug-2013 To Sep-2013</Season>
+    <SeasonID>28</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>52</PanelID>
+    <RowID>233</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>22400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>27</SeasonID>
+    <TourName>4 Dham</TourName>
+    <TourNo>22</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>53</PanelID>
+    <RowID>7259</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>15600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>51</SeasonID>
+    <TourName>Allahabad-Varanasi</TourName>
+    <TourNo>23</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>54</PanelID>
+    <RowID>7259</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>15600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-11-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Sep-2013 To Nov-2013</Season>
+    <SeasonID>51</SeasonID>
+    <TourName>Allahabad-Varanasi</TourName>
+    <TourNo>23</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>55</PanelID>
+    <RowID>7258</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>16100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>51</SeasonID>
+    <TourName>Allahabad-Varanasi</TourName>
+    <TourNo>23</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>56</PanelID>
+    <RowID>7258</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>16100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-11-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Sep-2013 To Nov-2013</Season>
+    <SeasonID>51</SeasonID>
+    <TourName>Allahabad-Varanasi</TourName>
+    <TourNo>23</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>57</PanelID>
+    <RowID>7260</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>15100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>51</SeasonID>
+    <TourName>Allahabad-Varanasi</TourName>
+    <TourNo>23</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>58</PanelID>
+    <RowID>7260</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>15100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-11-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Sep-2013 To Nov-2013</Season>
+    <SeasonID>51</SeasonID>
+    <TourName>Allahabad-Varanasi</TourName>
+    <TourNo>23</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>59</PanelID>
+    <RowID>7262</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>51</SeasonID>
+    <TourName>Allahabad-Varanasi</TourName>
+    <TourNo>23</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>60</PanelID>
+    <RowID>7262</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-11-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Sep-2013 To Nov-2013</Season>
+    <SeasonID>51</SeasonID>
+    <TourName>Allahabad-Varanasi</TourName>
+    <TourNo>23</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>61</PanelID>
+    <RowID>7261</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>20100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>51</SeasonID>
+    <TourName>Allahabad-Varanasi</TourName>
+    <TourNo>23</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>62</PanelID>
+    <RowID>7261</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>20100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-11-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Sep-2013 To Nov-2013</Season>
+    <SeasonID>51</SeasonID>
+    <TourName>Allahabad-Varanasi</TourName>
+    <TourNo>23</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>63</PanelID>
+    <RowID>256</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>18000</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-08-31T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Jun-2013 To Aug-2013</Season>
+    <SeasonID>32</SeasonID>
+    <TourName>Amarnath Yatra</TourName>
+    <TourNo>24</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>64</PanelID>
+    <RowID>255</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>18400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-08-31T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Jun-2013 To Aug-2013</Season>
+    <SeasonID>32</SeasonID>
+    <TourName>Amarnath Yatra</TourName>
+    <TourNo>24</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>65</PanelID>
+    <RowID>257</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>16400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-08-31T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Jun-2013 To Aug-2013</Season>
+    <SeasonID>32</SeasonID>
+    <TourName>Amarnath Yatra</TourName>
+    <TourNo>24</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>66</PanelID>
+    <RowID>259</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-08-31T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Jun-2013 To Aug-2013</Season>
+    <SeasonID>32</SeasonID>
+    <TourName>Amarnath Yatra</TourName>
+    <TourNo>24</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>67</PanelID>
+    <RowID>258</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>22900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-08-31T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Jun-2013 To Aug-2013</Season>
+    <SeasonID>32</SeasonID>
+    <TourName>Amarnath Yatra</TourName>
+    <TourNo>24</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>68</PanelID>
+    <RowID>150</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>5</SeasonID>
+    <TourName>Agra-Mathura Volvo</TourName>
+    <TourNo>39</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>69</PanelID>
+    <RowID>7230</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>1000</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>6</SeasonID>
+    <TourName>Agra-Mathura Volvo</TourName>
+    <TourNo>39</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>70</PanelID>
+    <RowID>7232</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>6</SeasonID>
+    <TourName>Agra-Mathura Volvo</TourName>
+    <TourNo>39</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>71</PanelID>
+    <RowID>151</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>5</SeasonID>
+    <TourName>Agra-Mathura Volvo</TourName>
+    <TourNo>39</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>72</PanelID>
+    <RowID>7231</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>1000</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>6</SeasonID>
+    <TourName>Agra-Mathura Volvo</TourName>
+    <TourNo>39</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>73</PanelID>
+    <RowID>7233</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>6</SeasonID>
+    <TourName>Agra-Mathura Volvo</TourName>
+    <TourNo>39</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>74</PanelID>
+    <RowID>166</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>2900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>13</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>75</PanelID>
+    <RowID>291</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>3200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>14</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>76</PanelID>
+    <RowID>291</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>3200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>14</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>77</PanelID>
+    <RowID>165</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>3100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>13</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>78</PanelID>
+    <RowID>290</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>3400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>14</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>79</PanelID>
+    <RowID>290</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>3400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>14</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>80</PanelID>
+    <RowID>167</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>2600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>13</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>81</PanelID>
+    <RowID>292</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>2900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>14</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>82</PanelID>
+    <RowID>292</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>2900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>14</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>83</PanelID>
+    <RowID>169</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>13</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>84</PanelID>
+    <RowID>294</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>14</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>85</PanelID>
+    <RowID>294</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>14</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>86</PanelID>
+    <RowID>168</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>3600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>13</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>87</PanelID>
+    <RowID>293</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>3900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>14</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>88</PanelID>
+    <RowID>293</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>3900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>14</SeasonID>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <TourNo>40</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>89</PanelID>
+    <RowID>319</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>1043</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-03-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Mar-2012 To Mar-2013</Season>
+    <SeasonID>44</SeasonID>
+    <TourName>Chennai Tirupathi</TourName>
+    <TourNo>45</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>90</PanelID>
+    <RowID>334</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-03-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Mar-2012 To Mar-2013</Season>
+    <SeasonID>44</SeasonID>
+    <TourName>Chennai Tirupathi</TourName>
+    <TourNo>45</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>91</PanelID>
+    <RowID>320</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>994</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-03-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Mar-2012 To Mar-2013</Season>
+    <SeasonID>44</SeasonID>
+    <TourName>Chennai Tirupathi</TourName>
+    <TourNo>45</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>92</PanelID>
+    <RowID>335</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-03-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Mar-2012 To Mar-2013</Season>
+    <SeasonID>44</SeasonID>
+    <TourName>Chennai Tirupathi</TourName>
+    <TourNo>45</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>93</PanelID>
+    <RowID>282</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>170</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>37</SeasonID>
+    <TourName>Hyderabad City Tour</TourName>
+    <TourNo>63</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>94</PanelID>
+    <RowID>7216</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>37</SeasonID>
+    <TourName>Hyderabad City Tour</TourName>
+    <TourNo>63</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>95</PanelID>
+    <RowID>283</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>170</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>37</SeasonID>
+    <TourName>Hyderabad City Tour</TourName>
+    <TourNo>63</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>96</PanelID>
+    <RowID>7217</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>37</SeasonID>
+    <TourName>Hyderabad City Tour</TourName>
+    <TourNo>63</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>97</PanelID>
+    <RowID>284</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>170</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>38</SeasonID>
+    <TourName>Ramoji Film City Tour</TourName>
+    <TourNo>64</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>98</PanelID>
+    <RowID>7218</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>38</SeasonID>
+    <TourName>Ramoji Film City Tour</TourName>
+    <TourNo>64</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>99</PanelID>
+    <RowID>285</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>170</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>38</SeasonID>
+    <TourName>Ramoji Film City Tour</TourName>
+    <TourNo>64</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>100</PanelID>
+    <RowID>7219</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>38</SeasonID>
+    <TourName>Ramoji Film City Tour</TourName>
+    <TourNo>64</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>101</PanelID>
+    <RowID>301</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>2600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>39</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>102</PanelID>
+    <RowID>139</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>3100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>9</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>103</PanelID>
+    <RowID>139</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>3100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>9</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>104</PanelID>
+    <RowID>300</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>2700</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>39</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>105</PanelID>
+    <RowID>138</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>3200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>9</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>106</PanelID>
+    <RowID>138</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>3200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>9</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>107</PanelID>
+    <RowID>302</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>2300</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>39</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>108</PanelID>
+    <RowID>140</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>2800</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>9</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>109</PanelID>
+    <RowID>140</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>2800</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>9</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>110</PanelID>
+    <RowID>304</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>39</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>111</PanelID>
+    <RowID>142</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>9</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>112</PanelID>
+    <RowID>142</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>9</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>113</PanelID>
+    <RowID>303</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>3100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>39</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>114</PanelID>
+    <RowID>141</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>3900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>9</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>115</PanelID>
+    <RowID>141</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>3900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>9</SeasonID>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <TourNo>69</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>116</PanelID>
+    <RowID>186</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>12900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-27T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>1-Nov-2012 To 27-Mar-2013</Season>
+    <SeasonID>19</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>117</PanelID>
+    <RowID>181</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>15900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-03-28T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>28-Mar-2013 To 30-Jun-2013</Season>
+    <SeasonID>18</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>118</PanelID>
+    <RowID>181</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>15900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>18</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>119</PanelID>
+    <RowID>185</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>13400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-27T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>1-Nov-2012 To 27-Mar-2013</Season>
+    <SeasonID>19</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>120</PanelID>
+    <RowID>180</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>16400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-03-28T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>28-Mar-2013 To 30-Jun-2013</Season>
+    <SeasonID>18</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>121</PanelID>
+    <RowID>180</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>16400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>18</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>122</PanelID>
+    <RowID>187</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>11400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-27T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>1-Nov-2012 To 27-Mar-2013</Season>
+    <SeasonID>19</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>123</PanelID>
+    <RowID>182</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>13900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-03-28T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>28-Mar-2013 To 30-Jun-2013</Season>
+    <SeasonID>18</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>124</PanelID>
+    <RowID>182</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>13900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>18</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>125</PanelID>
+    <RowID>189</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-27T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>1-Nov-2012 To 27-Mar-2013</Season>
+    <SeasonID>19</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>126</PanelID>
+    <RowID>184</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-03-28T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>28-Mar-2013 To 30-Jun-2013</Season>
+    <SeasonID>18</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>127</PanelID>
+    <RowID>184</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>18</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>128</PanelID>
+    <RowID>188</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>15400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-27T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>1-Nov-2012 To 27-Mar-2013</Season>
+    <SeasonID>19</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>129</PanelID>
+    <RowID>183</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>19400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-03-28T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>28-Mar-2013 To 30-Jun-2013</Season>
+    <SeasonID>18</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>130</PanelID>
+    <RowID>183</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>19400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>18</SeasonID>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <TourNo>71</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>131</PanelID>
+    <RowID>134</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>300</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>3</SeasonID>
+    <TourName>Akshardham Temple Tour</TourName>
+    <TourNo>73</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>132</PanelID>
+    <RowID>286</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>300</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>4</SeasonID>
+    <TourName>Akshardham Temple Tour</TourName>
+    <TourNo>73</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>133</PanelID>
+    <RowID>330</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>425</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>3</SeasonID>
+    <TourName>Akshardham Temple Tour</TourName>
+    <TourNo>73</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>134</PanelID>
+    <RowID>332</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>425</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>4</SeasonID>
+    <TourName>Akshardham Temple Tour</TourName>
+    <TourNo>73</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>135</PanelID>
+    <RowID>135</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>300</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>3</SeasonID>
+    <TourName>Akshardham Temple Tour</TourName>
+    <TourNo>73</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>136</PanelID>
+    <RowID>287</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>300</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>4</SeasonID>
+    <TourName>Akshardham Temple Tour</TourName>
+    <TourNo>73</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>137</PanelID>
+    <RowID>331</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>425</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>3</SeasonID>
+    <TourName>Akshardham Temple Tour</TourName>
+    <TourNo>73</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>138</PanelID>
+    <RowID>333</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>425</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>4</SeasonID>
+    <TourName>Akshardham Temple Tour</TourName>
+    <TourNo>73</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>139</PanelID>
+    <RowID>201</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>15400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>22</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>140</PanelID>
+    <RowID>196</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>18400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>21</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>141</PanelID>
+    <RowID>196</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>18400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>21</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>142</PanelID>
+    <RowID>200</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>15800</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>22</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>143</PanelID>
+    <RowID>195</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>18800</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>21</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>144</PanelID>
+    <RowID>195</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>18800</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>21</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>145</PanelID>
+    <RowID>202</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>13800</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>22</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>146</PanelID>
+    <RowID>197</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>16400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>21</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>147</PanelID>
+    <RowID>197</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>16400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>21</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>148</PanelID>
+    <RowID>204</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>22</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>149</PanelID>
+    <RowID>199</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>21</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>150</PanelID>
+    <RowID>199</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>21</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>151</PanelID>
+    <RowID>203</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>19400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>22</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>152</PanelID>
+    <RowID>198</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>23900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>21</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>153</PanelID>
+    <RowID>198</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>23900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>21</SeasonID>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <TourNo>91</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>154</PanelID>
+    <RowID>251</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>11200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-04-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>3</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>155</PanelID>
+    <RowID>251</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>11200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>3</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>156</PanelID>
+    <RowID>251</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>11200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Apr-2012 To Jun12</Season>
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>157</PanelID>
+    <RowID>251</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>11200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-09-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>3</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>158</PanelID>
+    <RowID>251</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>11200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>3</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>159</PanelID>
+    <RowID>251</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>11200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-11-30T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Sep-2012 To Nov-2012</Season>
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>160</PanelID>
+    <RowID>250</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>11600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-04-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>2</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>161</PanelID>
+    <RowID>250</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>11600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>2</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>162</PanelID>
+    <RowID>250</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>11600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Apr-2012 To Jun12</Season>
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>163</PanelID>
+    <RowID>250</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>11600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-09-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>2</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>164</PanelID>
+    <RowID>250</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>11600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>2</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>165</PanelID>
+    <RowID>250</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>11600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-11-30T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Sep-2012 To Nov-2012</Season>
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>166</PanelID>
+    <RowID>252</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>10700</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-04-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>4</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>167</PanelID>
+    <RowID>252</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>10700</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>4</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>168</PanelID>
+    <RowID>252</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>10700</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Apr-2012 To Jun12</Season>
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>169</PanelID>
+    <RowID>252</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>10700</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-09-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>4</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>170</PanelID>
+    <RowID>252</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>10700</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>4</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>171</PanelID>
+    <RowID>252</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>10700</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-11-30T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Sep-2012 To Nov-2012</Season>
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>172</PanelID>
+    <RowID>254</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-04-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>7</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>173</PanelID>
+    <RowID>254</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>7</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>174</PanelID>
+    <RowID>254</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Apr-2012 To Jun12</Season>
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>175</PanelID>
+    <RowID>254</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-09-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>7</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>176</PanelID>
+    <RowID>254</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>7</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>177</PanelID>
+    <RowID>254</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-11-30T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Sep-2012 To Nov-2012</Season>
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>178</PanelID>
+    <RowID>253</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>13400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-04-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>5</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>179</PanelID>
+    <RowID>253</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>13400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>5</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>180</PanelID>
+    <RowID>253</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>13400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Apr-2012 To Jun12</Season>
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>181</PanelID>
+    <RowID>253</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>13400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-09-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>5</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>182</PanelID>
+    <RowID>253</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>13400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>5</CategoryID>
+    <Season />
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>183</PanelID>
+    <RowID>253</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>13400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2012-11-30T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Sep-2012 To Nov-2012</Season>
+    <SeasonID>31</SeasonID>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <TourNo>94</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>184</PanelID>
+    <RowID>241</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>12400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-07-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-07-31T00:00:00+05:30</ToDate>
+    <s_month>Jul</s_month>
+    <CategoryID>3</CategoryID>
+    <Season />
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>185</PanelID>
+    <RowID>241</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>12400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-08-31T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>3</CategoryID>
+    <Season />
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>186</PanelID>
+    <RowID>241</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>12400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-09-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Jul-2011 To Sep-2011</Season>
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>187</PanelID>
+    <RowID>240</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>13200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-07-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-07-31T00:00:00+05:30</ToDate>
+    <s_month>Jul</s_month>
+    <CategoryID>2</CategoryID>
+    <Season />
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>188</PanelID>
+    <RowID>240</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>13200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-08-31T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>2</CategoryID>
+    <Season />
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>189</PanelID>
+    <RowID>240</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>13200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-09-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Jul-2011 To Sep-2011</Season>
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>190</PanelID>
+    <RowID>242</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>10400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-07-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-07-31T00:00:00+05:30</ToDate>
+    <s_month>Jul</s_month>
+    <CategoryID>4</CategoryID>
+    <Season />
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>191</PanelID>
+    <RowID>242</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>10400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-08-31T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>4</CategoryID>
+    <Season />
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>192</PanelID>
+    <RowID>242</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>10400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-09-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Jul-2011 To Sep-2011</Season>
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>193</PanelID>
+    <RowID>244</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-07-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-07-31T00:00:00+05:30</ToDate>
+    <s_month>Jul</s_month>
+    <CategoryID>7</CategoryID>
+    <Season />
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>194</PanelID>
+    <RowID>244</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-08-31T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>7</CategoryID>
+    <Season />
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>195</PanelID>
+    <RowID>244</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-09-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Jul-2011 To Sep-2011</Season>
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>196</PanelID>
+    <RowID>243</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>18600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-07-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-07-31T00:00:00+05:30</ToDate>
+    <s_month>Jul</s_month>
+    <CategoryID>5</CategoryID>
+    <Season />
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>197</PanelID>
+    <RowID>243</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>18600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-08-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-08-31T00:00:00+05:30</ToDate>
+    <s_month>Aug</s_month>
+    <CategoryID>5</CategoryID>
+    <Season />
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>198</PanelID>
+    <RowID>243</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>18600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-09-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-09-30T00:00:00+05:30</ToDate>
+    <s_month>Sep</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Jul-2011 To Sep-2011</Season>
+    <SeasonID>29</SeasonID>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <TourNo>97</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>199</PanelID>
+    <RowID>276</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>3</CategoryID>
+    <Season />
+    <SeasonID>35</SeasonID>
+    <TourName>Badrinath-Kedarnath Dormitory By Ac Coach</TourName>
+    <TourNo>100</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>200</PanelID>
+    <RowID>276</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>May-2011 To Jun-2011</Season>
+    <SeasonID>35</SeasonID>
+    <TourName>Badrinath-Kedarnath Dormitory By Ac Coach</TourName>
+    <TourNo>100</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>201</PanelID>
+    <RowID>275</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>2</CategoryID>
+    <Season />
+    <SeasonID>35</SeasonID>
+    <TourName>Badrinath-Kedarnath Dormitory By Ac Coach</TourName>
+    <TourNo>100</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>202</PanelID>
+    <RowID>275</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>May-2011 To Jun-2011</Season>
+    <SeasonID>35</SeasonID>
+    <TourName>Badrinath-Kedarnath Dormitory By Ac Coach</TourName>
+    <TourNo>100</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>203</PanelID>
+    <RowID>277</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>4</CategoryID>
+    <Season />
+    <SeasonID>35</SeasonID>
+    <TourName>Badrinath-Kedarnath Dormitory By Ac Coach</TourName>
+    <TourNo>100</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>204</PanelID>
+    <RowID>277</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>May-2011 To Jun-2011</Season>
+    <SeasonID>35</SeasonID>
+    <TourName>Badrinath-Kedarnath Dormitory By Ac Coach</TourName>
+    <TourNo>100</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>205</PanelID>
+    <RowID>279</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>8600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>7</CategoryID>
+    <Season />
+    <SeasonID>35</SeasonID>
+    <TourName>Badrinath-Kedarnath Dormitory By Ac Coach</TourName>
+    <TourNo>100</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>206</PanelID>
+    <RowID>279</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>8600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>May-2011 To Jun-2011</Season>
+    <SeasonID>35</SeasonID>
+    <TourName>Badrinath-Kedarnath Dormitory By Ac Coach</TourName>
+    <TourNo>100</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>207</PanelID>
+    <RowID>278</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>5</CategoryID>
+    <Season />
+    <SeasonID>35</SeasonID>
+    <TourName>Badrinath-Kedarnath Dormitory By Ac Coach</TourName>
+    <TourNo>100</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>208</PanelID>
+    <RowID>278</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>May-2011 To Jun-2011</Season>
+    <SeasonID>35</SeasonID>
+    <TourName>Badrinath-Kedarnath Dormitory By Ac Coach</TourName>
+    <TourNo>100</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>209</PanelID>
+    <RowID>271</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>3</CategoryID>
+    <Season />
+    <SeasonID>34</SeasonID>
+    <TourName>4 Dham-Dormitory By Ac Coach</TourName>
+    <TourNo>102</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>210</PanelID>
+    <RowID>271</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>May-2011 To Jun-2011</Season>
+    <SeasonID>34</SeasonID>
+    <TourName>4 Dham-Dormitory By Ac Coach</TourName>
+    <TourNo>102</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>211</PanelID>
+    <RowID>270</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>2</CategoryID>
+    <Season />
+    <SeasonID>34</SeasonID>
+    <TourName>4 Dham-Dormitory By Ac Coach</TourName>
+    <TourNo>102</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>212</PanelID>
+    <RowID>270</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>May-2011 To Jun-2011</Season>
+    <SeasonID>34</SeasonID>
+    <TourName>4 Dham-Dormitory By Ac Coach</TourName>
+    <TourNo>102</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>213</PanelID>
+    <RowID>272</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>4</CategoryID>
+    <Season />
+    <SeasonID>34</SeasonID>
+    <TourName>4 Dham-Dormitory By Ac Coach</TourName>
+    <TourNo>102</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>214</PanelID>
+    <RowID>272</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>May-2011 To Jun-2011</Season>
+    <SeasonID>34</SeasonID>
+    <TourName>4 Dham-Dormitory By Ac Coach</TourName>
+    <TourNo>102</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>215</PanelID>
+    <RowID>274</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>13600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>7</CategoryID>
+    <Season />
+    <SeasonID>34</SeasonID>
+    <TourName>4 Dham-Dormitory By Ac Coach</TourName>
+    <TourNo>102</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>216</PanelID>
+    <RowID>274</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>13600</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>May-2011 To Jun-2011</Season>
+    <SeasonID>34</SeasonID>
+    <TourName>4 Dham-Dormitory By Ac Coach</TourName>
+    <TourNo>102</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>217</PanelID>
+    <RowID>273</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>5</CategoryID>
+    <Season />
+    <SeasonID>34</SeasonID>
+    <TourName>4 Dham-Dormitory By Ac Coach</TourName>
+    <TourNo>102</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>218</PanelID>
+    <RowID>273</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-06-30T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>May-2011 To Jun-2011</Season>
+    <SeasonID>34</SeasonID>
+    <TourName>4 Dham-Dormitory By Ac Coach</TourName>
+    <TourNo>102</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>219</PanelID>
+    <RowID>171</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>3700</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>15</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>220</PanelID>
+    <RowID>296</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>4000</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>16</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>221</PanelID>
+    <RowID>296</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>4000</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>16</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>222</PanelID>
+    <RowID>170</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>3900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>15</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>223</PanelID>
+    <RowID>295</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>4200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>16</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>224</PanelID>
+    <RowID>295</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>4200</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>16</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>225</PanelID>
+    <RowID>172</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>3500</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>15</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>226</PanelID>
+    <RowID>297</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>3800</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>16</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>227</PanelID>
+    <RowID>297</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>3800</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>16</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>228</PanelID>
+    <RowID>174</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>15</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>229</PanelID>
+    <RowID>299</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>16</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>230</PanelID>
+    <RowID>299</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>16</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>231</PanelID>
+    <RowID>173</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>4800</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Nov-2012 To Mar-2013</Season>
+    <SeasonID>15</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>232</PanelID>
+    <RowID>298</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>5100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Apr-2013 To Jun13</Season>
+    <SeasonID>16</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>233</PanelID>
+    <RowID>298</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>5100</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>16</SeasonID>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <TourNo>105</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>234</PanelID>
+    <RowID>306</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>16000</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-27T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>1-Nov-2012 To 27-Mar-2013</Season>
+    <SeasonID>40</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>235</PanelID>
+    <RowID>206</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>18900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-03-28T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>28-Mar-2013 To 30-Jun-2013</Season>
+    <SeasonID>23</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>236</PanelID>
+    <RowID>206</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>18900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>23</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>237</PanelID>
+    <RowID>305</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>16500</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-27T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>1-Nov-2012 To 27-Mar-2013</Season>
+    <SeasonID>40</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>238</PanelID>
+    <RowID>205</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>19400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-03-28T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>28-Mar-2013 To 30-Jun-2013</Season>
+    <SeasonID>23</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>239</PanelID>
+    <RowID>205</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>19400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>23</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>240</PanelID>
+    <RowID>307</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>14500</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-27T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>1-Nov-2012 To 27-Mar-2013</Season>
+    <SeasonID>40</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>241</PanelID>
+    <RowID>207</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>17400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-03-28T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>28-Mar-2013 To 30-Jun-2013</Season>
+    <SeasonID>23</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>242</PanelID>
+    <RowID>207</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>17400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>23</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>243</PanelID>
+    <RowID>309</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-27T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>1-Nov-2012 To 27-Mar-2013</Season>
+    <SeasonID>40</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>244</PanelID>
+    <RowID>209</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-03-28T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>28-Mar-2013 To 30-Jun-2013</Season>
+    <SeasonID>23</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>245</PanelID>
+    <RowID>209</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>23</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>246</PanelID>
+    <RowID>308</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>19500</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-11-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-27T00:00:00+05:30</ToDate>
+    <s_month>Nov</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>1-Nov-2012 To 27-Mar-2013</Season>
+    <SeasonID>40</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>247</PanelID>
+    <RowID>208</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>23900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-03-28T00:00:00+05:30</FromDate>
+    <ToDate>2013-06-30T00:00:00+05:30</ToDate>
+    <s_month>Mar</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>28-Mar-2013 To 30-Jun-2013</Season>
+    <SeasonID>23</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>248</PanelID>
+    <RowID>208</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>23900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-10-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-10-31T00:00:00+05:30</ToDate>
+    <s_month>Oct</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Oct-2013</Season>
+    <SeasonID>23</SeasonID>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <TourNo>110</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>249</PanelID>
+    <RowID>261</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>10500</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>May-2011</Season>
+    <SeasonID>33</SeasonID>
+    <TourName>Ganga Pushkar Yatra</TourName>
+    <TourNo>116</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>250</PanelID>
+    <RowID>260</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>10900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>May-2011</Season>
+    <SeasonID>33</SeasonID>
+    <TourName>Ganga Pushkar Yatra</TourName>
+    <TourNo>116</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>251</PanelID>
+    <RowID>262</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>9250</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>May-2011</Season>
+    <SeasonID>33</SeasonID>
+    <TourName>Ganga Pushkar Yatra</TourName>
+    <TourNo>116</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>252</PanelID>
+    <RowID>264</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>May-2011</Season>
+    <SeasonID>33</SeasonID>
+    <TourName>Ganga Pushkar Yatra</TourName>
+    <TourNo>116</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>253</PanelID>
+    <RowID>263</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>12500</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2011-05-01T00:00:00+05:30</FromDate>
+    <ToDate>2011-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>May-2011</Season>
+    <SeasonID>33</SeasonID>
+    <TourName>Ganga Pushkar Yatra</TourName>
+    <TourNo>116</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>254</PanelID>
+    <RowID>280</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>36</SeasonID>
+    <TourName>Delhi City Tour By A.c. Volvo</TourName>
+    <TourNo>122</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>255</PanelID>
+    <RowID>7226</RowID>
+    <Category>Adult Fare</Category>
+    <ACFare>400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>1</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>46</SeasonID>
+    <TourName>Delhi City Tour By A.c. Volvo</TourName>
+    <TourNo>122</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>256</PanelID>
+    <RowID>326</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>520</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>36</SeasonID>
+    <TourName>Delhi City Tour By A.c. Volvo</TourName>
+    <TourNo>122</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>257</PanelID>
+    <RowID>7228</RowID>
+    <Category>Adult With South Veg Food</Category>
+    <ACFare>520</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>8</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>46</SeasonID>
+    <TourName>Delhi City Tour By A.c. Volvo</TourName>
+    <TourNo>122</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>258</PanelID>
+    <RowID>281</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>36</SeasonID>
+    <TourName>Delhi City Tour By A.c. Volvo</TourName>
+    <TourNo>122</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>259</PanelID>
+    <RowID>7227</RowID>
+    <Category>Child Fare</Category>
+    <ACFare>400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>6</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>46</SeasonID>
+    <TourName>Delhi City Tour By A.c. Volvo</TourName>
+    <TourNo>122</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>260</PanelID>
+    <RowID>327</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>520</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2012 To Mar-2013</Season>
+    <SeasonID>36</SeasonID>
+    <TourName>Delhi City Tour By A.c. Volvo</TourName>
+    <TourNo>122</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>261</PanelID>
+    <RowID>7229</RowID>
+    <Category>Child With South Veg Food</Category>
+    <ACFare>520</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-04-01T00:00:00+05:30</FromDate>
+    <ToDate>2014-03-31T00:00:00+05:30</ToDate>
+    <s_month>Apr</s_month>
+    <CategoryID>9</CategoryID>
+    <Season>Apr-2013 To Mar-2014</Season>
+    <SeasonID>46</SeasonID>
+    <TourName>Delhi City Tour By A.c. Volvo</TourName>
+    <TourNo>122</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>262</PanelID>
+    <RowID>311</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>19000</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-08-31T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>Jun-2013 To Aug-2013</Season>
+    <SeasonID>41</SeasonID>
+    <TourName>Amarnath Yatra-By A.c Volvo</TourName>
+    <TourNo>123</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>263</PanelID>
+    <RowID>310</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>19400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-08-31T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>Jun-2013 To Aug-2013</Season>
+    <SeasonID>41</SeasonID>
+    <TourName>Amarnath Yatra-By A.c Volvo</TourName>
+    <TourNo>123</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>264</PanelID>
+    <RowID>312</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>17400</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-08-31T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>Jun-2013 To Aug-2013</Season>
+    <SeasonID>41</SeasonID>
+    <TourName>Amarnath Yatra-By A.c Volvo</TourName>
+    <TourNo>123</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>265</PanelID>
+    <RowID>314</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-08-31T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>Jun-2013 To Aug-2013</Season>
+    <SeasonID>41</SeasonID>
+    <TourName>Amarnath Yatra-By A.c Volvo</TourName>
+    <TourNo>123</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>266</PanelID>
+    <RowID>313</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>23900</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2013-06-01T00:00:00+05:30</FromDate>
+    <ToDate>2013-08-31T00:00:00+05:30</ToDate>
+    <s_month>Jun</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>Jun-2013 To Aug-2013</Season>
+    <SeasonID>41</SeasonID>
+    <TourName>Amarnath Yatra-By A.c Volvo</TourName>
+    <TourNo>123</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>267</PanelID>
+    <RowID>322</RowID>
+    <Category>Adult on Triple Sharing</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>7999</NonACFare>
+    <FromDate>2012-05-15T00:00:00+05:30</FromDate>
+    <ToDate>2012-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>3</CategoryID>
+    <Season>15-May-2012 To 31-May-2012</Season>
+    <SeasonID>45</SeasonID>
+    <TourName>Narmada Pushkar Yatra</TourName>
+    <TourNo>124</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>268</PanelID>
+    <RowID>321</RowID>
+    <Category>Adult on Twin Sharing</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>8499</NonACFare>
+    <FromDate>2012-05-15T00:00:00+05:30</FromDate>
+    <ToDate>2012-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>2</CategoryID>
+    <Season>15-May-2012 To 31-May-2012</Season>
+    <SeasonID>45</SeasonID>
+    <TourName>Narmada Pushkar Yatra</TourName>
+    <TourNo>124</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>269</PanelID>
+    <RowID>323</RowID>
+    <Category>Child(5-11)Without Bed</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>3299</NonACFare>
+    <FromDate>2012-05-15T00:00:00+05:30</FromDate>
+    <ToDate>2012-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>4</CategoryID>
+    <Season>15-May-2012 To 31-May-2012</Season>
+    <SeasonID>45</SeasonID>
+    <TourName>Narmada Pushkar Yatra</TourName>
+    <TourNo>124</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>270</PanelID>
+    <RowID>325</RowID>
+    <Category>Dormitory Accommodation</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>0</NonACFare>
+    <FromDate>2012-05-15T00:00:00+05:30</FromDate>
+    <ToDate>2012-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>7</CategoryID>
+    <Season>15-May-2012 To 31-May-2012</Season>
+    <SeasonID>45</SeasonID>
+    <TourName>Narmada Pushkar Yatra</TourName>
+    <TourNo>124</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+  <FixedFarePanel>
+    <PanelID>271</PanelID>
+    <RowID>324</RowID>
+    <Category>Single Adult In a Room</Category>
+    <ACFare>0</ACFare>
+    <NonACFare>14499</NonACFare>
+    <FromDate>2012-05-15T00:00:00+05:30</FromDate>
+    <ToDate>2012-05-31T00:00:00+05:30</ToDate>
+    <s_month>May</s_month>
+    <CategoryID>5</CategoryID>
+    <Season>15-May-2012 To 31-May-2012</Season>
+    <SeasonID>45</SeasonID>
+    <TourName>Narmada Pushkar Yatra</TourName>
+    <TourNo>124</TourNo>
+    <IsQuery>false</IsQuery>
+  </FixedFarePanel>
+</DocumentElement>

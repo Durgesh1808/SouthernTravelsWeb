@@ -1,4 +1,5 @@
-﻿using SouthernTravelsWeb.DAL.DbObjects;
+﻿using ASPEMAILLib;
+using SouthernTravelsWeb.DAL.DbObjects;
 using SouthernTravelsWeb.DTO;
 using System;
 using System.Collections.Generic;
@@ -6,11 +7,14 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Web;
 using System.Web.Mail;
 using System.Web.UI;
-using ASPEMAILLib;
 namespace SouthernTravelsWeb.BLL
 {
 
@@ -274,7 +278,6 @@ namespace SouthernTravelsWeb.BLL
         /// <summary>
         /// Web config's connection string name.
         /// </summary>
-        public static string pbConnString = "southernconn";
         private static string connectionString;
 
         #endregion
@@ -285,7 +288,7 @@ namespace SouthernTravelsWeb.BLL
        
         public ClsCommon()
         {
-            connectionString = ConfigurationManager.AppSettings["southernconn"];
+            connectionString =DataLib.getConnectionString();
         }
         #endregion
         public static DataTable Fixed_ToursAtAGlance(string pDay, string pMonth, string pYear, string pBranchCode)
@@ -752,14 +755,16 @@ namespace SouthernTravelsWeb.BLL
             {
                 using (SqlCommand cmd = new SqlCommand(StoredProcedures.TourItenerary_SP, conn))
                 {
+
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@TourId", lTourID);
-                    cmd.Parameters.AddWithValue("@TourType", lTourType);
+                    cmd.Parameters.AddWithValue("@I_TourID", lTourID);
+                    cmd.Parameters.AddWithValue("@I_TourType", lTourType);
 
-                    SqlParameter statusParam = new SqlParameter("@Status", SqlDbType.Int);
-                    statusParam.Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add(statusParam);
-
+                    SqlParameter outputParam = new SqlParameter("@O_ReturnValue", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(outputParam);
                     try
                     {
                         conn.Open();
@@ -863,7 +868,7 @@ namespace SouthernTravelsWeb.BLL
                 using (SqlCommand cmd = new SqlCommand(StoredProcedures.GetIntMenu_sp, conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@pOfferID", (object)pOfferID ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@OfferID", (object)pOfferID ?? DBNull.Value);
 
                     try
                     {
@@ -973,6 +978,269 @@ namespace SouthernTravelsWeb.BLL
         }
 
 
+        /// <summary>
+        /// Mail With Attachment
+        /// </summary>
+        /// <param name="pTO"></param>
+        /// <param name="pBCC"></param>
+        /// <param name="pCC"></param>
+        /// <param name="pFrom"></param>
+        /// <param name="pSubject"></param>
+        /// <param name="pBody"></param>
+        /// <param name="pFromName"></param>
+        /// <param name="pFileName"></param>
+        public static void sendmail(string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName, string pFileName)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            try
+            {
+                if (pTO.ToLower().EndsWith("@temp.com"))
+                {
+                    pTO = pBCC;
+                }
+
+                if (ConfigurationManager.AppSettings["PersistMailORSmtpHost"]?.ToUpper() == "TRUE")
+                {
+                    MailSend(pTO, pBCC, pCC, pFrom, pSubject, pBody, pFromName);
+                }
+                else if (ConfigurationManager.AppSettings["AuthMail"]?.ToUpper() == "TRUE")
+                {
+                    AuthMail(pTO, pBCC, pCC, pFrom, pSubject, pBody, pFromName, pFileName);
+                }
+                else
+                {
+                    SendSmtpMail(pTO, pBCC, pCC, pFrom, pSubject, pBody, pFromName, pFileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Optional: log exception
+            }
+        }
+        public static void MailSend(string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName)
+        {
+            SendSmtpMail(pTO, pBCC, pCC, pFrom, pSubject, pBody, pFromName, null);
+        }
+        public static void AuthMail(string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName, string pFileName = null)
+        {
+            try
+            {
+                string smtpHost = ConfigurationManager.AppSettings["AuthMailSmtpIP"];
+                int smtpPort = Convert.ToInt32(ConfigurationManager.AppSettings["AuthMailSmtpPort"] ?? "587");
+                string smtpUser = ConfigurationManager.AppSettings[pFrom.ToLower() + "_UserName"];
+                string smtpPass = ConfigurationManager.AppSettings[pFrom.ToLower() + "_Password"];
+
+                SendSmtpMail(pTO, pBCC, pCC, smtpUser, pSubject, pBody, pFromName, pFileName, smtpHost, smtpPort, smtpUser, smtpPass, true);
+            }
+            catch (Exception ex)
+            {
+                // Optional: log exception
+            }
+        }
+
+        private static void SendSmtpMail(
+    string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName,
+    string pFileName = null,
+    string smtpHost = null,
+    int smtpPort = 25,
+    string smtpUser = null,
+    string smtpPass = null,
+    bool enableSsl = false)
+        {
+            using (System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage())
+            {
+                mail.From = new MailAddress(pFrom, pFromName);
+
+                foreach (var addr in pTO.Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries))
+                    mail.To.Add(addr.Trim());
+
+                if (!string.IsNullOrWhiteSpace(pCC))
+                    foreach (var addr in pCC.Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries))
+                        mail.CC.Add(addr.Trim());
+
+                if (!string.IsNullOrWhiteSpace(pBCC))
+                    foreach (var addr in pBCC.Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries))
+                        mail.Bcc.Add(addr.Trim());
+
+                mail.Subject = pSubject;
+                mail.Body = pBody;
+                mail.IsBodyHtml = true;
+
+                if (!string.IsNullOrWhiteSpace(pFileName) && File.Exists(pFileName))
+                {
+                    mail.Attachments.Add(new Attachment(pFileName));
+                }
+
+                smtpHost = smtpHost ?? ConfigurationManager.AppSettings["SmtpHost"];
+                smtpPort = smtpPort == 0 ? Convert.ToInt32(ConfigurationManager.AppSettings["SmtpPort"] ?? "25") : smtpPort;
+
+                using (SmtpClient smtp = new SmtpClient(smtpHost, smtpPort))
+                {
+                    smtp.EnableSsl = enableSsl;
+
+                    if (!string.IsNullOrWhiteSpace(smtpUser))
+                        smtp.Credentials = new NetworkCredential(smtpUser, smtpPass);
+                    else
+                        smtp.UseDefaultCredentials = true;
+
+                    smtp.Send(mail);
+                }
+            }
+        }
+
+
+        public DataTable fnGetMetaTagForTours(int? TourTypeId, int? TourId, int? CountryId, int? ZoneId)
+        {
+            DataTable dtMetaTags = new DataTable();
+
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(StoredProcedures.GetMetTagForTours_sp, con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@TourTypeId", TourTypeId ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@TourId", TourId ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@CountryId", CountryId ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@ZoneId", ZoneId ?? (object)DBNull.Value);
+
+                    try
+                    {
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(dtMetaTags);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Log exception or handle as needed
+                        return null;
+                    }
+                }
+            }
+
+            return dtMetaTags;
+        }
+
+        public List<GetTourPlaceInfo_SPResult> fnGetTourPlaceInfo(int pTourID, int pTourType)
+        {
+            List<GetTourPlaceInfo_SPResult> result = new List<GetTourPlaceInfo_SPResult>();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(StoredProcedures.GetTourPlaceInfo_SP, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@I_TourID", pTourID);
+                    cmd.Parameters.AddWithValue("@I_TourTypeID", pTourType);
+                    try
+                    {
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                result.Add(new GetTourPlaceInfo_SPResult
+                                {
+                                    RowID = Convert.ToInt32(reader["RowID"]),
+                                    TourTypeID = reader["TourTypeID"] as int?,
+                                    TourID = reader["TourID"] as int?,
+                                    CityID = reader["CityID"] as int?,
+                                    PlaceID = reader["PlaceID"] as int?,
+                                    CityName = reader["CityName"]?.ToString(),
+                                    PlaceName = reader["PlaceName"]?.ToString(),
+                                    ShortDescription = reader["ShortDescription"]?.ToString(),
+                                    LongDescription = reader["LongDescription"]?.ToString(),
+                                    ImagePath = reader["ImagePath"]?.ToString(),
+                                    GeoCode = reader["GeoCode"].ToString(), // NOT NULL
+                                    TourStartCity = reader["TourStartCity"].ToString(), // NOT NULL
+                                    TourStartFrom = reader["TourStartFrom"]?.ToString(),
+                                    TourStartFromID = reader["TourStartFromID"] as int?,
+                                    StateName = reader["StateName"]?.ToString()
+                                });
+                            }
+
+                        }
+                    }
+                    catch
+                    {
+                        return null;
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        public DataTable fnGetFixedTourJourneyDate(int? lTourNo, int? lMonth, int? lYear, int? lHours)
+        {
+            DataTable pdtTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataLib.getConnectionString()))
+                {
+                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.GetFixedTourJourneyDate_SP, conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@I_TourNo", lTourNo.HasValue ? (object)lTourNo.Value : DBNull.Value);
+                        cmd.Parameters.AddWithValue("@I_Month", lMonth.HasValue ? (object)lMonth.Value : DBNull.Value);
+                        cmd.Parameters.AddWithValue("@I_Year", lYear.HasValue ? (object)lYear.Value : DBNull.Value);
+                        cmd.Parameters.AddWithValue("@I_Hours", lHours.HasValue ? (object)lHours.Value : DBNull.Value);
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(pdtTable);
+                        }
+                    }
+                }
+
+                return pdtTable;
+            }
+            catch (Exception ex)
+            {
+                // Log the error if necessary
+                return null;
+            }
+            finally
+            {
+                if (pdtTable != null)
+                {
+                    pdtTable.Dispose();
+                }
+            }
+        }
+        public DataSet fnGetjdates_vacantseats(int? lTourNo, int? lTourDate)
+        {
+            DataSet ds = new DataSet();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(DataLib.getConnectionString()))
+                {
+                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.jdates_vacantseats, con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@tourno", lTourNo.HasValue ? (object)lTourNo.Value : DBNull.Value);
+                        cmd.Parameters.AddWithValue("@jdate", lTourDate.HasValue ? (object)lTourDate.Value : DBNull.Value);
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(ds);
+                        }
+                    }
+                }
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
 
     }
 }

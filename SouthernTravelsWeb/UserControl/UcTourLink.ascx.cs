@@ -113,17 +113,17 @@ namespace SouthernTravelsWeb.UserControl
                 {
                     if (fldIsLTC == true)
                     {
-                        lURL = "Fixed-Departure-LTC-Itinerary-" + hdTourName.Value.Trim().Replace(" ", "-") + "_" + hdTourID.Value.Trim();
+                        lURL = "../Fixed-Departure-LTC-Itinerary-" + hdTourName.Value.Trim().Replace(" ", "-") + "_" + hdTourID.Value.Trim();
                     }
                     else
                     {
-                        lURL = "Fixed-Departure-Itinerary-" + hdTourName.Value.Trim().Replace(" ", "-") + "_" + hdTourID.Value.Trim();
+                        lURL = "../Fixed-Departure-Itinerary-" + hdTourName.Value.Trim().Replace(" ", "-") + "_" + hdTourID.Value.Trim();
                     }
 
                 }
                 else if (fldTourType == TOURTYPE.SPECIAL_TOUR)
                 {
-                    lURL = "Holiday-Packages-Itinerary-" + hdTourName.Value.Trim().Replace(" ", "-") + "_" + hdTourID.Value.Trim();
+                    lURL = "../Holiday-Packages-Itinerary-" + hdTourName.Value.Trim().Replace(" ", "-") + "_" + hdTourID.Value.Trim();
                 }
                 lbtnTour.NavigateUrl = lURL;
             }

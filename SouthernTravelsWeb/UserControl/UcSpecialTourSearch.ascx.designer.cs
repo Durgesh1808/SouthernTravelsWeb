@@ -75,7 +75,7 @@ namespace SouthernTravelsWeb.UserControl
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        //protected global::AjaxControlToolkit.PopupControlExtender SplPopEx;
+        protected global::AjaxControlToolkit.PopupControlExtender SplPopEx;
 
         /// <summary>
         /// Panel1 control.

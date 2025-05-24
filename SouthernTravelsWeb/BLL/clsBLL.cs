@@ -100,6 +100,62 @@ namespace SouthernTravelsWeb.BLL
         }
 
 
+        public static int EnquiryTable_Entry(string pDescription, string pName, string pEmail, string pPhone,
+      string pFax, string pStreet, string pCity, string pZIP, string pCountry,
+      int pAdults, int pChild, DateTime pArrivalDate, DateTime pDeptDate,
+      string pRequestType, string pRefNo, string pCaptcha, string pPanNo)
+        {
+            int result = 0;
+            string connectionString = DataLib.getConnectionString();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.ins_Enq_tbl, conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@Desc", pDescription ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@uName", pName ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Email", pEmail ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Phone", pPhone ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Fax", pFax ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Street", pStreet ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@City", pCity ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Zip", pZIP ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Country", pCountry ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Adults", pAdults);
+                        cmd.Parameters.AddWithValue("@Child", pChild);
+                        cmd.Parameters.AddWithValue("@ArrivDate", pArrivalDate);
+                        cmd.Parameters.AddWithValue("@DepDate", pDeptDate);
+                        cmd.Parameters.AddWithValue("@type", pRequestType ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@refno", pRefNo ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@captcha", pCaptcha ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@PanNo", pPanNo ?? (object)DBNull.Value);
+
+                        // Output parameter
+                        SqlParameter outParam = new SqlParameter("@res", SqlDbType.Int)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(outParam);
+
+                        cmd.ExecuteNonQuery();
+
+                        result = outParam.Value != DBNull.Value ? Convert.ToInt32(outParam.Value) : 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    result = 2; 
+                }
+            }
+
+            return result;
+        }
+
         /// <summary>
         /// For Getting the Enquery Reference Code
         /// </summary>

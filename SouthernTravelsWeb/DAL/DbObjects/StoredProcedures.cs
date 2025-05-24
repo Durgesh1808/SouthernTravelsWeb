@@ -30,6 +30,18 @@ namespace SouthernTravelsWeb.DAL.DbObjects
         public const string GetTourInfo_SP = "GetTourInfo_SP";
         public const string GetTourItinerary_Meal = "GetTourItinerary_Meal";
         public const string GetTourPlaceInfo_SP = "GetTourPlaceInfo_SP";
+        public const string GetTourStartFromSearch_SP = "GetTourStartFromSearch_SP";
+        public const string SaveCustomerContactUS_SP = "SaveCustomerContactUS_SP";
+        public const string SaveCustomerFeedback_SP = "SaveCustomerFeedback_SP";
+        public const string FeedBackHierarchy_sp = "FeedBackHierarchy_sp";
+        public const string ins_Enq_tbl = "ins_Enq_tbl";
+        public const string sp_GetState = "sp_GetState";
+        public const string SaveVendor_Hotel_SP = "SaveVendor_Hotel_SP";
+        public const string FindTourDetail_sp = "FindTourDetail_sp";
+        public const string Get_Fare_Panel_IsQuery_sp = "Get_Fare_Panel_IsQuery_sp";
+        public const string GetFixedTourJourneyDate_SP = "GetFixedTourJourneyDate_SP";
+        public const string jdates_vacantseats= "jdates_vacantseats";
+
 
     }
     

@@ -306,6 +306,7 @@ namespace SouthernTravelsWeb.UserControl
         }
         private void BindPlace()
         {
+            ClsCommon clsCmn= new ClsCommon();
             List<GetTourPlaceInfo_SPResult> lGetPlaceName = null;
             ArrayList ArrAlpha = new ArrayList();
             ArrAlpha.Add("A"); ArrAlpha.Add("B"); ArrAlpha.Add("C"); ArrAlpha.Add("D"); ArrAlpha.Add("E"); ArrAlpha.Add("F"); ArrAlpha.Add("G");
@@ -316,7 +317,7 @@ namespace SouthernTravelsWeb.UserControl
             {
                 lGetPlaceName = new List<GetTourPlaceInfo_SPResult>();
 
-                lGetPlaceName = fnGetTourPlaceInfo(Convert.ToInt32(Request.QueryString["TourID"]), Convert.ToInt32(fldTourTypeID)).ToList();
+                lGetPlaceName = clsCmn.fnGetTourPlaceInfo(Convert.ToInt32(Request.QueryString["TourID"]), Convert.ToInt32(fldTourTypeID)).ToList();
                 if (lGetPlaceName != null && lGetPlaceName.Count > 0)
                 {
 
@@ -421,57 +422,6 @@ namespace SouthernTravelsWeb.UserControl
                     break;
                 }
             }
-        }
-        public List<GetTourPlaceInfo_SPResult> fnGetTourPlaceInfo(int pTourID, int pTourType)
-        {
-            List<GetTourPlaceInfo_SPResult> result = new List<GetTourPlaceInfo_SPResult>();
-
-            String connStr =ConfigurationManager.AppSettings["southernconn"];
-            using (SqlConnection conn = new SqlConnection(connStr))
-            {
-                using (SqlCommand cmd = new SqlCommand(StoredProcedures.GetTourPlaceInfo_SP, conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@TourType", pTourType);
-                    cmd.Parameters.AddWithValue("@TourID", pTourID);
-
-                    try
-                    {
-                        conn.Open();
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                result.Add(new GetTourPlaceInfo_SPResult
-                                {
-                                    RowID = Convert.ToInt32(reader["RowID"]),
-                                    TourTypeID = reader["TourTypeID"] as int?,
-                                    TourID = reader["TourID"] as int?,
-                                    CityID = reader["CityID"] as int?,
-                                    PlaceID = reader["PlaceID"] as int?,
-                                    CityName = reader["CityName"]?.ToString(),
-                                    PlaceName = reader["PlaceName"]?.ToString(),
-                                    ShortDescription = reader["ShortDescription"]?.ToString(),
-                                    LongDescription = reader["LongDescription"]?.ToString(),
-                                    ImagePath = reader["ImagePath"]?.ToString(),
-                                    GeoCode = reader["GeoCode"].ToString(), // NOT NULL
-                                    TourStartCity = reader["TourStartCity"].ToString(), // NOT NULL
-                                    TourStartFrom = reader["TourStartFrom"]?.ToString(),
-                                    TourStartFromID = reader["TourStartFromID"] as int?,
-                                    StateName = reader["StateName"]?.ToString()
-                                });
-                            }
-
-                        }
-                    }
-                    catch
-                    {
-                        return null;
-                    }
-                }
-            }
-
-            return result;
         }
 
         #endregion

@@ -366,7 +366,7 @@ namespace SouthernTravelsWeb.UserControl
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("fnGetTourStartFromSearch", con))
+                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.GetTourStartFromSearch_SP, con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@TourType", Convert.ToInt32(TOURTYPE.SPECIAL_TOUR));
