@@ -288,7 +288,6 @@ namespace SouthernTravelsWeb.UserControl
             try
             {
                 // use your AppSettings key for the connection string
-                //var connString = ConfigurationManager.AppSettings["southernconn"];
                 using (var conn = new SqlConnection(connectionString))
                 using (var cmd = new SqlCommand(StoredProcedures.GetTourList_By_Start_Region, conn))
                 {

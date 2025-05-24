@@ -128,7 +128,7 @@
 
                 numberOfMonths: 2,
                 showOn: "button", autoSize: true,
-                buttonImage: "images/calendar.gif",
+                buttonImage: "Assets/images/calendar.gif",
                 buttonImageOnly: true,
                 minDate: new Date(),
                 closeText: 'Close',
@@ -146,7 +146,7 @@
 
                 numberOfMonths: 2,
                 showOn: "button", autoSize: true,
-                buttonImage: "images/calendar.gif",
+                buttonImage: "Assets/images/calendar.gif",
                 buttonImageOnly: true,
                 minDate: new Date(),
                 closeText: 'Close',

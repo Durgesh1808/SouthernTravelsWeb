@@ -1,0 +1,2238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DocumentElement>
+  <!--<AllTours>
+    <TourType>1</TourType>
+    <ZoneName>Allahabad</ZoneName>
+    <RowID>94</RowID>
+    <TourNo>94</TourNo>
+    <Tour_Short_Key>AVBA</Tour_Short_Key>
+    <TourName>Allahabad-Varanasi-Ayodhya</TourName>
+    <FullTourName>Allahabad-Varanasi-Bodh Gaya-Ayodhya-Lucknow</FullTourName>
+    <Remarks>added on 28.12.09</Remarks>
+    <Tour_DisplayName>Allahabad-Varanasi-Ayodhy</Tour_DisplayName>
+    <Notes>This Tour is operated during month of April, May, June, and September, October &amp; November only. </Notes>
+    <TourSequence>20</TourSequence>
+  </AllTours>-->
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>Chennai</ZoneName>
+    <RowID>45</RowID>
+    <TourNo>45</TourNo>
+    <Tour_Short_Key>CTM</Tour_Short_Key>
+    <TourName>Chennai Tirupathi</TourName>
+    <FullTourName>Tirupathi - Thiruchanur - Tirumala</FullTourName>
+    <Remarks>The tour includes Breakfast, Lunch, hill charges and special darshan ticket Rs. 50- or Free Darshan Ticket</Remarks>
+    <Tour_DisplayName>Chennai-Tirupati</Tour_DisplayName>
+    <Notes />
+    <TourSequence>9</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>Hyderabad</ZoneName>
+    <RowID>63</RowID>
+    <TourNo>63</TourNo>
+    <Tour_Short_Key>HC</Tour_Short_Key>
+    <TourName>Hyderabad City Tour</TourName>
+    <FullTourName>Birla Mandir - Assembly Hall - Husain Sagar - Golkonda Fort - Salarjung Museum - Charminar - Nehru Zoological Park</FullTourName>
+    <Remarks>transport by non AC coach and guide service</Remarks>
+    <Tour_DisplayName>Hyderabad City Tour</Tour_DisplayName>
+    <Notes> Museum closed on Fridays and Zoo is closed on Mondays. Ravindra Bharti and Qutub Shahi Tombs will be driven through and viewrd from outside only.</Notes>
+    <TourSequence>18</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>Hyderabad</ZoneName>
+    <RowID>64</RowID>
+    <TourNo>64</TourNo>
+    <Tour_Short_Key>HRF</Tour_Short_Key>
+    <TourName>Ramoji Film City Tour</TourName>
+    <FullTourName>Hyderabad - Dilsukh Nagar - L B Nagar - Vanasthali Puram - Ramoji Film City - Hyderabad</FullTourName>
+    <Remarks>only non AC transport and entry ticket to RFC</Remarks>
+    <Tour_DisplayName>null</Tour_DisplayName>
+    <Notes />
+    <TourSequence>21</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>Kathmandu</ZoneName>
+    <RowID>86</RowID>
+    <TourNo>86</TourNo>
+    <Tour_Short_Key>KTMP</Tour_Short_Key>
+    <TourName>Kathmandu-Mankamna-Pokhara-Jomsom-Muktinath</TourName>
+    <FullTourName>Bangalore or Delhi - Kathmandu - Pokhara - Jamsom - Mukthnath - Jamsom Pokhara - Kathmandu - Bangalore or Delhi </FullTourName>
+    <Remarks>Added by sirez team</Remarks>
+    <Tour_DisplayName>null</Tour_DisplayName>
+    <Notes>
+      Tours are operated for minimum of 2 pax
+      Please ask for brochure for details / rules &amp; regulations
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>Kathmandu</ZoneName>
+    <RowID>87</RowID>
+    <TourNo>87</TourNo>
+    <Tour_Short_Key>KTP</Tour_Short_Key>
+    <TourName>Kathmandu-Pokhara</TourName>
+    <FullTourName>Delhi - Kathmandu - Pokhara - Delhi</FullTourName>
+    <Remarks>Added By sirez Team</Remarks>
+    <Tour_DisplayName>null</Tour_DisplayName>
+    <Notes>Delhi-Katmandu-Delhi Flight charges and Airport taxes are extra.</Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>11</RowID>
+    <TourNo>11</TourNo>
+    <Tour_Short_Key>CT</Tour_Short_Key>
+    <TourName>Delhi City Tour</TourName>
+    <FullTourName>Delhi City tour</FullTourName>
+    <Remarks>
+      Humayuns Tomb, Iskcon Temple and Chattarpur Temple will be covered on Mondays.
+      Rashtrapati Bhavan, Parliament House and Feroz Shah Kotla are shown from outside.
+
+      Red fort, Lotus Temple, Indira Gandhi Memorial and Nehru Museum will be closed on Sunday
+    </Remarks>
+    <Tour_DisplayName>Delhi City Tour</Tour_DisplayName>
+    <Notes>
+      Humayun's Tomb, Iskcon Temple and Chattarpur Temple will be covered on Mondays.
+      Rashtrapati Bhavan, Parliament House and Feroz Shah Kotla are shown from outside.
+
+      Red fort, Lotus Temple, Indira Gandhi Memorial and Nehru Museum will be closed on Sunday
+    </Notes>
+    <TourSequence>2</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>13</RowID>
+    <TourNo>13</TourNo>
+    <Tour_Short_Key>AM</Tour_Short_Key>
+    <TourName>Agra-Mathura</TourName>
+    <FullTourName>Delhi-Agra-Mathura-Delhi</FullTourName>
+    <Remarks>
+      Childern below 5 yrs will not be charged &amp; no seat will be provided.
+      * Above 5 yrs will be Charged Full.
+    </Remarks>
+    <Tour_DisplayName>null</Tour_DisplayName>
+    <Notes>No Service on Fridays as 'Taj Mahal' is closed</Notes>
+    <TourSequence>5</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>14</RowID>
+    <TourNo>14</TourNo>
+    <Tour_Short_Key>HR</Tour_Short_Key>
+    <TourName>Haridwar-Rishikesh</TourName>
+    <FullTourName>DELHI-HARIDWAR-RISHIKESH-LAXMAN JHOOLA-RAM JHOOLA-DELHI</FullTourName>
+    <Remarks>UPDATED ON 120307.</Remarks>
+    <Tour_DisplayName>Haridwar-Rishikesh</Tour_DisplayName>
+    <Notes>
+      *Childern below 5 yrs will not be charged &amp; no seat will be provided.
+      * Above 5 yrs will be Charged Full.
+    </Notes>
+    <TourSequence>6</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>21</RowID>
+    <TourNo>21</TourNo>
+    <Tour_Short_Key>BK-AC</Tour_Short_Key>
+    <TourName>Badrinath-Kedarnath</TourName>
+    <FullTourName>Delhi-Haridwar-Rishikesh-Srinagar-Gaurikund-Kedarnath-Rampur-Pipalkoti-Badrinath-Haridwar-Delhi</FullTourName>
+    <Remarks>updated on 01.06.09.This is a A.C Bus on twin sharing acco.</Remarks>
+    <Tour_DisplayName>Badrinath-Kedarnath</Tour_DisplayName>
+    <Notes>
+      Departure: Every Sunday / Monday / Wednesday / Friday 21:30 Hrs.
+
+      Return: Next Sunday/Monday/Wednesday / Friday 04:00 Hrs.
+    </Notes>
+    <TourSequence>13</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>22</RowID>
+    <TourNo>22</TourNo>
+    <Tour_Short_Key>YGBK-AC</Tour_Short_Key>
+    <TourName>4 Dham</TourName>
+    <FullTourName>Delhi-Rishikesh-Barkot-Yamunotri-Uttarkashi-Gangotri-Srinagar-Gaurikund-Kedarnath-Rampur-Pipalkoti-Badrinath-Haridwar-Delhi</FullTourName>
+    <Remarks>This package can also be arranged by Car  Innova Tempo Traveller on extra payment. </Remarks>
+    <Tour_DisplayName>4 Dham</Tour_DisplayName>
+    <Notes>Sun, Tue &amp; Wed tour will be operated only in the month of May &amp; June &amp; Friday tour will be operated from May to October</Notes>
+    <TourSequence>14</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>23</RowID>
+    <TourNo>23</TourNo>
+    <Tour_Short_Key>AV</Tour_Short_Key>
+    <TourName>Allahabad-Varanasi</TourName>
+    <FullTourName> Delhi –Naimisaranaya – Ayodhya- Janakpur- Sitamarhi – Bodhgaya – Gaya – Varanasi – Sarnath – Sitapur – Allahabad- Agra – Mathura</FullTourName>
+    <Remarks />
+    <Tour_DisplayName>Allahabad-Varanasi</Tour_DisplayName>
+    <Notes>
+      We can arrange your Train / Flight Tickets upto Varanasi on extra payment.
+      Note : In the month of May , tour will be operated every Monday.
+    </Notes>
+    <TourSequence>15</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>24</RowID>
+    <TourNo>24</TourNo>
+    <Tour_Short_Key>AMAR</Tour_Short_Key>
+    <TourName>Amarnath Yatra</TourName>
+    <FullTourName>Delhi-Katra-Srinagar-Baltal-Amarnath-Baltal-Srinagar-Katra-Amritsar-Wagha Border-Kurukshetra-Delhi</FullTourName>
+    <Remarks>
+      Accommodation charges at rest of the places are to be borne by the pilgrims.
+      This tour can be arranged by flight from Delhi-Srinagar-Delhi.From Srinagar to Baltal , Gulmarg , Pahalgam and Srinagar local sight seeing can be arranged by car.Baltal to Amarnath by pony  Helicopter. Please contact our office for charges.
+    </Remarks>
+    <Tour_DisplayName>Amarnath Yatra</Tour_DisplayName>
+    <Notes>
+      Accommodation charges at rest of the places are to be borne by the pilgrims.
+      This tour can be arranged by flight from Delhi-Srinagar-Delhi.From Srinagar to Baltal , Gulmarg , Pahalgam and Srinagar local sight seeing can be arranged by car.Baltal to Amarnath by pony / Helicopter. Please contact our office for charges.
+    </Notes>
+    <TourSequence>17</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>26</RowID>
+    <TourNo>26</TourNo>
+    <Tour_Short_Key>KTM </Tour_Short_Key>
+    <TourName>Kathmandu Package</TourName>
+    <FullTourName>KATHMANDU  PACKAGE</FullTourName>
+    <Remarks>UPDATED ON 260306, THE FARE IS APPLICABLE EX-KATHMANDU .AIR FARE IS EXTRA.</Remarks>
+    <Tour_DisplayName>null</Tour_DisplayName>
+    <Notes>
+      Please carry your identification like Ration Card/Identity Card/Driving License/Passport or a Photo attestation from a Notary Public.
+
+      Fare: Delhi - Kathmandu - Delhi flights charges (including airport tax) will be extra.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>27</RowID>
+    <TourNo>27</TourNo>
+    <Tour_Short_Key>KM</Tour_Short_Key>
+    <TourName>Kailash Manasarovar</TourName>
+    <FullTourName>KATHMANDU-KAILASH MANASAROVER-KATHMANDU</FullTourName>
+    <Remarks />
+    <Tour_DisplayName>null</Tour_DisplayName>
+    <Notes>
+      Flight fare to &amp; fro Kathmandu is extra Tours are operated once minimum group size of 12 pax is attained Please ask for brochure for details / rules &amp; regulations you are reaching Kailash Manasarovar on full moon days.
+      For a group booking of minimum 15 paying pax, we will offer one pax complimentary as tour leader.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>39</RowID>
+    <TourNo>39</TourNo>
+    <Tour_Short_Key>AM-V</Tour_Short_Key>
+    <TourName>Agra-Mathura Volvo</TourName>
+    <FullTourName>Delhi-Agra-Mathura-Delhi</FullTourName>
+    <Remarks>A-M VOLVO updated on 01.06.09</Remarks>
+    <Tour_DisplayName>null</Tour_DisplayName>
+    <Notes>No Service on Fridays as 'Taj Mahal' is closed</Notes>
+    <TourSequence>4</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>40</RowID>
+    <TourNo>40</TourNo>
+    <Tour_Short_Key>JA-V</Tour_Short_Key>
+    <TourName>Jaipur-Agra Volvo. A.c</TourName>
+    <FullTourName>Delhi-Jaipur-Fatehpur Sikri-Agra-Mathura-Delhi</FullTourName>
+    <Remarks />
+    <Tour_DisplayName>Jaipur-Agra Volvo A.C</Tour_DisplayName>
+    <Notes>
+      Monday &amp; Friday tour will be operated throughout the year.
+      Wednesday tour will be operated in the months of April, May, June, September &amp; October only.
+    </Notes>
+    <TourSequence>7</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>69</RowID>
+    <TourNo>69</TourNo>
+    <Tour_Short_Key>MUH-AC</Tour_Short_Key>
+    <TourName>Mussoorie-Haridwar-Rishikesh</TourName>
+    <FullTourName>Delhi-Mussoorie-Haridwar-Rishikesh-Delhi</FullTourName>
+    <Remarks>NEW Tour updated on 01.06.09</Remarks>
+    <Tour_DisplayName>Mussoorie-Haridwar-Rishik</Tour_DisplayName>
+    <Notes>
+      Tuesday tour will be operated only in the month of April,May,June &amp; October Only
+      Friday tour will be operated throughout the year
+    </Notes>
+    <TourSequence>9</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>71</RowID>
+    <TourNo>71</TourNo>
+    <Tour_Short_Key>SKM-V</Tour_Short_Key>
+    <TourName>Shimla-Kullu-Manali-Volvo Food</TourName>
+    <FullTourName>Delhi-Pinjore Garden-Shimla-Kufri-Kullu-Manali-Rohtang Pass-Chandigarh-Kurukshetra-Delhi</FullTourName>
+    <Remarks>THIS IS A VOLVO TOUR WITH FOOD.</Remarks>
+    <Tour_DisplayName>Shimla-Kullu-Manali Volvo</Tour_DisplayName>
+    <Notes>
+      Monday tour will be operated only in the month of May &amp; June
+      Thursday &amp; Saturday tour will be operated through out the year.
+    </Notes>
+    <TourSequence>10</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>73</RowID>
+    <TourNo>73</TourNo>
+    <Tour_Short_Key>AD</Tour_Short_Key>
+    <TourName>Akshardham Temple Tour</TourName>
+    <FullTourName>Akshardham temple Delhi tour</FullTourName>
+    <Remarks>Updated on 01.06.09</Remarks>
+    <Tour_DisplayName>Akshardham Temple Tour</Tour_DisplayName>
+    <Notes>The entrance tickets at Museums, Metro Rail ticket &amp; Show at Akshardham temple is extra. No Service on Mondays as show in Akshardham Temple will not be screened &amp; Museums are closed </Notes>
+    <TourSequence>3</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>91</RowID>
+    <TourNo>91</TourNo>
+    <Tour_Short_Key>MDK-V</Tour_Short_Key>
+    <TourName>Manali-Vaishnodevi Volvo With Food</TourName>
+    <FullTourName>Delhi - Chandigarh – Manali – Chamunda - Dharamshala- Vaishno Devi – Amritsar </FullTourName>
+    <Remarks />
+    <Tour_DisplayName>Manali-Vaishnodevi Volvo</Tour_DisplayName>
+    <Notes>
+      Friday tour will be operated only in the month of May &amp; June.
+      Monday &amp; Wednesday tour will be operated throughout the year.
+    </Notes>
+    <TourSequence>11</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>105</RowID>
+    <TourNo>105</TourNo>
+    <Tour_Short_Key>JAPA-V</Tour_Short_Key>
+    <TourName>Jaipur-Ajmer-Pushkar-Agra Volvo</TourName>
+    <FullTourName>Delhi-Jaipur-Ajmer-Pushkar-Fatehpursikri-Agra-Mathura-Delhi</FullTourName>
+    <Remarks>New Tour Added On 4-10-10</Remarks>
+    <Tour_DisplayName>Jaipur-Ajmer-Pushkar-Agra</Tour_DisplayName>
+    <Notes>Monday tour will be operated only in the month of May. Friday Tour will be operated during the months of April, May, June , September &amp; October.</Notes>
+    <TourSequence>8</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>110</RowID>
+    <TourNo>110</TourNo>
+    <Tour_Short_Key>KAS-V</Tour_Short_Key>
+    <TourName>Kashmir Package-By Ac Volvo</TourName>
+    <FullTourName>Delhi - Katra - Srinagar - Gulmarg - Pahalgam - Katra - Jammu - Amritsar - Wagah Border - Delhi</FullTourName>
+    <Remarks />
+    <Tour_DisplayName>Kashmir Package- By AC Vo</Tour_DisplayName>
+    <Notes>Tuesday / Thursday tour will be operated only in the month of May.</Notes>
+    <TourSequence>12</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>122</RowID>
+    <TourNo>122</TourNo>
+    <Tour_Short_Key>CT-V</Tour_Short_Key>
+    <TourName>Delhi City Tour By A.c. Volvo</TourName>
+    <FullTourName>Delhi City Tour By A.C. Volvo</FullTourName>
+    <Remarks>
+      Humayuns Tomb, Iskcon Temple and Chattarpur Temple will be covered on Mondays.
+      Rashtrapati Bhavan, Parliament House and Feroz Shah Kotla are shown from outside.
+
+      Red fort, Lotus Temple, Indira Gandhi Memorial and Nehru Museum will be closed on Sunday
+    </Remarks>
+    <Tour_DisplayName>Delhi City Tour By A.C. V</Tour_DisplayName>
+    <Notes>
+      Humayun's Tomb, Iskcon Temple and Chattarpur Temple will be covered on Mondays.
+      Rashtrapati Bhavan, Parliament House and Feroz Shah Kotla are shown from outside.
+
+      Red fort, Lotus Temple, Indira Gandhi Memorial and Nehru Museum will be closed on Sunday
+    </Notes>
+    <TourSequence>1</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>123</RowID>
+    <TourNo>123</TourNo>
+    <Tour_Short_Key>AMAR-V</Tour_Short_Key>
+    <TourName>Amarnath Yatra-By A.c Volvo</TourName>
+    <FullTourName>Delhi-Katra-Srinagar-Baltal-Amarnath-Baltal-Srinagar-Katra-Amritsar-Wagha Border-Kurukshetra-Delhi</FullTourName>
+    <Remarks />
+    <Tour_DisplayName>AMARNATH YATRA - BY A.C V</Tour_DisplayName>
+    <Notes>Accommodation charges at rest of the places are to be borne by the pilgrims.</Notes>
+    <TourSequence>16</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>1</TourType>
+    <ZoneName>New Delhi</ZoneName>
+    <RowID>125</RowID>
+    <TourNo>125</TourNo>
+    <Tour_Short_Key>KM-H</Tour_Short_Key>
+    <TourName>Kailash Manasarovar Pilgrimage</TourName>
+    <FullTourName>Kailash Manasarovar Pilgrimage</FullTourName>
+    <Remarks />
+    <Tour_DisplayName>Kailash Manasarovar Pilgr</Tour_DisplayName>
+    <Notes>Prices are subject to change*</Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Bengaluru</ZoneName>
+    <RowID>81</RowID>
+    <TourNo>81</TourNo>
+    <Tour_Short_Key>BC</Tour_Short_Key>
+    <TourName>Bengaluru City Tour</TourName>
+    <FullTourName>Bengaluru City Tour</FullTourName>
+    <Remarks>Added on 17-1-11</Remarks>
+    <Tour_DisplayName>Bengaluru City Tour</Tour_DisplayName>
+    <Notes />
+    <TourSequence>49</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Bengaluru</ZoneName>
+    <RowID>82</RowID>
+    <TourNo>82</TourNo>
+    <Tour_Short_Key>BMS</Tour_Short_Key>
+    <TourName>Mysore City Tour</TourName>
+    <FullTourName>Mysore City Tour</FullTourName>
+    <Remarks>Added on 17-1-11</Remarks>
+    <Tour_DisplayName>Mysore City Tour</Tour_DisplayName>
+    <Notes>Passengers should carry PassportElection Identity Card. The fare is subject to change.</Notes>
+    <TourSequence>38</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Eastern India</ZoneName>
+    <RowID>37</RowID>
+    <TourNo>37</TourNo>
+    <Tour_Short_Key>ED 01</Tour_Short_Key>
+    <TourName>Darjeeling-Gangtok</TourName>
+    <FullTourName>Darjeeling-Gangtok</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Darjeeling-Gangtok</Tour_DisplayName>
+    <Notes>
+      Air fare Train fare. Guide &amp; Entry fee during
+      sight seeing Portages, Laundry, Food, Tips ,Liquor exp. Any other item not specified in Cost Includes
+    </Notes>
+    <TourSequence>7</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Eastern India</ZoneName>
+    <RowID>73</RowID>
+    <TourNo>73</TourNo>
+    <Tour_Short_Key>ED 02</Tour_Short_Key>
+    <TourName>Gangtok-Kalimpong-Peling-Darjeeling</TourName>
+    <FullTourName>Gangtok-Kalimpong-Peling-Darjeeling</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Gangtok-Kalimpong-Peling-Darjeeling</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures.Prices are valid till March 2013.</Notes>
+    <TourSequence>32</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Eastern India</ZoneName>
+    <RowID>74</RowID>
+    <TourNo>74</TourNo>
+    <Tour_Short_Key>EKP 01</Tour_Short_Key>
+    <TourName>Bhubaneswar-Puri-Konark</TourName>
+    <FullTourName>Bhubaneswar-Puri-Konark</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Bhubaneswar-Puri-Konark</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate.Tour Code EKP 01- Single Adult in a room has to pay extra Rs. 2,900-in Standard &amp;
+      Rs. 3,900 - in Deluxe. All tours are subject to terms and conditions as mentioned in our brochures. Prices are valid till March 2013.
+    </Notes>
+    <TourSequence>31</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Eastern India</ZoneName>
+    <RowID>108</RowID>
+    <TourNo>108</TourNo>
+    <Tour_Short_Key>ED 03</Tour_Short_Key>
+    <TourName>Gangtok-Peling-Darjeeling</TourName>
+    <FullTourName>Gangtok-Peling-Darjeeling</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Gangtok-Peling-Darjeeling</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code ED 03 - Single Adult in a room has to pay extra April to June 8,500- in Standard &amp; 12,600- in Deluxe Packages and July to March 2012 7,600- Standard &amp; ` 10,500- in Deluxe packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Eastern India</ZoneName>
+    <RowID>109</RowID>
+    <TourNo>109</TourNo>
+    <Tour_Short_Key>ED 04</Tour_Short_Key>
+    <TourName>Gangtok-Lachung-Yumthang-Darjeeling</TourName>
+    <FullTourName>Gangtok-Lachung-Yumthang-Darjeeling</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Gangtok-Lachung-Yumthang-Darjeeling</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code ED 04- Single Adult in a room has to pay extra April to June ` 12,900- in Standard &amp; 16,600- in Deluxe Packages and July to March 2012 12,000- Standard &amp; ` 14,600- in Deluxe packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>1</RowID>
+    <TourNo>1</TourNo>
+    <Tour_Short_Key>NR 02</Tour_Short_Key>
+    <TourName>Best Of Rajasthan</TourName>
+    <FullTourName>Best Of Rajasthan</FullTourName>
+    <Remarks>c</Remarks>
+    <Tour_DisplayName>Best Of Rajasthan</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures. Tour code NR -02 Single Adult in a room has to pay extra Rs.7900-in Standard &amp; Rs. 11500-.in Deluxe package.</Notes>
+    <TourSequence>33</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>4</RowID>
+    <TourNo>4</TourNo>
+    <Tour_Short_Key>ND 04</Tour_Short_Key>
+    <TourName>Shimla-Manali-Kullu</TourName>
+    <FullTourName>Shimla-Manali-Kullu</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Shimla-Manali-Kullu</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour code MH -01- Single Adult in a room has to pay extra Rs. 2000- in Standard &amp; Rs. 3400- .in Deluxe package.
+    </Notes>
+    <TourSequence>1</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>5</RowID>
+    <TourNo>5</TourNo>
+    <Tour_Short_Key>ND06</Tour_Short_Key>
+    <TourName>Delhi-Shimla-Manali-Dalhousie-Amritsar</TourName>
+    <FullTourName>Delhi-Shimla-Manali-Dalhousie-Amritsar</FullTourName>
+    <Remarks>Shimla-Manali-dalhousie-Amritsar</Remarks>
+    <Tour_DisplayName>Delhi-Shimla-Manali-Dalhousie-Amritsar</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures. Tour code ND 06 Single Adult in a room has to pay extra Rs. 11500- in Standard &amp; Rs.15600- in Deluxe package.
+    </Notes>
+    <TourSequence>15</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>6</RowID>
+    <TourNo>6</TourNo>
+    <Tour_Short_Key>NK-01</Tour_Short_Key>
+    <TourName>Kashmir</TourName>
+    <FullTourName>Kashmir</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Kashmir</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures. Tour code NK -01 Single Adult in a room has to pay extra Rs.5900-in Standard &amp; Rs. 8250.in Deluxe package.</Notes>
+    <TourSequence>3</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>16</RowID>
+    <TourNo>16</TourNo>
+    <Tour_Short_Key>ND01</Tour_Short_Key>
+    <TourName>Nainital Tour</TourName>
+    <FullTourName>Nainital Tour</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Nainital Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures. Tour code ND-01 Single Adult in a room has to pay extra Rs.4500- in Standard &amp; Rs.5700 - in Deluxe package.
+    </Notes>
+    <TourSequence>45</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>17</RowID>
+    <TourNo>17</TourNo>
+    <Tour_Short_Key>ND 02</Tour_Short_Key>
+    <TourName>Corbett-Nainital Tour</TourName>
+    <FullTourName>Corbett-Nainital Tour</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Corbett-Nainital Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures. Tour code ND-02 Single Adult in a room has to pay extra Rs.6000- in Standard &amp; Rs.7800 - in Deluxe package.
+    </Notes>
+    <TourSequence>13</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>22</RowID>
+    <TourNo>22</TourNo>
+    <Tour_Short_Key>SB 01</Tour_Short_Key>
+    <TourName>Exotic South India</TourName>
+    <FullTourName>Exotic South India</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Exotic South India</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour Code : SB 01 This tour - Single Adult in a room has to pay extra Rs 6,000- in Standard &amp; Rs. 9,800- in Deluxe Packages. Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>51</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>23</RowID>
+    <TourNo>23</TourNo>
+    <Tour_Short_Key>SB 02</Tour_Short_Key>
+    <TourName>Best Of South India</TourName>
+    <FullTourName>Best Of South India</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Best Of South India</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour Code : SB 02 This tour -
+      Single Adult in a room has to pay extra Rs. 9,750- in Standard &amp; Rs. 15,600- in Deluxe Packages.Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>59</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>25</RowID>
+    <TourNo>25</TourNo>
+    <Tour_Short_Key>SK 03</Tour_Short_Key>
+    <TourName>Enchanting Kerala</TourName>
+    <FullTourName>Enchanting Kerala</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Enchanting Kerala</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures.Tour Code SK 03 This tour -Single Adult in a room has to pay extra RS. 8,750- in Standard &amp; Rs. 13,750- in Deluxe Packages. Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>11</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>28</RowID>
+    <TourNo>28</TourNo>
+    <Tour_Short_Key>SK 04</Tour_Short_Key>
+    <TourName>Best Of Kerala</TourName>
+    <FullTourName>Best Of Kerala</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Best Of Kerala</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures.Tour Code SK 04 This tour -Single Adult in a room has to pay extra RS.11,375- in Standard &amp; Rs. 17,600- in Deluxe Packages. Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>39</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>29</RowID>
+    <TourNo>29</TourNo>
+    <Tour_Short_Key>SK 06</Tour_Short_Key>
+    <TourName>Incredible Kerala</TourName>
+    <FullTourName>Incredible Kerala</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Incredible Kerala</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate.All tours are subject to terms and conditions mentioned in our brochures. A.C Supplement charges for vehicle RS. 3000- and Single Adult in a room has to pay extra Rs. 7,500- in Standard &amp; Rs. 12,250- in Deluxe Packages.AC in House Boat will be operated between 09.00 PM to 06.00 AM only.Prices are valid till March 2012.</Notes>
+    <TourSequence>2</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>30</RowID>
+    <TourNo>30</TourNo>
+    <Tour_Short_Key>SK 07</Tour_Short_Key>
+    <TourName>Splendours Of Kerala</TourName>
+    <FullTourName>Splendours Of Kerala</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Splendours Of Kerala</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All
+      tours are subject to terms and conditions as mentioned in our
+      brochures. Tour Code SK 07 This tour A.C Supplement charges for vehicle RS. 3500-
+      Single Adult in a room has to pay extra Rs. 9,000- in Standard &amp;
+      Rs. 14,250- in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>30</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>36</RowID>
+    <TourNo>36</TourNo>
+    <Tour_Short_Key>WG 01</Tour_Short_Key>
+    <TourName>Golden Goa</TourName>
+    <FullTourName>Golden Goa</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Golden Goa</Tour_DisplayName>
+    <Notes>
+      All tours are subject to terms and conditions as mentioned in
+      our brochures.Prices are valid till
+      March 2012.
+    </Notes>
+    <TourSequence>26</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>66</RowID>
+    <TourNo>66</TourNo>
+    <Tour_Short_Key>SE 02</Tour_Short_Key>
+    <TourName>Andaman Tour Package</TourName>
+    <FullTourName>Andaman Tour Package</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Andaman Tour Package</Tour_DisplayName>
+    <Notes>The vehicle is for Point travel and not at disposal.All tours are subject to terms &amp; conditions as mentioned in our Brouchers.Prices are valid till March 2013.</Notes>
+    <TourSequence>25</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>119</RowID>
+    <TourNo>119</TourNo>
+    <Tour_Short_Key>KTM</Tour_Short_Key>
+    <TourName>Kathmandu Package</TourName>
+    <FullTourName>Kathmandu Package</FullTourName>
+    <Remarks>New Entry</Remarks>
+    <Tour_DisplayName>Kathmandu Package</Tour_DisplayName>
+    <Notes>NB Please carry your identification like Ration CardIdentity CardDriving LicensePassport or a Photo attestation from a Notary Public.</Notes>
+    <TourSequence>17</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>120</RowID>
+    <TourNo>120</TourNo>
+    <Tour_Short_Key>KTP</Tour_Short_Key>
+    <TourName>Kathmandu-Pokhara</TourName>
+    <FullTourName>Kathmandu-Pokhara</FullTourName>
+    <Remarks>New Entry</Remarks>
+    <Tour_DisplayName>Kathmandu-Pokhara</Tour_DisplayName>
+    <Notes />
+    <TourSequence>19</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Pilgrimage</ZoneName>
+    <RowID>121</RowID>
+    <TourNo>121</TourNo>
+    <Tour_Short_Key>KTMP</Tour_Short_Key>
+    <TourName>Kathmandu-Mankamna-Pokhara-Jomsom-Muktinath</TourName>
+    <FullTourName>Kathmandu-Mankamna-Pokhara-Jomsom-Muktinath</FullTourName>
+    <Remarks>New Entry</Remarks>
+    <Tour_DisplayName>Kathmandu-Mankamna-Pokhara-Jomsom-Muktinath</Tour_DisplayName>
+    <Notes>
+      Flight fare from Bangalore  Delhi to Kathmandu &amp; back is extra
+      Tours are operated for minium of 2 pax
+      Please ask for brochure for details  rules &amp; regulations
+    </Notes>
+    <TourSequence>18</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>125</RowID>
+    <TourNo>125</TourNo>
+    <Tour_Short_Key>ND 08</Tour_Short_Key>
+    <TourName>Dazzling Manali</TourName>
+    <FullTourName>Dazzling Manali</FullTourName>
+    <Remarks>Created on 01-04-13</Remarks>
+    <Tour_DisplayName>Dazzling Manali</Tour_DisplayName>
+    <Notes>All distances and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures. Tour Code: ND o8 - Single adult in a room has to pay extra Rs.4500- in Standard and Rs.6000- in Deluxe Packages. Prices are valid till March 2104</Notes>
+    <TourSequence>1000</TourSequence>
+    <StartsFromID>221</StartsFromID>
+    <StartsFrom>Delhi</StartsFrom>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Kerala</ZoneName>
+    <RowID>25</RowID>
+    <TourNo>25</TourNo>
+    <Tour_Short_Key>SK 03</Tour_Short_Key>
+    <TourName>Enchanting Kerala</TourName>
+    <FullTourName>Enchanting Kerala</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Enchanting Kerala</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures.Tour Code SK 03 This tour -Single Adult in a room has to pay extra RS. 8,750- in Standard &amp; Rs. 13,750- in Deluxe Packages. Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>11</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Kerala</ZoneName>
+    <RowID>28</RowID>
+    <TourNo>28</TourNo>
+    <Tour_Short_Key>SK 04</Tour_Short_Key>
+    <TourName>Best Of Kerala</TourName>
+    <FullTourName>Best Of Kerala</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Best Of Kerala</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures.Tour Code SK 04 This tour -Single Adult in a room has to pay extra RS.11,375- in Standard &amp; Rs. 17,600- in Deluxe Packages. Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>39</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Kerala</ZoneName>
+    <RowID>29</RowID>
+    <TourNo>29</TourNo>
+    <Tour_Short_Key>SK 06</Tour_Short_Key>
+    <TourName>Incredible Kerala</TourName>
+    <FullTourName>Incredible Kerala</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Incredible Kerala</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate.All tours are subject to terms and conditions mentioned in our brochures. A.C Supplement charges for vehicle RS. 3000- and Single Adult in a room has to pay extra Rs. 7,500- in Standard &amp; Rs. 12,250- in Deluxe Packages.AC in House Boat will be operated between 09.00 PM to 06.00 AM only.Prices are valid till March 2012.</Notes>
+    <TourSequence>2</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Kerala</ZoneName>
+    <RowID>31</RowID>
+    <TourNo>31</TourNo>
+    <Tour_Short_Key>SK 05</Tour_Short_Key>
+    <TourName>Kerala-Kanyakumari</TourName>
+    <FullTourName>Kerala-Kanyakumari</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Kerala-Kanyakumari</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours
+      are subject to terms and conditions as mentioned in our brochures.
+      Tour Code SK 05 This tour - Single Adult in a room has to pay extra Rs. 11,500-
+      in Standard &amp; Rs. 18,800- in Deluxe Packages. Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>28</TourSequence>
+    <StartsFromID>71</StartsFromID>
+    <StartsFrom>Cochin</StartsFrom>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Kerala</ZoneName>
+    <RowID>30</RowID>
+    <TourNo>30</TourNo>
+    <Tour_Short_Key>SK 07</Tour_Short_Key>
+    <TourName>Splendours Of Kerala</TourName>
+    <FullTourName>Splendours Of Kerala</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Splendours Of Kerala</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All
+      tours are subject to terms and conditions as mentioned in our
+      brochures. Tour Code SK 07 This tour A.C Supplement charges for vehicle RS. 3500-
+      Single Adult in a room has to pay extra Rs. 9,000- in Standard &amp;
+      Rs. 14,250- in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>30</TourSequence>
+  </AllTours>
+
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Mumbai</ZoneName>
+    <RowID>89</RowID>
+    <TourNo>89</TourNo>
+    <Tour_Short_Key>MC</Tour_Short_Key>
+    <TourName>Mumbai City Tour</TourName>
+    <FullTourName>Mumbai City Tour</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Mumbai City Tour</Tour_DisplayName>
+    <Notes>* Denotes drive through and view from outside only.</Notes>
+    <TourSequence>12</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>3</RowID>
+    <TourNo>3</TourNo>
+    <Tour_Short_Key>ND 05</Tour_Short_Key>
+    <TourName>Shimla-Kullu-Manali</TourName>
+    <FullTourName>Shimla-Kullu-Manali</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Shimla-Kullu-Manali</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures. Tour code ND 05- Single Adult in a room has to pay extra Rs. 10500- in Standard &amp; Rs. 14000- in Deluxe package.</Notes>
+    <TourSequence>21</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>4</RowID>
+    <TourNo>4</TourNo>
+    <Tour_Short_Key>ND 04</Tour_Short_Key>
+    <TourName>Shimla-Manali-Kullu</TourName>
+    <FullTourName>Shimla-Manali-Kullu</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Shimla-Manali-Kullu</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour code MH -01- Single Adult in a room has to pay extra Rs. 2000- in Standard &amp; Rs. 3400- .in Deluxe package.
+    </Notes>
+    <TourSequence>1</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>5</RowID>
+    <TourNo>5</TourNo>
+    <Tour_Short_Key>ND06</Tour_Short_Key>
+    <TourName>Delhi-Shimla-Manali-Dalhousie-Amritsar</TourName>
+    <FullTourName>Delhi-Shimla-Manali-Dalhousie-Amritsar</FullTourName>
+    <Remarks>Shimla-Manali-dalhousie-Amritsar</Remarks>
+    <Tour_DisplayName>Delhi-Shimla-Manali-Dalhousie-Amritsar</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures. Tour code ND 06 Single Adult in a room has to pay extra Rs. 11500- in Standard &amp; Rs.15600- in Deluxe package.
+    </Notes>
+    <TourSequence>15</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>6</RowID>
+    <TourNo>6</TourNo>
+    <Tour_Short_Key>NK-01</Tour_Short_Key>
+    <TourName>Kashmir</TourName>
+    <FullTourName>Kashmir</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Kashmir</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures. Tour code NK -01 Single Adult in a room has to pay extra Rs.5900-in Standard &amp; Rs. 8250.in Deluxe package.</Notes>
+    <TourSequence>3</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>7</RowID>
+    <TourNo>7</TourNo>
+    <Tour_Short_Key>NK02</Tour_Short_Key>
+    <TourName>Kashmir-Vaishnodevi</TourName>
+    <FullTourName>Kashmir-Vaishnodevi</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Kashmir-Vaishnodevi</Tour_DisplayName>
+    <Notes>
+      *Fares from 21st December to 5th January are available on request.
+      US $ Price for NRI &amp; Foreigners is available with our offices.
+    </Notes>
+    <TourSequence>27</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>9</RowID>
+    <TourNo>9</TourNo>
+    <Tour_Short_Key>NK 04</Tour_Short_Key>
+    <TourName>Jammu-Vaishnodevi-Amritsar</TourName>
+    <FullTourName>Jammu-Vaishnodevi-Amritsar</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Jammu-Vaishnodevi-Amritsar</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour code NK 04- Single Adult in a room has to pay extra Rs.5000-in Standard &amp; Rs. 6500- in Deluxe package.
+    </Notes>
+    <TourSequence>24</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>10</RowID>
+    <TourNo>10</TourNo>
+    <Tour_Short_Key>NK 05</Tour_Short_Key>
+    <TourName>Leh-Discover Himalayas</TourName>
+    <FullTourName>Leh-Discover Himalayas</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Leh-Discover Himalayas</Tour_DisplayName>
+    <Notes>All distances and timings featured are approximate.All tours are subject to Terms &amp; conditions as mentioned iin our Brochures.Tour Code:NK 05 This tour-Single adult in a room has to pay extra Rs.3600- in standard packages and Rs.5500- in Deluxe packages.Prices are valid till March 2011.</Notes>
+    <TourSequence>52</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>13</RowID>
+    <TourNo>13</TourNo>
+    <Tour_Short_Key>EVA</Tour_Short_Key>
+    <TourName>Varanasi-Allahabad</TourName>
+    <FullTourName>Varanasi-Allahabad</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Varanasi-Allahabad</Tour_DisplayName>
+    <Notes>
+      We can also arrange 2 Days 1 Night package for the above
+      places.The hotels that you may get in the standard category are: Varanasi-M M Continental,Allahabad-Hotel Milan.The hotels that you may get in the Deluxe category are: Varanasi-M M Continental,Allahabad-Hotel Milan.According to the availability of the rooms the hotel can be changed. In that case you will be provided a similar hotel.Tour code EVA Single Adult in a room has to pay extra Rs.2200- in Standard &amp; Rs. 3000-.in Deluxe package.
+    </Notes>
+    <TourSequence>4</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>14</RowID>
+    <TourNo>14</TourNo>
+    <Tour_Short_Key>EVB</Tour_Short_Key>
+    <TourName>Varanasi-Bodhgaya-Allahabad</TourName>
+    <FullTourName>Varanasi-Bodhgaya-Allahabad</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Varanasi-Bodhgaya-Allahabad</Tour_DisplayName>
+    <Notes>
+      We can also arrange 2 Days 1 Night package for the above
+      places.The hotels that you may get in the standard category are: Varanasi-M M Continental,Allahabad-Hotel Milan,Bodhgaya-Shashi International.The hotels that you may get in the Deluxe category are: Varanasi-M M Continental,Allahabad-Hotel Milan,Bodhgaya-Shashi International.According to the availability of the rooms the hotel can be changed. In that case you will be provided a similar hotel.Tour Code:EVB This tour - Single Adult in a room has to pay extra RS. 3000- in standard and RS. 4,400- in Deluxe Packages Prices are valid till March 2012
+    </Notes>
+    <TourSequence>10</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>15</RowID>
+    <TourNo>15</TourNo>
+    <Tour_Short_Key>NBK</Tour_Short_Key>
+    <TourName>Badrinath-Kedarnath-Haridwar-Rishikesh</TourName>
+    <FullTourName>Badrinath-Kedarnath-Haridwar-Rishikesh</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Badrinath-Kedarnath-Haridwar-Rishikesh</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures..Due to sacrcity of accommodation Regular Things Personal Medicines, Motional sickness tablets Small portable oxygen cylinder Sweater, Shawl, Rain Coat, Sports Shoes, Slippers Camera Rolls, DVD Cassettes and Memory Cards for digital camera.Tour code NBK Single Adult in a room has to pay extra Rs.7200- in Standard &amp; Rs. 9000-.in Deluxe package.</Notes>
+    <TourSequence>5</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>16</RowID>
+    <TourNo>16</TourNo>
+    <Tour_Short_Key>ND01</Tour_Short_Key>
+    <TourName>Nainital Tour</TourName>
+    <FullTourName>Nainital Tour</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Nainital Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures. Tour code ND-01 Single Adult in a room has to pay extra Rs.4500- in Standard &amp; Rs.5700 - in Deluxe package.
+    </Notes>
+    <TourSequence>45</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>17</RowID>
+    <TourNo>17</TourNo>
+    <Tour_Short_Key>ND 02</Tour_Short_Key>
+    <TourName>Corbett-Nainital Tour</TourName>
+    <FullTourName>Corbett-Nainital Tour</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Corbett-Nainital Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures. Tour code ND-02 Single Adult in a room has to pay extra Rs.6000- in Standard &amp; Rs.7800 - in Deluxe package.
+    </Notes>
+    <TourSequence>13</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>45</RowID>
+    <TourNo>45</TourNo>
+    <Tour_Short_Key>ND07</Tour_Short_Key>
+    <TourName>Shimla-Chandigarh-Delhi</TourName>
+    <FullTourName>Shimla-Chandigarh-Delhi</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Shimla-Chandigarh-Delhi</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures. Tour code ND 07 Single Adult in a room has to pay extra Rs. 2500-in Standard &amp; Rs. 3500-.in Deluxe package.
+    </Notes>
+    <TourSequence>23</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>46</RowID>
+    <TourNo>46</TourNo>
+    <Tour_Short_Key>SSMC</Tour_Short_Key>
+    <TourName>Shimla-Manali-Chandigarh-Agra</TourName>
+    <FullTourName>Shimla-Manali-Chandigarh-Agra</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Shimla-Manali-Chandigarh-Agra</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures.The hotels that you may get in the standard category are: Shimla-Ras Resort,Falcon Crest,Manali-Kennil Worth,Chandigarh-Komfort Inn,Delhi-Hotel Southern.The hotels that you may get in the Deluxe category are: Shimla-D Park,Baljees Regency,Manali-Jessica,Chandigarh-North Park,Delhi-Hotel Southern.According to the availability of the rooms the hotel can be changed. In that case you will be provided a similar hotel.</Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>51</RowID>
+    <TourNo>51</TourNo>
+    <Tour_Short_Key>NYGBK</Tour_Short_Key>
+    <TourName>Gangotri-Yamunotri-Kedarnath-Badrinath</TourName>
+    <FullTourName>Gangotri-Yamunotri-Kedarnath-Badrinath</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Gangotri-Yamunotri-Kedarnath-Badrinath</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. Due to scarcity of accommodation at a few places guests will have to share ¾ bedded rooms. All tours are subject to terms and conditions mentioned in our brochures.Tour code NYGBK Single Adult in a room has to pay extra Rs.12900-in Standard &amp; Rs. 17500-.in Deluxe package.
+
+      Things to carry: Regular things. Personal medicines, motional sickness tablets. Small portable oxygen cylinder. Sweater, shawl, Rain Coat, Sports shoes, Slippers. Camera Rolls, DVD Cassettes and Memory cards for digital cameras.
+    </Notes>
+    <TourSequence>18</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>64</RowID>
+    <TourNo>64</TourNo>
+    <Tour_Short_Key>NBKVF</Tour_Short_Key>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <FullTourName>Badrinath-Kedarnath-Valley Of Flowers</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Badrinath-Kedarnath-Valley Of Flowers</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures. Tour Code:NBKVF This tour - Single Adult in a room has to pay extra RS. 9,800-. Packages Prices are valid till March 2012.</Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>75</RowID>
+    <TourNo>75</TourNo>
+    <Tour_Short_Key>UOM</Tour_Short_Key>
+    <TourName>Ujjain-Omkareshwar-Maheshwar</TourName>
+    <FullTourName>Ujjain-Omkareshwar-Maheshwar</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Ujjain-Omkareshwar-Maheshwar</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures.Prices are valid till March 2012.</Notes>
+    <TourSequence>36</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>76</RowID>
+    <TourNo>76</TourNo>
+    <Tour_Short_Key>KOJ</Tour_Short_Key>
+    <TourName>Khajuraho-Orchha-Jhansi</TourName>
+    <FullTourName>Khajuraho-Orchha-Jhansi</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Khajuraho-Orchha-Jhansi</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures.Prices are valid till March 2012.</Notes>
+    <TourSequence>57</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>77</RowID>
+    <TourNo>77</TourNo>
+    <Tour_Short_Key>AMK</Tour_Short_Key>
+    <TourName>Delhi-Amritsar-Kurukshethra-Delhi</TourName>
+    <FullTourName>Delhi-Amritsar-Kurukshethra-Delhi</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Delhi-Amritsar-Kurukshethra-Delhi</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour code AMK - Single Adult in a room has to pay extra Rs. 1300- in Standard &amp; Rs. 1700- .in Deluxe package.
+    </Notes>
+    <TourSequence>42</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>78</RowID>
+    <TourNo>78</TourNo>
+    <Tour_Short_Key>NJA-02</Tour_Short_Key>
+    <TourName>Delhi-Jaipur-Agra-Delhi</TourName>
+    <FullTourName>Delhi-Jaipur-Agra-Delhi</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Delhi-Jaipur-Agra-Delhi</Tour_DisplayName>
+    <Notes>Package rates are subject to change without prior Notice.Terms and conditions are applicable as per our website,leaflets and brochure.</Notes>
+    <TourSequence>8</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>80</RowID>
+    <TourNo>80</TourNo>
+    <Tour_Short_Key>NS-01</Tour_Short_Key>
+    <TourName>Delhi-Shimla-Delhi</TourName>
+    <FullTourName>Delhi-Shimla-Delhi</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Delhi-Shimla-Delhi</Tour_DisplayName>
+    <Notes>Package rates are subject to change without prior Notice.Terms and conditions are applicable as per our website,leaflets and brochure.</Notes>
+    <TourSequence>43</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>95</RowID>
+    <TourNo>95</TourNo>
+    <Tour_Short_Key>MH-01</Tour_Short_Key>
+    <TourName>Mussoorie–haridwar</TourName>
+    <FullTourName>Mussoorie–haridwar</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Mussoorie–haridwar</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour code MH -01 Single Adult in a room has to pay extra Rs. 2000- in Standard &amp; Rs. 3400- .in Deluxe package.
+    </Notes>
+    <TourSequence>22</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>96</RowID>
+    <TourNo>96</TourNo>
+    <Tour_Short_Key>NK 06</Tour_Short_Key>
+    <TourName>Enchanting Kashmir</TourName>
+    <FullTourName>Enchanting Kashmir</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Enchanting Kashmir</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour code NK 06 Single Adult in a room has to pay extra Rs.9200- in Standard &amp; Rs. 12000- .in Deluxe package.
+    </Notes>
+    <TourSequence>44</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>111</RowID>
+    <TourNo>111</TourNo>
+    <Tour_Short_Key>NK 07</Tour_Short_Key>
+    <TourName>Leh With Nubra Valley-Discover Himalayas</TourName>
+    <FullTourName>Leh With Nubra Valley-Discover Himalayas</FullTourName>
+    <Remarks>Added in April 2012</Remarks>
+    <Tour_DisplayName>Leh With Nubra Valley-Discover Himalayas</Tour_DisplayName>
+    <Notes>
+      * Fares from 21st December to 5th January are available on request.
+      US $ Price for NRI &amp; Foreigners is available with our offices.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>112</RowID>
+    <TourNo>112</TourNo>
+    <Tour_Short_Key>BMU</Tour_Short_Key>
+    <TourName>Bhopal-Maheshwar-Ujjain Tour</TourName>
+    <FullTourName>Bhopal-Maheshwar-Ujjain Tour</FullTourName>
+    <Remarks>Added in April 2012</Remarks>
+    <Tour_DisplayName>Bhopal-Maheshwar-Ujjain Tour</Tour_DisplayName>
+    <Notes>
+      US $ Price for NRI &amp; Foreigners is available on request.
+
+      Fares from 21st December to 5th January is available with our offices.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>113</RowID>
+    <TourNo>113</TourNo>
+    <Tour_Short_Key>KBP</Tour_Short_Key>
+    <TourName>Kanha-Bhedaghat-Pachmarhi</TourName>
+    <FullTourName>Kanha-Bhedaghat-Pachmarhi</FullTourName>
+    <Remarks>Added in April 2012</Remarks>
+    <Tour_DisplayName>Kanha-Bhedaghat-Pachmarhi</Tour_DisplayName>
+    <Notes>
+      * Fares from 21st December to 5th January are available on request.
+      US $ Price for NRI &amp; Foreigners is available with our offices.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>115</RowID>
+    <TourNo>115</TourNo>
+    <Tour_Short_Key>SSMCA</Tour_Short_Key>
+    <TourName>Economy Students Package</TourName>
+    <FullTourName>Economy Students Package</FullTourName>
+    <Remarks>Added in April 2012</Remarks>
+    <Tour_DisplayName>Economy Students Package</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate
+      All tours are subject to terms and conditions mentioned on the booking form in our brochures. Prices are valid till March 2013.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Eastern India</ZoneName>
+    <RowID>123</RowID>
+    <TourNo>123</TourNo>
+    <Tour_Short_Key>ED 05</Tour_Short_Key>
+    <TourName>Amazing Bhutan Fly In and Fly Out</TourName>
+    <FullTourName>Amazing Bhutan Fly In and Fly Out</FullTourName>
+    <Remarks>Test</Remarks>
+    <Tour_DisplayName>Amazing Bhutan Fly In and Fly Out</Tour_DisplayName>
+    <Notes>
+      US $ Price for NRI &amp; Foreigners is available on request.
+
+      Fares from 21st December to 5th January is available with our offices.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Eastern India</ZoneName>
+    <RowID>124</RowID>
+    <TourNo>124</TourNo>
+    <Tour_Short_Key>ED 06</Tour_Short_Key>
+    <TourName>The Magical Bhutan Drive In and Drive Out</TourName>
+    <FullTourName>The Magical Bhutan Drive In and Drive Out</FullTourName>
+    <Remarks>Test</Remarks>
+    <Tour_DisplayName>The Magical Bhutan Drive In and Drive Out</Tour_DisplayName>
+    <Notes />
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Pilgrimage</ZoneName>
+    <RowID>9</RowID>
+    <TourNo>9</TourNo>
+    <Tour_Short_Key>NK 04</Tour_Short_Key>
+    <TourName>Jammu-Vaishnodevi-Amritsar</TourName>
+    <FullTourName>Jammu-Vaishnodevi-Amritsar</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Jammu-Vaishnodevi-Amritsar</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour code NK 04- Single Adult in a room has to pay extra Rs.5000-in Standard &amp; Rs. 6500- in Deluxe package.
+    </Notes>
+    <TourSequence>24</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Pilgrimage</ZoneName>
+    <RowID>15</RowID>
+    <TourNo>15</TourNo>
+    <Tour_Short_Key>NBK</Tour_Short_Key>
+    <TourName>Badrinath-Kedarnath-Haridwar-Rishikesh</TourName>
+    <FullTourName>Badrinath-Kedarnath-Haridwar-Rishikesh</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Badrinath-Kedarnath-Haridwar-Rishikesh</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures..Due to sacrcity of accommodation Regular Things Personal Medicines, Motional sickness tablets Small portable oxygen cylinder Sweater, Shawl, Rain Coat, Sports Shoes, Slippers Camera Rolls, DVD Cassettes and Memory Cards for digital camera.Tour code NBK Single Adult in a room has to pay extra Rs.7200- in Standard &amp; Rs. 9000-.in Deluxe package.</Notes>
+    <TourSequence>5</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Pilgrimage</ZoneName>
+    <RowID>18</RowID>
+    <TourNo>18</TourNo>
+    <Tour_Short_Key>SC 01</Tour_Short_Key>
+    <TourName>Shri Bala Ji Darshan</TourName>
+    <FullTourName>Shri Bala Ji Darshan</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Shri Bala Ji Darshan</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code SC 01 This tour Single Adult in a room has to pay extra Rs. 3,500-in Standard &amp;
+      Rs. 4,900 - in Deluxe Packages Prices are valid till March 2013.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Pilgrimage</ZoneName>
+    <RowID>51</RowID>
+    <TourNo>51</TourNo>
+    <Tour_Short_Key>NYGBK</Tour_Short_Key>
+    <TourName>Gangotri-Yamunotri-Kedarnath-Badrinath</TourName>
+    <FullTourName>Gangotri-Yamunotri-Kedarnath-Badrinath</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Gangotri-Yamunotri-Kedarnath-Badrinath</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. Due to scarcity of accommodation at a few places guests will have to share ¾ bedded rooms. All tours are subject to terms and conditions mentioned in our brochures.Tour code NYGBK Single Adult in a room has to pay extra Rs.12900-in Standard &amp; Rs. 17500-.in Deluxe package.
+
+      Things to carry: Regular things. Personal medicines, motional sickness tablets. Small portable oxygen cylinder. Sweater, shawl, Rain Coat, Sports shoes, Slippers. Camera Rolls, DVD Cassettes and Memory cards for digital cameras.
+    </Notes>
+    <TourSequence>18</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Pilgrimage</ZoneName>
+    <RowID>64</RowID>
+    <TourNo>64</TourNo>
+    <Tour_Short_Key>NBKVF</Tour_Short_Key>
+    <TourName>Badrinath-Kedarnath-Valley Of Flowers</TourName>
+    <FullTourName>Badrinath-Kedarnath-Valley Of Flowers</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Badrinath-Kedarnath-Valley Of Flowers</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures. Tour Code:NBKVF This tour - Single Adult in a room has to pay extra RS. 9,800-. Packages Prices are valid till March 2012.</Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Pilgrimage</ZoneName>
+    <RowID>65</RowID>
+    <TourNo>65</TourNo>
+    <Tour_Short_Key>BUDH</Tour_Short_Key>
+    <TourName>Buddhist Pilgrimage</TourName>
+    <FullTourName>Buddhist Pilgrimage</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Buddhist Pilgrimage</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures. Tour code BUDH Single Adult in a room has to pay extra Rs.9500-.in Standard &amp; Rs. 15000-.in Deluxe package.</Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Rajasthan</ZoneName>
+    <RowID>1</RowID>
+    <TourNo>1</TourNo>
+    <Tour_Short_Key>NR 02</Tour_Short_Key>
+    <TourName>Best Of Rajasthan</TourName>
+    <FullTourName>Best Of Rajasthan</FullTourName>
+    <Remarks>c</Remarks>
+    <Tour_DisplayName>Best Of Rajasthan</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures. Tour code NR -02 Single Adult in a room has to pay extra Rs.7900-in Standard &amp; Rs. 11500-.in Deluxe package.</Notes>
+    <TourSequence>33</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Rajasthan</ZoneName>
+    <RowID>27</RowID>
+    <TourNo>27</TourNo>
+    <Tour_Short_Key>NR 03</Tour_Short_Key>
+    <TourName>Rajasthan Tour</TourName>
+    <FullTourName>Rajasthan Tour</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Rajasthan Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and conditions
+      as mentioned in our brochures.Tour code NR 03- Single Adult in a room has to pay extra Rs.12000- in Standard &amp; Rs 16500- in Deluxe package.
+    </Notes>
+    <TourSequence>40</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Rajasthan</ZoneName>
+    <RowID>79</RowID>
+    <TourNo>79</TourNo>
+    <Tour_Short_Key>NJ-01</Tour_Short_Key>
+    <TourName>Delhi-Jaipur-Delhi</TourName>
+    <FullTourName>Delhi-Jaipur-Delhi</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Delhi-Jaipur-Delhi</Tour_DisplayName>
+    <Notes>
+      Fares from 21st December to 5th January are available on request.
+      US $ Price for NRI &amp; Foreigners is available with our offices.
+    </Notes>
+    <TourSequence>34</TourSequence>
+    <StartsFromID>55</StartsFromID>
+    <StartsFrom>New Delhi</StartsFrom>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Rajasthan</ZoneName>
+    <RowID>93</RowID>
+    <TourNo>93</TourNo>
+    <Tour_Short_Key>NR 09</Tour_Short_Key>
+    <TourName>Jaipur-Fatehpursikri-Agra-Mathura</TourName>
+    <FullTourName>Jaipur-Fatehpursikri-Agra-Mathura</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Jaipur-Fatehpursikri-Agra-Mathura</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour code NR 09 Single Adult in a room has to pay extra Rs.1300- in Standard &amp; Rs. 1600- .in Deluxe package.
+    </Notes>
+    <TourSequence>4</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Rajasthan</ZoneName>
+    <RowID>94</RowID>
+    <TourNo>94</TourNo>
+    <Tour_Short_Key>NR 10</Tour_Short_Key>
+    <TourName>Jaipur–ajmer–pushkar–agra</TourName>
+    <FullTourName>Jaipur–ajmer–pushkar–agra</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Jaipur–ajmer–pushkar–agra</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour code NR 10 Single Adult in a room has to pay extra Rs.2600- in Standard &amp; Rs. 3400- .in Deluxe package.
+    </Notes>
+    <TourSequence>6</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>18</RowID>
+    <TourNo>18</TourNo>
+    <Tour_Short_Key>SC 01</Tour_Short_Key>
+    <TourName>Shri Bala Ji Darshan</TourName>
+    <FullTourName>Shri Bala Ji Darshan</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Shri Bala Ji Darshan</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code SC 01 This tour Single Adult in a room has to pay extra Rs. 3,500-in Standard &amp;
+      Rs. 4,900 - in Deluxe Packages Prices are valid till March 2013.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>19</RowID>
+    <TourNo>19</TourNo>
+    <Tour_Short_Key>SC 02</Tour_Short_Key>
+    <TourName>Divine Tamil Nadu</TourName>
+    <FullTourName>Divine Tamil Nadu</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Divine Tamil Nadu</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned on the booking form
+      in our brochures. Tour Code SC 02 This tourSingle Adult in a room has to pay extra Rs. 5300-
+      in Standard &amp; Rs. 8200- in Deluxe Packages. Prices are valid till
+      March 2013.
+    </Notes>
+    <TourSequence>29</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>20</RowID>
+    <TourNo>20</TourNo>
+    <Tour_Short_Key>SC 03</Tour_Short_Key>
+    <TourName>Tamilnadu Tour</TourName>
+    <FullTourName>Tamilnadu Tour</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Tamilnadu Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and conditions as
+      mentioned on the booking form in our brochures. Tour Code SC 03 This tour Single Adult in a room has to pay extra Rs. 6,900- in
+      Standard &amp; Rs.11,100- in Deluxe Packages. Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>41</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>22</RowID>
+    <TourNo>22</TourNo>
+    <Tour_Short_Key>SB 01</Tour_Short_Key>
+    <TourName>Exotic South India</TourName>
+    <FullTourName>Exotic South India</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Exotic South India</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour Code : SB 01 This tour - Single Adult in a room has to pay extra Rs 6,000- in Standard &amp; Rs. 9,800- in Deluxe Packages. Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>51</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>23</RowID>
+    <TourNo>23</TourNo>
+    <Tour_Short_Key>SB 02</Tour_Short_Key>
+    <TourName>Best Of South India</TourName>
+    <FullTourName>Best Of South India</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Best Of South India</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour Code : SB 02 This tour -
+      Single Adult in a room has to pay extra Rs. 9,750- in Standard &amp; Rs. 15,600- in Deluxe Packages.Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>59</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>25</RowID>
+    <TourNo>25</TourNo>
+    <Tour_Short_Key>SK 03</Tour_Short_Key>
+    <TourName>Enchanting Kerala</TourName>
+    <FullTourName>Enchanting Kerala</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Enchanting Kerala</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures.Tour Code SK 03 This tour -Single Adult in a room has to pay extra RS. 8,750- in Standard &amp; Rs. 13,750- in Deluxe Packages. Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>11</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>30</RowID>
+    <TourNo>30</TourNo>
+    <Tour_Short_Key>SK 07</Tour_Short_Key>
+    <TourName>Splendours Of Kerala</TourName>
+    <FullTourName>Splendours Of Kerala</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Splendours Of Kerala</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All
+      tours are subject to terms and conditions as mentioned in our
+      brochures. Tour Code SK 07 This tour A.C Supplement charges for vehicle RS. 3500-
+      Single Adult in a room has to pay extra Rs. 9,000- in Standard &amp;
+      Rs. 14,250- in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>30</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>33</RowID>
+    <TourNo>33</TourNo>
+    <Tour_Short_Key>AP 01</Tour_Short_Key>
+    <TourName>Colourful Hyderabad</TourName>
+    <FullTourName>Colourful Hyderabad</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Colourful Hyderabad</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All
+      tours are subject to terms and conditions as mentioned in our
+      brochures. Tour Code AP-01This tour: Single Adult in a room has to pay extra Rs 2,000- in standard &amp; Rs. 3,100- in Deluxe package. Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>60</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>34</RowID>
+    <TourNo>34</TourNo>
+    <Tour_Short_Key>AP 02</Tour_Short_Key>
+    <TourName>Visakhapatnam-Araku Valley</TourName>
+    <FullTourName>Visakhapatnam-Araku Valley</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Visakhapatnam-Araku Valley</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All
+      tours are subject to terms and conditions as mentioned in our
+      brochures. Tour Code AP-02This tour : Single Adult in a room has to pay extra Rs.2,250- in standard &amp; Rs. 3,900- in Deluxe package. Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>19</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>39</RowID>
+    <TourNo>39</TourNo>
+    <Tour_Short_Key>SB 04</Tour_Short_Key>
+    <TourName>Bengaluru-Mysore-Wayanad</TourName>
+    <FullTourName>Bengaluru-Mysore-Wayanad</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Bengaluru-Mysore-Wayanad</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochure. For a Single Adult in a room, has to pay Extra Rs.4,500- in Standard &amp; Rs.6,700- in Deluxe Packages. Prices are valid till March, 2012.</Notes>
+    <TourSequence>48</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>40</RowID>
+    <TourNo>40</TourNo>
+    <Tour_Short_Key>SB 05</Tour_Short_Key>
+    <TourName>Bengaluru-Mysore-Ooty-Kodaikanal</TourName>
+    <FullTourName>Bengaluru-Mysore-Ooty-Kodaikanal</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Bengaluru-Mysore-Ooty-Kodaikanal</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour Code : SB 05 - Single Adult in a room has to pay extra Rs. 6000- in Standard &amp; Rs. 9800- in Deluxe Packages. Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>9</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>41</RowID>
+    <TourNo>41</TourNo>
+    <Tour_Short_Key>SB 06</Tour_Short_Key>
+    <TourName>Bengaluru-Mysore-Ooty-Coonoor</TourName>
+    <FullTourName>Bengaluru-Mysore-Ooty-Coonoor</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Bengaluru-Mysore-Ooty-Coonoor</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned in our brochures. Tour Code : SB 06 - Single Adult in a
+      room has to pay extra Rs. 4,900- in Standard &amp; Rs. 7,600- in Deluxe Packages. Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>14</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>49</RowID>
+    <TourNo>49</TourNo>
+    <Tour_Short_Key>SSBM</Tour_Short_Key>
+    <TourName>Bengaluru-Mysore-Ooty-Tour</TourName>
+    <FullTourName>Bengaluru-Mysore-Ooty-Tour</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Bengaluru-Mysore-Ooty-Tour</Tour_DisplayName>
+    <Notes>All distance and timings featured are approximate.  All tours are subject to terms and conditions mentioned on the booking form in our brochures. Prices are valid till March 2011. Minimum strength of the group should be 30.  In case of smaller group, an additional cost would be charged.</Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>66</RowID>
+    <TourNo>66</TourNo>
+    <Tour_Short_Key>SE 02</Tour_Short_Key>
+    <TourName>Andaman Tour Package</TourName>
+    <FullTourName>Andaman Tour Package</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Andaman Tour Package</Tour_DisplayName>
+    <Notes>The vehicle is for Point travel and not at disposal.All tours are subject to terms &amp; conditions as mentioned in our Brouchers.Prices are valid till March 2013.</Notes>
+    <TourSequence>25</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>67</RowID>
+    <TourNo>67</TourNo>
+    <Tour_Short_Key>SSK</Tour_Short_Key>
+    <TourName>Cochin-Munnar-Thekkady-Alleppey</TourName>
+    <FullTourName>Cochin-Munnar-Thekkady-Alleppey</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Cochin-Munnar-Thekkady-Alleppey</Tour_DisplayName>
+    <Notes>All distances and timings featured are approximate.All tours are subject to terms and conditions as mentioned in our brochure.Prices are valid till March 2011.Minimum strength of th group should be 30.In case of smaller group an additional cost would be charged.</Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>68</RowID>
+    <TourNo>68</TourNo>
+    <Tour_Short_Key>SCK 01</Tour_Short_Key>
+    <TourName>Coimbatore-Munnar-Thekkady-Alleppey-Guruvayur</TourName>
+    <FullTourName>Coimbatore-Munnar-Thekkady-Alleppey-Guruvayur</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Coimbatore-Munnar-Thekkady-Alleppey-Guruvayur</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour Code : SCK 01This tour -
+      Single Adult in a room has to pay extra Rs. 7400- in Standard &amp; Rs. 12,300- in Deluxe Packages.Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>63</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>69</RowID>
+    <TourNo>69</TourNo>
+    <Tour_Short_Key>SCT 01</Tour_Short_Key>
+    <TourName>Coimbatore-Kodaikanal-Ooty-Coonoor</TourName>
+    <FullTourName>Coimbatore-Kodaikanal-Ooty-Coonoor</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Coimbatore-Kodaikanal-Ooty-Coonoor</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour Code : SCT 01This tour -
+      Single Adult in a room has to pay extra Rs. 4800- in Standard &amp; Rs. 7900- in Deluxe Packages. House Boat accommodation will be provided in Deluxe package only.Prices are valid till March 2012
+    </Notes>
+    <TourSequence>20</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>83</RowID>
+    <TourNo>83</TourNo>
+    <Tour_Short_Key>CCT</Tour_Short_Key>
+    <TourName>Chennai City Tour</TourName>
+    <FullTourName>Chennai City Tour</FullTourName>
+    <Remarks>Added on 17-1-11</Remarks>
+    <Tour_DisplayName>Chennai City Tour</Tour_DisplayName>
+    <Notes />
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>84</RowID>
+    <TourNo>84</TourNo>
+    <Tour_Short_Key>CMKT</Tour_Short_Key>
+    <TourName>Mahabalipuram-Kanchipuram Tour</TourName>
+    <FullTourName>Mahabalipuram-Kanchipuram Tour</FullTourName>
+    <Remarks>Added on 17-1-11</Remarks>
+    <Tour_DisplayName>Mahabalipuram-Kanchipuram Tour</Tour_DisplayName>
+    <Notes />
+    <TourSequence>62</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>85</RowID>
+    <TourNo>85</TourNo>
+    <Tour_Short_Key>CGT</Tour_Short_Key>
+    <TourName>Golden Temple Tour</TourName>
+    <FullTourName>Golden Temple Tour</FullTourName>
+    <Remarks>Added on 17-1-11</Remarks>
+    <Tour_DisplayName>Golden Temple Tour</Tour_DisplayName>
+    <Notes>The fares indicated against package tours displayed on this website are subject to seasonal variations. The fare will be charged prevailing at the time of booking. Customers may please check the change in the fares  tariff through e.mailfaxphone.</Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>86</RowID>
+    <TourNo>86</TourNo>
+    <Tour_Short_Key>HC</Tour_Short_Key>
+    <TourName>Hyderabad City Tour</TourName>
+    <FullTourName>Hyderabad City Tour</FullTourName>
+    <Remarks>Added on 17-1-11</Remarks>
+    <Tour_DisplayName>Hyderabad City Tour</Tour_DisplayName>
+    <Notes>Museum is closed on Fridays and Zoo is closed on Mondays. Ravindra Bharati and Qutub shahi Tombs are driven through and viewed from outside only.</Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>90</RowID>
+    <TourNo>90</TourNo>
+    <Tour_Short_Key>HRF</Tour_Short_Key>
+    <TourName>Ramoji Film City Tour</TourName>
+    <FullTourName>Ramoji Film City Tour</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Ramoji Film City Tour</Tour_DisplayName>
+    <Notes />
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>97</RowID>
+    <TourNo>97</TourNo>
+    <Tour_Short_Key>SC 04</Tour_Short_Key>
+    <TourName>Chennai-Kanchipuram-Pondichery-Mahabalipuram</TourName>
+    <FullTourName>Chennai-Kanchipuram-Pondichery-Mahabalipuram</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Chennai-Kanchipuram-Pondichery-Mahabalipuram</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code SC 04 This tour Single Adult in a room has to pay extra Rs. 3,600-in Standard &amp;
+      Rs. 5,800 - in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>98</RowID>
+    <TourNo>98</TourNo>
+    <Tour_Short_Key>SC 05</Tour_Short_Key>
+    <TourName>Nava Graha Temple Tour</TourName>
+    <FullTourName>Nava Graha Temple Tour</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Nava Graha Temple Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code SC 05 This tour Single Adult in a room has to pay extra Rs. 4,800-in Standard &amp;
+      Rs. 7,500 - in Deluxe Packages Prices are valid till March 2013.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>99</RowID>
+    <TourNo>99</TourNo>
+    <Tour_Short_Key>SM 01</Tour_Short_Key>
+    <TourName>Madurai-Kanyakumari Tour</TourName>
+    <FullTourName>Madurai-Kanyakumari Tour</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Madurai-Kanyakumari Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code SM 01 This tour Single Adult in a room has to pay extra Rs. 6,800-in Standard &amp;
+      Rs. 10,450 - in Deluxe Packages Prices are valid till March 2013.
+    </Notes>
+    <TourSequence>35</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>100</RowID>
+    <TourNo>100</TourNo>
+    <Tour_Short_Key>SB 07</Tour_Short_Key>
+    <TourName>Bengaluru-Coorg Tour</TourName>
+    <FullTourName>Bengaluru-Coorg Tour</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Bengaluru-Coorg Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code SB 07 This tour Single Adult in a room has to pay extra Rs. 6,150-in Standard &amp;
+      Rs. 9,200 - in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>53</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>101</RowID>
+    <TourNo>101</TourNo>
+    <Tour_Short_Key>SB 08</Tour_Short_Key>
+    <TourName>Coastal Karnataka Tour</TourName>
+    <FullTourName>Coastal Karnataka Tour</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Coastal Karnataka Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code SB 08 This tour Single Adult in a room has to pay extra Rs. 8,600-in Standard &amp;
+      Rs. 11,400 - in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>37</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>102</RowID>
+    <TourNo>102</TourNo>
+    <Tour_Short_Key>AP 03</Tour_Short_Key>
+    <TourName>Nagarjuna Sagar-Srisailam Tour</TourName>
+    <FullTourName>Nagarjuna Sagar-Srisailam Tour</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Nagarjuna Sagar-Srisailam Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code AP 03 This tour Single Adult in a room has to pay extra Rs. 1,000-in Standard &amp;
+      Rs. 1,000 - in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>55</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>103</RowID>
+    <TourNo>103</TourNo>
+    <Tour_Short_Key>AP 04</Tour_Short_Key>
+    <TourName>Pancha Ramas-Annavaram-Badrachalam</TourName>
+    <FullTourName>Pancha Ramas-Annavaram-Badrachalam</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Pancha Ramas-Annavaram-Badrachalam</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code AP 04 This tour Single Adult in a room has to pay extra Rs. 4,350-in Standard &amp;
+      Rs. 5,400 - in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>64</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>104</RowID>
+    <TourNo>104</TourNo>
+    <Tour_Short_Key>AP 05</Tour_Short_Key>
+    <TourName>Hampi-Mantralayam-Ahobhilam Tour</TourName>
+    <FullTourName>Hampi-Mantralayam-Ahobhilam Tour</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Hampi-Mantralayam-Ahobhilam Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code AP 05 This tour Single Adult in a room has to pay extra Rs. 5,300-in Standard &amp;
+      Rs. 7,600 - in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>105</RowID>
+    <TourNo>105</TourNo>
+    <Tour_Short_Key>AP 06</Tour_Short_Key>
+    <TourName>Yadagiri Gutta-Warangal Tour</TourName>
+    <FullTourName>Yadagiri Gutta-Warangal Tour</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Yadagiri Gutta-Warangal Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code AP 06 This tour Single Adult in a room has to pay extra Rs. 1,100-in Standard &amp;
+      Rs. 1,600 - in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>110</RowID>
+    <TourNo>110</TourNo>
+    <Tour_Short_Key>SE 03</Tour_Short_Key>
+    <TourName>Exciting Andaman Package</TourName>
+    <FullTourName>Exciting Andaman Package</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Exciting Andaman Package</Tour_DisplayName>
+    <Notes>The vehicle is for Point travel and not at disposal.All tours are subject to terms &amp; conditions as mentioned in our Brouchers.Prices are valid till March 2013.</Notes>
+    <TourSequence>65</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>South India</ZoneName>
+    <RowID>114</RowID>
+    <TourNo>114</TourNo>
+    <Tour_Short_Key>SC 06</Tour_Short_Key>
+    <TourName>Chennai-Kanchipiram-Vellore-Tirupati-Sri Kalahasti</TourName>
+    <FullTourName>Chennai-Kanchipiram-Vellore-Tirupati-Sri Kalahasti</FullTourName>
+    <Remarks>Added in April 2012</Remarks>
+    <Tour_DisplayName>Chennai-Kanchipiram-Vellore-Tirupati-Sri Kalahasti</Tour_DisplayName>
+    <Notes>
+      * Fares from 21st December to 5th January are available on request.
+      US $ Price for NRI &amp; Foreigners is available with our offices.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Visakhapatnam</ZoneName>
+    <RowID>87</RowID>
+    <TourNo>87</TourNo>
+    <Tour_Short_Key>VC</Tour_Short_Key>
+    <TourName>Visakhapatnam City Tour</TourName>
+    <FullTourName>Visakhapatnam City Tour</FullTourName>
+    <Remarks>Added on 17-1-11</Remarks>
+    <Tour_DisplayName>Visakhapatnam City Tour</Tour_DisplayName>
+    <Notes />
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Visakhapatnam</ZoneName>
+    <RowID>88</RowID>
+    <TourNo>88</TourNo>
+    <Tour_Short_Key>VAB</Tour_Short_Key>
+    <TourName>Araku-Borra Caves Tour</TourName>
+    <FullTourName>Araku-Borra Caves Tour</FullTourName>
+    <Remarks>Added on 17-1-11</Remarks>
+    <Tour_DisplayName>Araku-Borra Caves Tour</Tour_DisplayName>
+    <Notes>The fares indicated against package tours displayed on this website are subject to seasonal variations. The fare will be charged prevailing at the time of booking. Customers may please check the change in the fares  tariff through e.mailfaxphone.</Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Western India</ZoneName>
+    <RowID>36</RowID>
+    <TourNo>36</TourNo>
+    <Tour_Short_Key>WG 01</Tour_Short_Key>
+    <TourName>Golden Goa</TourName>
+    <FullTourName>Golden Goa</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Golden Goa</Tour_DisplayName>
+    <Notes>
+      All tours are subject to terms and conditions as mentioned in
+      our brochures.Prices are valid till
+      March 2012.
+    </Notes>
+    <TourSequence>26</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Western India</ZoneName>
+    <RowID>38</RowID>
+    <TourNo>38</TourNo>
+    <Tour_Short_Key>WG 02</Tour_Short_Key>
+    <TourName>Majestic Tour Of Gujarat</TourName>
+    <FullTourName>Majestic Tour Of Gujarat</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Majestic Tour Of Gujarat</Tour_DisplayName>
+    <Notes>
+      All tours are subject to terms and conditions as mentioned in
+      our brochures.Tour Code WG-02 This tour : Single Adult in a room has to pay extra Rs.6,600- in standard &amp; Rs. 9,000- in Deluxe package. Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>16</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Western India</ZoneName>
+    <RowID>42</RowID>
+    <TourNo>42</TourNo>
+    <Tour_Short_Key>WM 02</Tour_Short_Key>
+    <TourName>Sri Asthavinayak Yatra</TourName>
+    <FullTourName>Sri Asthavinayak Yatra</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Sri Asthavinayak Yatra</Tour_DisplayName>
+    <Notes>
+      All tours are subject to terms and conditions as mentioned in our brochures. Tour code :
+      WM 02 - Single Adult in a room has to pay extra Rs. 1,875- in Standard &amp; Rs. 3,125- in Deluxe Packages. Prices are valid till March 2009.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Western India</ZoneName>
+    <RowID>43</RowID>
+    <TourNo>43</TourNo>
+    <Tour_Short_Key>WM 03</Tour_Short_Key>
+    <TourName>Mumbai-Shirdi-Aurangabad-Ajanta-Ellora</TourName>
+    <FullTourName>Mumbai-Shirdi-Aurangabad-Ajanta-Ellora</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Mumbai-Shirdi-Aurangabad-Ajanta-Ellora</Tour_DisplayName>
+    <Notes>
+      All tours are subject to terms and conditions as mentioned in our brochures. Tour code : WM 03 This tour - Single Adult in a room has to pay extra Rs. 4,900- in Standard &amp; Rs.
+      6,900- in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>47</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Western India</ZoneName>
+    <RowID>50</RowID>
+    <TourNo>50</TourNo>
+    <Tour_Short_Key>SSG</Tour_Short_Key>
+    <TourName>Goa Package</TourName>
+    <FullTourName>Goa Package</FullTourName>
+    <Remarks>X</Remarks>
+    <Tour_DisplayName>Goa Package</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate
+      All tours are subject to terms and conditions mentioned on the booking form in our brochures. Prices are valid till March 2013.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Western India</ZoneName>
+    <RowID>70</RowID>
+    <TourNo>70</TourNo>
+    <Tour_Short_Key>WM 04</Tour_Short_Key>
+    <TourName>Shirdi-Sani Singanapur-Nashik-Shirdi</TourName>
+    <FullTourName>Shirdi-Sani Singanapur-Nashik-Shirdi</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Shirdi-Sani Singanapur-Nashik-Shirdi</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour Code : WM 04 This tour -
+      Single Adult in a room has to pay extra Rs. 2,600- in Standard &amp; Rs. 3,600- in Deluxe Packages.Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Western India</ZoneName>
+    <RowID>71</RowID>
+    <TourNo>71</TourNo>
+    <Tour_Short_Key>WM 05</Tour_Short_Key>
+    <TourName>Shirdi-Sani Singanapur-Ellora-Nashik-Aurangabad</TourName>
+    <FullTourName>Shirdi-Sani Singanapur-Ellora-Nashik-Aurangabad</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Shirdi-Sani Singanapur-Ellora-Nashik-Aurangabad</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour Code : WM 05 This tour -
+      Single Adult in a room has to pay extra Rs. 2,600- in Standard &amp; Rs. 3,600- in Deluxe Packages.Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>1000</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Western India</ZoneName>
+    <RowID>72</RowID>
+    <TourNo>72</TourNo>
+    <Tour_Short_Key>WM 06</Tour_Short_Key>
+    <TourName>Shirdi-Singnapur-Nasik-Ellora-Aurangabad-Ajantha</TourName>
+    <FullTourName>Shirdi-Singnapur-Nasik-Ellora-Aurangabad-Ajantha</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Shirdi-Singnapur-Nasik-Ellora-Aurangabad-Ajantha</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are subject to terms and
+      conditions as mentioned on the booking form in our brochures. Tour Code : WM 06 -
+      Single Adult in a room has to pay extra Rs. 3,800- in Standard &amp; Rs. 5,300- in Deluxe Packages.Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>56</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Western India</ZoneName>
+    <RowID>106</RowID>
+    <TourNo>106</TourNo>
+    <Tour_Short_Key>WG 03</Tour_Short_Key>
+    <TourName>Gujarat-Diu Tour</TourName>
+    <FullTourName>Gujarat-Diu Tour</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Gujarat-Diu Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code WG 03- Single Adult in a room has to pay extra Rs. 6,600-in Standard &amp;
+      Rs. 9,000 - in Deluxe Packages Prices are valid till March 2012.
+    </Notes>
+    <TourSequence>50</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Western India</ZoneName>
+    <RowID>107</RowID>
+    <TourNo>107</TourNo>
+    <Tour_Short_Key>WM 07</Tour_Short_Key>
+    <TourName>Pune-Mahabhaleshwar Tour</TourName>
+    <FullTourName>Pune-Mahabhaleshwar Tour</FullTourName>
+    <Remarks>x</Remarks>
+    <Tour_DisplayName>Pune-Mahabhaleshwar Tour</Tour_DisplayName>
+    <Notes>
+      All distance and timings featured are approximate. All tours are
+      subject to terms and conditions as mentioned in our brochures. Tour Code WM 07 This tour Single Adult in a room has to pay extra Rs. 5,100-in Standard &amp;
+      Rs. 7,500 - in Deluxe Packages Prices are valid till March 2013.
+    </Notes>
+    <TourSequence>46</TourSequence>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>125</RowID>
+    <TourNo>125</TourNo>
+    <Tour_Short_Key>ND 08</Tour_Short_Key>
+    <TourName>Dazzling Manali</TourName>
+    <FullTourName>Dazzling Manali</FullTourName>
+    <Remarks>Created on 01-04-13</Remarks>
+    <Tour_DisplayName>Dazzling Manali</Tour_DisplayName>
+    <Notes>All distances and timings featured are approximate. All tours are subject to terms and conditions as mentioned in our brochures. Tour Code: ND o8 - Single adult in a room has to pay extra Rs.4500- in Standard and Rs.6000- in Deluxe Packages. Prices are valid till March 2104</Notes>
+    <TourSequence>1000</TourSequence>
+    <StartsFromID>221</StartsFromID>
+    <StartsFrom>Delhi</StartsFrom>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>Honeymoon</ZoneName>
+    <RowID>126</RowID>
+    <TourNo>126</TourNo>
+    <Tour_Short_Key>NK 08</Tour_Short_Key>
+    <TourName>Incredible Kashmir</TourName>
+    <FullTourName>Incredible Kashmir</FullTourName>
+    <Remarks>Created on 01-04-13</Remarks>
+    <Tour_DisplayName>Incredible Kashmir</Tour_DisplayName>
+    <Notes>All distances and timings featured are approximate. All tours are subject to Terms and Conditions as mentioned in our brochures. Tour Code:NK 08 - Single Adult in a room has to pay extra Rs.11000- in Standard and Rs.16500- in Deluxe Package.</Notes>
+    <TourSequence>1000</TourSequence>
+    <StartsFromID>11</StartsFromID>
+    <StartsFrom>Srinagar</StartsFrom>
+  </AllTours>
+  <AllTours>
+    <TourType>2</TourType>
+    <ZoneName>North India</ZoneName>
+    <RowID>126</RowID>
+    <TourNo>126</TourNo>
+    <Tour_Short_Key>NK 08</Tour_Short_Key>
+    <TourName>Incredible Kashmir</TourName>
+    <FullTourName>Incredible Kashmir</FullTourName>
+    <Remarks>Created on 01-04-13</Remarks>
+    <Tour_DisplayName>Incredible Kashmir</Tour_DisplayName>
+    <Notes>All distances and timings featured are approximate. All tours are subject to Terms and Conditions as mentioned in our brochures. Tour Code:NK 08 - Single Adult in a room has to pay extra Rs.11000- in Standard and Rs.16500- in Deluxe Package.</Notes>
+    <TourSequence>1000</TourSequence>
+    <StartsFromID>11</StartsFromID>
+    <StartsFrom>Srinagar</StartsFrom>
+  </AllTours>
+</DocumentElement>

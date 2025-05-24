@@ -1333,7 +1333,7 @@ footer h4 {
 }
 
     #back-top a {
-        text-decoration: none
+        text-decoration: none;
     }
 
 #footerbtm .tooltip-inner {
@@ -5104,7 +5104,7 @@ ul.leftitinerary {
         right: auto;
         left: 15px;
         bottom: 0;
-        z-index: 999
+        z-index: 999;
     }
 
     #txtName {

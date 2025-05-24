@@ -585,8 +585,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="intlbox intlbox-home">
                 
                    <a href="InternationalTours_Offer2-Thailand-BestOfFareastThailandMalaysiaAndSingapore10Days09Nights_155">
-                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
-                 <img src="Assets/images/intl-pkg/Fareast.jpg" loading="lazy"/></div>
+                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" title="custom-arrow" loading="lazy" loading="lazy"/></span>
+                 <img src="Assets/images/intl-pkg/Fareast.jpg" title="fareast" alt="fareast" loading="lazy"/></div>
                  <uc3:UCImageStrip ID="UCImageStrip3" runat="server" fldTourID="155" fldTourType="INTERNATIONAL_TOUR" />
                     </a>
                         
@@ -595,7 +595,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="intlbox intlbox-home">
                 
                    <a href="InternationalTours_Offer2-Dubai-BestOfDubai4Days3Nights_151">
-                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
+                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" title="custom-arrow" loading="lazy" loading="lazy"/></span>
                  <img src="Assets/images/intl-pkg/Dubai.jpg" loading="lazy"/></div>
                  <uc3:UCImageStrip ID="UCImageStrip4" runat="server" fldTourID="151" fldTourType="INTERNATIONAL_TOUR" />
                     </a>
@@ -608,10 +608,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="intlbox intlbox-home">
                 
                    <a href="InternationalTours_Offer2-Malaysia-BestOfMalaysiaAndSingaporeWith2NightsStarCruise_154">
-                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" loading="lazy"></span>
-                 <img src="Assets/images/intl-pkg/Malaysia.jpg" loading="lazy"></div>
+                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" title="custom-arrow" loading="lazy" loading="lazy"/></span>
+                 <img src="Assets/images/intl-pkg/Malaysia.jpg" loading="lazy"/></div>
                  <uc3:UCImageStrip ID="UCImageStrip7" runat="server" fldTourID="154" fldTourType="INTERNATIONAL_TOUR" />
-                <%-- <div class="textsection"><p>Tour Code : FMAS7</p><h3>Best Of Malaysia<br> And Singapore With Cruise 8 D / 7 N</h3><p>Package Starting @ <i class="fa fa-rupee"></i> 1,27,500 /-</p></div>--%>
                     </a>
                         
                 </div>
@@ -619,10 +618,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        <div class="intlbox intlbox-home">
                 
                    <a href="InternationalTours_Offer2-UnitedKingdom-BestOfEurope10Days09Nights_182">
-                	<div class="imgsection"><span class="customtag2" loading="lazy">Fixed Tours<img src="Assets/images/custom-arrow.png" loading="lazy"></span>
+                	<div class="imgsection"><span class="customtag2" loading="lazy">Fixed Tours<img src="Assets/images/custom-arrow.png" title="custom-arrow" loading="lazy" loading="lazy" /></span>
                  <img src="Assets/images/intl-pkg/Europe.jpg" loading="lazy"></div>
                 <uc3:UCImageStrip ID="UCImageStrip6" runat="server" fldTourID="182" fldTourType="INTERNATIONAL_TOUR" />
-                 <%--<div class="textsection"><p>Tour Code : FED13</p><h3>Best Of European<br> Discovery 14 D / 13 N</h3><p>Package Starting @ <i class="fa fa-rupee"></i> 3,46,599 /-</p></div>--%>
                     </a>
                         
                 </div>
@@ -634,10 +632,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="intlbox intlbox-home">
                 
                    <a href="InternationalTours_Offer2-Thailand-BestOfThailand5Days4Nights_150">
-                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" loading="lazy"></span>
-                 <img src="Assets/images/intl-pkg/Thailand.jpg"></div>
+                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" alt="custom-arrow" title="custom-arrow" loading="lazy"></span>
+                 <img src="Assets/images/intl-pkg/Thailand.jpg" alt="thailand" title="thailand" loading="lazy"/></div>
                  <uc3:UCImageStrip ID="UCImageStrip2" runat="server" fldTourID="150" fldTourType="INTERNATIONAL_TOUR" />
-                <%-- <div class="textsection"><p>Tour Code : FBBP4</p><h3>Best Of Thailand 5 D / 4 N</h3><p>Package Starting @ <i class="fa fa-rupee"></i> 49,400 /-</p></div>--%>
                     </a>
                         
                 </div>
@@ -646,10 +643,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 
                    <a href="InternationalTours_Offer2-NorthAmerica%E2%80%93Newyork-BestOfAmerica14Days13Nights_181">
                 	<div class="imgsection">
-                	<span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" loading="lazy"></span>
-                 <img src="Assets/images/intl-pkg/1.jpg" loading="lazy"></div>
+                	<span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png"  alt="custom-arrow" title="custom-arrow" loading="lazy"/></span>
+                 <img src="Assets/images/intl-pkg/1.jpg"  alt="pkg" title="pkg"  loading="lazy"/></div>
                  <uc3:UCImageStrip ID="UCImageStrip1" runat="server" fldTourID="181" fldTourType="INTERNATIONAL_TOUR" />
-                <%-- <div class="textsection"><p>Tour Code : FUS13</p><h3>Best Of America 14 D / 13 N</h3><p>Package Starting @ <i class="fa fa-rupee"></i> 0 /-</p></div>--%>
                     </a>
                         
                 </div>                 
@@ -658,10 +654,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="intlbox intlbox-home">
                 
                    <a href="InternationalTours_Offer2-Srilanka-BestOfSrilanka7Days6Nights_152">
-                	<div class="imgsection" loading="lazy"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" loading="lazy"></span>
-                 <img src="Assets/images/intl-pkg/Srilanka.jpg" loading="lazy"></div>
+                	<div class="imgsection" loading="lazy"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png"  title="custom-arrow" loading="lazy" loading="lazy"/></span>
+                 <img src="Assets/images/intl-pkg/Srilanka.jpg" alt="srilanka" title="srilanka" loading="lazy" /></div>
               <uc3:UCImageStrip ID="UCImageStrip5" runat="server" fldTourID="152" fldTourType="INTERNATIONAL_TOUR" />
-              <%--   <div class="textsection"><p>Tour Code : FRSL5</p><h3>Best Of Sri<br> Lanka-Ramayana Trails 6 D / 5 N</h3><p>Package Starting @ <i class="fa fa-rupee"></i> 44,000 /-</p></div>--%>
                     </a>
                         
                 </div>
@@ -962,8 +957,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="popup__imgWrapper">
                 <a class="close" data-dismiss="modal" style="right: -15px !important; top: -12px">X</a>
 				<%=strHomePageBanner%> 
-                <%--<asp:Image  runat="server" id="ImgHmBanner" AlternateText="" CssClass="popup__img" Height="600px" />--%>
-                <%--<a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=152&ofr=2"> <img src="images/Ramayana-Trail-Pop-Up.png" alt="" class="popup__img" height="600px" /></a>--%>
                 <div class="container popup__img" style="background-color: White;display:none;">
                     <div style="height: 450px; overflow: scroll;">
                         <div class="row subheadrow">
@@ -1309,7 +1302,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <asp:Button ID="btnSubmitPop" runat="server" Text="Submit" OnClientClick="ga('send', 'event', { eventCategory: 'quick enquiry', eventAction: 'enquiry'});"
                         OnClick="btnSubmitPop_Click" class="btn pull-right" ValidationGroup="FOOHome" />
                         <input type="button" id="BtnMesgClose" class="btn pull-right" value="Close" />
-                         <%--<asp:Button ID="BtnMesgClose1" runat="server" Text="Close" class="btn pull-right"  OnClientClick="SetBtnMesg();return false;"/> --%>
                 </li>
             </ul>
         </div>

@@ -397,6 +397,7 @@ namespace SouthernTravelsWeb
 
         private void ModifyMetaTag()
         {
+            ClsCommon clsCmn= new ClsCommon();
             try
             {
                 int TourId, CountryID, ZoneId;
@@ -409,7 +410,7 @@ namespace SouthernTravelsWeb
                     TourId = 0;
                 }
                 ZoneId = 0; CountryID = 0;
-                DataTable dtM = fnGetMetaTagForTours(ClsCommon.ConvertStringint(TOURTYPE.INTERNATIONAL_TOUR), TourId, CountryID, ZoneId);
+                DataTable dtM = clsCmn.fnGetMetaTagForTours(ClsCommon.ConvertStringint(TOURTYPE.INTERNATIONAL_TOUR), TourId, CountryID, ZoneId);
                 if (dtM.Rows.Count > 0)
                 {
                     HtmlHead hd = (HtmlHead)Page.FindControl("HeadST");

@@ -234,8 +234,8 @@
                 <div class="downloadbtn posrel navwrap bgnone"><a href="#" class="commonbtn dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">e-Brochure <span class="caret"></span></a>
              
                 <ul class="dropdown-menu">
-                    <li><a href="https://www.southerntravelsindia.com/flipbook/Domestic/Domestic_2019.pdf" target=_blank>Domestic e-Brochure</a></li>
-                   <li><a href="https://www.southerntravelsindia.com/flipbook/International/Complete_International_Brochure-2020.pdf" target="_blank">International e-Brochure</a></li>
+                    <li><a href="https://www.southerntravelsindia.com/flipbook/Domestic/Domestic_e-Brochure.pdf" target="_blank">Domestic e-brochure</a></li>
+                    <li><a href="https://www.southerntravelsindia.com/flipbook/International/International_e-Brochure.pdf" target="_blank">International e-brochure</a></li>  
                   </ul>
              
              </div>
