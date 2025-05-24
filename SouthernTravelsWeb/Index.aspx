@@ -1506,7 +1506,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }
         }
 
-        submitBtn.style.display = 'none'; // hide the button only if validation passed
+        submitBtn.style.display = 'none'; 
         return true;
     }
 </script>
