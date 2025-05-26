@@ -6,17 +6,22 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 using System.Web.Mail;
 using System.Web.UI;
 namespace SouthernTravelsWeb.BLL
 {
+
 
     public enum BASE_PAYMENT_TYPE
     {
@@ -30,6 +35,45 @@ namespace SouthernTravelsWeb.BLL
         AMEX = 7,
         [Description("ATOM")]
         ATOM = 63
+    }
+    public struct RequestStatus
+    {
+        public bool Status;
+
+        public int ErrNo;
+
+        public string ErrDesc;
+    }
+    public enum pbException
+    {
+        [Description("Success")]
+        SUCCESS = 1,
+        [Description("Data not found.")]
+        ERR_DATANOT_FOUND = 1001,
+        [Description("Data Not Save.")]
+        ERR_DATANOT_SAVE = 1002,
+        [Description("Record Already Exist.")]
+        ERR_RECORD_EXIST = 1003,
+        [Description("Sorry For your inconvience.The Error has been Logged and will be rectified soon.")]
+        ERR_CATCH_BLOCK = 1004,
+        [Description("Sorry For your inconvience for saving data.")]
+        ERR_SAVE_CATCH_BLOCK = 1005,
+        [Description("Geocode value is not available.")]
+        ERR_GEOCODE_NOT_FOUND = 1006,
+        [Description("Season with same name already exist.")]
+        ERR_SEASON_EXIST = 1007,
+        [Description("Date range already exist.")]
+        ERR_SEASON_DATE_EXIST = 1008,
+        [Description("Week days already exists within same date range in some other season.")]
+        ERR_WEEK_DAYS_ALREADY_EXIST = 1009,
+        [Description("Sorry For your inconvience for Delete data.")]
+        ERR_DELETE_CATCH_BLOCK = 1010,
+        [Description("Approval levelName already exist.")]
+        ERR_APP_LEVEL_EXS = 1011,
+        [Description("Priority level already registered.")]
+        ERR_PR_LEVEL_EXS = 1012,
+        [Description("Date collapsing with previous date range.")]
+        ERR_DATE_COLLAPSE = 1013
     }
     public enum Booking_Source // *** CHANGED
     {
@@ -267,6 +311,13 @@ namespace SouthernTravelsWeb.BLL
         OVER_RIDE_CANCEL_REISSUE = 5,
         [Description("CANCELREISSUE")]
         CANCEL_REISSUE = 18,
+    }
+
+    public class DataListResponse<T>
+    {
+        public List<T> ResultList;
+
+        public RequestStatus Status;
     }
     /// <summary>
     /// Summary description for ClsCommon
@@ -1241,6 +1292,434 @@ namespace SouthernTravelsWeb.BLL
                 return null;
             }
         }
+        public static void LogAndSendError(string error)
+        {
 
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.LogError_sp, conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@Error", SqlDbType.NVarChar).Value = error;
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // Send error email
+                    string to = ConfigurationManager.AppSettings["errormail"];
+                    ClsCommon.sendmail(to, "", "", "tickets1@southerntravels.com",
+                        "Error Has Been Caught in Application_Error event", error, "");
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+        }
+        public List<GST_GetCityListByStateIdAndSearchedCityTextResult> GST_GetCityListByStateIdAndSearchedCityText(string search, int? StateId)
+        {
+            List<GST_GetCityListByStateIdAndSearchedCityTextResult> resultList = new List<GST_GetCityListByStateIdAndSearchedCityTextResult>();
+
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.GST_GetCityListByStateIdAndSearchedCityText, conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("@search", SqlDbType.NVarChar).Value = (object)search ?? DBNull.Value;
+                        cmd.Parameters.Add("@StateId", SqlDbType.Int).Value = (object)StateId ?? DBNull.Value;
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var city = new GST_GetCityListByStateIdAndSearchedCityTextResult
+                                {
+                                    CityID = reader["CityID"] != DBNull.Value ? reader["CityID"].ToString() : null,
+                                    CityName = reader["CityName"] != DBNull.Value ? reader["CityName"].ToString() : string.Empty
+                                };
+
+                                resultList.Add(city);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return null;
+                }
+            }
+
+            return resultList;
+        }
+      
+
+        public DataListResponse<GetCountryWiseStateName_SPResult> fnGetCountryWiseStateName(int iCountryID)
+        {
+            var dataListResponse = new DataListResponse<GetCountryWiseStateName_SPResult>();
+            var resultList = new List<GetCountryWiseStateName_SPResult>();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(StoredProcedures.GetCountryWiseStateName_SP, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@CountryID", iCountryID);
+
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var state = new GetCountryWiseStateName_SPResult
+                            {
+                                StateID = reader.GetInt32(reader.GetOrdinal("StateID")),
+                                CountryID = reader.GetInt32(reader.GetOrdinal("CountryID")),
+                                RegionID = reader.GetInt32(reader.GetOrdinal("RegionID")),
+                                StateName = reader.GetString(reader.GetOrdinal("StateName")),
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                                IsOffice = reader.GetBoolean(reader.GetOrdinal("IsOffice")),
+                                CreatedOn = reader.GetDateTime(reader.GetOrdinal("CreatedOn")),
+                                CreatedBy = reader.GetInt32(reader.GetOrdinal("CreatedBy")),
+                                LastUpdatedOn = reader.IsDBNull(reader.GetOrdinal("LastUpdatedOn"))
+                                    ? (DateTime?)null : reader.GetDateTime(reader.GetOrdinal("LastUpdatedOn")),
+                                LastUpdatedBy = reader.IsDBNull(reader.GetOrdinal("LastUpdatedBy"))
+                                    ? (int?)null : reader.GetInt32(reader.GetOrdinal("LastUpdatedBy"))
+                            };
+
+                            resultList.Add(state);
+                        }
+                    }
+                }
+
+                dataListResponse.ResultList = resultList;
+                if (resultList != null && resultList.Count > 0)
+                {
+                    dataListResponse.Status = fnGetRequestStatus(true, pbException.SUCCESS);
+                }
+                else
+                {
+                    dataListResponse.Status = fnGetRequestStatus(true, pbException.ERR_DATANOT_FOUND);
+                }
+            }
+            catch (Exception)
+            {
+                dataListResponse.Status = fnGetRequestStatus(false, pbException.ERR_CATCH_BLOCK);
+            }
+
+            return dataListResponse;
+        }
+        public static RequestStatus fnGetRequestStatus(bool pStatus, pbException pException)
+        {
+            RequestStatus result = default(RequestStatus);
+            result.Status = pStatus;
+            result.ErrNo = Convert.ToInt32(pException);
+            result.ErrDesc = fnGetEnumDescription(pException);
+            return result;
+        }
+
+        internal static string fnGetEnumDescription(Enum pValue)
+        {
+            FieldInfo field = pValue.GetType().GetField(pValue.ToString());
+            DescriptionAttribute[] array = (DescriptionAttribute[])field.GetCustomAttributes(typeof(DescriptionAttribute), inherit: false);
+            return (array.Length > 0) ? array[0].Description : pValue.ToString();
+        }
+
+        public int fnSaveAgentLogInInfo(int? pAgentID, string pIPAddress)
+        {
+            int status = 0;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.SaveAgentLogInInfo_sp, conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Parameters
+                        cmd.Parameters.Add("@AgentID", SqlDbType.Int).Value = (object)pAgentID ?? DBNull.Value;
+                        cmd.Parameters.Add("@IpAddress", SqlDbType.VarChar, 50).Value = pIPAddress;
+
+                        // Open and execute
+                        conn.Open();
+                        int result = cmd.ExecuteNonQuery();
+
+                        // If needed, you can return result here
+                        status = 1; // success
+                    }
+                }
+                catch (Exception ex)
+                {
+                    status = -1; // failure
+                                 // Optionally log the error
+                }
+            }
+
+            return status;
+        }
+        static string _Password = "SouthernTravels";
+        static byte[] _Salt = new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 };
+        /// <summary>
+        /// Decrypt Cipher Text using Symmetric Algorithm. 
+        /// </summary>
+        /// <returns></returns>
+        public static string Decrypt(string decryptedValue)
+        {
+            try
+            {
+
+                // VSR: UnEscape String (URL Decode) whenever received decrypted data from URL
+                //decryptedValue = System.Uri.UnescapeDataString(cipherText);
+
+                byte[] cipherBytes = Convert.FromBase64String(decryptedValue);
+                PasswordDeriveBytes pdb = new PasswordDeriveBytes(_Password, _Salt);
+                byte[] decryptedData = Decryption(cipherBytes, pdb.GetBytes(32), pdb.GetBytes(16));
+                return System.Text.Encoding.Unicode.GetString(decryptedData);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+        /// <summary>
+        ///  Decrypt a string using Symmetric Algorithm 
+        /// </summary>
+        /// <param name="cipherData">The original string</param>
+        /// <param name="Key">Set the value of secret key for Symmetric Algorithm </param>
+        /// <param name="IV">set initialization  vector for Symmetric Algorithm</param>
+        /// <returns>Decrypted String </returns>
+        private static byte[] Decryption(byte[] cipherData, byte[] Key, byte[] IV)
+        {
+
+            try
+            {
+                MemoryStream ms = new MemoryStream();
+                Rijndael alg = Rijndael.Create();
+                alg.Key = Key;
+                alg.IV = IV;
+                CryptoStream cs = new CryptoStream(ms, alg.CreateDecryptor(), CryptoStreamMode.Write);
+                cs.Write(cipherData, 0, cipherData.Length);
+                cs.Close();
+                byte[] decryptedData = ms.ToArray();
+                return decryptedData;
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
+        public static DataTable Agent_ForgotPassword(string pAgentEmail, string pAgentResetPassword)
+        {
+            DataTable dtAgentForgotPassword = null;
+            string connString = DataLib.getConnectionString();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connString))
+                using (SqlCommand cmd = new SqlCommand(StoredProcedures.Agent_ForgotPassword, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Add parameters
+                    cmd.Parameters.Add(new SqlParameter("@I_Emailid", SqlDbType.VarChar, 150) { Value = pAgentEmail });
+                    cmd.Parameters.Add(new SqlParameter("@I_Password", SqlDbType.VarChar, 50) { Value = pAgentResetPassword });
+
+                    conn.Open();
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {   
+                        dtAgentForgotPassword = new DataTable();
+                        adapter.Fill(dtAgentForgotPassword);
+                    }
+                }
+
+                // Return a copy if needed
+                return dtAgentForgotPassword != null ? dtAgentForgotPassword.Copy() : null;
+            }
+            catch (Exception ex)
+            {
+                // Optionally log the exception here
+                return null;
+            }
+            finally
+            {
+                if (dtAgentForgotPassword != null)
+                {
+                    dtAgentForgotPassword.Dispose();
+                    dtAgentForgotPassword = null;
+                }
+            }
+        }
+        public DataTable ValidateAgent(string pUserID)
+        {
+            DataTable dtValidateAgent = new DataTable();
+            string connString = DataLib.getConnectionString();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connString))
+                using (SqlCommand cmd = new SqlCommand(StoredProcedures.ValidateAgent_sp, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Input parameter
+                    cmd.Parameters.Add(new SqlParameter("@I_UserID", SqlDbType.VarChar, 20)
+                    {
+                        Value = pUserID
+                    });
+
+                    // Output parameter
+                    SqlParameter returnValueParam = new SqlParameter("@O_ReturnValue", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(returnValueParam);
+
+                    // Execute
+                    conn.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dtValidateAgent);
+                    }
+
+                    // You can optionally capture and use the output parameter value:
+                    int status = returnValueParam.Value != DBNull.Value ? (int)returnValueParam.Value : 0;
+
+                    if (dtValidateAgent.Rows.Count > 0)
+                        return dtValidateAgent.Copy();
+                    else
+                        return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Optionally log ex
+                return null;
+            }
+            finally
+            {
+                if (dtValidateAgent != null)
+                {
+                    dtValidateAgent.Dispose();
+                    dtValidateAgent = null;
+                }
+            }
+        }
+        public static DataTable CheckUpdateCustomerEmailMobile(int pCustID, string pEmailorMobile, char pType)
+        {
+            DataTable ldtCustomer = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(DataLib.getConnectionString()))
+            {
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.Check_UpdateCustomerEmailMobile, conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@rowid", pCustID);
+                        cmd.Parameters.AddWithValue("@type", pType);
+
+                        // Email or mobile based on type
+                        if (pType == 'E')
+                        {
+                            cmd.Parameters.AddWithValue("@email", pEmailorMobile);
+                            cmd.Parameters.AddWithValue("@mobile", "");
+                        }
+                        else if (pType == 'M')
+                        {
+                            cmd.Parameters.AddWithValue("@email", "");
+                            cmd.Parameters.AddWithValue("@mobile", pEmailorMobile);
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue("@email", "");
+                            cmd.Parameters.AddWithValue("@mobile", "");
+                        }
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(ldtCustomer);
+                        }
+
+                        return ldtCustomer.Copy();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Optional: Log the exception
+                    return null;
+                }
+                finally
+                {
+                    if (ldtCustomer != null)
+                    {
+                        ldtCustomer.Dispose();
+                    }
+                }
+            }
+        }
+
+
+        public int fnInsertPaymentDetail(
+string pOrderID, string pItemCode, char pPaidStatus, decimal pAmount, string pCurrencyCode,
+string pIPAdd, string pBankName, string pEMIMonth, string pSectionName,
+bool lIsHDFC, bool lIsPayU, string lPayMode)
+        {
+            int returnValue = 0;
+
+            string connStr = DataLib.getConnectionString();
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            using (SqlCommand cmd = new SqlCommand(StoredProcedures.InsertPaymentDetail_Sp, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // Input parameters
+                cmd.Parameters.AddWithValue("@OrderId", pOrderID);
+                cmd.Parameters.AddWithValue("@ItemCode", pItemCode);
+                cmd.Parameters.AddWithValue("@Amount", pAmount);
+                cmd.Parameters.AddWithValue("@IsPaid", pPaidStatus);
+                cmd.Parameters.AddWithValue("@Currency", pCurrencyCode);
+                cmd.Parameters.AddWithValue("@IP", pIPAdd ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@EMIMonth", pEMIMonth ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@BankName", pBankName ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@SectionName", pSectionName ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@IsHDFC", lIsHDFC);
+                cmd.Parameters.AddWithValue("@IsPayU", lIsPayU);
+                cmd.Parameters.AddWithValue("@PayMode", lPayMode ?? (object)DBNull.Value);
+
+                // Output parameter
+                SqlParameter outputParam = new SqlParameter("@TourRowId", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(outputParam);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    returnValue = Convert.ToInt32(outputParam.Value);
+                }
+                catch (Exception)
+                {
+                    returnValue = 0;
+                }
+            }
+
+            return returnValue;
+        }
     }
 }

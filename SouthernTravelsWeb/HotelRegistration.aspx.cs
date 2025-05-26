@@ -105,7 +105,8 @@ namespace SouthernTravelsWeb
         {
             try
             {
-                ddlState.DataSource = fnGetState();
+                clsAdo clsAdo = new clsAdo();
+                ddlState.DataSource = clsAdo.fnGetState();
                 ddlState.DataTextField = "State";
                 ddlState.DataValueField = "RowID";
                 ddlState.DataBind();
@@ -412,40 +413,6 @@ namespace SouthernTravelsWeb
             }
         }
 
-        public DataTable fnGetState()
-        {
-            DataTable dtStates = new DataTable();
-
-            string connectionString = DataLib.getConnectionString();
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.sp_GetState, conn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                        {
-                            adapter.Fill(dtStates);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    return null;
-                }
-                finally
-                {
-                    if (conn.State == ConnectionState.Open)
-                        conn.Close();
-                }
-            }
-
-            return dtStates;
-        }
 
         public int SaveVendorHotel(string pvendorType, string pChainName, string pHotelName, decimal pTax, decimal pLuxuryTax,
     decimal pServiceTax, string pAddress, string pStdCode, string pPhoneNO, string pMobile, string pContactPerson,

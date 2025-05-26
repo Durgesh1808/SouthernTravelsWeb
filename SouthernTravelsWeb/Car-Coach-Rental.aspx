@@ -274,7 +274,7 @@
                     </div>
                      <p><a href="Enquiryform.aspx?Type=car&Text=Volvo Multi Axle Coach : 53 Seater" class="commonbtn">Book now</a></p>
                      <%--<p><a href="javascript:void(0);" class="commonbtn">Book now</a></p>--%>
-                </div>
+                </div>Assets/images/facebox/closelabel.png
             </div>
             
         

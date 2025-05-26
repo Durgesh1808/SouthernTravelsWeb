@@ -31,8 +31,10 @@
             margin-left: 5px;
         }
     </style>
-    <script language="javascript" src="JavaScript/md5.js" type="text/javascript"></script>
-    <script language="javascript" src="JavaScript/MyScript.js" type="text/javascript"></script>
+                            <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+
+    <script src="Assets/js/md5.js"></script>
+    <script language="javascript" src="Assets/js/MyScript.js" type="text/javascript"></script>
     <!-- SweetAlert2 CSS & JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script language="javascript" type="text/javascript">
@@ -260,7 +262,7 @@
     <input type="hidden" id="tmpEnValue" runat="server" />
     <input type="hidden" id="isemail" runat="server" />
     <input type="hidden" value='<%=ViewState["salt"]%>' id="txtsalt" />
-    <header class="posrel innerheader" style="background-image: url(images/banner-login.jpg)">
+    <header class="posrel innerheader" style="background-image: url(Assets/images/banner-login.jpg)">
 
    <UCHeader:UCHeaderEndUser ID="UCHeader" runat="server"   />
    

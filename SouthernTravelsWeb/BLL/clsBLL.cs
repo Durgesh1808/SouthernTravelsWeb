@@ -193,5 +193,39 @@ namespace SouthernTravelsWeb.BLL
             return dtResult.Rows.Count > 0 ? dtResult.Copy() : null;
         }
 
+
+        /// <summary>
+        /// Insert Record In tbl_Paymentdetails Table
+        /// </summary>
+        /// <param name="pOrderID"></param>
+        /// <param name="pItemCode"></param>
+        /// <param name="pPaidStatus"></param>
+        /// <param name="pAmount"></param>
+        /// <param name="pCurrencyCode"></param>
+        /// <param name="pBankName"></param>
+        /// <returns> Integer value of Success Full Insertion of Record  </returns>
+
+        public static int PaymentTable_Entry(
+         string pOrderID, string pItemCode, char pPaidStatus, decimal pAmount, string pCurrencyCode,
+         string pBankName, string EMIMonth, string SectionName, bool lIsHDFC, bool lIsPayU, string lPayMode)
+        {
+            try
+            {
+                string ipAddress = Convert.ToString(HttpContext.Current?.Request?.ServerVariables["REMOTE_ADDR"]) ?? string.Empty;
+
+                ClsCommon clsCommon = new ClsCommon();
+
+                // Call the method using the instance
+                return clsCommon.fnInsertPaymentDetail(
+                    pOrderID, pItemCode, pPaidStatus, pAmount, pCurrencyCode,
+                    ipAddress, pBankName, EMIMonth, SectionName, lIsHDFC, lIsPayU, lPayMode);
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+
     }
 }

@@ -41,12 +41,7 @@
                     </div>
                 </td>
             </tr>
-            <%--<tr>
-                <td colspan="3">
-                    <div>
-                        <img src="blank.gif" height="4" alt="" /></div>
-                </td>
-            </tr>--%>
+           
             <tr>
                 <td>
                     <div align="left" style="vertical-align: middle">

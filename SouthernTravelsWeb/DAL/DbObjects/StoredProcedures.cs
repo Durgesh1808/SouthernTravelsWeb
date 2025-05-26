@@ -41,8 +41,42 @@ namespace SouthernTravelsWeb.DAL.DbObjects
         public const string Get_Fare_Panel_IsQuery_sp = "Get_Fare_Panel_IsQuery_sp";
         public const string GetFixedTourJourneyDate_SP = "GetFixedTourJourneyDate_SP";
         public const string jdates_vacantseats= "jdates_vacantseats";
+        public const string SP_Update_EBK_TCSVAL = "SP_Update_EBK_TCSVAL";
+         public const string LogError_sp = "LogError_sp";
+        public const string GST_GetCityListByStateIdAndSearchedCityText = "GST_GetCityListByStateIdAndSearchedCityText";
+        public const string GST_FindTourDetail_sp = "GST_FindTourDetail_sp";
+        public const string GetCountryWiseStateName_SP = "GetCountryWiseStateName_SP";
+        public const string SaveAgentLogInInfo_sp = "SaveAgentLogInInfo_sp";
+        public const string customer_login = "customer_login";
+        public const string customer_updatepassword = "customer_updatepassword";
+        public const string Agent_ForgotPassword = "Agent_ForgotPassword";
+         public const string agent_session_details = "agent_session_details";
+        public const string ValidateAgent_sp = "ValidateAgent_sp";
+        public const string insert_OnlineCustomer = "insert_OnlineCustomer";
+        public const string Check_UpdateCustomerEmailMobile = "Check_UpdateCustomerEmailMobile";
+        public const string onlinecustomer_details = "onlinecustomer_details";
+        public const string update_OnlineCustomer_PWD = "update_OnlineCustomer_PWD";
+        public const string update_OnlineCustomer = "update_OnlineCustomer";
+        public const string customer_bookedtickets = "customer_bookedtickets";
+        public const string customer_journeydate = "customer_journeydate";
+        public const string request_ltc = "request_ltc";
+        public const string customer_cancelledtickets = "customer_cancelledtickets";
+        public const string CheckInMbkTicket_sp = "CheckInMbkTicket_sp";
+        public const string GetExtraServiceCollectionDetails_sp = "GetExtraServiceCollectionDetails_sp";
+        public const string UpdateTicketDeatilsByOrderID = "UpdateTicketDeatilsByOrderID";
+        public const string MBKGetGroupEnquiryByOrderID_sp = "MBKGetGroupEnquiryByOrderID_sp";
+        public const string InsertPaymentDetail_Sp = "InsertPaymentDetail_Sp";
+        public const string OnlineBalanceClear_sp = "OnlineBalanceClear_sp";
+
+        public const string InsertPaymentHDFCPG_SP = "InsertPaymentHDFCPG_SP";
+
+        public const string customer_splbookedtickets = "customer_splbookedtickets";
+        public const string customer_Groupbookedtickets = "customer_Groupbookedtickets";
+
+        
 
 
     }
-    
+
+
 }
