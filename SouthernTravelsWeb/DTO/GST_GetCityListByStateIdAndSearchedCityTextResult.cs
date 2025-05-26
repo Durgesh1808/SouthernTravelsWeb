@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace SouthernTravelsWeb.DTO
+{
+    public class GST_GetCityListByStateIdAndSearchedCityTextResult
+    {
+        public string CityID { get; set; }
+        public string CityName { get; set; }
+    }
+
+}

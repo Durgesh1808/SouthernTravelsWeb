@@ -9,6 +9,7 @@ using System.Net;
 using System.Security.Cryptography;
 using System.IO;
 using System.Text;
+using SouthernTravelsWeb.DAL.DbObjects;
 
 namespace SouthernTravelsWeb.BLL
 {
@@ -513,6 +514,134 @@ namespace SouthernTravelsWeb.BLL
                     clsObj = null;
                 }
             }
+        }
+
+        public static int InsStoredProcData(string strSP, SqlParameter[] arrSPParam)
+        {
+            int strTour = 0;
+            string paramOut = "";
+
+            SqlConnection pvConnection = new SqlConnection();
+            SqlCommand localSqlCommand = new SqlCommand();
+            localSqlCommand.Connection = GetConnection(pvConnection);
+            localSqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            localSqlCommand.CommandText = strSP;
+            try
+            {
+
+                if (arrSPParam != null)
+                {
+                    strTour = 0;
+                    foreach (SqlParameter param in arrSPParam)
+                    {
+                        localSqlCommand.Parameters.Add(param);
+                        if (param.Direction == ParameterDirection.Output)
+                        {
+                            paramOut = param.ParameterName;
+                            strTour = 1;
+                        }
+                    }
+                }
+                localSqlCommand.ExecuteNonQuery();
+                localSqlCommand.Dispose();
+                if (strTour == 1)
+                {
+                    strTour = Convert.ToInt32(localSqlCommand.Parameters[paramOut].Value);
+                }
+            }
+            catch (Exception ex)
+            {
+                strTour = -1;
+            }
+            finally
+            {
+                CloseConnection(pvConnection);
+                if (pvConnection != null)
+                {
+                    pvConnection = null;
+                }
+                if (localSqlCommand != null)
+                {
+                    localSqlCommand.Dispose();
+                    localSqlCommand = null;
+                }
+
+            }
+            return strTour;
+        }
+
+        public static string sendsms(int rowid, string mobileno, string message, string sender, string branch)
+        {
+            if (!Convert.ToBoolean(ConfigurationSettings.AppSettings["IsSMS"]))
+            {
+                return "True";
+            }
+
+            WebClient wc = new WebClient();
+            string pSenderName = ConfigurationSettings.AppSettings["SenderName"].ToString().Trim();
+            string pSenderID = ConfigurationSettings.AppSettings["SenderID"].ToString().Trim();
+            string pSMSUID = ConfigurationSettings.AppSettings["SMSUID"].ToString().Trim();
+            string pSMSKEY = ConfigurationSettings.AppSettings["SMSKEY"].ToString().Trim();
+            string pAccessKey = ConfigurationSettings.AppSettings["AccessKey"].ToString().Trim();
+
+            string strData = Encoding.Default.GetString(wc.DownloadData(
+                $"https://mobilnxt.in/api/push?accesskey={pAccessKey}&to={mobileno.Substring(0, 10)}&text={message}&from={pSenderName}"
+            ));
+
+            string sIPAddress = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"].ToString();
+
+            try
+            {
+                if (strData.IndexOf("ERROR", StringComparison.OrdinalIgnoreCase) < 0)
+                {
+                    int val = fninsert_SmsSend_tbl_ADO(rowid, mobileno, sIPAddress, message, sender, branch, null, null, null);
+                    return val == 0 ? "True" : "False";
+                }
+                else
+                {
+                    return "False";
+                }
+            }
+            catch
+            {
+                return "False";
+            }
+        }
+
+        public static int fninsert_SmsSend_tbl_ADO(decimal? pCustID, string pMblNo, string pUserID, string pMsg, string pUserName,
+    string pBranchCode, string transactionType, string ticketNo, string orderId)
+        {
+            int result = 1;
+            string connStr = DataLib.getConnectionString();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connStr))
+                using (SqlCommand cmd = new SqlCommand(StoredProcedures.insert_SmsSend_tbl, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@CustomerId", (object)pCustID ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@MobileNo", (object)pMblNo ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@UserIP", (object)pUserID ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@message", (object)pMsg ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@username", (object)pUserName ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@branchcode", (object)pBranchCode ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@TransactionType", (object)transactionType ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@TicketNo", (object)ticketNo ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@OrderId", (object)orderId ?? DBNull.Value);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    result = 0; // success
+                }
+            }
+            catch (Exception)
+            {
+                result = 1; // failure
+            }
+
+            return result;
         }
 
     }

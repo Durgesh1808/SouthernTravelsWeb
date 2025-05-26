@@ -266,103 +266,95 @@ src="https://www.facebook.com/tr?id=520605323053563&ev=PageView&noscript=1"
 
         });
     </script>
-    <script>
-
-
-
-        /* ================================================================================= map =========================================================================*/
-        var map;
-        var myCenter = new google.maps.LatLng(32.9914962, 74.9318173);
-        var marker = new google.maps.Marker({
-            position: myCenter
-        });
-
-        function initialize() {
-            var mapProp = {
-                center: myCenter,
-                zoom: 14,
-                draggable: true,
-                scrollwheel: false,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-
-            map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
-            marker.setMap(map);
-
-            google.maps.event.addListener(marker, 'click', function () {
-
-                infowindow.setContent(contentString);
-                infowindow.open(map, marker);
-
-            });
-        };
-        google.maps.event.addDomListener(window, 'load', initialize);
-
-        google.maps.event.addDomListener(window, "resize", resizingMap());
-
-        $('#myMapModal').on('show.bs.modal', function () {
-            //Must wait until the render of the modal appear, thats why we use the resizeMap and NOT resizingMap!! ;-)
-            resizeMap();
-        })
-
-        function resizeMap() {
-            if (typeof map == "undefined") return;
-            setTimeout(function () { resizingMap(); }, 400);
-        }
-
-        function resizingMap() {
-            if (typeof map == "undefined") return;
-            var center = map.getCenter();
-            google.maps.event.trigger(map, "resize");
-            map.setCenter(center);
-        }
-        /* ================================================================================= end map =========================================================================*/
-
-
+<script>
+    /* ================================================================================= map =========================================================================*/
+    var map;
+    var myCenter = new google.maps.LatLng(32.9914962, 74.9318173);
+    var marker = new google.maps.Marker({
+        position: myCenter
     });
 
+    function initialize() {
+        var mapProp = {
+            center: myCenter,
+            zoom: 14,
+            draggable: true,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
 
-        /* ================================================	center modal popup ============================================*/
-        // initialise on document ready
-        jQuery(document).ready(function ($) {
-            'use strict';
+        map = new google.maps.Map(document.getElementById("map-canvas"), mapProp);
+        marker.setMap(map);
 
-            // CENTERED MODALS
-            // phase one - store every dialog's height
-            $('.modal').each(function () {
-                var t = $(this),
-                    d = t.find('.modal-dialog'),
-                    fadeClass = (t.is('.fade') ? 'fade' : '');
-                // render dialog
-                t.removeClass('fade')
-                    .addClass('invisible')
-                    .css('display', 'block');
-                // read and store dialog height
-                d.data('height', d.height());
-                // hide dialog again
-                t.css('display', '')
-                    .removeClass('invisible')
-                    .addClass(fadeClass);
-            });
-            // phase two - set margin-top on every dialog show
-            $('.modal').on('show.bs.modal', function () {
-                var t = $(this),
-                    d = t.find('.modal-dialog'),
-                    dh = d.data('height'),
-                    w = $(window).width(),
-                    h = $(window).height();
-                // if it is desktop & dialog is lower than viewport
-                // (set your own values)
-                if (w > 380 && (dh + 60) < h) {
-                    d.css('margin-top', Math.round(0.96 * (h - dh) / 2));
-                } else {
-                    d.css('margin-top', '');
-                }
-            });
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.setContent(contentString);
+            infowindow.open(map, marker);
+        });
+    };
+    google.maps.event.addDomListener(window, 'load', initialize);
 
-        }); /* ================================================	center modal popup ============================================*/
+    // Pass function reference, do NOT call it here
+    google.maps.event.addDomListener(window, "resize", resizingMap);
 
-    </script>
+    $('#myMapModal').on('show.bs.modal', function () {
+        // Must wait until modal is rendered, use resizeMap not resizingMap here
+        resizeMap();
+    })
+
+    function resizeMap() {
+        if (typeof map == "undefined") return;
+        setTimeout(function () { resizingMap(); }, 400);
+    }
+
+    function resizingMap() {
+        if (typeof map == "undefined") return;
+        var center = map.getCenter();
+        google.maps.event.trigger(map, "resize");
+        map.setCenter(center);
+    }
+    /* ================================================================================= end map =========================================================================*/
+
+
+    /* ================================================	center modal popup ============================================*/
+    // initialise on document ready
+    jQuery(document).ready(function ($) {
+        'use strict';
+
+        // CENTERED MODALS
+        // phase one - store every dialog's height
+        $('.modal').each(function () {
+            var t = $(this),
+                d = t.find('.modal-dialog'),
+                fadeClass = (t.is('.fade') ? 'fade' : '');
+            // render dialog
+            t.removeClass('fade')
+                .addClass('invisible')
+                .css('display', 'block');
+            // read and store dialog height
+            d.data('height', d.height());
+            // hide dialog again
+            t.css('display', '')
+                .removeClass('invisible')
+                .addClass(fadeClass);
+        });
+        // phase two - set margin-top on every dialog show
+        $('.modal').on('show.bs.modal', function () {
+            var t = $(this),
+                d = t.find('.modal-dialog'),
+                dh = d.data('height'),
+                w = $(window).width(),
+                h = $(window).height();
+            // if it is desktop & dialog is lower than viewport
+            // (set your own values)
+            if (w > 380 && (dh + 60) < h) {
+                d.css('margin-top', Math.round(0.96 * (h - dh) / 2));
+            } else {
+                d.css('margin-top', '');
+            }
+        });
+    }); /* ================================================	center modal popup ============================================*/
+</script>
+
     <script type="text/javascript">
         $(function () {
             $('.tabsection_inner .nav-tabs li a').on('click', function (e) {
