@@ -333,7 +333,7 @@ namespace SouthernTravelsWeb.UserControl
             DataTable dt = new DataTable();
             DataSet ds = new DataSet();
             List<TourItenerary_SPResult> lGetResult = null;
-            ClsCommon objOther = new ClsCommon();
+            clsAdo objOther = new clsAdo();
 
             try
             {

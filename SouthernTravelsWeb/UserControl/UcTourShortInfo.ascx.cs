@@ -193,7 +193,7 @@ namespace SouthernTravelsWeb.UserControl
         private void BindTourItenerary()
         {
             List<TourItenerary_SPResult> lGetResult = null;
-            ClsCommon objOther = new ClsCommon();
+            clsAdo objOther = new clsAdo();
 
             try
             {

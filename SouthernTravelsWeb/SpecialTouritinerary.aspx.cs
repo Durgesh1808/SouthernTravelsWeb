@@ -26,6 +26,8 @@ namespace SouthernTravelsWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             string pURL = Request.Url.ToString();
+         
+
             if (Request.QueryString["utm_source"] != null
                    || Request.QueryString["utm_medium"] != null
                    || Request.QueryString["utm_term"] != null
@@ -39,10 +41,10 @@ namespace SouthernTravelsWeb
                 Session["utm_campaign"] = Convert.ToString(Request.QueryString["utm_campaign"]);
             }
 
-            if (ClsCommon.ConvertStringint(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"])) == 176 ||
-                ClsCommon.ConvertStringint(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"])) == 177 ||
-                ClsCommon.ConvertStringint(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"])) == 178 ||
-                ClsCommon.ConvertStringint(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"])) == 179)
+            if (ClsCommon.ConvertStringint(Request.QueryString["TourID"]) == 176 ||
+                ClsCommon.ConvertStringint(Request.QueryString["TourID"]) == 177 ||
+                ClsCommon.ConvertStringint(Request.QueryString["TourID"]) == 178 ||
+                ClsCommon.ConvertStringint(Request.QueryString["TourID"]) == 179)
             {
                 hdfIswed.Value = "1";
                 SplTours.Visible = true;
@@ -55,7 +57,7 @@ namespace SouthernTravelsWeb
             if (!IsPostBack)
             {
                 clsAdo clsObj = new clsAdo();
-                List<FindSpl_TourMaster_spResult> lTourInfo = clsObj.fnFindSpl_TourMaster(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]));
+                List<FindSpl_TourMaster_spResult> lTourInfo = clsObj.fnFindSpl_TourMaster(ClsCommon.ConvertStringint(Request.QueryString["TourID"]));
                 try
                 {
                     if (lTourInfo != null && lTourInfo.Count > 0)
@@ -78,37 +80,58 @@ namespace SouthernTravelsWeb
                 ModifyMetaTag();
 
 
+
+
+                //ucItinerary.fldTourType = TOURTYPE.SPECIAL_TOUR;
+                //ucItinerary.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+                //UCCityWisePlaceDisplay1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+                //UCCityWisePlaceDisplay1.fldTourTypeID = ClsCommon.ConvertStringint(TOURTYPE.SPECIAL_TOUR);
+                //ucShowFeedBack1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+                //ucShowFeedBack1.fldFeedBCKTourType = TOURTYPE.SPECIAL_TOUR;
+                //ucShowFeedBack1.fldShowAll = 1;
+                //UCWeatherInfo1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+                //UCWeatherInfo1.fldTourType = ClsCommon.ConvertStringint(TOURTYPE.SPECIAL_TOUR);
+                BindTourItenerary();
+                //BindPlace();
+                //if (IsValidTour(Request.QueryString["TourID"].ToString()))
+                //{
+                //    lblSpecialNote.Text = "Special rates are defined for this tour from 15-Dec-2013 to 04-Jan-2014. Please <a href=\"http://www.southerntravelsindia.com/Contact-us.aspx\" target=\"_blank\">contact us</a> for more details.";
+                //}
+                //else
+                //{
+                //    lblSpecialNote.Text = "";
+                //}
                 HideDateSelection();
 
 
 
             }
-            var tourId = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
-            SpecialTourFarePanel81.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            SpecialTourFarePanel81.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
             SpecialTourFarePanel81.fldShowNotes = false;
             SpecialTourFarePanel81.CanBook = false;
             SpecialTourFarePanel81.fldWidth = "748";
-            SpecialTourFarePanel81.fldJourneyDate = Convert.ToString(Page.RouteData.Values["jdate"]);
+            SpecialTourFarePanel81.fldJourneyDate = Convert.ToString(Request.QueryString["jdate"]);
 
 
 
             ucItinerary.fldTourType = TOURTYPE.SPECIAL_TOUR;
-            ucItinerary.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
-            UCCityWisePlaceDisplay1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            ucItinerary.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            UCCityWisePlaceDisplay1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
             UCCityWisePlaceDisplay1.fldTourTypeID = ClsCommon.ConvertStringint(TOURTYPE.SPECIAL_TOUR);
-            ucTourShortInfo1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            ucTourShortInfo1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
             ucTourShortInfo1.fldTourTypeID = ClsCommon.ConvertStringint(TOURTYPE.SPECIAL_TOUR);
             ucTourShortInfo1.fldTourType = "Holiday Packages";
-            ucTourCostIncludeExcIude1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            ucTourCostIncludeExcIude1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
             ucTourCostIncludeExcIude1.fldTourType = ClsCommon.ConvertStringint(TOURTYPE.SPECIAL_TOUR);
-            ucMatchingTour1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            ucMatchingTour1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
             ucMatchingTour1.fldTourType = ClsCommon.ConvertStringint(TOURTYPE.SPECIAL_TOUR);
-            UcSPLModifySearch1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            //ucMatchingTour1.fldZoneID = ClsCommon.ConvertStringint(Request.QueryString["Code"]);
+            UcSPLModifySearch1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
             UcSPLModifySearch1.fldTourType = ClsCommon.ConvertStringint(TOURTYPE.SPECIAL_TOUR);
             UCTourInfo1.fldTourType = TOURTYPE.SPECIAL_TOUR;
-            UCTourInfo1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            UCTourInfo1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
             UCTourGallery1.fldTourType = TOURTYPE.SPECIAL_TOUR;
-            UCTourGallery1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            UCTourGallery1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
         }
         #endregion
 

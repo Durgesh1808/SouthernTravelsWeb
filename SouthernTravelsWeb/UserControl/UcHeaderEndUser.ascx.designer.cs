@@ -141,6 +141,15 @@ namespace SouthernTravelsWeb.UserControl
         protected global::System.Web.UI.HtmlControls.HtmlAnchor MainMINTC;
 
         /// <summary>
+        /// MainCruisePackages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor MainCruisePackages;
+
+        /// <summary>
         /// MainMHTL control.
         /// </summary>
         /// <remarks>

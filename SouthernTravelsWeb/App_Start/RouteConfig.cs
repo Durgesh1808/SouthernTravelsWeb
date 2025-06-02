@@ -139,7 +139,7 @@ namespace SouthernTravelsWeb
             // Special Tour Itinerary with JDate
             routes.MapPageRoute(
                 "HolidayPackagesWithDate",
-                "Holiday-Packages-Itinerary_JDate-{something}_{jdate}",
+                "Holiday-Packages-Itinerary_JDate-{tourId}_{jdate}",
                 "~/SpecialTouritinerary.aspx"
             );
 
