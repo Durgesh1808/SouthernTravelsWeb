@@ -400,7 +400,7 @@
                  else
                  {%><li class="menuinner showonmobile" ><a href="CustomerLogin.aspx?LIN=1&Type=U" class="commonbtn">Sign in</a></li><%} %>
                  
-              <li><a href="https://www.southerntravelsindia.com/" runat="server" id="MainMHM" class="active"><i class="fa fa-home homelinkicon"></i> <span class="homelink">Home</span></a></li>
+              <li><a href="Index.aspx" runat="server" id="MainMHM" class="active"><i class="fa fa-home homelinkicon"></i> <span class="homelink">Home</span></a></li>
               <li><a href="../India-Tour-Packages.aspx" runat="server" id="MainMFD" >Fixed Departure Tours<br /><span class="smalltext">(Domestic / seat in coach basis)</span></a></li>
               <li class="dropdown"> 
                
@@ -534,16 +534,16 @@
 
                        <h3 class="title"><span>Europe - UK</span></h3>
                             <ul class="nav-list">
-                            <li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=182&ofr=1" class="link-navimg6">Best Of European Discovery - 14D/13N</a></li>
-                            <li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=184&ofr=2" class="link-navimg7">Glimpse Of Europe - 11D/10N</a></li>
-                            <li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=197&ofr=2&tourname=Paris-And-Swiss-Delight%E2%80%937D/6N" class="link-navimg21">Paris And Swiss Delight 7D/6N</a></li>
+                            <li><a href="IntItenaryDetails.aspx?TourId=182&ofr=1" class="link-navimg6">Best Of European Discovery - 14D/13N</a></li>
+                            <li><a href="IntItenaryDetails.aspx?TourId=184&ofr=2" class="link-navimg7">Glimpse Of Europe - 11D/10N</a></li>
+                            <li><a href="IntItenaryDetails.aspx?TourId=197&ofr=2&tourname=Paris-And-Swiss-Delight%E2%80%937D/6N" class="link-navimg21">Paris And Swiss Delight 7D/6N</a></li>
                             <%--<li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=192&ofr=2&tourname=Greece-7D/6N" class="link-navimg19">Best of Greece - 7D/6N</a></li>
                             <li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=269&ofr=2" class="link-navimg40">Scandic Capitals Winter Season - 10D/9N</a></li>
                             <li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=274&ofr=2" class="link-navimg18">Northern Lights - 10D/9N</a></li>--%>
-                            <li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=275&ofr=2" class="link-navimg6">Experience Europe - 11D/10N</a></li>
+                            <li><a href="IntItenaryDetails.aspx?TourId=275&ofr=2" class="link-navimg6">Experience Europe - 11D/10N</a></li>
                             <%--<li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=276&ofr=2" class="link-navimg6">Best Of European Discovery - 14D / 13N</a></li> --%>                                                       
                             <%--<li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=283&ofr=2" class="link-navimg7">Glimpse of Europe - Winter Season 11D/10N</a></li>--%>
-                            <li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=284&ofr=2&tourname=Best-of-Eastern-Europe-7D/6N" class="link-navimg22">Best of Eastern Europe – 7D/6N</a></li>
+                            <li><a href="IntItenaryDetails.aspx?TourId=284&ofr=2&tourname=Best-of-Eastern-Europe-7D/6N" class="link-navimg22">Best of Eastern Europe – 7D/6N</a></li>
                             
                             <%--<li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=235&ofr=2&tourname=Best-of-Eastern-Europe-7D/6N" class="link-navimg22">Best of Eastern Europe – 7D/6N</a></li>
                             <li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=247&ofr=2&tourname=Best-of-Europe-14D/13N" class="link-navimg6"> Best of Europe - 14D/13N</a></li>                            
@@ -562,7 +562,7 @@
                              <li><a href="IntItenaryDetails.aspx?TourId=112&amp;ofr=2&amp;tourname=Highlights-of-Malaysia-and-Singapore-With-Cruise-8D/7N" class="link-navimg2">Highlights of Malaysia and Singapore with Cruise - 8D/7N</a></li>--%>
                              <li><a href="IntItenaryDetails.aspx?TourId=188&amp;ofr=2&amp;tourname=Malaysia-and-Singapore-6D/5N" class="link-navimg10"> Best Of Malaysia And Singapore - 6D/5N</a></li>
                              <li><a href="IntItenaryDetails.aspx?TourId=154&amp;ofr=2&amp;tourname=Malaysia-and-Singapore-with-Cruise-8D/7N" class="link-navimg2">Best Of Malaysia And Singapore With Cruise - 8D/7N</a></li>
-                             <li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=459&ofr=1" class="link-navimg10">Best Of Singapore With Cruise - 6D/5N</a></li>
+                             <li><a href="IntItenaryDetails.aspx?TourId=459&ofr=1" class="link-navimg10">Best Of Singapore With Cruise - 6D/5N</a></li>
                              <%--<li><a href="IntItenaryDetails.aspx?TourId=39&amp;ofr=2&amp;tourname=Thailand-Splendour-5D/4N" class="link-navimg2">Thailand Splendour - 5D/4N</a></li>--%>
                              <li><a href="IntItenaryDetails.aspx?TourId=150&amp;ofr=2&amp;tourname=Best-of-Thailand-5D/4N" class="link-navimg81">Best of Thailand - 5D/4N</a></li>
                              <li><a href="IntItenaryDetails.aspx?TourId=460&amp;ofr=2&amp;tourname=Affordable-Thailand-5D/4N" class="link-navimg2">Affordable Thailand - 5D/4N</a></li>
@@ -571,7 +571,7 @@
                              <li><a href="IntItenaryDetails.aspx?TourId=457&amp;ofr=2&amp;tourname=Best-Of-Vietnam-6D/5N" class="link-navimg82"> Best Of Vietnam - 6D/5N</a></li>
                              <%--<li><a href="IntItenaryDetails.aspx?TourId=271&amp;ofr=2&amp;tourname=Best-of-Vietnam-and-Cambodia-8D/07N" class="link-navimg12"> Best of Vietnam and Cambodia with Angkor Wat – 8D/7N</a></li>--%>
                              <li><a href="IntItenaryDetails.aspx?TourId=458&amp;ofr=2&amp;tourname=Best-of-Angkor-Wat-with-Cambodia-and-Vietnam-8D/7N" class="link-navimg83"> Best of Angkor Wat with Cambodia & Vietnam-8D/7N</a></li>
-                             <li><a href="https://www.southerntravelsindia.com/IntItenaryDetails.aspx?TourId=472&ofr=1" class="link-navimg83">Best Of Bali - 6 D / 5 N</a></li>
+                             <li><a href="IntItenaryDetails.aspx?TourId=472&ofr=1" class="link-navimg83">Best Of Bali - 6 D / 5 N</a></li>
                              <%--<li><a href="IntItenaryDetails.aspx?TourId=189&amp;ofr=2&amp;tourname=Hongkong-and-Macau-6D/5N" class="link-navimg15">Best of Hongkong And Macau – 6D/5N</a></li>
                              <li><a href="IntItenaryDetails.aspx?TourId=225&amp;ofr=2&amp;tourname=Wonders-of-Hongkong-7D/6N" class="link-navimg20">Wonders of Hongkong – 7D/6N</a></li>--%>
                              
