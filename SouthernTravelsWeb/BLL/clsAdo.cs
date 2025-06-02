@@ -909,59 +909,74 @@ string lMobile, string lPWS, string lTitle, bool lCanSendPromotion)
         }
         public List<TourItenerary_SPResult> fnGetTourItenerary(int lTourID, int lTourType)
         {
-            List<TourItenerary_SPResult> resultList = new List<TourItenerary_SPResult>();
+            List<TourItenerary_SPResult> lResult = new List<TourItenerary_SPResult>();
 
-            try
+            using (SqlConnection conn = new SqlConnection(DataLib.getConnectionString()))
             {
-                string connectionString = DataLib.getConnectionString();
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(StoredProcedures.TourItenerary_SP, conn))
                 {
-                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.TourItenerary_SP, conn))
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@I_TourID", lTourID);
+                    cmd.Parameters.AddWithValue("@I_TourType", lTourType);
+
+                    SqlParameter outputParam = new SqlParameter("@O_ReturnValue", SqlDbType.Int)
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add(new SqlParameter("@I_TourID", SqlDbType.Int)).Value = lTourID;
-                        cmd.Parameters.Add(new SqlParameter("@I_TourType", SqlDbType.Int)).Value = lTourType;
-
-                        SqlParameter outputParam = new SqlParameter("@O_ReturnValue", SqlDbType.Int)
-                        {
-                            Direction = ParameterDirection.Output
-                        };
-                        cmd.Parameters.Add(outputParam);
-
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(outputParam);
+                    try
+                    {
                         conn.Open();
-
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                TourItenerary_SPResult item = new TourItenerary_SPResult
+                                TourItenerary_SPResult result = new TourItenerary_SPResult
                                 {
-                                    TourID = reader["TourID"] != DBNull.Value ? Convert.ToInt32(reader["TourID"]) : (int?)null,
-                                    TourName = reader["TourName"] != DBNull.Value ? reader["TourName"].ToString() : null,
-                                    Location = reader["Location"] != DBNull.Value ? reader["Location"].ToString() : null,
-                                    Description = reader["Description"] != DBNull.Value ? reader["Description"].ToString() : null,
-                                    StartDate = reader["StartDate"] != DBNull.Value ? Convert.ToDateTime(reader["StartDate"]) : (DateTime?)null,
-                                    EndDate = reader["EndDate"] != DBNull.Value ? Convert.ToDateTime(reader["EndDate"]) : (DateTime?)null,
-                                    MealPlan = reader["MealPlan"] != DBNull.Value ? reader["MealPlan"].ToString() : null,
-                                    Price = reader["Price"] != DBNull.Value ? Convert.ToDecimal(reader["Price"]) : (decimal?)null
+                                    Tour_Short_key = reader["Tour_Short_key"] as string,
+                                    ISAccomodation = reader["ISAccomodation"] as char?,
+                                    TourName = reader["TourName"] as string,
+                                    Departuretime = reader["Departuretime"] as string,
+                                    ReturnTime = reader["ReturnTime"] as string,
+                                    CostIncludes = reader["CostIncludes"] as string,
+                                    CostExcludes = reader["CostExcludes"] as string,
+                                    Duration = reader["Duration"] as string,
+                                    TourPolicy = reader["TourPolicy"] as string,
+                                    Notes = reader["Notes"] as string,
+                                    OccasionalItinerary = reader["OccasionalItinerary"] as string,
+                                    NoOfDays = reader["NoOfDays"] as int?,
+                                    NoOfNights = reader["NoOfNights"] as int?,
+                                    DepartureWeekDays = reader["DepartureWeekDays"] as string,
+                                    ReturnWweekDays = reader["ReturnWweekDays"] as string,
+                                    TourGoingOn = reader["TourGoingOn"] as string,
+                                    ImagePath = reader["ImagePath"] as string,
+                                    CoachDetails = reader["CoachDetails"] as string,
+                                    ZoneName = reader["ZoneName"] as string,
+                                    State = reader["State"] as string,
+                                    Fair = reader["Fair"] != DBNull.Value ? Convert.ToDecimal(reader["Fair"]) : 0,
+                                    TourCost = reader["TourCost"] as string,
+                                    HolidayType = reader["HolidayType"] as string,
+                                    OfferZone = reader["OfferZone"] as string,
+                                    Remarks = reader["Remarks"] as string,
+                                    PageBanner = reader["PageBanner"] as string,
+                                    ImageDescription = reader["ImageDescription"] as string,
+                                    IsQuery = reader["IsQuery"] != DBNull.Value ? Convert.ToBoolean(reader["IsQuery"]) : false
                                 };
 
-                                resultList.Add(item);
+                                lResult.Add(result);
                             }
                         }
-
-                        int? status = outputParam.Value != DBNull.Value ? (int?)outputParam.Value : null;
+                    }
+                    catch (Exception ex)
+                    {
+                        // Log the exception or handle as needed
+                        return new List<TourItenerary_SPResult>(); // Return empty list on error
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                // Log or handle the exception as needed
-                return null;
-            }
 
-            return resultList;
+            return lResult;
         }
 
         public DataTable fnGetMetaTagForTours(int? TourTypeId, int? TourId, int? CountryId, int? ZoneId)

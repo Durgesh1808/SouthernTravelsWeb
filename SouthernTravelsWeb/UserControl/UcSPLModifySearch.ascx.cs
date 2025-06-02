@@ -98,7 +98,7 @@ namespace SouthernTravelsWeb.UserControl
             {
                 string[] ltourName = fldTourName.ToString().Split('(');
                 hdTourName.Value = ltourName[0].Trim().Replace(" ", "-");
-              
+                
                 if (fldJDate != "")
                 {
                     lblJDate.Text = " <span class=\"tName\">| </span>" + fldJDate;
@@ -121,9 +121,9 @@ namespace SouthernTravelsWeb.UserControl
                     ddlSPLYear.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("yyyy");
                 }
                 GetLastJourneyDateAll();
-                if (Page.RouteData.Values["jdate"] != null)
+                if (Request.QueryString["jdate"] != null)
                 {
-                    string[] lJDate = Page.RouteData.Values["jdate"].ToString().Split('/');
+                    string[] lJDate = Request.QueryString["jdate"].ToString().Split('/');
                     hdFromDate.Value = new DateTime(Convert.ToInt32(lJDate[2]), Convert.ToInt32(lJDate[0]), Convert.ToInt32(lJDate[1])).ToString();
                     hdToDate.Value = Convert.ToDateTime(hdFromDate.Value).AddDays(1).ToString();
                     ddlSPLMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
@@ -131,8 +131,10 @@ namespace SouthernTravelsWeb.UserControl
                 }
                 else
                 {
+
                     ddlSPLMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
                     ddlSPLYear.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("yyyy");
+                    lblCurrentDate.Value = hdFromDate.Value;
                     Session["SPLFromDate"] = null;
                 }
                 if (Convert.ToDateTime(lblCurrentDate.Value).Month == Convert.ToDateTime(hdFromDate.Value).Month
@@ -566,7 +568,7 @@ namespace SouthernTravelsWeb.UserControl
                 lCommand.CommandTimeout = 20 * 1000;
                 lCommand.CommandType = CommandType.StoredProcedure;
                 lCommand.Parameters.AddWithValue("@I_TourType", Convert.ToInt32(TOURTYPE.SPECIAL_TOUR));
-                lCommand.Parameters.AddWithValue("@I_TourID", Convert.ToInt32(Page.RouteData.Values["tourId"]));
+                lCommand.Parameters.AddWithValue("@I_TourID", Convert.ToInt32(Request.QueryString["TourID"]));
 
                 if (lConn.State == ConnectionState.Closed)
                 {

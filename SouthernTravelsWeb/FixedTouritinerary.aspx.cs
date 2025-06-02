@@ -146,7 +146,7 @@ namespace SouthernTravelsWeb
         private void BindTourItenerary()
         {
             List<TourItenerary_SPResult> lGetResult = null;
-            ClsCommon objOther = new ClsCommon();
+            clsAdo objOther = new clsAdo();
             hd.Style.Add("background-image", "url(Assets/images/banner.jpg)");
             try
             {

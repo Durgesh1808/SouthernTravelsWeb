@@ -84,7 +84,7 @@
                         <h3 class="title text-center">
                            <asp:Label ID="lblMonth" runat="server" Text="" CssClass="txtcolor"></asp:Label> </h3>
                         <div class="calnav calnavright">
-                            <asp:ImageButton ID="btnRight" runat="server" Text="Submit" ImageUrl="../images/arrowbtn-right.png" OnClick="btnRight_Click"/>
+                            <asp:ImageButton ID="btnRight" runat="server" Text="Submit" ImageUrl="Assets/images/arrowbtn-right.png" OnClick="btnRight_Click"/>
                             <%--<a href="#"><i class="fa fa-angle-right"></i></a>--%>
                         </div>
                     </div>

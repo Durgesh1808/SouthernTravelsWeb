@@ -3594,7 +3594,7 @@ namespace SouthernTravelsWeb
         private void BindTourItenerary(string lhtmlTourPlace)
         {
             List<TourItenerary_SPResult> lGetResult = null;
-            ClsCommon objOther = new ClsCommon();
+            clsAdo objOther = new clsAdo();
 
             try
             {

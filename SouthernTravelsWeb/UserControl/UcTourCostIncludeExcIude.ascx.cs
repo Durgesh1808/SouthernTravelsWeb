@@ -59,7 +59,7 @@ namespace SouthernTravelsWeb.UserControl
         private void BindCostIncludeExclue()
         {
             List<TourItenerary_SPResult> lGetResult = null;
-            ClsCommon objOther = new ClsCommon();
+            clsAdo objOther = new clsAdo();
 
             try
             {
