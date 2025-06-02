@@ -245,6 +245,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="SearchResult.aspx" />
     <Content Include="site-map.aspx" />
     <Content Include="Site.Master" />
     <Content Include="HtmlPages\SouthernTravelHotels.htm" />
@@ -614,6 +615,13 @@
       <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchResult.aspx.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchResult.aspx.designer.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="site-map.aspx.cs">
       <DependentUpon>site-map.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

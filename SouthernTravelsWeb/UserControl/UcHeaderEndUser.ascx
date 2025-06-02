@@ -602,7 +602,7 @@
                            <li><a href="IntItenaryDetails.aspx?TourId=465&amp;ofr=1&amp;tourname=Dazzling-Dubai-5D/4N" class="link-navimg84">Dazzling Dubai - 5D/4N</a></li>  
                            <li><a href="IntItenaryDetails.aspx?TourId=470&ofr=2" class="link-navimg84">Amazing Baku - 6D/5N</a></li> 
                            <li><a href="IntItenaryDetails.aspx?TourId=471&ofr=2" class="link-navimg84">Highlights Of Baku - 5D/4N</a></li>
-                                                    
+                            <li><a href="IntItenaryDetails.aspx?TourId=478&ofr=2" class="link-navimg84">Unforgettable Almaty - 5D/4N</a></li>                    
                          </ul>
 
 
