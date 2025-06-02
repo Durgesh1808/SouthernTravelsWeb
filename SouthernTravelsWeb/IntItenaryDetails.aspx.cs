@@ -83,7 +83,7 @@ namespace SouthernTravelsWeb
             divrecaptcha.Attributes.Add("data-sitekey", ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
             if (!IsPostBack)
             {
-                ViewState["TourID"] = fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+                ViewState["TourID"] = fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
                 int offid = ClsCommon.ConvertStringint(Request.QueryString["ofr"]);
                 if (fldTourID == 182 && offid == 1)
                 { Response.Redirect("InternationalTours_Offer2-UnitedKingdom-BestOfEurope10Days09Nights_182"); }
@@ -101,21 +101,21 @@ namespace SouthernTravelsWeb
                 ModifyMetaTag();
             }
             ucItinerary.fldTourType = TOURTYPE.INTERNATIONAL_TOUR;
-            ucItinerary.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            ucItinerary.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
             ucMatchingTour1.fldTourType = ClsCommon.ConvertStringint(TOURTYPE.INTERNATIONAL_TOUR);
-            ucMatchingTour1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            ucMatchingTour1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
 
-            ucTourShortInfo1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            ucTourShortInfo1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
             ucTourShortInfo1.fldTourTypeID = ClsCommon.ConvertStringint(TOURTYPE.INTERNATIONAL_TOUR);
             ucTourShortInfo1.fldTourType = "International Tour";
             ucTourShortInfo1.fldClass = "active";
 
             ucInclu.fldTourType = ClsCommon.ConvertStringint(TOURTYPE.INTERNATIONAL_TOUR);
-            ucInclu.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            ucInclu.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
             UCTourInfo1.fldTourType = TOURTYPE.INTERNATIONAL_TOUR;
-            UCTourInfo1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            UCTourInfo1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
             UCTourGallery1.fldTourType = TOURTYPE.INTERNATIONAL_TOUR;
-            UCTourGallery1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            UCTourGallery1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
             if (Request.QueryString["ofr"] != null && Request.QueryString["ofr"].ToString() == "1")
             {
                 UCHeader.fldMainSection = Current_Section.HOLIDAY_PACKAGE_INTERNATIONAL_CUSTOMIZED;
@@ -291,7 +291,7 @@ namespace SouthernTravelsWeb
                 {
                     if (fldOfferIDs != "0")
                     {
-                        string url = "~/StatFarePanel.aspx?TourID=" + Request.QueryString["TourID"].ToString() + "&TourType=3";
+                        string url = "~/StatFarePanel.aspx?TourID=" + Page.RouteData.Values["tourId"].ToString() + "&TourType=3";
 
                         StringBuilder htmlHtmlContent = new StringBuilder();
                         StringWriter htmlStringWriter = new StringWriter();
@@ -401,9 +401,9 @@ namespace SouthernTravelsWeb
             try
             {
                 int TourId, CountryID, ZoneId;
-                if (Request.QueryString["TourID"] != null && Request.QueryString["tourId"] != "")
+                if (Page.RouteData.Values["tourId"] != null && Page.RouteData.Values["tourId"] != "")
                 {
-                    TourId = ClsCommon.ConvertStringint(Request.QueryString["tourId"]);
+                    TourId = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
                 }
                 else
                 {
@@ -497,7 +497,7 @@ namespace SouthernTravelsWeb
             hd.Style.Add("background-image", "url(Assets/images/banner.jpg)");
             try
             {
-                int tourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+                int tourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
                 int tourType = ClsCommon.ConvertStringint(TOURTYPE.INTERNATIONAL_TOUR);
 
                 lGetResult = GetTourIteneraryADO(tourID, tourType);

@@ -1,5 +1,6 @@
 ﻿using SouthernTravelsWeb.BLL;
 using SouthernTravelsWeb.DAL.DbObjects;
+using SouthernTravelsWeb.DTO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,12 +17,11 @@ namespace SouthernTravelsWeb.UserControl
 {
     public partial class UcSpecialTourSearch : System.Web.UI.UserControl
     {
+
         #region Member Variable(s)
         private string _loginUserID = "";
         private string _tourStartFrom = "";
         ArrayList DateHdr = new ArrayList();
-        protected string connectionString;
-
         #endregion
 
         #region Property(s)
@@ -55,25 +55,11 @@ namespace SouthernTravelsWeb.UserControl
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            //if (Session["SPLFromDate"] == null)
-            //{
-            //    hdFromDate.Value = DateTime.Now.ToString();
-            //    hdToDate.Value = DateTime.Now.AddDays(1).ToString();
-            //    ddlSPLMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
-            //    ddlSPLYear.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("yyyy");
-            //}
-            //else
-            //{
-            //    hdFromDate.Value = Convert.ToDateTime(Session["SPLFromDate"]).ToString();
-            //    hdToDate.Value = Convert.ToDateTime(hdFromDate.Value).AddDays(1).ToString();
-            //    ddlSPLMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
-            //    ddlSPLYear.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("yyyy");
-            //}
-            if (Request.QueryString["jdate"] != null)
+           
+            if (Page.RouteData.Values["jdate"] != null)
             {
-                string[] lJDate = Request.QueryString["jdate"].ToString().Split('/');
+                string[] lJDate = Page.RouteData.Values["jdate"].ToString().Split('/');
                 hdFromDate.Value = new DateTime(Convert.ToInt32(lJDate[2]), Convert.ToInt32(lJDate[0]), Convert.ToInt32(lJDate[1])).ToString();
-                //hdFromDate.Value = Convert.ToDateTime(Session["SPLFromDate"]).ToString();
                 hdToDate.Value = Convert.ToDateTime(hdFromDate.Value).AddDays(1).ToString();
                 ddlSPLMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
                 ddlSPLYear.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("yyyy");
@@ -92,56 +78,33 @@ namespace SouthernTravelsWeb.UserControl
         }
         void Page_PreRender(object sender, EventArgs e)
         {
-            //this.lstSPLTours.BorderColor = System.Drawing.Color.Transparent;
-            //this.lstSPLTours.BorderStyle = BorderStyle.None;
-            //this.lstSPLTours.BorderWidth = new Unit(0);
-
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            connectionString = ConfigurationManager.AppSettings["southernconn"];
+
             btnSPLBook.Attributes.Add("onclick", "javascript:return fnQuickSPLSearchVal();");
-            //btnRight.Attributes.Add("onclick", "javascript:return fnQuickSPLSearchVal();");
             txtSPLJourneyDate.Attributes.Add("readonly", "readonly");
             if (!IsPostBack)
-            {
-                //txtSPLTour.Attributes.Add("onKeyPress", "javascript:if (event.keyCode == 13){ __doPostBack('" + btnSPLBook.UniqueID + "','')}");
-                // txtSPLJourneyDate.Attributes.Add("onKeyPress", "javascript:if (event.keyCode == 13){ __doPostBack('" + btnSPLBook.UniqueID + "','')}");
-                Panel1.Style.Add("display", "none");
+            { Panel1.Style.Add("display", "none");
 
                 BindYear();
-                //BindMonth(ddlSPLMonth);
+           
                 GetTourStartFromSearch();
                 string pURL = Request.Url.ToString().ToLower();
 
-                if (Request.QueryString["TourID"] != null && (pURL.Contains("BookSpecialTour.aspx".ToLower()) || pURL.Contains("SpecialTouritinerary.aspx".ToLower())))
+                if (Page.RouteData.Values["tourId"] != null && (pURL.Contains("BookSpecialTour.aspx".ToLower()) || pURL.Contains("SpecialTouritinerary.aspx".ToLower())))
                 {
-                    BindTours(Convert.ToInt32(Request.QueryString["TourID"]));
+                    BindTours(Convert.ToInt32(Page.RouteData.Values["tourId"]));
                 }
                 else
                 {
                     txtSPLJourneyDate.Text = "";
-                    //txtSPLTour.Text = "";
                 }
-                //if (Session["SPLFromDate"] == null)
-                //{
-                //    hdFromDate.Value = DateTime.Now.ToString();
-                //    hdToDate.Value = DateTime.Now.AddDays(1).ToString();
-                //    ddlSPLMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
-                //    ddlSPLYear.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("yyyy");
-                //}
-                //else
-                //{
-                //    hdFromDate.Value = Convert.ToDateTime(Session["SPLFromDate"]).ToString();
-                //    hdToDate.Value = Convert.ToDateTime(hdFromDate.Value).AddDays(1).ToString();
-                //    ddlSPLMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
-                //    ddlSPLYear.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("yyyy");
-                //}
-                if (Request.QueryString["jdate"] != null)
+               
+                if (Page.RouteData.Values["jdate"] != null)
                 {
-                    string[] lJDate = Request.QueryString["jdate"].ToString().Split('/');
+                    string[] lJDate = Page.RouteData.Values["jdate"].ToString().Split('/');
                     hdFromDate.Value = new DateTime(Convert.ToInt32(lJDate[2]), Convert.ToInt32(lJDate[0]), Convert.ToInt32(lJDate[1])).ToString();
-                    //hdFromDate.Value = Convert.ToDateTime(Session["SPLFromDate"]).ToString();
                     hdToDate.Value = Convert.ToDateTime(hdFromDate.Value).AddDays(1).ToString();
                     ddlSPLMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
                     ddlSPLYear.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("yyyy");
@@ -161,13 +124,10 @@ namespace SouthernTravelsWeb.UserControl
                 {
                     btnLeft.Visible = false;
                 }
-                //GetLastJourneyDateAll();
             }
 
             BindCalendar(Convert.ToDateTime(hdFromDate.Value), Convert.ToDateTime(hdToDate.Value));
-            //lstSPLTours.BorderWidth = 0;
-            //btnLeft.Visible = true;
-            //btnRight.Visible = true;
+           
         }
         protected void txtSPLTour_TextChanged(object sender, EventArgs e)
         {
@@ -226,7 +186,6 @@ namespace SouthernTravelsWeb.UserControl
         }
         protected void ddlSPLTourStartFrom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //System.Threading.Thread.Sleep(1500000);
             GetBindTours();
         }
         protected void btnSPLBook_Click(object sender, EventArgs e)
@@ -235,12 +194,10 @@ namespace SouthernTravelsWeb.UserControl
             string lJDate = pJDate[1].ToString().Trim() + "/" + pJDate[0].ToString().Trim() + "/" + pJDate[2].ToString().Trim();
             string pURL = Request.Url.ToString();
 
-            //Response.Redirect("~/BookSpecialTour.aspx?TourID=" + fldTourID.Value + "&jdate=" + lJDate);
 
             if (pURL.Contains("BookSpecialTour.aspx"))
             {
                 Response.Redirect("~/BookSpecialTour.aspx?TourID=" + fldTourID.Value + "&jdate=" + lJDate);
-                //Response.Redirect("~/Holiday-Packages-Booking_JDate-" + txtSPLTour.Text.Trim().Replace(" ", "-") + "_" + Convert.ToString(fldTourID.Value) + "_" + lJDate.Trim().Replace("/", "-"));
             }
             else if (pURL.Contains("SpecialTouritinerary.aspx"))
             {
@@ -248,7 +205,6 @@ namespace SouthernTravelsWeb.UserControl
             }
             else
             {
-                //Response.Redirect("~/SpecialTouritinerary.aspx?TourID=" + fldTourID.Value + "&jdate=" + lJDate);
                 Response.Redirect("~/Holiday-Packages-Itinerary_JDate-" + ddlSPLTour.SelectedItem.Text.Trim().Replace(" ", "-") + "_" + Convert.ToString(fldTourID.Value) + "_" + lJDate.Trim().Replace("/", "-"));
             }
 
@@ -259,44 +215,23 @@ namespace SouthernTravelsWeb.UserControl
         #region Method(s)
         private void BindTours(int pTourID)
         {
-            DataTable dtTour = new DataTable();
-
+            List<GetTourStratFrom_SPResult> lGetTour = null;
+            clsAdo objOther = new clsAdo();
             try
             {
+                lGetTour = new List<GetTourStratFrom_SPResult>();
 
-                using (SqlConnection con = new SqlConnection(connectionString))
+                lGetTour = objOther.fnGetTourStratFrom(Convert.ToInt32(pTourID), Convert.ToInt32(TOURTYPE.SPECIAL_TOUR)).ToList();
+                if (lGetTour != null && lGetTour.Count > 0)
                 {
-                   using (SqlCommand cmd = new SqlCommand(StoredProcedures.sp_GetTourStartFrom, con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        // Add parameters for your stored procedure
-                        cmd.Parameters.AddWithValue("@TourID", pTourID);
-                        cmd.Parameters.AddWithValue("@TourType", Convert.ToInt32(TOURTYPE.SPECIAL_TOUR));
-
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                        {
-                            da.Fill(dtTour);
-                        }
-                    }
-                }
-
-                if (dtTour != null && dtTour.Rows.Count > 0)
-                {
-                    // Assuming your stored procedure returns columns: TourStartFrom, TourName
-                    ddlSPLTourStartFrom.SelectedValue = dtTour.Rows[0]["TourStartFrom"].ToString();
-
-                    // Call GetBindTours method as in your original code
+                    ddlSPLTourStartFrom.SelectedValue = Convert.ToString(lGetTour[0].TourStartFrom);
                     GetBindTours();
-
-                    ddlSPLTour.SelectedValue = dtTour.Rows[0]["TourName"].ToString();
+                    ddlSPLTour.SelectedValue = lGetTour[0].TourName;
                     fldTourID.Value = pTourID.ToString();
-
-                    if (Request.QueryString["jdate"] != null)
+                    if (Page.RouteData.Values["jdate"] != null)
                     {
-                        txtSPLJourneyDate.Text = Convert.ToDateTime(Request.QueryString["jdate"]).ToString("dd/MM/yyyy");
+                        txtSPLJourneyDate.Text = Convert.ToDateTime(Page.RouteData.Values["jdate"]).ToString("dd/MM/yyyy");
                     }
-
                     if (Session["SPLFromDate"] == null)
                     {
                         hdFromDate.Value = DateTime.Now.ToString();
@@ -314,117 +249,146 @@ namespace SouthernTravelsWeb.UserControl
                     BindCalendar(Convert.ToDateTime(hdFromDate.Value), Convert.ToDateTime(hdToDate.Value));
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                // Handle/log exception as needed
+            }
+            finally
+            {
+                if (lGetTour != null)
+                {
+                    lGetTour = null;
+                }
+
+                if (objOther != null)
+                {
+                    objOther = null;
+                }
             }
         }
-        private void GetTourStartFromSearch_ADONET()
+        private void GetTourStartFromSearch_XML()
         {
-            DataTable dtStartFrom = new DataTable();
-
+            List<GetTourStartFromSearch_SPResult> lResultSet = new List<GetTourStartFromSearch_SPResult>();
+            GetTourStartFromSearch_SPResult lResult = null;
+            XDocument XDocTourList = XDocument.Load(Server.MapPath("Common/ToursStartsFrom.xml"));
             try
             {
-
-                using (SqlConnection con = new SqlConnection(connectionString))
+                var varTourStartFrom = from TourStartFrom in XDocTourList.Descendants("StartsFrom")
+                                       where Convert.ToInt32(TourStartFrom.Element("TourType").Value) == Convert.ToInt32(TOURTYPE.SPECIAL_TOUR)
+                                       orderby TourStartFrom.Element("CityName").Value
+                                       select new
+                                       {
+                                           CityID = TourStartFrom.Element("CityID").Value.Trim(),
+                                           CityName = TourStartFrom.Element("CityName").Value.Trim()
+                                       };
+                foreach (var TourStartFrom in varTourStartFrom)
                 {
-                    // Use stored procedure or raw query as needed
-                    using (SqlCommand cmd = new SqlCommand("sp_GetTourStartFromByType", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        // Pass the tour type parameter (assuming int)
-                        cmd.Parameters.AddWithValue("@TourType", Convert.ToInt32(TOURTYPE.SPECIAL_TOUR));
-
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                        {
-                            da.Fill(dtStartFrom);
-                        }
-                    }
+                    lResult = new GetTourStartFromSearch_SPResult();
+                    lResult.CityID = Convert.ToInt32(TourStartFrom.CityID);
+                    lResult.CityName = TourStartFrom.CityName;
+                    lResultSet.Add(lResult);
                 }
 
-                if (dtStartFrom != null && dtStartFrom.Rows.Count > 0)
-                {
-                    ddlSPLTourStartFrom.DataSource = dtStartFrom;
-                    ddlSPLTourStartFrom.DataValueField = "CityID";    // Column from your DB
-                    ddlSPLTourStartFrom.DataTextField = "CityName";   // Column from your DB
-                    ddlSPLTourStartFrom.DataBind();
-                    ddlSPLTourStartFrom.Items.Insert(0, new ListItem("Tour starting from", "0"));
-                }
-            }
-            catch (Exception ex)
-            {
-                // Log or handle exception
-            }
-        }
-
-        private void GetTourStartFromSearch()
-        {
-            DataTable dtStartFrom = new DataTable();
-            try
-            {
-
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
-                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.GetTourStartFromSearch_SP, con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@TourType", Convert.ToInt32(TOURTYPE.SPECIAL_TOUR));
-
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                        {
-                            da.Fill(dtStartFrom);
-                        }
-                    }
-                }
-
-                ddlSPLTourStartFrom.DataSource = dtStartFrom;
-                ddlSPLTourStartFrom.DataValueField = "CityID";    // Ensure column names match your DB results
+                ddlSPLTourStartFrom.DataSource = lResultSet;
+                ddlSPLTourStartFrom.DataValueField = "CityID";
                 ddlSPLTourStartFrom.DataTextField = "CityName";
                 ddlSPLTourStartFrom.DataBind();
                 ddlSPLTourStartFrom.Items.Insert(0, new ListItem("Tour starting from", "0"));
             }
             catch (Exception ex)
             {
-                // Handle error properly (logging etc.)
+
+            }
+            finally
+            {
+                if (lResultSet != null)
+                {
+                    lResultSet = null;
+                }
+                if (lResult != null)
+                {
+                    lResult = null;
+                }
+                if (XDocTourList != null)
+                {
+                    XDocTourList = null;
+                }
             }
         }
+        private void GetTourStartFromSearch()
+        {
+            List<GetTourStartFromSearch_SPResult> lResultSet = null;
+           
+            clsAdo lclsEndObj = null;
+            try
+            {
+                lclsEndObj = new clsAdo();
+                lResultSet = new List<GetTourStartFromSearch_SPResult>();
+                lResultSet = lclsEndObj.fnGetTourStartFromSearch(Convert.ToInt32(TOURTYPE.SPECIAL_TOUR));
+                ddlSPLTourStartFrom.DataSource = lResultSet;
+                ddlSPLTourStartFrom.DataValueField = "CityID";
+                ddlSPLTourStartFrom.DataTextField = "CityName";
+                ddlSPLTourStartFrom.DataBind();
+                ddlSPLTourStartFrom.Items.Insert(0, new ListItem("Tour starting from", "0"));
+            }
+            catch (Exception ex)
+            {
 
+            }
+            finally
+            {
+               
+                if (lResultSet != null)
+                {
+                    lResultSet = null;
+                }
+            }
+        }
         /// <summary>
         /// Use Xml For Fill Tours Info
         /// </summary>
         private void GetBindTours_XML()
         {
-            DataTable dtTours = new DataTable();
+            List<GetTourS_Search_SPResult> lResultSet = new List<GetTourS_Search_SPResult>(); ;
+            GetTourS_Search_SPResult lResult = null;
+            XDocument XDocTourList = XDocument.Load(Server.MapPath("Common/QuickSearchTours.xml"));
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                var varTourList = from TourList in XDocTourList.Descendants("TourList")
+                                  where Convert.ToInt32(TourList.Element("TourType").Value) == Convert.ToInt32(Convert.ToInt32(TOURTYPE.SPECIAL_TOUR))
+                                  && Convert.ToInt32(TourList.Element("StartsFromID").Value.Trim()) == Convert.ToInt32(ddlSPLTourStartFrom.SelectedValue)
+                                  orderby TourList.Element("TourName").Value
+                                  select new
+                                  {
+                                      TourNo = TourList.Element("TourNo").Value.Trim(),
+                                      TourName = TourList.Element("TourName").Value.Trim(),
+                                      Tour_Short_key = TourList.Element("Tour_Short_key").Value,
+                                      StartsFromID = TourList.Element("StartsFromID").Value.Trim(),
+                                      TourType = TourList.Element("TourType").Value.Trim()
+                                  };
+                foreach (var Tour in varTourList)
                 {
-                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.sp_GetToursByTypeAndStartFrom, con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        // Assuming your stored procedure accepts these parameters
-                        cmd.Parameters.AddWithValue("@TourType", Convert.ToInt32(TOURTYPE.SPECIAL_TOUR));
-                        cmd.Parameters.AddWithValue("@StartsFromID", Convert.ToInt32(ddlSPLTourStartFrom.SelectedValue));
-
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                        {
-                            da.Fill(dtTours);
-                        }
-                    }
+                    lResult = new GetTourS_Search_SPResult();
+                    lResult.TourNo = Convert.ToInt16(Tour.TourNo);
+                    lResult.Tour_Short_key = Tour.Tour_Short_key;
+                    lResult.TourName = Tour.TourName;
+                    lResultSet.Add(lResult);
                 }
-
-                if (dtTours != null && dtTours.Rows.Count > 0)
+                if (lResultSet != null && lResultSet.Count > 0)
                 {
-                    ddlSPLTour.DataSource = dtTours;
-                    ddlSPLTour.DataValueField = "TourNo";      
+                    //lstSPLTours.DataSource = lResultSet;
+                    //lstSPLTours.DataValueField = "TourNo";
+                    //lstSPLTours.DataTextField = "TourName";
+                    //lstSPLTours.DataBind();
+
+                    ddlSPLTour.DataSource = lResultSet;
+                    ddlSPLTour.DataValueField = "TourNo";
                     ddlSPLTour.DataTextField = "TourName";
                     ddlSPLTour.DataBind();
                     ddlSPLTour.Items.Insert(0, new ListItem("I want to go to", "0"));
                 }
 
                 fldTourID.Value = "0";
+                //txtSPLTour.Text = "";
                 txtSPLJourneyDate.Text = "";
 
                 if (Session["SPLFromDate"] == null)
@@ -441,46 +405,46 @@ namespace SouthernTravelsWeb.UserControl
                     ddlSPLMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
                     ddlSPLYear.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("yyyy");
                 }
-
                 BindCalendar(Convert.ToDateTime(hdFromDate.Value), Convert.ToDateTime(hdToDate.Value));
             }
             catch (Exception ex)
             {
-                // Handle exception (log etc.)
+
+            }
+            finally
+            {
+                if (lResult != null)
+                {
+                    lResult = null;
+                }
+                if (XDocTourList != null)
+                {
+                    XDocTourList = null;
+                }
+                if (lResultSet != null)
+                {
+                    lResultSet = null;
+                }
             }
         }
-
         private void GetBindTours()
         {
-            DataTable dtTours = new DataTable();
+            List<GetTourS_Search_SPResult> lResultSet = null;
+            clsAdo lclsEndObj = null;
             try
             {
-
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
-                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.GetTourS_Search_SP, con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@StartFrom", ddlSPLTourStartFrom.SelectedValue);
-                        cmd.Parameters.AddWithValue("@SomeParam", ""); // Replace with actual parameter name or remove if not needed
-                        cmd.Parameters.AddWithValue("@TourType", Convert.ToInt32(TOURTYPE.SPECIAL_TOUR));
-
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                        {
-                            da.Fill(dtTours);
-                        }
-                    }
-                }
-
-                ddlSPLTour.DataSource = dtTours;
-                ddlSPLTour.DataValueField = "TourNo";  // Make sure these column names match your result set
+                lclsEndObj = new clsAdo();
+                lResultSet = new List<GetTourS_Search_SPResult>();
+                lResultSet = lclsEndObj.fnGetTourS_Search(ddlSPLTourStartFrom.SelectedValue, "", Convert.ToInt32(TOURTYPE.SPECIAL_TOUR));
+               
+                ddlSPLTour.DataSource = lResultSet;
+                ddlSPLTour.DataValueField = "TourNo";
                 ddlSPLTour.DataTextField = "TourName";
                 ddlSPLTour.DataBind();
                 ddlSPLTour.Items.Insert(0, new ListItem("I want to go to", "0"));
-
                 fldTourID.Value = "0";
+             
                 txtSPLJourneyDate.Text = "";
-
                 if (Session["SPLFromDate"] == null)
                 {
                     hdFromDate.Value = DateTime.Now.ToString();
@@ -495,15 +459,24 @@ namespace SouthernTravelsWeb.UserControl
                     ddlSPLMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
                     ddlSPLYear.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("yyyy");
                 }
-
                 BindCalendar(Convert.ToDateTime(hdFromDate.Value), Convert.ToDateTime(hdToDate.Value));
             }
             catch (Exception ex)
             {
-                // Log or handle the error properly
+
+            }
+            finally
+            {
+                if (lclsEndObj != null)
+                {
+                    lclsEndObj = null;
+                }
+                if (lResultSet != null)
+                {
+                    lResultSet = null;
+                }
             }
         }
-
         private void BindYear()
         {
             ddlSPLYear.Items.Clear();
@@ -524,12 +497,11 @@ namespace SouthernTravelsWeb.UserControl
             try
             {
                 DateHdr = new ArrayList();
-                int lTotalDays = DateTime.DaysInMonth(FromDate.Year, FromDate.Month);
-                DateTime lNext = new DateTime(FromDate.Year, FromDate.Month, lTotalDays);
-                DateTime lPrev = new DateTime(FromDate.Year, FromDate.Month, 1);
+                int lTotalDays = Convert.ToInt32(DateTime.DaysInMonth(FromDate.Year, FromDate.Month));
+                DateTime lNext = new DateTime(Convert.ToInt32(FromDate.Year.ToString()), Convert.ToInt32(FromDate.Month), lTotalDays);
+                DateTime lPrev = new DateTime(Convert.ToInt32(FromDate.Year.ToString()), Convert.ToInt32(FromDate.Month), 01);
                 lblStartDate.Value = FromDate.ToString("MMMM") + " " + FromDate.Year.ToString();
 
-                // Weekday headers
                 DateHdr.Add("Sun");
                 DateHdr.Add("Mon");
                 DateHdr.Add("Tue");
@@ -539,42 +511,33 @@ namespace SouthernTravelsWeb.UserControl
                 DateHdr.Add("Sat");
 
                 DataTable dt = new DataTable();
-                foreach (string day in DateHdr)
-                    dt.Columns.Add(day);
 
+                dt.Columns.Add("Sun");
+                dt.Columns.Add("Mon");
+                dt.Columns.Add("Tue");
+                dt.Columns.Add("Wed");
+                dt.Columns.Add("Thu");
+                dt.Columns.Add("Fri");
+                dt.Columns.Add("Sat");
+
+
+                clsAdo lclsEndObj = null;
                 DataTable dtTourDate = new DataTable();
-
                 try
                 {
-                    // ADO.NET code starts here
                     string pHours = "0";
                     pHours = "-" + pHours;
-
-                    using (SqlConnection con = new SqlConnection(connectionString))
-                    {
-                        using (SqlCommand cmd = new SqlCommand(StoredProcedures.GetSpecialTourJourneyDate_SP, con))
-                        {
-                            cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@TourID", Convert.ToInt32(fldTourID.Value));
-                            cmd.Parameters.AddWithValue("@Month", FromDate.Month);
-                            cmd.Parameters.AddWithValue("@Year", FromDate.Year);
-                            cmd.Parameters.AddWithValue("@Hours", Convert.ToInt32(pHours));
-
-                            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                            {
-                                da.Fill(dtTourDate);
-                            }
-                        }
-                    }
-                    // ADO.NET code ends here
-
+                    lclsEndObj = new clsAdo();
+                    dtTourDate = lclsEndObj.fnGetSpecialTourJourneyDate(Convert.ToInt32(fldTourID.Value), FromDate.Month, FromDate.Year, Convert.ToInt32(pHours));
                     lbl.Text = "(" + FromDate.ToString("MMM") + " " + FromDate.ToString("yyyy") + ")<br>Seat Availability in";
 
                     ArrayList ArrDays = new ArrayList();
 
                     int pRow = 5;
-                    if ((lPrev.DayOfWeek.ToString() == "Friday" && (lTotalDays == 30 || lTotalDays == 31)) ||
-                        (lPrev.DayOfWeek.ToString() == "Saturday" && (lTotalDays == 30 || lTotalDays == 31)))
+                    if ((lPrev.DayOfWeek.ToString() == "Friday" && lTotalDays == 30)
+                         || (lPrev.DayOfWeek.ToString() == "Friday" && lTotalDays == 31)
+                         || (lPrev.DayOfWeek.ToString() == "Saturday" && lTotalDays == 30)
+                         || (lPrev.DayOfWeek.ToString() == "Saturday" && lTotalDays == 31))
                     {
                         pRow = 6;
                     }
@@ -584,18 +547,17 @@ namespace SouthernTravelsWeb.UserControl
                         DataRow dr = dt.NewRow();
                         for (int Week = 0; Week < dt.Columns.Count; Week++)
                         {
-                            string[] DateArr = lPrev.ToString("D").Split(',');
+                            string[] DateArr = lPrev.ToString("D").ToString().Split(',');
                             string lDay = DateArr[0].Substring(0, 3);
                             string lMon = DateArr[1].Substring(0, 4);
                             string lDate = DateArr[1].Substring(DateArr[1].Length - 2, 2);
                             string lYear = DateArr[2].Substring(DateArr[2].Length - 2, 2);
                             string lShortDate = lDate.Trim() + " " + lMon.Trim() + " " + lYear.Trim();
-
                             if (lMon.Trim() == FromDate.ToString("MMM"))
                             {
-                                if (dt.Columns[Week].ColumnName.ToUpper() == lDay.ToUpper().Trim())
+                                if (dt.Columns[Week].ToString().ToUpper() == lDay.ToString().ToUpper().Trim())
                                 {
-                                    dr[Week] = lDate.Trim();
+                                    dr[Week] = lDate.ToString().Trim();
                                     ArrDays.Add(lPrev.AddDays(1).ToString());
                                     lPrev = lPrev.AddDays(1);
                                 }
@@ -603,15 +565,13 @@ namespace SouthernTravelsWeb.UserControl
                         }
                         dt.Rows.Add(dr);
                     }
-
                     gvRoomDetails.DataSource = dt;
                     gvRoomDetails.DataBind();
-
                     int lCurentMonth = DateTime.Now.Month;
                     int lCurentDay = DateTime.Now.Day;
-
                     foreach (GridViewRow item in gvRoomDetails.Rows)
                     {
+
                         for (int i = 0; i < DateHdr.Count; i++)
                         {
                             try
@@ -622,17 +582,20 @@ namespace SouthernTravelsWeb.UserControl
                                 item.Cells[i].BorderColor = System.Drawing.Color.White;
                                 item.Cells[i].BackColor = System.Drawing.Color.FromName("#f3f3f3");
                                 item.Cells[i].ForeColor = System.Drawing.Color.FromName("#848F98");
+
+                                //item.Cells[i].Style.Add("font-weight", "bold");
                                 item.Cells[i].Style.Add("text-align", "center");
                                 item.Cells[i].Style.Add("vertical-align", "middle");
+                                //item.Cells[i].ForeColor = System.Drawing.Color.Black;
+
                             }
                             catch { }
-
                             if (item.Cells[i].Text != "" && item.Cells[i].Text != "&nbsp;")
                             {
                                 HiddenField hdJDate = new HiddenField();
                                 hdJDate.ID = "hdJDate" + item.Cells[i].Text;
                                 item.Cells[i].Controls.Add(hdJDate);
-                                hdJDate.Value = Convert.ToDateTime(item.Cells[i].Text + " " + lblStartDate.Value).ToString("MM/dd/yyyy");
+                                hdJDate.Value = Convert.ToDateTime(item.Cells[i].Text + lblStartDate.Value).ToString("MM/dd/yyyy");
 
                                 Label lblDate = new Label();
                                 lblDate.ID = "lblDate" + item.Cells[i].Text;
@@ -640,6 +603,8 @@ namespace SouthernTravelsWeb.UserControl
                                 item.Cells[i].Controls.Add(lblDate);
                                 item.Cells[i].HorizontalAlign = HorizontalAlign.Right;
                                 item.Cells[i].VerticalAlign = VerticalAlign.Top;
+
+
                             }
                         }
                     }
@@ -651,64 +616,80 @@ namespace SouthernTravelsWeb.UserControl
                         {
                             if (item.Cells[i].Text != "" && item.Cells[i].Text != "&nbsp;")
                             {
+
                                 Label lblDate = (Label)item.Cells[i].FindControl("lblDate" + item.Cells[i].Text);
                                 HiddenField hdJDate = (HiddenField)item.Cells[i].FindControl("hdJDate" + item.Cells[i].Text);
                                 DateTime pDate = Convert.ToDateTime(hdJDate.Value);
-
                                 for (int lTourDate = 0; lTourDate < dtTourDate.Rows.Count; lTourDate++)
                                 {
                                     DateTime JDate = Convert.ToDateTime(dtTourDate.Rows[lTourDate]["JourneyDate"].ToString());
-
-                                    if (pDate.Date == JDate.Date)
+                                    if (pDate.ToString("MM/dd/yyyy") == JDate.ToString("MM/dd/yyyy"))
                                     {
-                                        item.Cells[i].ForeColor = System.Drawing.Color.FromName("#848f98");
-                                        item.Cells[i].Style.Add("font-size", "12px");
-                                        item.Cells[i].Style.Add("decoration", "none");
+                                        if (pDate.ToString("yyyy").Trim() == JDate.ToString("yyyy").Trim())
+                                        {
+                                            if (pDate.ToString("MMM").Trim() == JDate.ToString("MMM").Trim())
+                                            {
+                                                if (pDate.ToString("dd").Trim() == JDate.ToString("dd").Trim())
+                                                {
 
-                                        LinkButton lbDate = new LinkButton();
-                                        lbDate.ID = "lbDate" + item.Cells[i].Text;
-                                        lbDate.CommandName = "lbDate";
-                                        lbDate.ToolTip = "Select Date";
-                                        lbDate.CssClass = "";
 
-                                        lbDate.Click += new EventHandler(lbDate_Click);
-                                        item.Cells[i].Controls.Add(lbDate);
+                                                    item.Cells[i].ForeColor = System.Drawing.Color.FromName("#848f98");
+                                                    item.Cells[i].Style.Add("font-size", "12px");
+                                                    item.Cells[i].Style.Add("decoration", "none");
+                                                    LinkButton lbDate = new LinkButton();
+                                                    lbDate.ID = "lbDate" + item.Cells[i].Text;
+                                                    lbDate.CommandName = "lbDate";
+                                                    lbDate.ToolTip = "Select Date";
+                                                    lbDate.CssClass = "";
 
-                                        lbDate.Attributes.Add("onclick", "javascript:PopupHide();");
-                                        lbDate.Text = item.Cells[i].Text;
-                                        lbDate.Attributes.Add("onmouseover", "this.style.color='#f3f3f3';");
-                                        lbDate.Attributes.Add("onmouseout", "this.style.color='#848f98'");
-                                        lbDate.Style.Add("color", "#848f98");
-                                        lbDate.Text = "<br/>Book";
+                                                    lbDate.Click += new EventHandler(lbDate_Click);
+                                                    item.Cells[i].Controls.Add(lbDate);
 
-                                        item.Cells[i].Attributes.Add("onmouseover", "this.style.color='White';this.style.decoration='none';this.style.backgroundColor='#F9B32F'");
-                                        item.Cells[i].Attributes.Add("onmouseout", "this.style.color='#848f98';this.style.backgroundColor='#f3f3f3'");
-                                        item.Cells[i].BackColor = System.Drawing.Color.FromName("#f3f3f3");
+                                                    lbDate.Attributes.Add("onclick", "javascript:PopupHide();");
+                                                    lbDate.Text = item.Cells[i].Text;
+                                                    lbDate.Attributes.Add("onmouseover", "this.style.color='#f3f3f3';");
+                                                    lbDate.Attributes.Add("onmouseout", "this.style.color='#848f98'");
+                                                    lbDate.Style.Add("color", "#848f98");
+                                                    lbDate.Text = "<br/>Book";
+
+
+                                                    item.Cells[i].Attributes.Add("onmouseover", "this.style.color='White';this.style.decoration='none';this.style.backgroundColor='#F9B32F'");
+                                                    // This will change back the ground color
+                                                    item.Cells[i].Attributes.Add("onmouseout", "this.style.color='#848f98';this.style.backgroundColor='#f3f3f3'");
+                                                    item.Cells[i].BackColor = System.Drawing.Color.FromName("#f3f3f3");
+                                                }
+
+
+                                            }
+                                        }
                                     }
+
                                 }
                             }
                         }
                     }
+
                 }
                 catch (Exception ex)
                 {
-                    // Log or handle exception here
+
                 }
                 finally
                 {
+                    if (lclsEndObj != null)
+                    {
+                        lclsEndObj = null;
+                    }
                     if (dtTourDate != null)
                     {
                         dtTourDate.Dispose();
                         dtTourDate = null;
                     }
                 }
-            }
-            catch
-            {
-                // Handle outer exceptions here
-            }
-        }
 
+            }
+            catch { }
+        }
 
         protected void lbDate_Click(object sender, EventArgs e)
         {
@@ -752,27 +733,9 @@ namespace SouthernTravelsWeb.UserControl
                     e.Row.Cells[i].BorderWidth = Unit.Pixel(1);
                     e.Row.Cells[i].BorderColor = System.Drawing.Color.White;
 
-                    /*e.Row.Cells[i].ForeColor = System.Drawing.Color.FromName("#FFF");
-                    e.Row.Cells[i].BackColor = System.Drawing.Color.FromName("#FFC99A");
-                    //e.Row.Cells[i].Style.Add("font-weight", "bold");
-                    e.Row.Cells[i].Style.Add("text-align", "center");
-                    e.Row.Cells[i].Style.Add("vertical-align", "middle");
-                    e.Row.Cells[i].Width = Unit.Pixel(50);
-                    e.Row.Cells[i].Height = Unit.Pixel(25);
-                    e.Row.Cells[i].BorderWidth = Unit.Pixel(1);
-                    e.Row.Cells[i].BorderColor = System.Drawing.Color.White;*/
                 }
             }
-            //if (e.Row.RowType == DataControlRowType.DataRow || e.Row.RowType == DataControlRowType.EmptyDataRow)
-            //{
-            //    for (int i = 0; i < 7; i++)
-            //    {
-            //        e.Row.Cells[i].BorderColor = System.Drawing.Color.Gray;
-            //        e.Row.Cells[i].ForeColor = System.Drawing.Color.White;
-            //        e.Row.Cells[i].BorderWidth = Unit.Pixel(1);
-
-            //    }
-            //}
+          
         }
 
         protected void ddlSPLMonth_SelectedIndexChanged(object sender, EventArgs e)
@@ -780,7 +743,7 @@ namespace SouthernTravelsWeb.UserControl
             hdFromDate.Value = "01" + " " + ddlSPLMonth.SelectedValue + " " + ddlSPLYear.SelectedValue;
             hdToDate.Value = Convert.ToDateTime(hdFromDate.Value).AddMonths(1).ToString();
             BindCalendar(Convert.ToDateTime(hdFromDate.Value), Convert.ToDateTime(hdToDate.Value));
-            //BalloonPopupExtender2.DisplayOnFocus = true;
+
         }
         protected void ddlSPLYear_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -788,7 +751,7 @@ namespace SouthernTravelsWeb.UserControl
             hdFromDate.Value = "01" + " " + ddlSPLMonth.SelectedValue + " " + ddlSPLYear.SelectedValue;
             hdToDate.Value = Convert.ToDateTime(hdFromDate.Value).AddMonths(1).ToString();
             BindCalendar(Convert.ToDateTime(hdFromDate.Value), Convert.ToDateTime(hdToDate.Value));
-            //BalloonPopupExtender2.DisplayOnFocus = true;
+
         }
         private void BindMonth(DropDownList ddlSPLMonth)
         {
@@ -858,7 +821,7 @@ namespace SouthernTravelsWeb.UserControl
         protected void btnRight_Click(object sender, EventArgs e)
         {
             btnRight.Visible = true;
-            //tblCal.Visible = true;
+       
             btnLeft.Visible = true;
             lblCurrentDate.Value = Convert.ToDateTime(hdFromDate.Value).AddMonths(1).ToString();
 
@@ -869,12 +832,7 @@ namespace SouthernTravelsWeb.UserControl
 
             BindCalendar(Convert.ToDateTime(hdFromDate.Value), Convert.ToDateTime(hdToDate.Value));
 
-            //if (Convert.ToDateTime(hdLastDateCal.Value).Month == Convert.ToDateTime(hdFromDate.Value).Month
-            //       && Convert.ToDateTime(hdLastDateCal.Value).Year == Convert.ToDateTime(hdFromDate.Value).Year)
-            //{
-            //    btnRight.Visible = false;
-
-            //}
+         
         }
         public void GetLastJourneyDateAll()
         {
@@ -888,14 +846,15 @@ namespace SouthernTravelsWeb.UserControl
 
             try
             {
+                String strCn = System.Configuration.ConfigurationManager.AppSettings["southernconn"];
 
-                lConn = new SqlConnection(connectionString);// For  Live
+                lConn = new SqlConnection(strCn);// For  Live
 
-                lCommand = new SqlCommand(StoredProcedures.GetLastJourneyDateAll_SP, lConn);
+                lCommand = new SqlCommand("GetLastJourneyDateAll_SP", lConn);
                 lCommand.CommandTimeout = 20 * 1000;
                 lCommand.CommandType = CommandType.StoredProcedure;
                 lCommand.Parameters.AddWithValue("@I_TourType", Convert.ToInt32(TOURTYPE.SPECIAL_TOUR));
-                lCommand.Parameters.AddWithValue("@I_TourID", Convert.ToInt32(Request.QueryString["TourID"]));
+                lCommand.Parameters.AddWithValue("@I_TourID", Convert.ToInt32(Page.RouteData.Values["tourId"]));
 
                 if (lConn.State == ConnectionState.Closed)
                 {
@@ -912,11 +871,7 @@ namespace SouthernTravelsWeb.UserControl
                     if (Convert.ToString(ldsDetail.Tables[0].Rows[0]["JourneyDate"]) != "")
                         hdLastDateCal.Value = Convert.ToDateTime(ldsDetail.Tables[0].Rows[0]["JourneyDate"]).ToString("MM/dd/yyyy");
                 }
-                else
-                {
-                    //btnRight.Visible = false;
-                    //btnLeft.Visible = false;
-                }
+                
             }
             catch (Exception ex)
             {

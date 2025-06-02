@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UcSpecialTourSearch.ascx.cs" Inherits="SouthernTravelsWeb.UserControl.UcSpecialTourSearch" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-<%--<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>--%>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script language="javascript" type="text/javascript">
 
@@ -261,9 +261,7 @@
                     OnSelectedIndexChanged="ddlSPLTourStartFrom_SelectedIndexChanged"
                         ValidationGroup="SPLValidation1" AutoPostBack="True">
                     </asp:DropDownList>
-                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ddlSPLTourStartFrom"
-                ErrorMessage="Required Field." InitialValue="0" ValidationGroup="SPLValidation1"
-                SetFocusOnError="True" Display="Dynamic"></asp:RequiredFieldValidator>--%>
+                   
                 </div>
             </div>
             <div class="row mrgnbtminput">
@@ -271,9 +269,7 @@
                     <asp:DropDownList ID="ddlSPLTour" class="form-control" runat="server" OnSelectedIndexChanged="ddlSPLTour_SelectedIndexChanged"
                         ValidationGroup="SPLValidation1" AutoPostBack="True">
                     </asp:DropDownList>
-                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlSPLTour"
-                ErrorMessage="Required Field." InitialValue="0" ValidationGroup="SPLValidation1"
-                SetFocusOnError="True" Display="Dynamic"></asp:RequiredFieldValidator>--%>
+                  
                 </div>
             </div>
             <div class="row">
@@ -290,14 +286,12 @@
                         </asp:TextBox>
                         <img src="/Assets/images/icon-calendar.jpg" id="btnSplDate" runat="server" width="38" height="38"
                             alt="select date" onclick="Javascript:OnShowCal();" style="cursor: pointer"  loading="lazy"/>
-                        <%--  <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSPLJourneyDate"
-                ErrorMessage="Required Field." ValidationGroup="SPLValidation1"
-                SetFocusOnError="True" Display="Dynamic"></asp:RequiredFieldValidator>--%>
+                      
                         <cc1:PopupControlExtender ID="SplPopEx" runat="server" TargetControlID="btnSplDate"
                             PopupControlID="Panel1" Position="Bottom" OffsetX="-220" OffsetY="0">
                         </cc1:PopupControlExtender>
                         <asp:Panel ID="Panel1" runat="server" Style="z-index: 1;" Width="269">
-                            <%-- <uc1:UCJCallender ID="UCJCallender1" runat="server" />--%>
+                     
                             <table width="269" id="tblCal" runat="server" border="0" cellpadding="0" cellspacing="0"
                                 style="border-top-width: 1px; border-bottom-width: 1px; border-left-width: 1px;
                                 border-right-width: 1px; border-style: solid; border-color: #BF3411;">
@@ -318,8 +312,7 @@
                                             <asp:ListItem Text="Nov" Value="Nov"></asp:ListItem>
                                             <asp:ListItem Text="Dec" Value="Dec"></asp:ListItem>
                                         </asp:DropDownList>
-                                        <%--<asp:ImageButton ID="btnLeft" runat="server" Width="24" Height="24" ImageUrl="../Images/prev.gif"
-                                            OnClick="btnLeft_Click" ValidationGroup="dfdsfds" />--%>
+                                 
                                           <asp:LinkButton ID="btnLeft" runat="server" 
                         onclick="btnLeft_Click" style="color:#fff; font-size:28px; font-weight:bold; text-decoration:none;"><</asp:LinkButton>
                         
@@ -329,9 +322,7 @@
                                         <asp:Label ID="lbl" runat="server" Text="" Font-Size="13px" ForeColor="White"></asp:Label>
                                     </td>
                                     <td bgcolor="#f2572b" width="20%" align="center" valign="middle">
-                                       <%--<asp:ImageButton ID="btnRight" runat="server" Width="24" Height="24" ImageUrl="../Images/next.gif"
-                                            OnClick="btnRight_Click" ValidationGroup="dfdsfds"  CausesValidation="false" CommandName="select" EnableViewState="true"  />
-                                        --%> 
+                                     
                                          <asp:LinkButton ID="btnRight" runat="server" 
                         onclick="btnRight_Click" style="color:#fff;  font-size:28px; font-weight:bold; text-decoration:none;">></asp:LinkButton>
                                         
@@ -340,16 +331,13 @@
                                         <asp:HiddenField ID="lblStartDate" runat="server" />
                                         <asp:HiddenField ID="lblCurrentDate" runat="server" />
                                         <asp:HiddenField ID="hdLastDateCal" runat="server" />
-                                        <%--  <asp:ImageButton ID="imgbtnPre" runat="server" ImageUrl="~/Images/prev.png" OnClick="imgbtnPre_Click"
-                                ToolTip="Previous " />--%>
+                                       
                                         <asp:DropDownList ID="ddlSPLYear"   runat="server" AutoPostBack="True" Visible="false"
                                          OnSelectedIndexChanged="ddlSPLYear_SelectedIndexChanged"
                                              >
-                                            <%--<asp:ListItem Text="2012" Value="2012"></asp:ListItem>
-                                <asp:ListItem Text="2013" Value="2013"></asp:ListItem>--%>
+                                           
                                         </asp:DropDownList>
-                                        <%-- <asp:ImageButton ID="imgbtnNex" runat="server" ImageUrl="~/Images/next.png" OnClick="imgbtnNex_Click"
-                                ToolTip="Next" />--%>
+                                     
                                     </td>
                                 </tr>
                                 <tr>

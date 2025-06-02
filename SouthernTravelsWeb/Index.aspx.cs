@@ -49,7 +49,7 @@ namespace SouthernTravelsWeb
                 // ================================= Mail Format Start Here ==============================
                 string mailbody = "<table width=\"350\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" align=\"center\" ";
                 mailbody += " style='border-style: solid;border-color: Black; border-width: 1px;'>"; ;
-                mailbody += "<tr><td><table width=\"350\" align=\"center\"><tr><td><table width=\"100%\"><tr><td align=\"center\"><img src=\"http://www.southerntravelsindia.com/Assets/images/southern-travel.gif\" >";
+                mailbody += "<tr><td><table width=\"350\" align=\"center\"><tr><td><table width=\"100%\"><tr><td align=\"center\"><img  loading=\'lazy\' src=\"http://www.southerntravelsindia.com/Assets/images/southern-travel.gif\" >";
                 mailbody += "</td></tr> <tr><td height=\"20\"></td></tr><tr><td><table width=\"94%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" align=\"center\">";
                 mailbody += "<tr><td align=\"left\" style=\"height: 16px; background: #ffffff; font-size: 12px; font-family: Trebuchet MS, Tahoma, Arial, Helvetica, sans-serif;color: #333333; padding: 0; margin: 0; text-align: justify;\">";
                 mailbody += "Dear Executive,</td> </tr> <tr><td height=\"10\"> </td>  </tr> <tr> <td align=\"left\" style=\"height: 32px; background: #ffffff; font-size: 12px; font-family: Trebuchet MS, Tahoma, Arial, Helvetica, sans-serif;color: #333333; padding: 0; margin: 0; text-align: justify;\">";
@@ -200,7 +200,7 @@ namespace SouthernTravelsWeb
                 }
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    strHomePageBanner += "<a href = '" + Convert.ToString(dr["ImgWebURL"]) + "'><img src='Assets/images/" + Convert.ToString(dr["Img"]) + "' alt='" + Convert.ToString(dr["ImgAlt"]) + "' CssClass='popup__img' Height='600px'></a>";
+                    strHomePageBanner += "<a href = '" + Convert.ToString(dr["ImgWebURL"]) + "'><img  loading=\'lazy\' src='Assets/images/" + Convert.ToString(dr["Img"]) + "' alt='" + Convert.ToString(dr["ImgAlt"]) + "' CssClass='popup__img' Height='600px'></a>";
                     //ImgHmBanner.AlternateText = Convert.ToString(dr["ImgAlt"]);
                     //Live
                     //ImgHmBanner.Src = Server.MapPath("..\\images\\") + Convert.ToString(dr["Img"]);
@@ -227,7 +227,7 @@ namespace SouthernTravelsWeb
                 }
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    strSliderItems += "<div class='item'> <a href = '" + Convert.ToString(dr["ImgWebURL"]) + "'><img src='Assets/images/hero-slider/" + Convert.ToString(dr["Img"]) + "' alt='" + Convert.ToString(dr["ImgAlt"]) + "'></a></div>";
+                    strSliderItems += "<div class='item'> <a href = '" + Convert.ToString(dr["ImgWebURL"]) + "'><img  loading=\'lazy\' src='Assets/images/hero-slider/" + Convert.ToString(dr["Img"]) + "' alt='" + Convert.ToString(dr["ImgAlt"]) + "'></a></div>";
                 }
                 #endregion
             }

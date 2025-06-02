@@ -259,7 +259,7 @@ var __cfRLUnblockHandlers = 1;
 
     <script language="javascript" src="Assets/js/MyScript.js" type="text/javascript"></script>
 
-    <script language="javascript" src="JavaScript/tourbooking.js" type="text/javascript"></script>
+    <script language="javascript" src="Scripts/tourbooking.js" type="text/javascript"></script>
 
     <script language="javascript" type="text/javascript">
     <!--

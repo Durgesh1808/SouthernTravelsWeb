@@ -98,7 +98,7 @@
                   <asp:HiddenField runat="server" ID="hdZoneId" Value = '<%# Eval("ZoneId") %>' />
                   
                    <a href='#' id="lnkZone" runat="server"  class="Zone">
-                   <img src='="/Assets/images/Zone/<%# Eval("ZoneImg") %>' alt="zone" loading="lazy"/> <%#Eval("ZoneName")%></a> 
+                   <img loading="lazy" src='="/Assets/images/Zone/<%# Eval("ZoneImg") %>' alt="zone" loading="lazy"/> <%#Eval("ZoneName")%></a> 
                  </li>
                
                  </ItemTemplate>
@@ -373,14 +373,14 @@
                 employees[i].firstChild.nodeValue = "";
 
                 var div = document.createElement("DIV");
-                div.innerHTML = "<img style = 'height:26px;width:485px;cursor: default; background-repeat:repeat-x;' src = 'images/City.jpg' />";
+                div.innerHTML = "<img loading='lazy' style = 'height:26px;width:485px;cursor: default; background-repeat:repeat-x;' src = 'images/City.jpg' />";
                 employees[i].appendChild(div);
             }
             else if (employees[i].firstChild.nodeValue == 'Tours') {
                 employees[i].firstChild.nodeValue = "";
 
                 var div = document.createElement("DIV");
-                div.innerHTML = "<img style = 'height:26px;width:485px;cursor: default; background-repeat:repeat-x;' src = 'images/Tours.jpg' />";
+                div.innerHTML = "<img loading='lazy' style = 'height:26px;width:485px;cursor: default; background-repeat:repeat-x;' src = 'images/Tours.jpg' />";
                 employees[i].appendChild(div);
             }
             else {
@@ -389,7 +389,7 @@
                 var text = employees[i].firstChild.nodeValue;
                 employees[i]._value = employees[i]._value + "~" + text;
                 //Height and Width of the mage can be customized here...
-                employees[i].innerHTML = "<img style = 'height:26px;width:26px;cursor: default;' src = 'images/location2.png' /> &nbsp;" + text;
+                employees[i].innerHTML = "<img loading='lazy' style = 'height:26px;width:26px;cursor: default;' src = 'images/location2.png' /> &nbsp;" + text;
             }
         }
     }

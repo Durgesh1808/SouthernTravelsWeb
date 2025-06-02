@@ -221,7 +221,7 @@ namespace SouthernTravelsWeb.UserControl
         {
             if (!IsPostBack)
             {
-                CheckIntlEBKTourIDs(Convert.ToString(Request.QueryString["TourID"]));
+                CheckIntlEBKTourIDs(Convert.ToString(Page.RouteData.Values["tourId"]));
                 GetFarePanel();
             }
         }

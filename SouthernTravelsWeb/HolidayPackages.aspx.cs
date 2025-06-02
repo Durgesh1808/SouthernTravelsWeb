@@ -46,6 +46,7 @@ namespace SouthernTravelsWeb
 
                     SetPageTitle(fldTourOrigin);
                 }
+                
             }
             if (Request.QueryString["Off"] != null && Request.QueryString["Off"].ToString() == "1")
             {
@@ -62,6 +63,7 @@ namespace SouthernTravelsWeb
         }
         #endregion
         #region "Method(s)"
+        
         private void SetPageTitle(string pTourOrigin)
         {
             switch (pTourOrigin.ToLower())

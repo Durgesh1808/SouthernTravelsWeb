@@ -222,73 +222,69 @@ namespace SouthernTravelsWeb
         public bool reCaptcha()
         {
             bool lFlag = false;
-            //start building recaptch api call
+
+            var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"];
+            var reCaptchaResponse = Request["g-recaptcha-response"];
+
+            if (string.IsNullOrEmpty(secretKey))
+            {
+                MessageLabel.Text = "Secret key is not configured.";
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(reCaptchaResponse))
+            {
+                MessageLabel.Text = "Captcha response is empty.";
+                return false;
+            }
+
             var sb = new System.Text.StringBuilder();
             sb.Append("https://www.google.com/recaptcha/api/siteverify?secret=");
+            sb.Append(HttpUtility.UrlEncode(secretKey));
 
-            //our secret key
-            var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"]; //"6LesfBwTAAAAAPKzkHq9ny59cb_BtZa1D6ZLLBGf";
-            sb.Append(secretKey);
+            sb.Append("&response=");
+            sb.Append(HttpUtility.UrlEncode(reCaptchaResponse));
 
-            //response from recaptch control
-            sb.Append("&");
-            sb.Append("response=");
-            var reCaptchaResponse = Request["g-recaptcha-response"];
-            sb.Append(reCaptchaResponse);
-
-            //client ip address
-            //---- This Ip address part is optional. If you donot want to send IP address you can
-            //---- Skip(Remove below 4 lines)
-            sb.Append("&");
-            sb.Append("remoteip=");
             var clientIpAddress = GetUserIp();
-            sb.Append(clientIpAddress);
+            if (!string.IsNullOrEmpty(clientIpAddress))
+            {
+                sb.Append("&remoteip=");
+                sb.Append(HttpUtility.UrlEncode(clientIpAddress));
+            }
 
-            //make the api call and determine validity
             using (var client = new System.Net.WebClient())
             {
                 var uri = sb.ToString();
                 var json = client.DownloadString(uri);
+
                 var serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(RecaptchaApiResponse));
-                var ms = new System.IO.MemoryStream(System.Text.Encoding.Unicode.GetBytes(json));
-                var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
-
-                //--- Check if we are able to call api or not.
-                if (result == null)
+                using (var ms = new System.IO.MemoryStream(System.Text.Encoding.UTF8.GetBytes(json)))
                 {
-                    MessageLabel.Text = "Captcha was unable to make the api call";
-                }
-                else // If Yes
-                {
-                    //api call contains errors
-                    if (result.ErrorCodes != null)
-                    {
-                        if (result.ErrorCodes.Count > 0)
-                        {
-                            foreach (var error in result.ErrorCodes)
-                            {
-                                MessageLabel.Text = "Captcha is required.";
-                            }
-                        }
-                    }
-                    else //api does not contain errors
-                    {
-                        if (!result.Success) //captcha was unsuccessful for some reason
-                        {
-                            MessageLabel.Text = "Captcha did not pass, please try again.";
-                        }
-                        else //---- If successfully verified. Do your rest of logic.
-                        {
-                            MessageLabel.Text = "Captcha cleared ";
-                            lFlag = true;
-                        }
-                    }
+                    var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
 
+                    if (result == null)
+                    {
+                        MessageLabel.Text = "Captcha was unable to make the api call";
+                    }
+                    else if (result.ErrorCodes != null && result.ErrorCodes.Count > 0)
+                    {
+                        MessageLabel.Text = "Captcha error: " + string.Join(", ", result.ErrorCodes);
+                    }
+                    else if (!result.Success)
+                    {
+                        MessageLabel.Text = "Captcha did not pass, please try again.";
+                    }
+                    else
+                    {
+                        MessageLabel.Text = "Captcha cleared";
+                        lFlag = true;
+                    }
                 }
-
             }
+
             return lFlag;
         }
+
         [DataContract]
         public class RecaptchaApiResponse
         {

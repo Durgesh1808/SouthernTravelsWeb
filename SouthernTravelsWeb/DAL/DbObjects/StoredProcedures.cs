@@ -67,14 +67,54 @@ namespace SouthernTravelsWeb.DAL.DbObjects
         public const string MBKGetGroupEnquiryByOrderID_sp = "MBKGetGroupEnquiryByOrderID_sp";
         public const string InsertPaymentDetail_Sp = "InsertPaymentDetail_Sp";
         public const string OnlineBalanceClear_sp = "OnlineBalanceClear_sp";
-
         public const string InsertPaymentHDFCPG_SP = "InsertPaymentHDFCPG_SP";
-
         public const string customer_splbookedtickets = "customer_splbookedtickets";
         public const string customer_Groupbookedtickets = "customer_Groupbookedtickets";
-
-        
-
+        public const string GetTourStratFrom_SP = "GetTourStratFrom_SP";
+        public const string FindSpl_TourMaster_sp = "FindSpl_TourMaster_sp";
+        public const string Get_SpecialTour_FarePanel_NEW_sp = "Get_SpecialTour_FarePanel_NEW_sp";
+        public const string GetTour_sp = "GetTour_sp";
+        public const string GetServiceTaxIsAcc_sp = "GetServiceTaxIsAcc_sp";
+        public const string GetServiceTaxValue_sp = "GetServiceTaxValue_sp";
+        public const string GetCombinationTour_sp = "GetCombinationTour_sp";
+        public const string GetLTCCharges_sp = "GetLTCCharges_sp";
+        public const string RowWiseTourID_sp = "RowWiseTourID_sp";
+        public const string DeleteOnlineToursBooking_sp = "DeleteOnlineToursBooking_sp";
+        public const string GetCustomerDetail_sp = "GetCustomerDetail_sp";
+        public const string SaveTransactionByPromoCode_sp = "SaveTransactionByPromoCode_sp";
+        public const string GetSumOfTourAmt_sp = "GetSumOfTourAmt_sp";
+        public const string insert_tbl_PaymentDetails = "insert_tbl_PaymentDetails";
+        public const string GetPickUpMAsterRowID_sp = "GetPickUpMAsterRowID_sp";
+        public const string GetDiscount_Detail = "GetDiscount_Detail";
+        public const string GetFbDetail_sp = "GetFbDetail_sp";
+        public const string GetCountryName_SP = "GetCountryName_SP";
+        public const string GetCustRowID_sp = "GetCustRowID_sp";
+        public const string GST_InsertUpdateCustDetail_sp = "GST_InsertUpdateCustDetail_sp";
+        public const string sp_NoOfSeats = "sp_NoOfSeats";
+        public const string sp_GetTAXValue = "sp_GetTAXValue";
+        public const string sp_GetSeatArrangement = "sp_GetSeatArrangement";
+        public const string Get_FixedTour_Fare = "Get_FixedTour_Fare";
+        public const string SP_AddOperatingBranchForEBK_SPL = "SP_AddOperatingBranchForEBK_SPL";
+        public const string Fixed_PickupAddr_DeptTime = "Fixed_PickupAddr_DeptTime";
+        public const string Fixed_Default_PickupAddress = "Fixed_Default_PickupAddress";
+        public const string dispup_sp = "dispup_sp";
+        public const string GetMultiplePickupPoint_sp = "GetMultiplePickupPoint_sp";
+        public const string Get_VacantSeats = "Get_VacantSeats";
+        public const string BlockUnBlockSeats_sp= "BlockUnBlockSeats_sp";
+        public const string GetBusAllot_Detail_sp = "GetBusAllot_Detail_sp";
+        public const string GetOrderID_sp = "GetOrderID_sp";
+        public const string ValidateDiscount_sp = "ValidateDiscount_sp";
+        public const string ChkBusType_sp = "ChkBusType_sp";
+        public const string Fixed_TourSerial = "Fixed_TourSerial";
+        public const string TourWiseTourSr_sp = "TourWiseTourSr_sp";
+        public const string SeatDetail_sp = "SeatDetail_sp";
+        public const string UpdaterTourDeatil_sp = "UpdaterTourDeatil_sp";
+        public const string GetJourneyDate_sp = "GetJourneyDate_sp";
+        public const string GST_ExistCustomerDetail_sp = "GST_ExistCustomerDetail_sp";
+        public const string Check_Promocode = "Check_Promocode";
+        public const string GetToursBookingInfo_sp = "GetToursBookingInfo_sp";
+        public const string insertbook_sp = "insertbook_sp";
+        public const string Updatebook_sp = "Updatebook_sp";
 
     }
 

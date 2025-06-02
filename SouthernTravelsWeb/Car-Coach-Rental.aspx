@@ -107,7 +107,7 @@
         <div class="row rowgap">
         	<div class="col-md-4">
             	<div>
-                <p class="posrel imgsection"><img src="Assets/images/car-coach/car-sedan.jpg" class="img-responsive imgborder3px" loading="lazy" />
+                <p class="posrel imgsection"><img loading="lazy" src="Assets/images/car-coach/car-sedan.jpg" class="img-responsive imgborder3px" loading="lazy" />
                 </p>
                 <div class="carcoachbox">
                 	<h3 class="title mrgnbtmno"><span>Car (Economy) Sedan</span></h3>
@@ -769,7 +769,7 @@
 				pagination : false,
 				// Navigation
 				navigation : true,
-				navigationText : ["<img src='Assets/images/arrow-prev.png'>","<img src='Assets/images/arrow-next.png'>"],
+              navigationText: ["<img loading='lazy' src='Assets/images/arrow-prev.png'>","<img loading='lazy' src='Assets/images/arrow-next.png'>"],
 				rewindNav : true,
 				scrollPerPage : false,
 				autoplay:true,

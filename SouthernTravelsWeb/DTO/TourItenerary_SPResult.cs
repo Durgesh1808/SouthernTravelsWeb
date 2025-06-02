@@ -35,6 +35,14 @@ namespace SouthernTravelsWeb.DTO
         public string PageBanner { get; set; }
         public string ImageDescription { get; set; }
         public bool IsQuery { get; set; }
+
+        public int? TourID { get; set; }
+        public string Location { get; set; }
+        public string Description { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string MealPlan { get; set; }
+        public decimal? Price { get; set; }
     }
 
 }

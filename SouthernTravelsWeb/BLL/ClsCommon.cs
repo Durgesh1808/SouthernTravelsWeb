@@ -648,7 +648,7 @@ namespace SouthernTravelsWeb.BLL
                         sb.Append("<div class=\"col-md-4\"><div class=\"intlbox\"><a href=" + URL + ">");
 
                         sb.Append("<div class=\"imgsection\"><span class=\"customtag2\">");
-                        sb.Append(lTourType + "<img src=\"/Assets/images/custom-arrow.png\"></span><img width='371px' height='385px' src=/Assets/images/EntityImage/" + ResProduct.Tables[0].Rows[lctr]["MainImg"].ToString() + "></div>");
+                        sb.Append(lTourType + "<img loading=\'lazy\' src=\"/Assets/images/custom-arrow.png\"></span><img loading='lazy' width='371px' height='385px' src=/Assets/images/EntityImage/" + ResProduct.Tables[0].Rows[lctr]["MainImg"].ToString() + "></div>");
 
 
 
@@ -1721,5 +1721,297 @@ bool lIsHDFC, bool lIsPayU, string lPayMode)
 
             return returnValue;
         }
+
+
+
+        public static int Add_Fixed_PickupPlace(int pTourID)
+        {
+            clsAdo clsObj = new clsAdo();
+            DataSet dsDefault = null;
+
+            try
+            {
+                dsDefault = clsObj.fnFixed_Default_PickupAddress(pTourID);
+
+                if (dsDefault != null && dsDefault.Tables.Count > 0 && dsDefault.Tables[0].Rows.Count > 0)
+                {
+                    string arrtime = "06:00:00 AM";
+                    string dept = Convert.ToString(dsDefault.Tables[0].Rows[0]["departuretime"]);
+
+                    if (!string.IsNullOrEmpty(dept) && dept.Length > 2)
+                    {
+                        DateTime dt = DateTime.Parse(dept).AddMinutes(-30);
+                        arrtime = dt.ToString("hh:mm:ss tt"); 
+                    }
+
+                    int Val = clsObj.fnInsertUpdatedispup(
+                        Convert.ToInt32(dsDefault.Tables[0].Rows[0]["Rowid"]),
+                        pTourID,
+                        Convert.ToString(dsDefault.Tables[0].Rows[0]["branchname"]).Replace("'", "''"),
+                        arrtime,
+                        arrtime,
+                        'Y',
+                        Convert.ToString(dsDefault.Tables[0].Rows[0]["branchcode"]),
+                        Convert.ToString(dsDefault.Tables[0].Rows[0]["address"]).Replace("'", "''")
+                    );
+
+                    return Val;
+                }
+                else
+                {
+                    return 2; // no rows found
+                }
+            }
+            finally
+            {
+                if (dsDefault != null)
+                {
+                    dsDefault.Dispose();
+                    dsDefault = null;
+                }
+            }
+        }
+
+        public static int NoofAvailableSeats(int pBusSeatCapacity, int pBusSerialNo)
+        {
+            int availableSeats = 0;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataLib.getConnectionString()))
+                using (SqlCommand cmd = new SqlCommand(StoredProcedures.Get_VacantSeats, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@seaterCapacity", SqlDbType.Int) { Value = pBusSeatCapacity });
+                    cmd.Parameters.Add(new SqlParameter("@SerialNo", SqlDbType.Int) { Value = pBusSerialNo });
+
+                    // Output parameter
+                    SqlParameter outputParam = new SqlParameter("@availableseats", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(outputParam);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+
+                    if (outputParam.Value != DBNull.Value)
+                    {
+                        availableSeats = Convert.ToInt32(outputParam.Value);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                // Optionally log error here
+                availableSeats = 0;  // Same behavior as original on error
+            }
+            return availableSeats;
+        }
+        public static bool Block_Seats(string pSeats, int pTourSerial, string pBlockedString)
+        {
+            int val = 0;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(DataLib.getConnectionString()))
+                using (SqlCommand cmd = new SqlCommand(StoredProcedures.BlockUnBlockSeats_sp, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@TSerial", SqlDbType.VarChar, 15) { Value = pTourSerial.ToString() });
+                    cmd.Parameters.Add(new SqlParameter("@Seat", SqlDbType.VarChar, -1) { Value = pSeats }); // VarChar(MAX) = -1
+                    cmd.Parameters.Add(new SqlParameter("@BlockedString", SqlDbType.VarChar, 150) { Value = pBlockedString });
+                    cmd.Parameters.Add(new SqlParameter("@flag", SqlDbType.Bit) { Value = true });
+
+                    // Output parameter for return value
+                    SqlParameter outputParam = new SqlParameter("@ReturnValue", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(outputParam);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+
+                    if (outputParam.Value != DBNull.Value)
+                    {
+                        val = Convert.ToInt32(outputParam.Value);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                val = -1;
+            }
+
+            return val > 0;
+        }
+        public static void UnBlock_Seats(string pSeats, int pTourSerial)
+        {
+            try
+            {
+                int status = new clsAdo().fnBlockUnBlockSeats_sp(pTourSerial.ToString(), pSeats, "NULL", false);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public static int Insert_OnlineToursBooking(
+    string pOrderID, int pTourID, DateTime pDOJ, DateTime pDOB, char pBusEnvType,
+    int pAdults, int pChilds, int pTwin, int pTriple, int pChildNoBed, int pSingle, string pTourName, decimal pAmount,
+    decimal pTaxPercent, decimal pTax, decimal pTotalAmount, string pSeatNos, string pBusSerial, string pTourSerial,
+    int pPickupPointID, decimal pAdultFare, decimal pChildFare, decimal pTwinFare, decimal pTripleFare, decimal pChildNoBedFare,
+    decimal pSingleFare, decimal pCCFee, decimal pCCAmount, int pDormitory, decimal pDormitoryFare, char pIsLtc, string pOnlineDiscont, decimal pMinPay,
+    int NoAWFood, int NoCWFood, decimal AdWFoodfare, decimal CWFoodfare, string Utm_Source, string Utm_Medium, string Utm_Term, string Utm_Content, string Utm_Campaign,
+    decimal ServiceChargesTotal, decimal ServiceChargesTax, decimal ServiceChargesTaxVal, decimal AdultServiceCharges, decimal ChildServiceCharges)
+        {
+            int result = -1;
+
+            using (SqlConnection conn = new SqlConnection(DataLib.getConnectionString()))
+            using (SqlCommand cmd = new SqlCommand(StoredProcedures.insertbook_sp, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // Add parameters - match SQL types carefully
+                cmd.Parameters.Add("@orderid", SqlDbType.NVarChar, 100).Value = pOrderID ?? (object)DBNull.Value;
+                cmd.Parameters.Add("@tourno", SqlDbType.Int).Value = pTourID;
+                cmd.Parameters.Add("@doj", SqlDbType.SmallDateTime).Value = pDOJ;
+                cmd.Parameters.Add("@dob", SqlDbType.SmallDateTime).Value = pDOB;
+                cmd.Parameters.Add("@env", SqlDbType.Char, 1).Value = pBusEnvType;
+                cmd.Parameters.Add("@adults", SqlDbType.SmallInt).Value = pAdults;
+                cmd.Parameters.Add("@child", SqlDbType.SmallInt).Value = pChilds;
+                cmd.Parameters.Add("@adultstwin", SqlDbType.SmallInt).Value = pTwin;
+                cmd.Parameters.Add("@adultstriple", SqlDbType.SmallInt).Value = pTriple;
+                cmd.Parameters.Add("@childbed", SqlDbType.SmallInt).Value = pChildNoBed;
+                cmd.Parameters.Add("@singleadults", SqlDbType.SmallInt).Value = pSingle;
+                cmd.Parameters.Add("@TourName", SqlDbType.VarChar, 50).Value = pTourName ?? (object)DBNull.Value;
+                cmd.Parameters.Add("@amt", SqlDbType.Decimal).Value = pAmount;
+                cmd.Parameters.Add("@tax", SqlDbType.Decimal).Value = pTaxPercent;
+                cmd.Parameters.Add("@taxamt", SqlDbType.Decimal).Value = pTax;
+                cmd.Parameters.Add("@tot", SqlDbType.Decimal).Value = pTotalAmount;
+                cmd.Parameters.Add("@tempstr", SqlDbType.VarChar, 500).Value = pSeatNos ?? (object)DBNull.Value;
+                cmd.Parameters.Add("@BusserialNo", SqlDbType.VarChar, 100).Value = pBusSerial ?? (object)DBNull.Value;
+                cmd.Parameters.Add("@TourSerial", SqlDbType.VarChar, 100).Value = pTourSerial ?? (object)DBNull.Value;
+                cmd.Parameters.Add("@pkpID", SqlDbType.Int).Value = pPickupPointID;
+                cmd.Parameters.Add("@afare", SqlDbType.Decimal).Value = pAdultFare;
+                cmd.Parameters.Add("@cfare", SqlDbType.Decimal).Value = pChildFare;
+                cmd.Parameters.Add("@a2fare", SqlDbType.Decimal).Value = pTwinFare;
+                cmd.Parameters.Add("@a3fare", SqlDbType.Decimal).Value = pTripleFare;
+                cmd.Parameters.Add("@cbfare", SqlDbType.Decimal).Value = pChildNoBedFare;
+                cmd.Parameters.Add("@safare", SqlDbType.Decimal).Value = pSingleFare;
+                cmd.Parameters.Add("@ccfee", SqlDbType.Decimal).Value = pCCFee;
+                cmd.Parameters.Add("@ccamt", SqlDbType.Decimal).Value = pCCAmount;
+                cmd.Parameters.Add("@dormitory", SqlDbType.SmallInt).Value = pDormitory;
+                cmd.Parameters.Add("@dormitoryfare", SqlDbType.Decimal).Value = pDormitoryFare;
+                cmd.Parameters.Add("@IsLtc", SqlDbType.Char, 1).Value = pIsLtc;
+                cmd.Parameters.Add("@OnLineDis", SqlDbType.VarChar, 5).Value = pOnlineDiscont ?? (object)DBNull.Value;
+                cmd.Parameters.Add("@MinimumPay", SqlDbType.Decimal).Value = pMinPay;
+                cmd.Parameters.Add("@noAdultWithFood", SqlDbType.Int).Value = NoAWFood;
+                cmd.Parameters.Add("@noChildWithFood", SqlDbType.Int).Value = NoCWFood;
+                cmd.Parameters.Add("@AdultWithFoodFare", SqlDbType.Decimal).Value = AdWFoodfare;
+                cmd.Parameters.Add("@ChildWithFoodFare", SqlDbType.Decimal).Value = CWFoodfare;
+                cmd.Parameters.Add("@Utm_Source", SqlDbType.VarChar, 250).Value = Utm_Source ?? (object)DBNull.Value;
+                cmd.Parameters.Add("@Utm_Medium", SqlDbType.VarChar, 250).Value = Utm_Medium ?? (object)DBNull.Value;
+                cmd.Parameters.Add("@Utm_Term", SqlDbType.VarChar, 250).Value = Utm_Term ?? (object)DBNull.Value;
+                cmd.Parameters.Add("@Utm_Content", SqlDbType.VarChar, 250).Value = Utm_Content ?? (object)DBNull.Value;
+                cmd.Parameters.Add("@Utm_Campaign", SqlDbType.VarChar, 250).Value = Utm_Campaign ?? (object)DBNull.Value;
+                cmd.Parameters.Add("@ServiceChargesTotal", SqlDbType.Decimal).Value = ServiceChargesTotal;
+                cmd.Parameters.Add("@ServiceChargesTax", SqlDbType.Decimal).Value = ServiceChargesTax;
+                cmd.Parameters.Add("@ServiceChargesTaxVal", SqlDbType.Decimal).Value = ServiceChargesTaxVal;
+                cmd.Parameters.Add("@AdultServiceCharges", SqlDbType.Decimal).Value = AdultServiceCharges;
+                cmd.Parameters.Add("@ChildServiceCharges", SqlDbType.Decimal).Value = ChildServiceCharges;
+
+                // Open connection and execute
+                conn.Open();
+
+                // ExecuteNonQuery returns number of rows affected, but since your SP returns int, better use ExecuteScalar or Return Value param
+                // Assuming stored proc returns int as return value:
+                // Add a parameter for the return value
+                SqlParameter returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+
+                cmd.ExecuteNonQuery();
+
+                result = (int)returnParameter.Value;
+            }
+
+            return result;
+        }
+        public static int Update_OnlineToursBooking(
+    DateTime pJDate, char pBusEnvType, int pAdults, int pChilds, int pTwin,
+    int pTriple, int pChildNoBed, int pSingle, decimal pAmount, decimal pTax, decimal pTaxAmount, decimal pTotalAmt,
+    string pSeatNos, string pBusSerial, int pTourSerial, int pPickupID, decimal pAdultFare, decimal pChildFare,
+    decimal pTwinFare, decimal pTripleFare, decimal pChildNoBedFare, decimal pSingleFare, decimal pCCFee, decimal pCCAmount,
+    int pRowID, int pDormitory, decimal pDormitoryFare, int NoAWFood, int NoCWFood, decimal AdWFoodfare, decimal CWFoodfarein,
+    int lTourID, string lToueName,
+    decimal ServiceChargesTotal, decimal ServiceChargesTax, decimal ServiceChargesTaxVal, decimal AdultServiceCharges, decimal ChildServiceCharges,
+    bool isLtc = false)
+        {
+            int result = -1;
+            string connectionString = DataLib.getConnectionString();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(StoredProcedures.Updatebook_sp, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@jdate", SqlDbType.SmallDateTime).Value = pJDate;
+                    cmd.Parameters.Add("@env", SqlDbType.Char, 1).Value = pBusEnvType;
+                    cmd.Parameters.Add("@adults", SqlDbType.SmallInt).Value = Convert.ToInt16(pAdults);
+                    cmd.Parameters.Add("@child", SqlDbType.SmallInt).Value = Convert.ToInt16(pChilds);
+                    cmd.Parameters.Add("@adultstwin", SqlDbType.SmallInt).Value = Convert.ToInt16(pTwin);
+                    cmd.Parameters.Add("@adultstriple", SqlDbType.SmallInt).Value = Convert.ToInt16(pTriple);
+                    cmd.Parameters.Add("@childbed", SqlDbType.SmallInt).Value = Convert.ToInt16(pChildNoBed);
+                    cmd.Parameters.Add("@singleadult", SqlDbType.SmallInt).Value = Convert.ToInt16(pSingle);
+                    cmd.Parameters.Add("@amt", SqlDbType.Decimal).Value = decimal.Round(pAmount);
+                    cmd.Parameters.Add("@tax", SqlDbType.Decimal).Value = pTax;
+                    cmd.Parameters.Add("@taxamt", SqlDbType.Decimal).Value = decimal.Round(pTaxAmount);
+                    cmd.Parameters.Add("@tot", SqlDbType.Decimal).Value = decimal.Round(pTotalAmt);
+                    cmd.Parameters.Add("@tempstr", SqlDbType.VarChar, 500).Value = pSeatNos ?? (object)DBNull.Value;
+                    cmd.Parameters.Add("@BusserialNo", SqlDbType.VarChar, 100).Value = pBusSerial ?? (object)DBNull.Value;
+                    cmd.Parameters.Add("@TourSerial", SqlDbType.VarChar, 100).Value = pTourSerial.ToString();
+                    cmd.Parameters.Add("@pkpID", SqlDbType.Int).Value = pPickupID;
+                    cmd.Parameters.Add("@afare", SqlDbType.Decimal).Value = pAdultFare;
+                    cmd.Parameters.Add("@cfare", SqlDbType.Decimal).Value = pChildFare;
+                    cmd.Parameters.Add("@a2fare", SqlDbType.Decimal).Value = pTwinFare;
+                    cmd.Parameters.Add("@a3fare", SqlDbType.Decimal).Value = pTripleFare;
+                    cmd.Parameters.Add("@cbfare", SqlDbType.Decimal).Value = pChildNoBedFare;
+                    cmd.Parameters.Add("@safare", SqlDbType.Decimal).Value = pSingleFare;
+                    cmd.Parameters.Add("@ccfee", SqlDbType.Decimal).Value = pCCFee;
+                    cmd.Parameters.Add("@ccamt", SqlDbType.Decimal).Value = decimal.Round(pCCAmount);
+                    cmd.Parameters.Add("@Rowid", SqlDbType.Int).Value = pRowID;
+                    cmd.Parameters.Add("@dormitory", SqlDbType.SmallInt).Value = Convert.ToInt16(pDormitory);
+                    cmd.Parameters.Add("@dormitoryfare", SqlDbType.Decimal).Value = pDormitoryFare;
+                    cmd.Parameters.Add("@IsLtc", SqlDbType.Char, 1).Value = isLtc ? '1' : '0';
+                    cmd.Parameters.Add("@noAdultWithFood", SqlDbType.Int).Value = NoAWFood;
+                    cmd.Parameters.Add("@noChildWithFood", SqlDbType.Int).Value = NoCWFood;
+                    cmd.Parameters.Add("@AdultWithFoodFare", SqlDbType.Decimal).Value = AdWFoodfare;
+                    cmd.Parameters.Add("@ChildWithFoodFare", SqlDbType.Decimal).Value = CWFoodfarein;
+                    cmd.Parameters.Add("@TourID", SqlDbType.VarChar, 100).Value = lTourID.ToString();
+                    cmd.Parameters.Add("@TourName", SqlDbType.VarChar, 100).Value = lToueName ?? (object)DBNull.Value;
+                    cmd.Parameters.Add("@ServiceChargesTotal", SqlDbType.Decimal).Value = ServiceChargesTotal;
+                    cmd.Parameters.Add("@ServiceChargesTax", SqlDbType.Decimal).Value = ServiceChargesTax;
+                    cmd.Parameters.Add("@ServiceChargesTaxVal", SqlDbType.Decimal).Value = ServiceChargesTaxVal;
+                    cmd.Parameters.Add("@AdultServiceCharges", SqlDbType.Decimal).Value = AdultServiceCharges;
+                    cmd.Parameters.Add("@ChildServiceCharges", SqlDbType.Decimal).Value = ChildServiceCharges;
+
+                    try
+                    {
+                        conn.Open();
+                        result = cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        result = -1;
+                    }
+                }
+            }
+
+            return result;
+        }
+
     }
 }

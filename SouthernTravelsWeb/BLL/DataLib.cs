@@ -643,6 +643,301 @@ namespace SouthernTravelsWeb.BLL
 
             return result;
         }
+        public static string scriptclear(string strText)
+        {
+            if (strText == null || strText.Length == 0) return "";
+            return replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(strText, "<", ""), ">", ""), "--", ""), "'", ""), ";", ""), "+", ""), "&quot;", ""), "&lt", ""), "&gt", ""), "&#40", ""), "&#41", ""), "&#35", ""), "&#38", ""), "&apos;", ""), "\u0027", ""), "(", ""), ")", "");
+        }
+        // FOR QUERY STRING ENCRYPTION and DeCRYPTION
+
+        public static string TripleDESDecode(string value, string key)
+        {
+
+            TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider();
+
+            des.IV = new byte[8];
+
+            PasswordDeriveBytes pdb = new PasswordDeriveBytes(key, new byte[-1 + 1]);
+
+            des.Key = pdb.CryptDeriveKey("RC2", "MD5", 128, new byte[8]);
+
+            byte[] encryptedBytes = Convert.FromBase64String(value);
+
+            MemoryStream ms = new MemoryStream(value.Length);
+
+            CryptoStream decStream = new CryptoStream(ms, des.CreateDecryptor(), CryptoStreamMode.Write);
+
+            decStream.Write(encryptedBytes, 0, encryptedBytes.Length);
+
+            decStream.FlushFinalBlock();
+
+            byte[] plainBytes = new byte[(int)ms.Length - 1 + 1];
+
+            ms.Position = 0;
+
+            ms.Read(plainBytes, 0, (int)ms.Length);
+
+            decStream.Close();
+
+            return Encoding.UTF8.GetString(plainBytes);
+
+        }
+
+        public static string TripleDESEncode(string value, string key)
+        {
+
+            TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider();
+
+            des.IV = new byte[8];
+
+            PasswordDeriveBytes pdb = new PasswordDeriveBytes(key, new byte[-1 + 1]);
+
+            des.Key = pdb.CryptDeriveKey("RC2", "MD5", 128, new byte[8]);
+
+            MemoryStream ms = new MemoryStream((value.Length * 2) - 1);
+
+            CryptoStream encStream = new CryptoStream(ms, des.CreateEncryptor(), CryptoStreamMode.Write);
+
+            byte[] plainBytes = Encoding.UTF8.GetBytes(value);
+
+            encStream.Write(plainBytes, 0, plainBytes.Length);
+
+            encStream.FlushFinalBlock();
+
+            byte[] encryptedBytes = new byte[(int)ms.Length - 1 + 1];
+
+            ms.Position = 0;
+            ms.Read(encryptedBytes, 0, (int)ms.Length);
+            encStream.Close();
+            return Convert.ToBase64String(encryptedBytes);
+        }
+
+        public static string getvacantseats(int tourno, string jdate)
+        {
+            DataSet dtvacantseats = null;
+            try
+            {
+                // Parse and normalize the date to MM/dd/yyyy
+                string[] jd = jdate.Contains("/") ? jdate.Split('/') : jdate.Split('-');
+                string jdd = jd[1] + "/" + jd[0] + "/" + jd[2];
+                dtvacantseats =new clsAdo().fnGetNoOfSeats_ADO(tourno, jdd);
+
+                int ac = 0, nac = 0;
+                if (dtvacantseats.Tables.Count > 0 && dtvacantseats.Tables[0].Rows.Count > 0)
+                {
+                    foreach (DataRow row in dtvacantseats.Tables[0].Rows)
+                    {
+                        string acStatus = Convert.ToString(row["AC"]);
+                        int seats = Convert.ToInt32(row["vacant_seats"]);
+                        if (acStatus == "Y")
+                            ac += seats;
+                        else
+                            nac += seats;
+                    }
+                }
+
+                return ac + "^" + nac;
+            }
+            catch
+            {
+                return "0^0"; // or log error
+            }
+            finally
+            {
+                if (dtvacantseats != null)
+                {
+                    dtvacantseats.Dispose();
+                    dtvacantseats = null;
+                }
+            }
+        }
+        public static string GetserviceTax(string strTax)
+        {
+            try
+            {
+
+                return new clsAdo().fnGetTAXValue_ADO(strTax);
+            }
+            catch
+            {
+                return null; // or handle/log exception as needed
+            }
+        }
+
+        /// <summary>
+        /// For Displaying the seating chart
+        /// </summary>
+        /// <param name="SeaterType"></param>
+        /// <param name="tourserial"></param>
+        /// <param name="busno"></param>
+        /// <returns></returns>
+        public static StringBuilder seatarr(string SeaterType, int tourserial, int busno)
+        {
+            #region Optimize Code
+            /*string str;
+            StringBuilder Chart = new StringBuilder();
+            DataTable vacent = new DataTable();
+            SqlParameter[] paramseat = new SqlParameter[1];
+            paramseat[0] = new SqlParameter("@tourserial", tourserial);
+            str = "Select * from SeatArrangement(nolock) where TourSerial=@tourserial";
+            vacent = DataLib.GetDataTableWithparam(DataLib.Connection.ConnectionString, str, paramseat);
+            SqlParameter[] paramseat1 = new SqlParameter[1];
+            paramseat1[0] = new SqlParameter("@tourserial", tourserial);
+            string seater = "select bustype from busallot where rowid=@tourserial";
+            string bt = DataLib.GetStringDataWithParam(DataLib.Connection.ConnectionString, seater, paramseat1);
+            string btype = bt.Substring(0, 2);
+            int ss = Convert.ToInt32(btype);
+            SeaterType = btype + " Seater";
+            SqlParameter[] paramseat2 = new SqlParameter[1];
+            paramseat2[0] = new SqlParameter("@SeaterType", SeaterType);
+            string a1 = "select seatdesign from SeatingChartMaster where bustype=@SeaterType";
+            string de = DataLib.GetStringDataWithParam(DataLib.Connection.ConnectionString, a1, paramseat2);*/
+            #endregion
+
+            StringBuilder Chart = new StringBuilder();
+
+            clsAdo clsObj = null;
+            DataSet ldtRecord = null;
+            DataTable vacent = null;
+            vacentSeatNumber.Clear();  
+            occupiedSeatNumber.Clear(); 
+            try
+            {
+                clsObj = new clsAdo();
+                int? lTourSrNo = tourserial;
+                ldtRecord = clsObj.fnGetSeatArrangementDetail(lTourSrNo);
+
+                if (ldtRecord != null && ldtRecord.Tables.Count > 0)
+                {
+                    vacent = ldtRecord.Tables[0];
+                    int pBType = Convert.ToInt32(ldtRecord.Tables[1].Rows[0]["bustype"]);
+
+                    string pSeatDes = ldtRecord.Tables[2].Rows[0]["seatdesign"].ToString();
+
+                    string[] pSeatDesign;
+                    pSeatDesign = pSeatDes.Split(',');
+
+                  
+
+                    Chart.Append("<div class=\"selectiondiv\" > <div class=\"frontsection\"><div class=\"seat-d\">");
+
+                    Chart.Append("<img src=\"images/seat-d.png\"></div>  ");
+                    if (pBType < 14)
+                    {
+                        Chart.Append("</div> <div class=\"backsection\">");
+                    }
+                    else
+                    {
+                        Chart.Append("<div class=\"seat-c\"><img src=\"images/seat-c.png\"></div>");
+                        Chart.Append("<div class=\"bus-entry\"><img src=\"images/bus-entry.jpg\"></div></div> <div class=\"backsection\">");
+                        Chart.Append("<div class=\"bus-midspace\">&nbsp;</div>");
+                    }
+                    Chart.Append("<table id=chart" + busno + "2 width='100%' border='0' cellspacing='0' cellpadding='0'>");
+                    int pCount = 0;
+
+
+
+                    for (int i = 0; i < pSeatDesign.Length; i++)
+                    {
+                        string pColm = pSeatDesign[i];
+                        if (i == 0)
+                        {
+                            Chart.Append("<tr>");
+                        }
+
+                        if (pColm == "b")
+                        {
+                            Chart.Append("<td width='70px' bgColor='#fff' ></td>");
+                        }
+                        else if (pColm == "z")
+                        {
+                            Chart.Append("<td width='70px' bgColor='#fff' colspan=\"3\" style='color:#ffffff;font-weight:normal'><h1>" + "Seater Type - " + SeaterType + " Seater" + "</h1></td>");
+                        }
+                        else if ((pColm != "b") && (pColm != "n"))
+                        {
+                            pCount = pCount + 1;
+                            if (pCount <= pBType)
+                            {
+                                if (vacent.Rows[0]["s" + pColm] == DBNull.Value)
+                                {
+                                    Chart.Append("<td ID='td" + busno + "" + pColm + "' width='70px' align='center' height='50px'> <input type='checkbox' ID='" + busno + "chk" + pColm + "' value='" + busno + "" + pColm + "' style='display:none;' /><div class='TB_avbl' style='cursor:pointer;' onclick=\"javascript:checkUnheck('" + busno + "chk" + pColm + "',this);\"><span>" + pColm + "</span></div></td>");
+                                    vacentSeatNumber.Add(int.Parse(pColm)); //Updated By Murli on 11 July 2024
+                                    bus_vac_Number.Add(busno + "_" + pColm);
+                                }
+                                else
+                                {
+                                    Chart.Append("<td align='center' width='70px' height='50px' ><div class='TB_Bkd'><span>" + pColm + "</span></div></td>");
+                                    occupiedSeatNumber.Add(int.Parse(pColm)); //Updated By Murli on 11 July 2024
+                                }
+                            }
+                        }
+                        if (pColm == "n")
+                        {
+                            Chart.Append("</tr>");
+                            Chart.Append("<tr>");
+                        }
+                    }
+                    Chart.Append("</tr>");
+                    Chart.Append("</table></div></div>");
+                 
+                }
+                return Chart;
+            }
+            finally
+            {
+                if (clsObj != null)
+                {
+                    clsObj = null;
+                }
+                if (vacent != null)
+                {
+                    vacent.Dispose();
+                    vacent = null;
+                }
+                if (ldtRecord != null)
+                {
+                    ldtRecord.Dispose();
+                    ldtRecord = null;
+                }
+            }
+        }
+
+
+        public static string pnr()
+        {
+            string rr = new clsAdo().fnGetOrderID();
+            if (string.IsNullOrEmpty(rr) || rr.Length < 3)
+                rr = "100";
+
+            rr = rr.Substring(0, 3);
+            string ss = "";
+            int tt = 100;
+
+            try
+            {
+                tt = Convert.ToInt32(rr);
+            }
+            catch
+            {
+                ss = "Y";
+            }
+            finally
+            {
+                if (ss == "Y" || tt == 999)
+                    tt = 100;
+
+                tt = tt + 1;
+            }
+
+            // Generate final PNR
+            return Convert.ToString(tt)
+                + DateTime.Now.Day.ToString("00")
+                + DateTime.Now.Month.ToString("00")
+                + DateTime.Now.Year
+                + DateTime.Now.Minute.ToString("00")
+                + DateTime.Now.Second.ToString("00")
+                + DateTime.Now.Millisecond.ToString("000");
+        }
 
     }
 

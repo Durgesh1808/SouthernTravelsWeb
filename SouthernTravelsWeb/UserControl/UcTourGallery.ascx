@@ -42,9 +42,9 @@
             <div class="col-md-6 gallerybox">
                 <div class="packagebox2 posrel" >
                 <div class="intlbox">
-                   <a href='EntityImage/<%#Eval("ImagePath") %>' data-toggle="lightbox" data-gallery="multiimages" data-title="">
+                   <a href='Assets/images/EntityImage/<%#Eval("ImagePath") %>' data-toggle="lightbox" data-gallery="multiimages" data-title="">
                         <div class="imgsection">
-                            <img src='EntityImage/<%#Eval("ImagePath") %>' class="img-responsive" style="" >
+                            <img src='Assets/images/EntityImage/<%#Eval("ImagePath") %>' class="img-responsive" style="" >
                             <%--style="width: 229px; height: 239px"--%>
                         </div>
                      <%-- <%# Eval("ImageDescription").ToString().Replace("&nbsp;", "").Trim() == "" ? "" : "<div class=textsection><p>" + Eval("ImageDescription").ToString() + " </p></div>"%>--%>

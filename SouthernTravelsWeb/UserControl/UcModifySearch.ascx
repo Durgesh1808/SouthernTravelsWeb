@@ -139,7 +139,7 @@
                 <div class="seatavailmonth">
                     <div class="calheader posrel ">
                         <div class="calnav calnavleft">
-                            <asp:ImageButton ID="btnLeft" runat="server" Text="Submit" ImageUrl="../images/arrowbtn-left.png"
+                            <asp:ImageButton ID="btnLeft" runat="server" Text="Submit" ImageUrl="/Assets/images/arrowbtn-left.png"
                                 OnClick="btnLeft_Click" />
                         </div>
                         <h3 class="title text-center">

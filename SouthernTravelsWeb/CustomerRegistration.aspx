@@ -395,14 +395,12 @@
     </div>  
     
     <div class="col-md-5 paddingright0">
-    	<%--<input type="text" class="form-control" placeholder="First Name*">--%>
     	<input name="txtFname" type="text" class="form-control" placeholder="First Name*" id="txtFname" size="25" runat="server"
          maxlength="35" onkeypress="return CheckOnlyCharacter(event);" tabindex="1" oncopy="return false"
           ondrag="return false" ondrop="return false" onpaste="return false" autocomplete="off" />
     </div>  
     
     <div class="col-md-5">
-    	<%--<input type="text" class="form-control" placeholder="Last Name">--%>
     	 <input name="txtLastName" type="text" class="form-control" placeholder="Last Name" id="txtLastName" onkeypress="return CheckOnlyCharacter(event);"
          runat="server" size="25" maxlength="35" tabindex="2" oncopy="return false" ondrag="return false"
           ondrop="return false" onpaste="return false" autocomplete="off" />
@@ -413,7 +411,6 @@
       <div class="row mrgnbtminput">
     	
     <div class="col-md-6">
-    	<%--<input type="text" class="form-control" placeholder="Address1*">--%>
     	<input name="txtAddress1" type="text"  class="form-control" placeholder="Address1*" id="txtAddress1" maxlength="150"
         runat="server" onkeypress="return CheckOnlyCharacteraddress(event);" tabindex="6"
         oncopy="return false" ondrag="return false" ondrop="return false" onpaste="return false"
@@ -421,7 +418,6 @@
     </div>  
     
     <div class="col-md-6">
-    	<%--<input type="text" class="form-control" placeholder="Address2">--%>
     	 <input name="txtAddress2" type="text" class="form-control" placeholder="Address2" maxlength="150" id="txtAddress2"
          onkeypress="return CheckOnlyCharacteraddress(event);" runat="server" tabindex="7"
          oncopy="return false" ondrag="return false" ondrop="return false" onpaste="return false"
@@ -434,7 +430,6 @@
       <div class="row mrgnbtminput">
     	
     <div class="col-md-6">
-    	<%--<input type="text" class="form-control" placeholder="City">--%>
     	 <input name="txtCity" type="text"  class="form-control" placeholder="City" id="txtCity" maxlength="50" onkeypress="return CheckOnlyCharacter(event);"
           runat="server" tabindex="8" oncopy="return false" ondrag="return false" ondrop="return false"
           onpaste="return false" autocomplete="off" />
@@ -454,17 +449,12 @@
     	<input name="txtCountry" type="text" class="form-control" placeholder="Country" id="txtCountry" maxlength="50"
         runat="server" onkeypress="return CheckOnlyCharacter(event);" tabindex="10" oncopy="return false"
         ondrag="return false" ondrop="return false" onpaste="return false" autocomplete="off" />
-        <%--<select class="form-control">
-	<option selected="selected" value="0">Country</option>
-	<option value="India">India</option>
-	<option value="Nepal">Nepal</option>
-</select>--%>
+     
         
         
     </div>  
     
     <div class="col-md-6">
-    	<%--<input type="text" class="form-control" placeholder="Pincode">--%>
     	<input name="txtPinCode" type="text"  class="form-control" placeholder="Pincode" id="txtPinCode" maxlength="10"
         runat="server" onkeypress="return chkNumeric(event);" tabindex="11" oncopy="return false"
         ondrag="return false" ondrop="return false" onpaste="return false" autocomplete="off" />
@@ -477,14 +467,12 @@
       <div class="row mrgnbtminput">
     	
     <div class="col-md-6">
-    	<%--<input type="text" class="form-control" placeholder="Mobile No*">--%>
     	<input name="txtMobile" type="text" class="form-control" placeholder="Mobile No*" id="txtMobile" maxlength="15" runat="server"
         onkeypress="return chkNumeric(event);" tabindex="3" oncopy="return false" ondrag="return false"
         ondrop="return false" onpaste="return false" autocomplete="off" />
     </div>  
     
     <div class="col-md-6">
-    	<%--<input type="text" class="form-control" placeholder="Alternate No">--%>
     	<input name="txtAlternateNo" type="text" class="form-control" placeholder="Alternate No" id="txtAlternateNo" maxlength="15"
         runat="server" onkeypress="return chkNumeric(event);" tabindex="4" oncopy="return false"
         ondrag="return false" ondrop="return false" onpaste="return false" autocomplete="off" />
@@ -495,14 +483,12 @@
       <div class="row mrgnbtminput">
     	
     <div class="col-md-6">
-    <%--<input type="text" class="form-control" placeholder="Email Id*">--%>
     <input name="txtEmail" type="text" class="form-control" placeholder="Email Id*" id="txtEmail" maxlength="150" runat="server"
     tabindex="5" oncopy="return false" ondrag="return false" ondrop="return false"
     onpaste="return false" autocomplete="off" />
     </div>  
     
     <div class="col-md-6">
-    	<%--<input type="text" class="form-control" placeholder="Choose Password*">--%>
     	<input name="txtNewPassword" type="password" class="form-control" placeholder="Choose Password*" id="txtNewPassword" runat="server"
         maxlength="50" tabindex="12" oncopy="return false" ondrag="return false" ondrop="return false"
         onpaste="return false" autocomplete="off" />
@@ -514,7 +500,6 @@
      <div class="row mrgnbtminput">
     	
     <div class="col-md-6">
-    <%--<input type="text" class="form-control" placeholder="Re-type Password*">--%>
     <input name="txtRetypePassword" type="password" class="form-control" placeholder="Re-type Password*" id="txtRetypePassword"
     runat="server" maxlength="50" tabindex="13" oncopy="return false" ondrag="return false"
      ondrop="return false" onpaste="return false" autocomplete="off" />
@@ -526,14 +511,12 @@
     	
     <div class="col-md-6">
    	  
-       <%-- <asp:Image ID="imgCaptcha" runat="server"  ImageUrl="JpegImage.aspx?cache=1394701635527"  AlternateText="This is a test to determine whether the user visiting the site is human or an automated program. Automated programs cannot read the distorted letters in the box - only humans can. When you type in the word, it ensures that the page is being accessed by a real person. If you don’t see an image, make sure your browser is set to display images and try again. And if you’re not sure about exactly what the letters are, make your best guess - if you’re wrong you’ll get another chance to enter a different word."></asp:Image>
-         <img id="refresh_captcha" src="Images/captcha_refresh.jpg" style="height: 35px; cursor: pointer;"> --%>
+  
       <div class="g-recaptcha" runat="server" id="divrecaptcha" ></div>
       
     </div>  
     
     <div class="col-md-6">
-    	  <%--<asp:TextBox ID="txtCaptchImage"  MaxLength="50" runat="server"  CssClass="form-control" placeholder="Enter the Code shown *"></asp:TextBox>--%>
             <asp:Label ID="MessageLabel" runat="server" CssClass="verdana11bk" ForeColor="red"></asp:Label>
 
     </div>
@@ -552,7 +535,6 @@
    
     <div class="row mrgnbtminput">
     	<div class="col-md-6">
-        <%--<input type="submit" class="commonbtn displayinline" value="Submit">--%>
         <asp:Button ID="btnsubmit" CssClass="commonbtn displayinline" runat="server" OnClick="btnsubmit_Click" TabIndex="15" Text="Submit" />
         </div>
     

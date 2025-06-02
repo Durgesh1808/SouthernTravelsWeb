@@ -70,7 +70,7 @@ namespace SouthernTravelsWeb
             // Fixed Departure with JDate
             routes.MapPageRoute(
                 "FixedDepartureWithDate",
-                "Fixed-Departure-Itinerary_JDate-{title}_{tourId}_{day}-{month}-{year}",
+                "Fixed-Departure-Itinerary_JDate-{title}_{tourId}_{jdate}",
                 "~/FixedTouritinerary.aspx"
             );
 
@@ -91,7 +91,7 @@ namespace SouthernTravelsWeb
             // Fixed Departure Booking with JDate (from rewrite config, add missing route)
             routes.MapPageRoute(
                 "FixedDepartureBookingJDate",
-                "Fixed-Departure-Booking_JDate-{title}_{tourId}_{day}-{month}-{year}",
+                "Fixed-Departure-Booking_JDate-{title}_{tourId}_{jdate}",
                 "~/TourBooking.aspx"
             );
 
@@ -125,21 +125,21 @@ namespace SouthernTravelsWeb
             // Special Tour Itinerary
             routes.MapPageRoute(
                 "SpecialTourItinerary",
-                "Holiday-Packages-Itinerary-{something}_{tourId}",
+                "Holiday-Packages-Itinerary-{tourId}",
                 "~/SpecialTouritinerary.aspx"
             );
 
             // Special Tour Itinerary with UTM params
             routes.MapPageRoute(
                 "FSBHolidayPackagesUTM",
-                "FSB-Holiday-Packages-Itinerary-{something}_{tourId}_{utm_source}_{utm_medium}_{utm_term}_{utm_content}_{utm_campaign}",
+                "FSB-Holiday-Packages-Itinerary-{tourId}_{utm_source}_{utm_medium}_{utm_term}_{utm_content}_{utm_campaign}",
                 "~/SpecialTouritinerary.aspx"
             );
 
             // Special Tour Itinerary with JDate
             routes.MapPageRoute(
                 "HolidayPackagesWithDate",
-                "Holiday-Packages-Itinerary_JDate-{something}_{tourId}_{day}-{month}-{year}",
+                "Holiday-Packages-Itinerary_JDate-{something}_{jdate}",
                 "~/SpecialTouritinerary.aspx"
             );
 

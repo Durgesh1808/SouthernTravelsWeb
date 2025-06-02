@@ -62,9 +62,9 @@ namespace SouthernTravelsWeb.UserControl
         {
             base.OnInit(e);
             
-            if (Request.QueryString["jdate"] != null && Convert.ToString(Request.QueryString["jdate"]) != "")
+            if (Page.RouteData.Values["jdate"] != null && Convert.ToString(Page.RouteData.Values["jdate"]) != "")
             {
-                string[] lJDate = Request.QueryString["jdate"].ToString().Split('/');
+                string[] lJDate = Page.RouteData.Values["tourId"].ToString().Split('/');
                 hdFromDate.Value = new DateTime(Convert.ToInt32(lJDate[2]), Convert.ToInt32(lJDate[0]), Convert.ToInt32(lJDate[1])).ToString();
                 hdToDate.Value = Convert.ToDateTime(hdFromDate.Value).AddDays(1).ToString();
                 ddlMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
@@ -83,22 +83,23 @@ namespace SouthernTravelsWeb.UserControl
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            CheckIntlEBKTourIDs(Convert.ToString(Request.QueryString["TourID"]));
+            CheckIntlEBKTourIDs(Convert.ToString(Page.RouteData.Values["tourId"]));
             if (!IsPostBack)
             {
                 if (fldJDate != "")
                 {
                     //lblJDate.Text = " <span class=\"tName\">| </span>" + fldJDate;
                 }
-                CheckIntlEBKTourIDs(Convert.ToString(Request.QueryString["TourID"]));
-                fillddlJdate(Convert.ToInt32(Request.QueryString["TourID"]));
+                CheckIntlEBKTourIDs(Convert.ToString(Page.RouteData.Values["tourId"]));
+                fillddlJdate(Convert.ToInt32(Page.RouteData.Values["tourId"]));
                 BindYear();
                 
                 GetLastJourneyDateAll();
-                if (Request.QueryString["jdate"] != null)
+                lblCurrentDate.Value = Convert.ToDateTime(hdFromDate.Value).AddMonths(1).ToString();
+                if (Page.RouteData.Values["jdate"] != null)
                 {
 
-                    string[] lJDate = Request.QueryString["jdate"].ToString().Split('/');
+                    string[] lJDate = Page.RouteData.Values["jdate"].ToString().Split('/');
                     hdFromDate.Value = new DateTime(Convert.ToInt32(lJDate[2]), Convert.ToInt32(lJDate[0]), Convert.ToInt32(lJDate[1])).ToString();
                     hdToDate.Value = Convert.ToDateTime(hdFromDate.Value).AddDays(1).ToString();
                     ddlMonth.SelectedValue = Convert.ToDateTime(hdFromDate.Value).ToString("MMM");
@@ -171,7 +172,7 @@ namespace SouthernTravelsWeb.UserControl
                     string pHours = ConfigurationManager.AppSettings["CustomerFixedTourHours"].ToString();
                     pHours = "-" + pHours;
                     lclsEndObj = new ClsCommon();
-                    dtTourDate = lclsEndObj.fnGetFixedTourJourneyDate(Convert.ToInt32(Request.QueryString["TourID"]), FromDate.Month, FromDate.Year, Convert.ToInt32(pHours));
+                    dtTourDate = lclsEndObj.fnGetFixedTourJourneyDate(Convert.ToInt32(Page.RouteData.Values["tourId"]), FromDate.Month, FromDate.Year, Convert.ToInt32(pHours));
                     lblMonth.Text = FromDate.ToString("MMMMM") + " " + FromDate.ToString("yyyy");
 
 
@@ -266,9 +267,9 @@ namespace SouthernTravelsWeb.UserControl
 
                                                         try
                                                         {
-                                                            if (Request.QueryString["jdate"] != null)
+                                                            if (Page.RouteData.Values["jdate"] != null)
                                                             {
-                                                                if (Convert.ToDateTime(Request.QueryString["jdate"]).ToString("MM//dd/yyyy").Trim() == JDate.ToString("MM//dd/yyyy").Trim())
+                                                                if (Convert.ToDateTime(Page.RouteData.Values["jdate"]).ToString("MM//dd/yyyy").Trim() == JDate.ToString("MM//dd/yyyy").Trim())
                                                                 {
                                                                     item.Cells[i].CssClass = "td_seatavail active";
                                                                 }
@@ -410,7 +411,7 @@ namespace SouthernTravelsWeb.UserControl
                 {
                     lQryStr = lQryStr + "&C=" + Convert.ToString(Request.QueryString["C"]);
                 }
-                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Request.QueryString["TourID"]) + "&jdate=" + lJDate + "&orderid=" + Convert.ToString(Request.QueryString["orderid"]) +
+                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Page.RouteData.Values["tourId"]) + "&jdate=" + lJDate + "&orderid=" + Convert.ToString(Request.QueryString["orderid"]) +
                          "&Rowid=" + Convert.ToString(Request.QueryString["Rowid"]) + "&IsEdit=IsEdit" + lQryStr.Trim() + "#BookSelect");
              
             }
@@ -418,18 +419,18 @@ namespace SouthernTravelsWeb.UserControl
             {
                 Session["Panel2Step"] = null;
                 Response.Redirect("TourBooking.aspx?orderid=" + Convert.ToString(Request.QueryString["orderid"]) + "&jdate=" + lJDate +
-                    "&TourId=" + Convert.ToString(Request.QueryString["TourID"]) + "&A=" + Convert.ToString(Request.QueryString["A"]) + "&C=" +
+                    "&TourId=" + Convert.ToString(Page.RouteData.Values["tourId"]) + "&A=" + Convert.ToString(Request.QueryString["A"]) + "&C=" +
                     Convert.ToString(Request.QueryString["C"]) +
                     "&TourName=" + Convert.ToString(Request.QueryString["TourName"]) + "&IsBookMore=BookMore" + "#BookSelect");
                 
             }
             else if (Request.QueryString["ltc"] != null)
             {
-                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Request.QueryString["TourID"]) + "&jdate=" + lJDate + "&ltc=true" + "#BookSelect");
+                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Page.RouteData.Values["tourId"]) + "&jdate=" + lJDate + "&ltc=true" + "#BookSelect");
             }
             else
             {
-                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Request.QueryString["TourID"]) + "&jdate=" + lJDate + "#BookSelect");
+                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Page.RouteData.Values["tourId"]) + "&jdate=" + lJDate + "#BookSelect");
              
             }
         }
@@ -499,7 +500,7 @@ namespace SouthernTravelsWeb.UserControl
                     lQryStr = lQryStr + "&C=" + Convert.ToString(Request.QueryString["C"]);
 
                 }
-                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Request.QueryString["TourID"]) + "&jdate=" + lJDate + "&orderid=" + Convert.ToString(Request.QueryString["orderid"]) +
+                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Page.RouteData.Values["tourId"]) + "&jdate=" + lJDate + "&orderid=" + Convert.ToString(Request.QueryString["orderid"]) +
                          "&Rowid=" + Convert.ToString(Request.QueryString["Rowid"]) + "&IsEdit=IsEdit" + lQryStr.Trim() + "#BookSelect");
 
             }
@@ -507,18 +508,18 @@ namespace SouthernTravelsWeb.UserControl
             {
                 Session["Panel2Step"] = null;
                 Response.Redirect("TourBooking.aspx?orderid=" + Convert.ToString(Request.QueryString["orderid"]) + "&jdate=" + lJDate +
-                    "&TourId=" + Convert.ToString(Request.QueryString["TourID"]) + "&A=" + Convert.ToString(Request.QueryString["A"]) + "&C=" +
+                    "&TourId=" + Convert.ToString(Page.RouteData.Values["tourId"]) + "&A=" + Convert.ToString(Request.QueryString["A"]) + "&C=" +
                     Convert.ToString(Request.QueryString["C"]) +
                     "&TourName=" + Convert.ToString(Request.QueryString["TourName"]) + "&IsBookMore=BookMore" + "#BookSelect");
 
             }
             else if (Request.QueryString["ltc"] != null)
             {
-                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Request.QueryString["TourID"]) + "&jdate=" + lJDate + "&ltc=true" + "#BookSelect", true);
+                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Page.RouteData.Values["tourId"]) + "&jdate=" + lJDate + "&ltc=true" + "#BookSelect", true);
             }
             else
             {
-                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Request.QueryString["TourID"]) + "&jdate=" + lJDate + "#BookSelect", true);
+                Response.Redirect("~/TourBooking.aspx?TourID=" + Convert.ToString(Page.RouteData.Values["tourId"]) + "&jdate=" + lJDate + "#BookSelect", true);
 
             }
         }
@@ -571,9 +572,9 @@ namespace SouthernTravelsWeb.UserControl
                 else
                 {
                 }
-                if (Request.QueryString["jdate"] != null)
+                if (Page.RouteData.Values["jdate"] != null)
                 {
-                    string[] lJDate = Convert.ToString(Request.QueryString["jdate"]).Split('/');
+                    string[] lJDate = Convert.ToString(Page.RouteData.Values["jdate"]).Split('/');
                     ddlJDate.SelectedValue = (new DateTime(Convert.ToInt32(lJDate[2]), Convert.ToInt32(lJDate[0]),
                         Convert.ToInt32(lJDate[1]))).ToString("MM/dd/yyyy").Trim();
                 }
@@ -697,7 +698,7 @@ namespace SouthernTravelsWeb.UserControl
                 lCommand.CommandTimeout = 20 * 1000;
                 lCommand.CommandType = CommandType.StoredProcedure;
                 lCommand.Parameters.AddWithValue("@I_TourType", Convert.ToInt32(TOURTYPE.FIXED_TOUR));
-                lCommand.Parameters.AddWithValue("@I_TourID", Convert.ToInt32(Request.QueryString["TourID"]));
+                lCommand.Parameters.AddWithValue("@I_TourID", Convert.ToInt32(Page.RouteData.Values["tourId"]));
 
                 if (lConn.State == ConnectionState.Closed)
                 {

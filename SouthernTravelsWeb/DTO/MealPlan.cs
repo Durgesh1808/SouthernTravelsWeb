@@ -14,6 +14,7 @@ namespace SouthernTravelsWeb.DTO
 
         public int DayNo { get; set; }
         public string MealType { get; set; }
+        public string MealName { get; internal set; }
     }
 
 }

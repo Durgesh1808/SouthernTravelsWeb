@@ -74,7 +74,7 @@
            <div class="container">
             <div class="row rowgap">
               <div class="col-md-3">
-					<img src="Assets/images/hotel-zone/logo.jpg" class="img-responsive">           
+					<img loading="lazy" src="Assets/images/hotel-zone/logo.jpg" class="img-responsive">           
               </div>
               <div class="col-md-9">
               	<h3 class="title">Welcome to <span>Zone by The Park, Jaipur</span></h3>
@@ -131,8 +131,8 @@ for creating unique experiences and lifelong memories. </p>
                 <div class="row rowgap">
                 	<div class="col-md-8">
                     	<div class="hotel_slider owl-carousel">
-                        <div class="item"><img src="Assets/images/hotel-zone/zone-room1.jpg" class="img-responsive"></div>
-                        <!-- <div class="item"><img src="Assets/images/hotel-zone/zon-room1.jpg" class="img-responsive"></div> -->
+                        <div class="item"><img loading="lazy" src="Assets/images/hotel-zone/zone-room1.jpg" class="img-responsive"></div>
+                        <!-- <div class="item"><img loading="lazy" src="Assets/images/hotel-zone/zon-room1.jpg" class="img-responsive"></div> -->
                         
                         </div>
                     </div>
@@ -177,8 +177,8 @@ for creating unique experiences and lifelong memories. </p>
           	   <div class="row rowgap">
                 	<div class="col-md-8">
                     	<div class="hotel_slider owl-carousel">
-                        <div class="item"><img src="Assets/images/hotel-zone/zone-trio1.jpg" class="img-responsive"></div>
-                        <!-- <div class="item"><img src="Assets/images/hotel-zone/zon-room1.jpg" class="img-responsive"></div> -->
+                        <div class="item"><img loading="lazy" src="Assets/images/hotel-zone/zone-trio1.jpg" class="img-responsive"></div>
+                        <!-- <div class="item"><img loading="lazy" src="Assets/images/hotel-zone/zon-room1.jpg" class="img-responsive"></div> -->
                         
                         </div>
                     </div>
@@ -225,8 +225,8 @@ for creating unique experiences and lifelong memories. </p>
                  <div class="row rowgap">
                 	<div class="col-md-8">
                     	<div class="hotel_slider owl-carousel">
-                        <div class="item"><img src="Assets/images/hotel-zone/zone-quad1.jpg" class="img-responsive"></div>
-                        <!-- <div class="item"><img src="Assets/images/hotel-zone/zon-room1.jpg" class="img-responsive"></div> -->
+                        <div class="item"><img loading="lazy" src="Assets/images/hotel-zone/zone-quad1.jpg" class="img-responsive"></div>
+                        <!-- <div class="item"><img loading="lazy" src="Assets/images/hotel-zone/zon-room1.jpg" class="img-responsive"></div> -->
                         
                         </div>
                     </div>
@@ -275,8 +275,8 @@ for creating unique experiences and lifelong memories. </p>
                    <div class="row rowgap">
                 	<div class="col-md-8">
                     	<div class="hotel_slider owl-carousel">
-                        <div class="item"><img src="Assets/images/hotel-zone/zone-suite1.jpg" class="img-responsive"></div>
-                        <!-- <div class="item"><img src="Assets/images/hotel-zone/zon-room1.jpg" class="img-responsive"></div> -->
+                        <div class="item"><img loading="lazy" src="Assets/images/hotel-zone/zone-suite1.jpg" class="img-responsive"></div>
+                        <!-- <div class="item"><img loading="lazy" src="Assets/images/hotel-zone/zon-room1.jpg" class="img-responsive"></div> -->
                         
                         </div>
                     </div>
@@ -350,7 +350,7 @@ for creating unique experiences and lifelong memories. </p>
                
                <div class="row rowgap">
                <div class="col-md-4">
-                <img src="Assets/images/hotel-zone/restaurant.jpg" class="img-responsive">
+                <img loading="lazy" src="Assets/images/hotel-zone/restaurant.jpg" class="img-responsive">
                </div> 
                <div class="col-md-8">
                <div class="rastraucontent">
@@ -381,7 +381,7 @@ for creating unique experiences and lifelong memories. </p>
                
                  <div class="row">
                <div class="col-md-4">
-               <img src="Assets/images/hotel-zone/Zone-Playa.jpg" class="img-responsive">
+               <img loading="lazy" src="Assets/images/hotel-zone/Zone-Playa.jpg" class="img-responsive">
                </div> 
                <div class="col-md-8">
              
@@ -428,9 +428,9 @@ for creating unique experiences and lifelong memories. </p>
                         	  <div class="row">
                      <div class="col-md-4">
                      	 <div class="hotel_slider owl-carousel">
-                        <div class="item"> <img src="Assets/images/hotel-zone/Zone-Swimming-Pool.jpg" class="img-responsive"></div>
-                        <div class="item"> <img src="Assets/images/hotel-zone/Zone-Gym.jpg" class="img-responsive"></div>
-                        <div class="item"> <img src="Assets/images/hotel-zone/Zone-Spa.jpg" class="img-responsive"></div>
+                        <div class="item"> <img loading="lazy" src="Assets/images/hotel-zone/Zone-Swimming-Pool.jpg" class="img-responsive"></div>
+                        <div class="item"> <img loading="lazy" src="Assets/images/hotel-zone/Zone-Gym.jpg" class="img-responsive"></div>
+                        <div class="item"> <img loading="lazy" src="Assets/images/hotel-zone/Zone-Spa.jpg" class="img-responsive"></div>
                         </div>
                      </div>
                      
@@ -489,10 +489,10 @@ for creating unique experiences and lifelong memories. </p>
               <div class="container">
                 <div class="row">
                   <div class="col-md-3">
-                  <img src="Assets/images/hotel-zone/Conference-Hall.jpg" class="img-responsive">
+                  <img loading="lazy" src="Assets/images/hotel-zone/Conference-Hall.jpg" class="img-responsive">
                   </div>
                    <div class="col-md-3">
-                  <img src="Assets/images/hotel-zone/conference-room.jpg" class="img-responsive">
+                  <img loading="lazy" src="Assets/images/hotel-zone/conference-room.jpg" class="img-responsive">
                   </div>
                   
                   <div class="col-md-6">
@@ -507,7 +507,7 @@ for creating unique experiences and lifelong memories. </p>
                       </ul>
                     </div>
                       
-                      <!-- <img src="images/hotel-map.jpg" class="img-responsive">--> 
+                      <!-- <img loading="lazy" src="images/hotel-map.jpg" class="img-responsive">--> 
                    
                   
                   </div>
