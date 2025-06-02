@@ -10,7 +10,7 @@
         </a>
         <div class="col-md-2">
             <div class="imgsection">
-                <img class="img-responsive" src='EntityImage/<%# Eval("ImagePath") %>' title='<%# Eval("PlaceName") %>'
+                <img class="img-responsive" src='Assets/images/EntityImage/<%# Eval("ImagePath") %>' title='<%# Eval("PlaceName") %>'
                     alt='<%# Eval("PlaceName") %>'>
             </div>
         </div>

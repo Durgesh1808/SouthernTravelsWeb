@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UcTourShortInfo.ascx.cs" Inherits="SouthernTravelsWeb.UserControl.UcTourShortInfo" %>
+
 <%@ Register Src="UcBlogInnerPages.ascx" TagName="ucBlog" TagPrefix="uc2" %>
 <%@ Register Src="UcPrintMailSms.ascx" TagName="UCPrintMailSms" TagPrefix="uc1" %>
 <%@ Register Src="UcIntLeftUC.ascx" TagName="IntLeftUC" TagPrefix="uc2" %>
@@ -28,8 +29,8 @@
         var binVal, thisString;
         var myregexp = /(%[^%]{2})/;
         while ((match = myregexp.exec(output)) != null
-             && match.length > 1
-             && match[1] != '') {
+            && match.length > 1
+            && match[1] != '') {
             binVal = parseInt(match[1].substr(1), 16);
             thisString = String.fromCharCode(binVal);
             output = output.replace(match[1], thisString);
@@ -43,7 +44,7 @@
     var rendererOptions = {
         draggable: true
     };
-    var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions); ;
+    var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);;
     var directionsService = new google.maps.DirectionsService();
     var map;
 
@@ -60,7 +61,7 @@
         directionsDisplay.setMap(map);
         //directionsDisplay.setPanel(document.getElementById('directionsPanel'));
 
-        google.maps.event.addListener(directionsDisplay, 'directions_changed', function() {
+        google.maps.event.addListener(directionsDisplay, 'directions_changed', function () {
             computeTotalDistance(directionsDisplay.directions);
         });
 
@@ -96,7 +97,7 @@
                 waypoints: waypts,
                 travelMode: google.maps.DirectionsTravelMode.DRIVING
             };
-            directionsService.route(request, function(response, status) {
+            directionsService.route(request, function (response, status) {
                 if (status == google.maps.DirectionsStatus.OK) {
                     directionsDisplay.setDirections(response);
                 }
@@ -116,16 +117,16 @@
 
             var infoWindow = new google.maps.InfoWindow;
 
-            var onMarkerClick = function() {
+            var onMarkerClick = function () {
                 var marker = this;
                 var latLng = marker.getPosition();
 
                 infoWindow.setContent('<h3>City Information :</h3>' + '<p>' + Company + '</p>' +
-                      latLng.lat() + ', ' + latLng.lng());
+                    latLng.lat() + ', ' + latLng.lng());
 
                 infoWindow.open(map, marker);
             };
-            google.maps.event.addListener(map, 'click', function() {
+            google.maps.event.addListener(map, 'click', function () {
                 infoWindow.close();
             });
 
@@ -145,9 +146,8 @@
         total = total / 1000.
         //document.getElementById('total').innerHTML = total + ' km';
     }
-      
-</script>
 
+</script>
 
 <script type="text/javascript">
     function PrintPage() {
@@ -165,9 +165,6 @@
 
 
     }
-    //        function DoBestMap(locs) {
-    //            map.SetMapView(locs);
-    //        }
 </script>
 
 <div id="fixedtabsection">
@@ -180,7 +177,13 @@
                       {%>
                 <span class = "smallheadtxt">(Operated by Andhra Pradesh Tourism Development Corp. Govt. of A.P.)</span>
                 <%} %>
-              
+                <%--<asp:Literal ID="lblCoachDetails" runat="server"></asp:Literal>BY AC VOLVO--%>
+                <%--<ul class="sharelist">
+        <li><a href="https://www.facebook.com/SouthernTravels/" target="_blank" class="fb"></a></li>
+        <li><a href="https://twitter.com/happyholidaying"  target="_blank" class="tw"></a></li>
+        <li><a href="https://plus.google.com/b/105500167792879378506/105500167792879378506/posts"  target="_blank" class="gplus"></a></li>
+        <li><a href="#" class="more"></a></li>
+        </ul>--%>
                 <ul class="sharelist hideonmobile">
                     <li><a class="addthis_button_preferred_1"></a></li>
                     <li><a class="addthis_button_preferred_2"></a></li>
@@ -188,8 +191,18 @@
                     <li><a class="addthis_button_preferred_4"></a></li>
                     <li><a class="addthis_button_compact"></a></li>
                     <li><a class="addthis_counter addthis_bubble_style"></a></li></ul>
+<!-- Go to www.addthis.com/dashboard to generate a new set of sharing buttons -->
+<!-- Go to www.addthis.com/dashboard to generate a new set of sharing buttons -->
+<!-- Go to www.addthis.com/dashboard to generate a new set of sharing buttons -->
 
-<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5073e7951ddeab53"></script>
+<%--<ul class="sharelist  hideonmobile">
+<li><a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
+</li><li><a href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter"/></a>
+</li><li><a href="https://api.addthis.com/oexchange/0.8/forward/email/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-5073e7951ddeab53&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email"/></a>
+</li><li><a href="https://api.addthis.com/oexchange/0.8/forward/print/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-5073e7951ddeab53&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/print.png" border="0" alt="Print"/></a>
+</li><li><a href="https://www.addthis.com/bookmark.php?source=tbx32nj-1.0&v=300&url=http%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/addthis.png" border="0" alt="Addthis"/></a>
+</li></ul>--%>
+                    <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5073e7951ddeab53"></script>
 
                
             </h1>
@@ -201,13 +214,13 @@
                 <div class="btnbooknow" runat="server" id="divhBook">
                     <%if (fldTourTypeID == 1)
                       {%>
-                    <a href='TourBooking.aspx?TourID=<%= Request.QueryString["TourID"] %>#DateSelect'>Book
+                    <a href='TourBooking.aspx?TourID=<%= Page.RouteData.Values["tourId"] %>#DateSelect'>Book
                         now</a>
                         <asp:Button ID="BtnDomesticEnq" runat="server" Text="Enquire Now" class="commonbtn" style="font-size: 14px;line-height: 1.42857143;" />
                     <%} %>
                     <%else if (fldTourTypeID == 2)
                         {%>
-                    <a href='BookSpecialTour.aspx?TourID=<%= Request.QueryString["TourID"] %>#DateSelect'>
+                    <a href='BookSpecialTour.aspx?TourID=<%= Page.RouteData.Values["tourId"] %>#DateSelect'>
                         Book now</a>
                     <%} %>
                     <%else if (fldTourTypeID == 3)
@@ -305,11 +318,11 @@
          <div class="btnbooknow"  runat="server" id ="div1">
         <%if (fldTourTypeID == 1)
           {%>
-       <a href='TourBooking.aspx?TourID=<%= Request.QueryString["TourID"] %>' class="bookbtn">Book Now</a>
+       <a href='TourBooking.aspx?TourID=<%= Page.RouteData.Values["tourId"] %>' class="bookbtn">Book Now</a>
         <%} %>
         <%else if (fldTourTypeID == 2)
             {%>
-        <a href='BookSpecialTour.aspx?TourID=<%= Request.QueryString["TourID"] %>' class="bookbtn">Book now</a>
+        <a href='BookSpecialTour.aspx?TourID=<%= Page.RouteData.Values["tourId"] %>' class="bookbtn">Book now</a>
         <%} %>
          <%else if (fldTourTypeID == 3)
              {%>
@@ -353,7 +366,7 @@
 
         <script type="text/javascript">
             var PathL = "<center><img alt='' src='";
-            PathL += "/Assets/images/loader.gif'/><br/></center>";
+            PathL += "Assets/images/loader.gif'/><br/></center>";
             document.write('<div id="loading" style="position: absolute; float: right; z-index: 2; margin-left: 110px; margin-top:100px;"> ' + PathL + '</div>');
         </script>
 
@@ -367,7 +380,38 @@
       </div>
       <%} %>
       </section>
+            <%-- <section>
+      	<div class="youmaylike">
+        <h2 class="title">You May Also <span>Like</span></h2>
+        	<!-- slider -->
+            <!-- <img src="images/youmaylike/1.jpg" class="img-responsive"> -->
+            
+             <div id="like-slider" class="owl-carousel">
+          <div class="item"> 
+          <img src="images/youmaylike/1.jpg" alt="Touch">
+            
+          </div>
+           <div class="item"> 
+         <img src="images/youmaylike/1.jpg" alt="Touch">
           
+          </div>
+          
+           <div class="item"> 
+          <img src="images/youmaylike/1.jpg" alt="Touch">
+           
+          </div>
+          
+        </div>
+            
+        </div>
+      </section>
+            <section>
+      	<div class="sploffer">
+        <h2 class="title">Hot <span>Deals</span></h2>
+        	<!-- slider -->
+            <img src="images/spl-offer.jpg" class="img-responsive">
+        </div>
+      </section>--%>
             <section>
       	<div class="latestblogs">
       	
@@ -387,32 +431,32 @@
         </div>
     </div>
 <script type="text/javascript">
-        $('#ankEnq').click(function (e) {
-            $('.tabsection_inner .nav-tabs>li').removeClass('active');
-            $('.tabsection_inner [href="#tab_dateprice"]').parent().addClass('active');
-            e.preventDefault();
-        })
-        $('#ucTourShortInfo1_BtnDomesticEnq').click(function (e) {
-            $("#divSCPop").addClass('qe_open slideInRight');
-            //$('#UCFooter_BtnMesgClose').css("display", "none");
-            e.preventDefault();
-            $('body').addClass('formOpen');
-        })
-        $('#ucTourShortInfo1_BtnSpecialEnq').click(function (e) {
-            $("#DivScPopup").addClass('qe_open slideInRight');
-            //$('#UCFooter_BtnMesgClose').css("display", "none");
-            e.preventDefault();
-            $('body').addClass('formOpen');
-        })
-       $('#ucTourShortInfo1_BtnDSEnq').click(function (e) {
-           $("#DivScPopup").addClass('qe_open slideInRight');
-            //$('#UCFooter_BtnMesgClose').css("display", "none");
-            e.preventDefault();
-            $('body').addClass('formOpen');
-        })
-         $('#ucTourShortInfo1_BtnIntEnq').click(function (e) {
-            $('.tabsection_inner .nav-tabs>li').removeClass('active');
-            $('.tabsection_inner [href="#tab_dateprice"]').parent().addClass('active');
-            e.preventDefault();
-        })
+    $('#ankEnq').click(function (e) {
+        $('.tabsection_inner .nav-tabs>li').removeClass('active');
+        $('.tabsection_inner [href="#tab_dateprice"]').parent().addClass('active');
+        e.preventDefault();
+    })
+    $('#ucTourShortInfo1_BtnDomesticEnq').click(function (e) {
+        $("#divSCPop").addClass('qe_open slideInRight');
+        //$('#UCFooter_BtnMesgClose').css("display", "none");
+        e.preventDefault();
+        $('body').addClass('formOpen');
+    })
+    $('#ucTourShortInfo1_BtnSpecialEnq').click(function (e) {
+        $("#DivScPopup").addClass('qe_open slideInRight');
+        //$('#UCFooter_BtnMesgClose').css("display", "none");
+        e.preventDefault();
+        $('body').addClass('formOpen');
+    })
+    $('#ucTourShortInfo1_BtnDSEnq').click(function (e) {
+        $("#DivScPopup").addClass('qe_open slideInRight');
+        //$('#UCFooter_BtnMesgClose').css("display", "none");
+        e.preventDefault();
+        $('body').addClass('formOpen');
+    })
+    $('#ucTourShortInfo1_BtnIntEnq').click(function (e) {
+        $('.tabsection_inner .nav-tabs>li').removeClass('active');
+        $('.tabsection_inner [href="#tab_dateprice"]').parent().addClass('active');
+        e.preventDefault();
+    })
 </script>

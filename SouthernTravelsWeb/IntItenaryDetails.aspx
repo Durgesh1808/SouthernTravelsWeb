@@ -21,8 +21,8 @@
     <meta id="mtKeywords" name="Keywords" content="international tour packages, international holiday packages, srilanka tours, australia tours, middle east tours, egypt tour, new zealand tours, africa tour, malaysia holidays packages, singapore tour, mauritius tour, hong kong tour, thailand tour, colombo, kandy tour, dubai tour, south Africa package tour, new Zealand tour packages, north island package tour, south island, bangkok pattaya, thailand package, bangkok package, mauritius tour, thailand tour packages, singapore package, santosa singapore, santose, malaysia singapore, sentosa singapore, santos" />
     <meta id="mtrobots" name="robots" content="index,follow" />
     <asp:placeholder runat="server" id="plcItHead">
-        <meta property="og:image" content="https://www.southerntravelsindia.com/EntityImage/<%= pbFBImage1 %>" />
-        <meta property="og:image" content="https://www.southerntravelsindia.com/EntityImage/<%= pbFBImage2 %>" />
+        <meta property="og:image" content="https://www.southerntravelsindia.com/Assets/images/EntityImage/<%= pbFBImage1 %>" />
+        <meta property="og:image" content="https://www.southerntravelsindia.com/Assets/images/EntityImage/<%= pbFBImage2 %>" />
     </asp:placeholder>
     <script language="javascript" type="text/javascript">
         function fnRest() {

@@ -116,8 +116,8 @@ namespace SouthernTravelsWeb.UserControl
         {
             if (!IsPostBack)
             {
-                //if(!string.IsNullOrEmpty(Request.QueryString["TourID"]))
-                //pvTourID=Convert.ToInt32(Request.QueryString["TourID"]);
+                //if(!string.IsNullOrEmpty(Page.RouteData.Values["tourId"]))
+                //pvTourID=Convert.ToInt32(Page.RouteData.Values["tourId"]);
                 //if (!string.IsNullOrEmpty(Request.QueryString["TourType"]))
                 //    pvTourType = Convert.ToInt32(Request.QueryString["TourType"]);
                 // pvTourID = 73;
@@ -317,7 +317,7 @@ namespace SouthernTravelsWeb.UserControl
             {
                 lGetPlaceName = new List<GetTourPlaceInfo_SPResult>();
 
-                lGetPlaceName = clsCmn.fnGetTourPlaceInfo(Convert.ToInt32(Request.QueryString["TourID"]), Convert.ToInt32(fldTourTypeID)).ToList();
+                lGetPlaceName = clsCmn.fnGetTourPlaceInfo(Convert.ToInt32(Page.RouteData.Values["tourId"]), Convert.ToInt32(fldTourTypeID)).ToList();
                 if (lGetPlaceName != null && lGetPlaceName.Count > 0)
                 {
 

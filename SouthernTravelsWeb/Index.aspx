@@ -1184,7 +1184,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 pagination: false,
                 // Navigation
                 navigation: true,
-                navigationText: ["<img src='Assets/images/arrow-prev.png'loading='lazy'>", "<img src='Assets/images/arrow-next.png' loading='lazy'/>"],
+                navigationText: ["<img src='Assets/images/arrow-prev.png' loading='lazy'>", "<img src='Assets/images/arrow-next.png' loading='lazy'/>"],
                 rewindNav: true,
                 scrollPerPage: false,
                 autoplay: true,

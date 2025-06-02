@@ -44,10 +44,10 @@ namespace SouthernTravelsWeb
                 DataTable dttour = null;
                 try
                 {
-                    dttour = fnFindTourDetail(Convert.ToInt32(Request.QueryString["TourID"]));
+                    dttour = fnFindTourDetail(Convert.ToInt32(Page.RouteData.Values["tourId"]));
                     if (dttour != null && dttour.Rows.Count > 0)
                     {
-                        string mesg = GetPopupMessage(Convert.ToInt32(Request.QueryString["TourID"]));
+                        string mesg = GetPopupMessage(Convert.ToInt32(Page.RouteData.Values["tourId"]));
                         if (mesg != string.Empty)
                         { ClientScript.RegisterStartupScript(this.GetType(), "Alert", "<script>alert('" + mesg + "');</script>"); }
                         
@@ -65,8 +65,8 @@ namespace SouthernTravelsWeb
                 {
                     dttour = null;
                 }
-                FTFarePane91.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
-                FTFarePane91.fldJourneyDate = Convert.ToString(Request.QueryString["jdate"]);
+                FTFarePane91.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+                FTFarePane91.fldJourneyDate = Convert.ToString(Page.RouteData.Values["jdate"]);
                 if (Request.QueryString["ltc"] != null)
                 {
                     FTFarePane91.fldCanBook = false;
@@ -79,21 +79,21 @@ namespace SouthernTravelsWeb
 
             }
             ucItinerary.fldTourType = TOURTYPE.FIXED_TOUR;
-            ucItinerary.fldTourID = Convert.ToInt32(Request.QueryString["TourID"]);
-            UCCityWisePlaceDisplay1.fldTourID = Convert.ToInt32(Request.QueryString["TourID"]);
+            ucItinerary.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            UCCityWisePlaceDisplay1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
             UCCityWisePlaceDisplay1.fldTourTypeID = Convert.ToInt32(TOURTYPE.FIXED_TOUR);
 
             ucMatchingTour1.fldTourType = Convert.ToInt32(TOURTYPE.FIXED_TOUR);
             UCTourInfo1.fldTourType = TOURTYPE.FIXED_TOUR;
-            UCTourInfo1.fldTourID = Convert.ToInt32(Request.QueryString["TourID"]);
+            UCTourInfo1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
             UCTourGallery1.fldTourType = TOURTYPE.FIXED_TOUR;
-            UCTourGallery1.fldTourID = Convert.ToInt32(Request.QueryString["TourID"]);
+            UCTourGallery1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
 
-            ucTourShortInfo1.fldTourID = Convert.ToInt32(Request.QueryString["TourID"]);
+            ucTourShortInfo1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
             ucTourShortInfo1.fldTourTypeID = Convert.ToInt32(TOURTYPE.FIXED_TOUR);
             ucTourShortInfo1.fldTourType = "Fixed Departure";
             ucTourShortInfo1.fldClass = "active";
-            ucMatchingTour1.fldTourID = Convert.ToInt32(Request.QueryString["TourID"]);
+            ucMatchingTour1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
 
             BindTourItenerary();
             Session["Panel2Step"] = null;
@@ -152,7 +152,7 @@ namespace SouthernTravelsWeb
             {
                 lGetResult = new List<TourItenerary_SPResult>();
 
-                lGetResult = objOther.fnGetTourItenerary(Convert.ToInt32(Request.QueryString["TourID"]), Convert.ToInt32(TOURTYPE.FIXED_TOUR)).ToList();
+                lGetResult = objOther.fnGetTourItenerary(Convert.ToInt32(Page.RouteData.Values["tourId"]), Convert.ToInt32(TOURTYPE.FIXED_TOUR)).ToList();
 
                 if (lGetResult != null && lGetResult.Count > 0)
                 {
@@ -192,9 +192,9 @@ namespace SouthernTravelsWeb
                     }
 
 
-                    if (Request.QueryString["jdate"] != null)
+                    if (Page.RouteData.Values["jdate"] != null)
                     {
-                        UcModifySearch1.fldJDate = Convert.ToDateTime(Request.QueryString["jdate"]).ToString("dddd, MMMM d, yyyy");
+                        UcModifySearch1.fldJDate = Convert.ToDateTime(Page.RouteData.Values["jdate"]).ToString("dddd, MMMM d, yyyy");
                     }
 
                 
@@ -223,9 +223,9 @@ namespace SouthernTravelsWeb
             try
             {
                 int TourId, CountryID, ZoneId;
-                if (Request.QueryString["TourID"] != null && Request.QueryString["tourId"] != "")
+                if (Page.RouteData.Values["tourId"] != null && Page.RouteData.Values["tourId"] != "")
                 {
-                    TourId = Convert.ToInt32(Request.QueryString["tourId"]);
+                    TourId = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
                 }
                 else
                 {

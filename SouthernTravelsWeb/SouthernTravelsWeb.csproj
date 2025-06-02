@@ -187,6 +187,7 @@
     <Content Include="LFC-Home.aspx" />
     <Content Include="News-Events.aspx" />
     <Content Include="OnLineBalanceClear.aspx" />
+    <Content Include="PaymentModes.aspx" />
     <Content Include="PrivacyPolicy.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -247,6 +248,7 @@
     <Content Include="site-map.aspx" />
     <Content Include="Site.Master" />
     <Content Include="HtmlPages\SouthernTravelHotels.htm" />
+    <Content Include="SpecialTouritinerary.aspx" />
     <Content Include="Terms-Conditions.aspx" />
     <Content Include="TourBooking.aspx" />
     <Content Include="UserControl\UcBlog.ascx" />
@@ -273,7 +275,10 @@
     <Content Include="UserControl\UcPrintMailSms.ascx" />
     <Content Include="UserControl\UcQuickSearch.ascx" />
     <Content Include="UserControl\UcSearchTours.ascx" />
+    <Content Include="UserControl\UcSpecialFarePaneltable.ascx" />
+    <Content Include="UserControl\UcSpecialTourFarePanel.ascx" />
     <Content Include="UserControl\UcSpecialTourSearch.ascx" />
+    <Content Include="UserControl\UcSPLModifySearch.ascx" />
     <Content Include="UserControl\UcTourCostIncludeExcIude.ascx" />
     <Content Include="UserControl\UcTourGallery.ascx" />
     <Content Include="UserControl\UcTourInfo.ascx" />
@@ -326,7 +331,9 @@
     <Compile Include="BLL\clsAdo.cs" />
     <Compile Include="BLL\clsBLL.cs" />
     <Compile Include="BLL\ClsCommon.cs" />
+    <Compile Include="BLL\clsContractModule.cs" />
     <Compile Include="BLL\DataLib.cs" />
+    <Compile Include="BLL\GST_Data.cs" />
     <Compile Include="Car-Coach-Rental.aspx.cs">
       <DependentUpon>Car-Coach-Rental.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -425,15 +432,25 @@
     <Compile Include="DTO\ClsBlog.cs" />
     <Compile Include="DTO\customer_loginResult.cs" />
     <Compile Include="DTO\FeedBackHierarchy_spResult.cs" />
+    <Compile Include="DTO\FindSpl_TourMaster_spResult.cs" />
+    <Compile Include="DTO\GetCountryName_SPResult.cs" />
     <Compile Include="DTO\GetCountryWiseStateName_SPResult.cs" />
+    <Compile Include="DTO\GetFbDetail_spResult.cs" />
+    <Compile Include="DTO\GetOverrideServiceTax_SPResult.cs" />
     <Compile Include="DTO\GetTourItinerary_Meal_spResult.cs" />
     <Compile Include="DTO\GetTourList_By_Start_RegionResult.cs" />
     <Compile Include="DTO\GetTourPlaceInfo_SPResult.cs" />
+    <Compile Include="DTO\GetTourStartFromSearch_SPResult.cs" />
+    <Compile Include="DTO\GetTourStratFrom_SPResult.cs" />
+    <Compile Include="DTO\GetTourS_Search_SPResult.cs" />
     <Compile Include="DTO\Get_Fare_Panel_IsQuery_spResult.cs" />
+    <Compile Include="DTO\Get_SPL_Fare_Panel_spResult.cs" />
     <Compile Include="DTO\Globals.cs" />
     <Compile Include="DTO\GST_GetCityListByStateIdAndSearchedCityTextResult.cs" />
+    <Compile Include="DTO\GST_OnlineCustomer.cs" />
     <Compile Include="DTO\MealPlan.cs" />
     <Compile Include="DTO\OnlineBalanceClear_Result.cs" />
+    <Compile Include="DTO\OnlineCustomer.cs" />
     <Compile Include="DTO\TourItenerary_SPResult.cs" />
     <Compile Include="DTO\TourModel.cs" />
     <Compile Include="Enquiryform.aspx.cs">
@@ -582,6 +599,13 @@
     <Compile Include="OnLineBalanceClear.aspx.designer.cs">
       <DependentUpon>OnLineBalanceClear.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PaymentModes.aspx.cs">
+      <DependentUpon>PaymentModes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentModes.aspx.designer.cs">
+      <DependentUpon>PaymentModes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PrivacyPolicy.aspx.cs">
       <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -611,6 +635,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="SpecialTouritinerary.aspx.cs">
+      <DependentUpon>SpecialTouritinerary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SpecialTouritinerary.aspx.designer.cs">
+      <DependentUpon>SpecialTouritinerary.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Terms-Conditions.aspx.cs">
       <DependentUpon>Terms-Conditions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -620,6 +651,7 @@
     </Compile>
     <Compile Include="TourBooking.aspx.cs">
       <DependentUpon>TourBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TourBooking.aspx.designer.cs">
       <DependentUpon>TourBooking.aspx</DependentUpon>
@@ -792,12 +824,31 @@
     <Compile Include="UserControl\UcSearchTours.ascx.designer.cs">
       <DependentUpon>UcSearchTours.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\UcSpecialFarePaneltable.ascx.cs">
+      <DependentUpon>UcSpecialFarePaneltable.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcSpecialFarePaneltable.ascx.designer.cs">
+      <DependentUpon>UcSpecialFarePaneltable.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcSpecialTourFarePanel.ascx.cs">
+      <DependentUpon>UcSpecialTourFarePanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcSpecialTourFarePanel.ascx.designer.cs">
+      <DependentUpon>UcSpecialTourFarePanel.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UcSpecialTourSearch.ascx.cs">
       <DependentUpon>UcSpecialTourSearch.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControl\UcSpecialTourSearch.ascx.designer.cs">
       <DependentUpon>UcSpecialTourSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcSPLModifySearch.ascx.cs">
+      <DependentUpon>UcSPLModifySearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcSPLModifySearch.ascx.designer.cs">
+      <DependentUpon>UcSPLModifySearch.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UcTourCostIncludeExcIude.ascx.cs">
       <DependentUpon>UcTourCostIncludeExcIude.ascx</DependentUpon>

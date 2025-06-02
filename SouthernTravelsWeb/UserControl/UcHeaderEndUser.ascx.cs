@@ -203,16 +203,18 @@ namespace SouthernTravelsWeb.UserControl
             int IsActive = 1;
             if (Request.Url.PathAndQuery.Split('?').Length > 1)
             {
-                string qryString = Request.Url.PathAndQuery.Split('?')[1];
-                string[] qryStringValues = qryString.Split('&');
-                for (int i = 0; i < qryStringValues.Length; i++)
-                {
-                    if (qryStringValues[i].ToLower().Contains("tourid"))
-                    {
-                        fldTourID = Convert.ToInt32(qryStringValues[i].ToString().Split('=')[1]);
-                    }
+                
+                //string qryString = Request.Url.PathAndQuery.Split('?')[1];
+                //string[] qryStringValues = qryString.Split('&');
+                //for (int i = 0; i < qryStringValues.Length; i++)
+                //{
+                //    if (qryStringValues[i].ToLower().Contains("tourid"))
+                //    {
+                //        fldTourID = Convert.ToInt32(qryStringValues[i].ToString().Split('=')[1]);
+                //    }
 
-                }
+                //}
+                fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
             }
             string urlPath = Request.Url.AbsolutePath;
             FileInfo fileInfo = new FileInfo(urlPath);
