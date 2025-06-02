@@ -223,7 +223,7 @@
         <div class="container">
           <div class="navbar-header posrel">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <a class="navbar-brand" href="https://www.southerntravelsindia.com"><img  loading="lazy" src="Assets/images/logo-st.png" alt="" title=""></a> 
+            <a class="navbar-brand" href="Index.aspx"><img  loading="lazy" src="Assets/images/logo-st.png" alt="" title=""></a> 
             <a href="#" class="searchicon-top"><i class="fa fa-search"></i></a>
             
                <div id="trophy" class="trophy hideonmobile">
@@ -400,7 +400,7 @@
                  else
                  {%><li class="menuinner showonmobile" ><a href="CustomerLogin.aspx?LIN=1&Type=U" class="commonbtn">Sign in</a></li><%} %>
                  
-              <li><a href="https://www.southerntravelsindia.com/" runat="server" id="MainMHM" class="active"><i class="fa fa-home homelinkicon"></i> <span class="homelink">Home</span></a></li>
+              <li><a href="Index.aspx" runat="server" id="MainMHM" class="active"><i class="fa fa-home homelinkicon"></i> <span class="homelink">Home</span></a></li>
               <li><a href="../India-Tour-Packages.aspx" runat="server" id="MainMFD" >Fixed Departure Tours<br /><span class="smalltext">(Domestic / seat in coach basis)</span></a></li>
               <li class="dropdown"> 
                
