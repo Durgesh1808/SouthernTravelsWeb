@@ -9,7 +9,7 @@
 <%--<%@ Register Src="UserControl/UcBlog.ascx" TagName="ucBlog" TagPrefix="uc2" %>--%>
 
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml"  itemtype="https://schema.org/WebSite">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en" itemtype="https://schema.org/WebSite">
 <head id="Head1" runat="server"  itemtype="https://schema.org/TravelAgency">
     <title>International Holiday Packages | Tour & Travel Agency | Car Rental Services</title>
 
@@ -62,7 +62,7 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
   "@type": "TravelAgency",
   "name": "SouthernTravelsIndia",
   "url": "https://www.southerntravelsindia.com/",
-  "logo": "https://www.southerntravelsindia.com/Assets/images/logo-st.png",
+  "logo": "https://www.southerntravelsindia.com/Assets/images/logo-st.webp",
   "description": "Southern Travels India offers domestic and international tour packages, holiday planning, and travel booking services across India and abroad.",
   "address": {
     "@type": "PostalAddress",
@@ -488,8 +488,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="row displaytable">
                   <div class="col-lg-2 col-md-2 displaycol bgnews valignmid">
                     <div class="inner text-center pull-right">
-                      <img src="/Assets/images/icon-news.png" loading="lazy" />
-                      <p>Latest<br>News</p>
+                      <img src="/Assets/images/icon-news.png" alt="icon-news" loading="lazy" />
+                      <p>Latest<br/>News</p>
                     </div>
                   </div>
                   <div class="col-lg-10 col-md-10 displaycol bgnewsdetail valignmid">
@@ -523,20 +523,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-md-5">
         <h2 class="title">Fixed Departure Tours - <span>India</span></h2>
         <div id="fd-slider" class="owl-carousel">
-          <div class="item"> <img src="Assets/images/fd-slider/delhi.png" alt="Touch" loading="lazy">
+          <div class="item"> <img src="Assets/images/fd-slider/delhi.webp"  alt="delhi" loading="lazy"/>
             <div class="fd-content">
               <h3>Tours from New Delhi</h3>
              <UCTourList:UCFixedTour runat = "server" ID = "ucFixedTourDelhi" fldTourType = "FIXED_TOUR" fldTourOrigin="New Delhi"></UCTourList:UCFixedTour>
               <a class="viewall" href="India-Tour-Packages.aspx">View all &nbsp;<i class='fa fa-chevron-right' style="font-weight: lighter"></i></a> </div>
           </div>
-          <div class="item"> <img src="Assets/images/fd-slider/Chennai.png" alt="Touch" loading="lazy">
+          <div class="item"> <img src="Assets/images/fd-slider/Chennai.webp" alt="Chennai" loading="lazy"/>
             <div class="fd-content">
               <h3>Tours from Chennai</h3>
               <UCTourList:UCFixedTour runat = "server" ID = "ucFixedTourChennai" fldTourType = "FIXED_TOUR" fldTourOrigin="Chennai"></UCTourList:UCFixedTour>
               <a class="viewall" href="India-Tour-Packages.aspx">View all &nbsp;<i class='fa fa-chevron-right' style="font-weight: lighter"></i></a>
             </div>
           </div>
-          <div class="item"> <img src="Assets/images/fd-slider/Hyderabad.png" alt="Touch" loading="lazy"> 
+          <div class="item"> <img src="Assets/images/fd-slider/Hyderabad.webp" alt="Hyderabad" loading="lazy"> 
             <div class="fd-content">
               <h3>Tours from Hyderabad</h3>
               <UCTourList:UCFixedTour runat = "server" ID = "ucFixedTourHyderabad" fldTourType = "FIXED_TOUR" fldTourOrigin="Hyderabad"></UCTourList:UCFixedTour>
@@ -547,7 +547,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="col-md-4">
         <h2 class="title">Holiday Packages - <span>India</span></h2>
-        <div class="holidaypkg"> <img src="Assets/images/bnr-holidays-packages.jpg" class="img-responsive" loading="lazy"/>
+        <div class="holidaypkg"> <img src="Assets/images/bnr-holidays-packages.jpg" alt="bnr-holidays-packages" class="img-responsive" loading="lazy"/>
           <div class="row tourlist">
 
             <div class="col-md-6 col-xs-6"><a href="HolidayPackages.aspx?ORG=Honeymoon&Code=7">HoneyMoon/leisure Packages</a></div>
@@ -561,7 +561,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="title">Hot <span>Deals</span></h2>
         <div class="offerofmonth">
          <div class="item">
-        <img src="Assets/images/EMI_Offer.jpg" loading="lazy"/></div>
+        <img src="Assets/images/EMI_Offer.webp" alt="EMI_Offer" loading="lazy"/></div>
       </div>
     </div>
   </div>
@@ -575,9 +575,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="row subheadrow">
       <div class="col-md-12 text-center">
-        <p><img src="Assets/images/dbl-line-left.png" class="img-responsive" loading="lazy"/></p>
+        <p><img src="Assets/images/dbl-line-left.png" alt="dbl-line-left" class="img-responsive" loading="lazy"/></p>
         <p>Our Customers Favourite Destinations</p>
-        <p><img src="Assets/images/dbl-line-right.png" class="img-responsive" loading="lazy"/></p>
+        <p><img src="Assets/images/dbl-line-right.png" alt="dbl-line-right" class="img-responsive" loading="lazy"/></p>
       </div>
     </div>
     <div class="row">
@@ -585,8 +585,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="intlbox intlbox-home">
                 
                    <a href="InternationalTours_Offer2-Thailand-BestOfFareastThailandMalaysiaAndSingapore10Days09Nights_155">
-                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" title="custom-arrow" loading="lazy" loading="lazy"/></span>
-                 <img src="Assets/images/intl-pkg/Fareast.jpg" title="fareast" alt="fareast" loading="lazy"/></div>
+                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" title="custom-arrow" alt="custom-arrow" loading="lazy"/></span>
+                 <img src="Assets/images/intl-pkg/Fareast.webp" title="fareast" alt="fareast" loading="lazy"/></div>
                  <uc3:UCImageStrip ID="UCImageStrip3" runat="server" fldTourID="155" fldTourType="INTERNATIONAL_TOUR" />
                     </a>
                         
@@ -595,8 +595,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="intlbox intlbox-home">
                 
                    <a href="InternationalTours_Offer2-Dubai-BestOfDubai4Days3Nights_151">
-                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" title="custom-arrow" loading="lazy" loading="lazy"/></span>
-                 <img src="Assets/images/intl-pkg/Dubai.jpg" loading="lazy"/></div>
+                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" alt="custom-arrow" title="custom-arrow" loading="lazy"/></span>
+                 <img src="Assets/images/intl-pkg/Dubai.webp" alt="Dubai" loading="lazy"/></div>
                  <uc3:UCImageStrip ID="UCImageStrip4" runat="server" fldTourID="151" fldTourType="INTERNATIONAL_TOUR" />
                     </a>
                         
@@ -608,8 +608,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="intlbox intlbox-home">
                 
                    <a href="InternationalTours_Offer2-Malaysia-BestOfMalaysiaAndSingaporeWith2NightsStarCruise_154">
-                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" title="custom-arrow" loading="lazy" loading="lazy"/></span>
-                 <img src="Assets/images/intl-pkg/Malaysia.jpg" loading="lazy"/></div>
+                	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" title="custom-arrow"loading="lazy"/></span>
+                 <img src="Assets/images/intl-pkg/Malaysia.webp" alt="Malaysia"  loading="lazy"/></div>
                  <uc3:UCImageStrip ID="UCImageStrip7" runat="server" fldTourID="154" fldTourType="INTERNATIONAL_TOUR" />
                     </a>
                         
@@ -618,8 +618,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        <div class="intlbox intlbox-home">
                 
                    <a href="InternationalTours_Offer2-UnitedKingdom-BestOfEurope10Days09Nights_182">
-                	<div class="imgsection"><span class="customtag2" loading="lazy">Fixed Tours<img src="Assets/images/custom-arrow.png" title="custom-arrow" loading="lazy" loading="lazy" /></span>
-                 <img src="Assets/images/intl-pkg/Europe.jpg" loading="lazy"></div>
+                	<div class="imgsection"><span class="customtag2" loading="lazy">Fixed Tours<img src="Assets/images/custom-arrow.png" title="custom-arrow" alt="custom-arrow" loading="lazy" /></span>
+                 <img src="Assets/images/intl-pkg/Europe.webp" alt="Europe" loading="lazy"/></div>
                 <uc3:UCImageStrip ID="UCImageStrip6" runat="server" fldTourID="182" fldTourType="INTERNATIONAL_TOUR" />
                     </a>
                         
@@ -633,7 +633,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 
                    <a href="InternationalTours_Offer2-Thailand-BestOfThailand5Days4Nights_150">
                 	<div class="imgsection"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png" alt="custom-arrow" title="custom-arrow" loading="lazy"></span>
-                 <img src="Assets/images/intl-pkg/Thailand.jpg" alt="thailand" title="thailand" loading="lazy"/></div>
+                 <img src="Assets/images/intl-pkg/Thailand.webp" alt="thailand" title="thailand" loading="lazy"/></div>
                  <uc3:UCImageStrip ID="UCImageStrip2" runat="server" fldTourID="150" fldTourType="INTERNATIONAL_TOUR" />
                     </a>
                         
@@ -644,7 +644,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                    <a href="InternationalTours_Offer2-NorthAmerica%E2%80%93Newyork-BestOfAmerica14Days13Nights_181">
                 	<div class="imgsection">
                 	<span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png"  alt="custom-arrow" title="custom-arrow" loading="lazy"/></span>
-                 <img src="Assets/images/intl-pkg/1.jpg"  alt="pkg" title="pkg"  loading="lazy"/></div>
+                 <img src="Assets/images/intl-pkg/1.webp"  alt="pkg" title="pkg"  loading="lazy"/></div>
                  <uc3:UCImageStrip ID="UCImageStrip1" runat="server" fldTourID="181" fldTourType="INTERNATIONAL_TOUR" />
                     </a>
                         
@@ -654,8 +654,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="intlbox intlbox-home">
                 
                    <a href="InternationalTours_Offer2-Srilanka-BestOfSrilanka7Days6Nights_152">
-                	<div class="imgsection" loading="lazy"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png"  title="custom-arrow" loading="lazy" loading="lazy"/></span>
-                 <img src="Assets/images/intl-pkg/Srilanka.jpg" alt="srilanka" title="srilanka" loading="lazy" /></div>
+                	<div class="imgsection" loading="lazy"><span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png"  alt="custom-arrow" title="custom-arrow" loading="lazy" /></span>
+                 <img src="Assets/images/intl-pkg/Srilanka.webp" alt="srilanka" title="srilanka" loading="lazy" /></div>
               <uc3:UCImageStrip ID="UCImageStrip5" runat="server" fldTourID="152" fldTourType="INTERNATIONAL_TOUR" />
                     </a>
                         
@@ -663,14 +663,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
                  <div class="intlbox intlbox-home">
                 
-                   <a href="International-Packages.aspx?off=1">
+<%--                   <a href="International-Packages.aspx?off=1">
                 	<div class="imgsection">
-                 <img src="Assets/images/intl-pkg/8.jpg" loading="lazy"></div>
-                
-                 
-                    </a>
-                        
+                 <img src="Assets/images/intl-pkg/8.jpg" alt="International" loading="lazy"/></div>
+                              
+                    </a>--%>
+                        <a href="International-Packages.aspx?off=1" class="intlbox intlbox-home">
+                            <img src="Assets/images/intl-pkg/8.webp" alt="View International Travel Packages" loading="lazy" />
+                          </a>
                 </div>
+          
+
       </div>
     </div>
   </div>
@@ -732,16 +735,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="row subheadrow">
       <div class="col-md-12 text-center">
-        <p><img src="Assets/images/dbl-line-left-gray.png" loading="lazy" alt=""></p>
+        <p><img src="Assets/images/dbl-line-left-gray.png" loading="lazy" alt="dbl-line-left-gray"/></p>
         <h2 class="title">Our Own <span>Hotels</span></h2>
-        <p><img src="Assets/images/dbl-line-right-gray.png" loading="lazy" alt=""></p>
+        <p><img src="Assets/images/dbl-line-right-gray.png" loading="lazy" alt="dbl-line-right-gray"/></p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4 col-sm-6">
         <div class="block">
           <a href="hotel-southern.aspx?HTLREG=DEL">
-            <img src="Assets/images/own-hotel1.jpg" loading="lazy" alt="Hotel Southern Delhi">
+            <img src="Assets/images/own-hotel1.jpg" loading="lazy" alt="Hotel Southern Delhi"/>
             <div class="hotelname">Hotel Southern - Delhi</div>
           </a>
         </div>
@@ -749,7 +752,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-md-4 col-sm-6">
         <div class="block">
           <a href="HotelSouthernGrandVijayawada.aspx">
-            <img src="Assets/images/own-hotel2.jpg" loading="lazy" alt="Southern Grand Vijayawada">
+            <img src="Assets/images/own-hotel2.jpg" loading="lazy" alt="Southern Grand Vijayawada"/>
             <div class="hotelname">Southern Grand - Vijayawada</div>
           </a>
         </div>
@@ -757,7 +760,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-md-4 col-sm-6">
         <div class="block">
           <a href="hotel-southern-jaipur.aspx">
-            <img src="Assets/images/own-hotel3.jpg" loading="lazy" alt="ZONE By The Park Jaipur">
+            <img src="Assets/images/own-hotel3.jpg" loading="lazy" alt="ZONE By The Park Jaipur"/>
             <div class="hotelname">ZONE By The Park - Jaipur</div>
           </a>
         </div>
@@ -917,7 +920,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 class="title">MICE</h2>
           <div id="mice-slider" class="owl-carousel">
             <div class="item">
-              <img src="Assets/images/mice/2.jpg" alt="MICE Image 1" loading="lazy"/>
+              <img src="Assets/images/mice/2.web" alt="MICE Image 1" loading="lazy"/>
               <div class="txtdiv">Meetings, Incentives, Conferences, Exhibitions</div>
             </div>
             <div class="item">
@@ -937,9 +940,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="row subheadrow">
       <div class="col-md-12 text-center">
-        <p><img src="Assets/images/dbl-line-left-gray.png" loading="lazy" /></p>
+        <p><img src="Assets/images/dbl-line-left-gray.png" alt="dbl-line-left-gray.png" loading="lazy" /></p>
         <h2 class="title">Latest from our <span>blogs</span></h2>
-        <p><img src="Assets/images/dbl-line-right-gray.png" loading="lazy" /></p>
+        <p><img src="Assets/images/dbl-line-right-gray.png" alt="dbl-line-right-gray.png" loading="lazy" /></p>
       </div>
     </div>
 
@@ -1128,8 +1131,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         
         }
         $(document).ready(function ($) {
+            window.addEventListener("load", function () {
+                setTimeout(function () {
+                    var popup = document.getElementById("DivHmPopup");
+                    popup.style.display = "block";
 
-            $('#DivHmPopup').addClass('qe_open slideInRight');
+                    // Now safely apply jQuery animation class
+                    $('#DivHmPopup').addClass('qe_open slideInRight');
+                }, 3000); // Show after 3 seconds
+            });
             $('body').addClass('formOpen');
             checkCookie();
 
@@ -1184,7 +1194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 pagination: false,
                 // Navigation
                 navigation: true,
-                navigationText: ["<img src='Assets/images/arrow-prev.png' loading='lazy'>", "<img src='Assets/images/arrow-next.png' loading='lazy'/>"],
+                navigationText: ["<img src='Assets/images/arrow-prev.png' alt='arrow-prev' loading='lazy'>", "<img src='Assets/images/arrow-next.png' alt='arrow-next' loading='lazy'/>"],
                 rewindNav: true,
                 scrollPerPage: false,
                 autoplay: true,
@@ -1282,10 +1292,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             AutoCompleteType="None" MaxLength="10" CssClass="form-control"></asp:TextBox>
                          </div>
                          <div class="col-md-4 col-xs-6">
-                          <img src="JpegImage.aspx?cache=1394701635527" id="captchImg" alt="captcha" width="110px"  loading="lazy"/>
+                          <img src="JpegImage.aspx?cache=1394701635527" id="captchImg" alt="JpegImage_captcha" width="110px"  loading="lazy"/>
                          </div>
                          <div class="col-md-3 col-xs-6">
-                          <img id="refresh_captcha" src="Assets/images/captcha_refresh.jpg" style="height:28px; cursor:pointer;" loading="lazy"/>
+                            <img
+                              id="refresh_captcha"
+                              src="Assets/images/captcha_refresh.jpg"
+                              alt="Refresh captcha"
+                              width="28"
+                              height="28"
+                              style="height:28px; cursor:pointer;"
+                              loading="lazy"
+                            />
                          </div>
                     
                             
@@ -1386,6 +1404,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         #DivHmPopup {
+                display: none;
           z-index: 1000 !important; 
         }
 

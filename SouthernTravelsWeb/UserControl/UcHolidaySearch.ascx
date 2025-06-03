@@ -37,33 +37,27 @@
         }
     }
     function IAmSelected(source, eventArgs) {
-        //alert( " Key : "+ eventArgs.get_text() +"  Value :  "+eventArgs.get_value());
         var lVal = eventArgs.get_value().split('~')
         document.getElementById("<%=fldTourID.ClientID %>").value = lVal[0];
         document.getElementById("<%=fldTourTypeID.ClientID %>").value = lVal[1];
         document.getElementById("<%=txtSearch.ClientID %>").value = lVal[2];
 
         if (document.getElementById("<%=fldTourTypeID.ClientID %>").value == 1) {
-            //window.location = "FixedTouritinerary.aspx?TourID=" + document.getElementById("<%=fldTourID.ClientID %>").value;
             var str = document.getElementById("<%=txtSearch.ClientID %>").value.split(':');
             var res = str[1].trim().replace(" ", "-") + "_" + document.getElementById("<%=fldTourID.ClientID %>").value;
             window.location = "Fixed-Departure-Itinerary-" + res;
         }
         else if (document.getElementById("<%=fldTourTypeID.ClientID %>").value == 2) {
-            //window.location = "SpecialTouritinerary.aspx?TourID=" + document.getElementById("<%=fldTourID.ClientID %>").value;
             var str = document.getElementById("<%=txtSearch.ClientID %>").value.split(':');
             var res = str[1].trim().replace(" ", "-") + "_" + document.getElementById("<%=fldTourID.ClientID %>").value;
             window.location = "Holiday-Packages-Itinerary-" + res;
         }
         else if (document.getElementById("<%=fldTourTypeID.ClientID %>").value == 3) {
-            //window.location = "International-Packages.aspx";
             var str = document.getElementById("<%=txtSearch.ClientID %>").value.split(':');
             var res = str[1].trim().replace(" ", "-") + "_" + document.getElementById("<%=fldTourID.ClientID %>").value;
             window.location = "InternationalTours-" + res;
         }
 
-        //alert(document.getElementById("<%=fldTourID.ClientID %>").value);
-        //alert(document.getElementById("<%=fldTourTypeID.ClientID %>").value);
     }
     function ShowProcessImage() {
         var autocomplete = document.getElementById('<%=txtSearch.ClientID %>');
@@ -82,22 +76,18 @@
                 employees[i].firstChild.nodeValue = "";
 
                 var div = document.createElement("DIV");
-                div.innerHTML = "<img style = 'height:26px;width:485px;cursor: default; background-repeat:repeat-x;' src = 'images/City.jpg' loading='lazy' />";
+                div.innerHTML = "<img style = 'height:26px;width:485px;cursor: default; background-repeat:repeat-x;' src = 'images/City.jpg' loading='lazy' alt='City'/>";
                 employees[i].appendChild(div);
             }
             else if (employees[i].firstChild.nodeValue == 'Tours') {
                 employees[i].firstChild.nodeValue = "";
 
                 var div = document.createElement("DIV");
-                div.innerHTML = "<img style = 'height:26px;width:485px;cursor: default; background-repeat:repeat-x;' src = 'images/Tours.jpg' loading='lazy' />";
+                div.innerHTML = "<img style = 'height:26px;width:485px;cursor: default; background-repeat:repeat-x;' src = 'images/Tours.jpg' loading='lazy' alt='Tours' />";
                 employees[i].appendChild(div);
             }
             else {
-//                var lstr = employees[i].firstChild.nodeValue;
-//                employees[i].firstChild.nodeValue = "";
-//                var div = document.createElement("DIV");
-//                div.innerHTML = "<img style = 'height:26px;width:26px;cursor: default;' src = 'images/location2.png' /> &nbsp;" + lstr;
-//                employees[i].appendChild(div);
+
 
                 // Consider value as image path
                 var imgeUrl = employees[i]._value;
@@ -105,7 +95,7 @@
                 var text = employees[i].firstChild.nodeValue;
                 employees[i]._value = employees[i]._value + "~" + text;
                 //Height and Width of the mage can be customized here...
-                employees[i].innerHTML = "<img style = 'height:26px;width:26px;cursor: default;' src = 'images/location2.png'  loading='lazy'/> &nbsp;" + text;
+                employees[i].innerHTML = "<img style = 'height:26px;width:26px;cursor: default;' src = 'images/location2.png'  loading='lazy'  alt='location2' /> &nbsp;" + text;
             }
         }
     }
@@ -201,7 +191,6 @@
             <asp:TextBox ID="txtMaxDay" runat="server" CssClass="form-control" placeholder="No. of Days(Max)" MaxLength = "2"></asp:TextBox>
         </div>
         <div class="col-md-4 paddingleft0">
-            <%--<asp:TextBox ID="txtMonthofTravel" runat="server" CssClass="form-control" placeholder="Month of Travel"></asp:TextBox>--%>
             <asp:DropDownList ID="ddlMonthofTravel" runat="server" CssClass="form-control">
             </asp:DropDownList>
         </div>

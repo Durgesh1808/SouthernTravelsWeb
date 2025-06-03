@@ -2391,6 +2391,48 @@ string lMobile, string lPWS, string lTitle, bool lCanSendPromotion)
 
             return pdtDTSet;
         }
+        public List<GetNewsUpdate_SPResult> fnGetNewsUpdate(int lRowID)
+        {
+            List<GetNewsUpdate_SPResult> results = new List<GetNewsUpdate_SPResult>();
+
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["southernconn"]))
+            using (SqlCommand cmd = new SqlCommand(StoredProcedures.GetNewsUpdate_SP, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@I_RowID", lRowID);
+
+                try
+                {
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            GetNewsUpdate_SPResult item = new GetNewsUpdate_SPResult
+                            {
+                                RowID = reader.GetInt32(reader.GetOrdinal("RowID")),
+                                HeadLine = reader["HeadLine"] as string,
+                                ShortNews = reader["ShortNews"] as string,
+                                LongNews = reader["LongNews"] as string,
+                                ImagePath = reader["ImagePath"] as string,
+                                IsActive = reader["IsActive"] as bool?,
+                                CreatedOn = reader["CreatedOn"] as DateTime?,
+                                CreatedBy = reader["CreatedBy"] as int?,
+                                LastUpdatedOn = reader["LastUpdatedOn"] as DateTime?,
+                                LastUpdatedBy = reader["LastUpdatedBy"] as int?
+                            };
+                            results.Add(item);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return null;
+                }
+            }
+
+            return results;
+        }
 
     }
 }
