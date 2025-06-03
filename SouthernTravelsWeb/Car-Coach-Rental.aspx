@@ -107,7 +107,7 @@
         <div class="row rowgap">
         	<div class="col-md-4">
             	<div>
-                <p class="posrel imgsection"><img loading="lazy" src="Assets/images/car-coach/car-sedan.jpg" class="img-responsive imgborder3px" loading="lazy" />
+                <p class="posrel imgsection"><img loading="lazy" src="Assets/images/car-coach/car-sedan.jpg" alt="car-sedan" class="img-responsive imgborder3px" loading="lazy" />
                 </p>
                 <div class="carcoachbox">
                 	<h3 class="title mrgnbtmno"><span>Car (Economy) Sedan</span></h3>
@@ -126,7 +126,7 @@
             
            	<div class="col-md-4">
             	<div>
-                <p class="posrel imgsection"><img src="Assets/images/car-coach/car-suv.jpg" class="img-responsive imgborder3px" loading="lazy" />
+                <p class="posrel imgsection"><img src="Assets/images/car-coach/car-suv.jpg" alt="car-suv" class="img-responsive imgborder3px" loading="lazy" />
                 </p>
                 <div class="carcoachbox">
                 	<h3 class="title mrgnbtmno"><span>Car (Deluxe), SUV</span></h3>
@@ -145,7 +145,7 @@
             
            	<div class="col-md-4">
             	<div>
-                <p class="posrel imgsection"><img src="Assets/images/car-coach/car-luxury.jpg" class="img-responsive imgborder3px" loading="lazy" />
+                <p class="posrel imgsection"><img src="Assets/images/car-coach/car-luxury.jpg" alt="car-luxury" class="img-responsive imgborder3px" loading="lazy" />
                 </p>
                 <div class="carcoachbox">
                 	<h3 class="title mrgnbtmno"><span>Car (Luxury)</span></h3>
@@ -167,7 +167,7 @@
           <div class="row rowgap">
         	<div class="col-md-4">
             	<div>
-                <p class="posrel imgsection"><img src="Assets/images/car-coach/tempo-traveller.jpg" class="img-responsive imgborder3px" loading="lazy" />
+                <p class="posrel imgsection"><img src="Assets/images/car-coach/tempo-traveller.jpg"  alt="tempo-traveller" class="img-responsive imgborder3px" loading="lazy" />
                 </p>
                 <div class="carcoachbox2">
                 	<h3 class="title mrgnbtmno"><span>Tempo Traveller</span></h3>
@@ -188,7 +188,7 @@
             
            	<div class="col-md-4">
             	<div>
-                <p class="posrel imgsection"><img src="Assets/images/car-coach/hitech-coach.jpg" class="img-responsive imgborder3px" loading="lazy" />
+                <p class="posrel imgsection"><img src="Assets/images/car-coach/hitech-coach.jpg" alt="hitech-coach" class="img-responsive imgborder3px" loading="lazy" />
                 </p>
                  <div class="carcoachbox2">
                 	<h3 class="title mrgnbtmno"><span>Hi-Tech Coaches</span></h3>
@@ -209,7 +209,7 @@
             
            	<div class="col-md-4">
             	<div>
-                <p class="posrel imgsection"><img src="Assets/images/car-coach/mini-coach.jpg" class="img-responsive imgborder3px" loading="lazy" />
+                <p class="posrel imgsection"><img src="Assets/images/car-coach/mini-coach.jpg" alt="mini-coach"  class="img-responsive imgborder3px" loading="lazy" />
                 </p>
                  <div class="carcoachbox2">
                 	<h3 class="title mrgnbtmno"><span>Mini - Coaches</span></h3>
@@ -232,7 +232,7 @@
           <div class="row rowgap">
         	<div class="col-md-4">
             	<div>
-                <p class="posrel imgsection"><img src="Assets/images/car-coach/volvocoach.jpg" class="img-responsive imgborder3px" loading="lazy" />
+                <p class="posrel imgsection"><img src="Assets/images/car-coach/volvocoach.jpg" alt="volvocoach" class="img-responsive imgborder3px" loading="lazy" />
                 </p>
                  <div class="carcoachbox3">
                 	<h3 class="title mrgnbtmno"><span>Volvo Coach</span></h3>
@@ -255,7 +255,7 @@
             
            	<div class="col-md-4">
             	<div>
-                <p class="posrel imgsection"><img src="Assets/images/car-coach/multi_axel_volvo.jpg" class="img-responsive imgborder3px" loading="lazy" />
+                <p class="posrel imgsection"><img src="Assets/images/car-coach/multi_axel_volvo.jpg" alt="multi_axel_volvo" class="img-responsive imgborder3px" loading="lazy" />
                 </p>
                 <div class="carcoachbox3">
                 	<h3 class="title mrgnbtmno"><span>Volvo Multi Axle Coach</span></h3>
@@ -321,7 +321,7 @@
                     <tr>
                         <td colspan="3">
                             <div>
-                                <img src="Assets/images/blank.gif" height="4" alt=""  loading="lazy" /></div>
+                                <img src="Assets/images/blank.gif" height="4" alt="blank"  loading="lazy" /></div>
                         </td>
                     </tr>
                     <tr>

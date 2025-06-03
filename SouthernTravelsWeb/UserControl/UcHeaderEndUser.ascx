@@ -223,9 +223,14 @@
         <div class="container">
           <div class="navbar-header posrel">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <a class="navbar-brand" href="../Index.aspx"><img  loading="lazy" src="Assets/images/logo-st.png" alt="" title=""></a> 
-            <a href="#" class="searchicon-top"><i class="fa fa-search"></i></a>
-            
+            <a class="navbar-brand" href="../Index.aspx">
+              <img loading="lazy" src="Assets/images/logo-st.png" alt="Southern Travel Homepage" title="Southern Travel Homepage">
+            </a>
+<%--            <a href="#" class="searchicon-top"><i class="fa fa-search"></i></a>--%>
+            <a href="javascript:void(0);" class="searchicon-top" aria-label="Open search">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+
                <div id="trophy" class="trophy hideonmobile">
                     <img loading="lazy" src="Assets/images/Award_Trophy.png" width="14" height="54" alt="Trophy" />
                     <span>Ranked No.1 Domestic Tour Operator </span>
@@ -242,8 +247,8 @@
           
           <div class="top_app_icons">
           <span>Book ticket faster. Download our mobile app</span><br />
-            <a href="https://play.google.com/store/apps/details?id=com.virtupaper.android.user.c620" target="_blank"><img loading="lazy" src="Assets/images/icon_gplay.png" alt="icon" /></a>
-            <a href="https://itunes.apple.com/us/app/southern-travels/id1434666186?mt=8" target="_blank"><img loading="lazy" src="Assets/images/icon_ios.png" alt="icon" /></a>
+            <a href="https://play.google.com/store/apps/details?id=com.virtupaper.android.user.c620" target="_blank"><img loading="lazy" src="Assets/images/icon_gplay.png" alt="icon_gplay" /></a>
+            <a href="https://itunes.apple.com/us/app/southern-travels/id1434666186?mt=8" target="_blank"><img loading="lazy" src="Assets/images/icon_ios.png" alt="icon_ios" /></a>
           
           </div>
           
@@ -253,8 +258,8 @@
           </div>
           <div id="lang" class="langwrap hideonmobile">
                     <div id="langL" class="langL pull-left">
-                        <img loading="lazy" src="Assets/images/ChangeLanguage.gif" alt="Change Language" />
-                        |&nbsp;<span class="mR5"><a href='javascript:convertnew("en|en");'><img loading="lazy" src="Assets/images/Eng.gif" alt="eng"
+                        <img loading="lazy" src="Assets/images/ChangeLanguage.gif" alt="ChangeLanguage" />
+                        |&nbsp;<span class="mR5"><a href='javascript:convertnew("en|en");'><img loading="lazy" src="Assets/images/Eng.gif" alt="Eng"
                             /></a></span></div>
                     <div id="langR" class="pull-left">
                         <langbar class="niceform">
@@ -349,7 +354,7 @@
            <div id="Div1" class="langwrap showonmobile">
                     <div id="Div2" class="pull-left langL">
                         <img loading="lazy" src="Assets/images/ChangeLanguage.gif" alt="Change Language" />
-                        |&nbsp;<span class="mR5"><a href='javascript:convertnew("en|en");'><img loading="lazy" src="Assets/images/Eng.gif"
+                        |&nbsp;<span class="mR5"><a href='javascript:convertnew("en|en");'><img loading="lazy" src="Assets/images/Eng.gif" alt="Eng"
                            /></a></span></div>
                     <div id="Div3" class="pull-left">
                         <langbar class="niceform">

@@ -784,7 +784,7 @@ function pageLoaded(sender, args){
 
 <div class="row btm25">
     <div class="left_ico">
-        <img src="images/ico_flag.gif" width="23" height="26" alt="&gt;" loading="lazy" /></div>
+        <img src="images/ico_flag.gif" width="23" height="26" alt="ico_flag;" loading="lazy" /></div>
     <div class="rhtForm">
         <div class="head">
             Where</div>
@@ -799,7 +799,7 @@ function pageLoaded(sender, args){
 </div>
 <div class="row btm25">
     <div class="left_ico">
-        <img src="images/ico_watch.gif" width="21" height="21" alt="&gt;" loading="lazy" /></div>
+        <img src="images/ico_watch.gif" width="21" height="21" alt="ico_watch;" loading="lazy" /></div>
     <div class="rhtForm">
         <div class="head bdrBtm1">
             When</div>
@@ -840,7 +840,7 @@ function pageLoaded(sender, args){
 </div>
 <div class="row btm25">
     <div class="left_ico">
-        <img src="images/ico_people.gif" width="20" height="21" alt="&gt;" loading="lazy"/></div>
+        <img src="images/ico_people.gif" width="20" height="21" alt="ico_people" loading="lazy"/></div>
     <div class="rhtForm">
         <div class="head bdrBtm1">
             How many People</div>

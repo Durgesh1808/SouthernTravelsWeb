@@ -437,6 +437,7 @@
     <Compile Include="DTO\GetCountryName_SPResult.cs" />
     <Compile Include="DTO\GetCountryWiseStateName_SPResult.cs" />
     <Compile Include="DTO\GetFbDetail_spResult.cs" />
+    <Compile Include="DTO\GetNewsUpdate_SPResult.cs" />
     <Compile Include="DTO\GetOverrideServiceTax_SPResult.cs" />
     <Compile Include="DTO\GetTourItinerary_Meal_spResult.cs" />
     <Compile Include="DTO\GetTourList_By_Start_RegionResult.cs" />

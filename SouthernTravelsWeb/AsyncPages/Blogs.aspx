@@ -9,7 +9,7 @@
    <ItemTemplate>
       <div class="col-md-4">
         <div class="block eqheightcol">
-          <div class="imgsection"><img src='<%# Eval("ImageUrl")%>' class="img-responsive" loading="lazy"></div>
+          <div class="imgsection"><img src='<%# Eval("ImageUrl")%>' class="img-responsive" alt="Blog" loading="lazy"></div>
           <div class="txtsection">
             <h3> <%# Eval("BlogTitle")%></h3>
             <p>

@@ -81,9 +81,21 @@ namespace SouthernTravelsWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             divrecaptcha.Attributes.Add("data-sitekey", System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
+            string tourId = null;
+
+            // Try to get from RouteData first
+            if (Page.RouteData.Values["tourId"] != null)
+            {
+                tourId = Page.RouteData.Values["tourId"].ToString();
+            }
+            // If not in RouteData, try QueryString
+            else if (Request.QueryString["TourID"] != null)
+            {
+                tourId = Request.QueryString["TourID"];
+            }
             if (!IsPostBack)
             {
-                ViewState["TourID"] = fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+                ViewState["TourID"] = fldTourID = ClsCommon.ConvertStringint(tourId);
                 int offid = ClsCommon.ConvertStringint(Request.QueryString["ofr"]);
                 if (fldTourID == 182 && offid == 1)
                 { Response.Redirect("InternationalTours_Offer2-UnitedKingdom-BestOfEurope10Days09Nights_182"); }
@@ -103,21 +115,21 @@ namespace SouthernTravelsWeb
 
             }
             ucItinerary.fldTourType = TOURTYPE.INTERNATIONAL_TOUR;
-            ucItinerary.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            ucItinerary.fldTourID = ClsCommon.ConvertStringint(tourId);
             ucMatchingTour1.fldTourType = ClsCommon.ConvertStringint(TOURTYPE.INTERNATIONAL_TOUR);
-            ucMatchingTour1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            ucMatchingTour1.fldTourID = ClsCommon.ConvertStringint(tourId);
 
-            ucTourShortInfo1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            ucTourShortInfo1.fldTourID = ClsCommon.ConvertStringint(tourId);
             ucTourShortInfo1.fldTourTypeID = ClsCommon.ConvertStringint(TOURTYPE.INTERNATIONAL_TOUR);
             ucTourShortInfo1.fldTourType = "International Tour";
             ucTourShortInfo1.fldClass = "active";
 
             ucInclu.fldTourType = ClsCommon.ConvertStringint(TOURTYPE.INTERNATIONAL_TOUR);
-            ucInclu.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            ucInclu.fldTourID = ClsCommon.ConvertStringint(tourId);
             UCTourInfo1.fldTourType = TOURTYPE.INTERNATIONAL_TOUR;
-            UCTourInfo1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            UCTourInfo1.fldTourID = ClsCommon.ConvertStringint(tourId);
             UCTourGallery1.fldTourType = TOURTYPE.INTERNATIONAL_TOUR;
-            UCTourGallery1.fldTourID = ClsCommon.ConvertStringint(Request.QueryString["TourID"]);
+            UCTourGallery1.fldTourID = ClsCommon.ConvertStringint(tourId);
             if (Request.QueryString["ofr"] != null && Request.QueryString["ofr"].ToString() == "1")
             {
                 UCHeader.fldMainSection = Current_Section.HOLIDAY_PACKAGE_INTERNATIONAL_CUSTOMIZED;

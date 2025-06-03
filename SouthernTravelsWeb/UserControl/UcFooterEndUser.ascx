@@ -2,7 +2,6 @@
 <%@ Register Src="UCPaymentOptionNetBanking.ascx" TagName="UCPaymentOptionNetBanking"
     TagPrefix="uc1" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-<%--<script src="css2016/js/jquery-2.2.0.min.js"></script>--%>
 
 <script src="/Assets/js/jquery-scrolltofixed.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onloadCallbackF&render=explicit"
@@ -357,13 +356,42 @@
                   <div id="collapseF2" class="panel-collapse collapse">
                     <div class="panel-body">
                      <ul>
-          <li><a href="India-Tour-Packages.aspx">Fixed Departure Tours <span class="smalltext">(Domestic / seat in Coach basis)</span></a></li>
-          <li><a href="HolidayPackages.aspx">Holiday Packages <span class="smalltext">(India / Nepal / Bhutan)</span></a></li>
-          <li><a href="International-GroupDeparture.aspx?off=2">International <span class="smalltext">(Fixed / Group Departures)</span></a></li>
-          <li><a href="International-Packages.aspx?off=1">International <span class="smalltext">(Customized Holidays)</span></a></li>
-          <li><a href="hotel-southern.aspx?HTLREG=DEL">Our Hotels</a></li>
-          <li><a href="Car-Coach-Rental.aspx?ORG=All">Car / Coach Rental</a></li>
-          <li><a href="LFC-Home.aspx">LFC / LTC Tours</a></li>
+                            <li>
+                      <a href="India-Tour-Packages.aspx" aria-label="Fixed Departure Tours, Domestic, seat in Coach basis">
+                        Fixed Departure Tours <span class="smalltext">(Domestic / seat in Coach basis)</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="HolidayPackages.aspx" aria-label="Holiday Packages for India, Nepal, Bhutan">
+                        Holiday Packages <span class="smalltext">(India / Nepal / Bhutan)</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="International-GroupDeparture.aspx?off=2" aria-label="International Fixed and Group Departure Tours">
+                        International <span class="smalltext">(Fixed / Group Departures)</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="International-Packages.aspx?off=1" aria-label="International Customized Holidays">
+                        International <span class="smalltext">(Customized Holidays)</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="hotel-southern.aspx?HTLREG=DEL" aria-label="Our Hotels in Delhi">
+                        Our Hotels
+                      </a>
+                    </li>
+                    <li>
+                      <a href="Car-Coach-Rental.aspx?ORG=All" aria-label="Car and Coach Rental Services">
+                        Car / Coach Rental
+                      </a>
+                    </li>
+                    <li>
+                      <a href="LFC-Home.aspx" aria-label="LFC and LTC Tours">
+                        LFC / LTC Tours
+                      </a>
+                    </li>
+
         </ul>
                     </div>
                   </div>
@@ -407,17 +435,25 @@
                   </div>
                   <div id="collapseF5" class="panel-collapse collapse">
                     <div class="panel-body">
-                     <ul>
-          <li><a href="contact-us.aspx?CONREG=Corporate">Coporate Office</a></li>
-          <li><a href="contact-us.aspx?CONREG=Branches">Branch Office</a></li>
-          <li><a href="contact-us.aspx#Customer">Customer Care</a></li>
-          <li><a href="Feedback.aspx?MM=5">Feedback Form</a></li>
-          <li><a href="Enquiryform.aspx">Enquiry Form</a></li>
-          <li><a href="site-map.aspx">Site Map</a></li>
-          <li class="mob_foot_app_icon"><a href="https://play.google.com/store/apps/details?id=com.virtupaper.android.user.c620" target="_blank">  <img src="Assets/images/icon_gplay.png" loading="lazy" alt="Google Play Icon" />
-</a></li>
-          <li class="mob_foot_app_icon"><a href="https://itunes.apple.com/us/app/southern-travels/id1434666186?mt=8" target="_blank"><img src="Assets/images/icon_ios.png" loading="lazy"/></a></li>
-        </ul>
+                  <ul>
+                          <li><a href="contact-us.aspx?CONREG=Corporate">Corporate Office</a></li>
+                          <li><a href="contact-us.aspx?CONREG=Branches">Branch Office</a></li>
+                          <li><a href="contact-us.aspx#Customer">Customer Care</a></li>
+                          <li><a href="Feedback.aspx?MM=5">Feedback Form</a></li>
+                          <li><a href="Enquiryform.aspx">Enquiry Form</a></li>
+                          <li><a href="site-map.aspx">Site Map</a></li>
+                          <li class="mob_foot_app_icon">
+                            <a href="https://play.google.com/store/apps/details?id=com.virtupaper.android.user.c620" target="_blank" rel="noopener noreferrer" aria-label="Download on Google Play Store">
+                              <img src="Assets/images/icon_gplay.png" loading="lazy" alt="Google Play Store Icon" />
+                            </a>
+                          </li>
+                          <li class="mob_foot_app_icon">
+                            <a href="https://itunes.apple.com/us/app/southern-travels/id1434666186?mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download on Apple App Store">
+                              <img src="Assets/images/icon_ios.png" alt="Apple App Store Icon" loading="lazy" />
+                            </a>
+                          </li>
+                        </ul>
+
                     </div>
                   </div>
                 </div>
@@ -746,7 +782,7 @@
                           <img src="JpegImage.aspx?cache=1394701635527" id="captchImg" alt="captcha" width="110px" loading="lazy" />
                          </div>
                          <div class="col-md-2" style="margin-left: 53px;">
-                          <img id="refresh_captcha" src="Assets/images/captcha_refresh.jpg" style="height:28px; cursor:pointer;" loading="lazy">
+                          <img id="refresh_captcha" src="Assets/images/captcha_refresh.jpg" alt="captcha_refresh" style="height:28px; cursor:pointer;" loading="lazy">
                          </div>
                     
                             
@@ -767,16 +803,19 @@
             <ul class="row">
                 <li class="col-md-12">
                     <asp:Button ID="btnSubmitDe" runat="server" Text="Submit" OnClientClick="ga('send', 'event', { eventCategory: 'quick enquiry', eventAction: 'enquiry'});"
-                        OnClick="btnSubmitDe_Click" class="btn pull-right" ValidationGroup="FOO" /><%--
-        	<input type="submit" class="btn pull-right" value="Submit">--%>
+                        OnClick="btnSubmitDe_Click" class="btn pull-right" ValidationGroup="FOO" />
                 </li>
             </ul>
         </div>
     </div>
 </div>
-<div id="back-top" style=" margin-bottom: 24px;">
-    <a href="#top">
-        <img src="Assets/images/back-top.png" loading="lazy"><br>Back to Top</div>
+<div id="back-top" style="margin-bottom: 24px;">
+    <a href="#top" aria-label="Back to top of page">
+        <img src="Assets/images/back-top.png" alt="Back to top" loading="lazy"><br>
+        Back to Top
+    </a>
+</div>
+
 
 <script>
     $('select.form-control').selectpicker({

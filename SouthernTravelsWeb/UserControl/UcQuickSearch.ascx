@@ -134,8 +134,7 @@
 </script>
 
 <div id="booking">
-    <%--<asp:ScriptManager ID="ScriptManager1" runat="server">
-    </asp:ScriptManager>--%>
+   
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <asp:HiddenField ID="hdMenuSubTab" runat="server" Value="" />
@@ -175,7 +174,12 @@
                     </div>
                    
                    <div class="tab-pane fade" runat="server" id="QSINDHTLDIV">
-                     <iframe src="/HtmlPages/SouthernTravelHotels.htm" width="100%" height="230px"></iframe>
+                       <iframe src="/HtmlPages/SouthernTravelHotels.htm"
+                                width="100%"
+                                height="230"
+                                title="Southern Travel Hotels list">
+                        </iframe>
+
                     </div>
                   </div>
                 </div>
