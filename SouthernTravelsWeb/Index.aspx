@@ -920,7 +920,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 class="title">MICE</h2>
           <div id="mice-slider" class="owl-carousel">
             <div class="item">
-              <img src="Assets/images/mice/2.web" alt="MICE Image 1" loading="lazy"/>
+              <img src="Assets/images/mice/2.jpg" alt="MICE Image 1" loading="lazy"/>
               <div class="txtdiv">Meetings, Incentives, Conferences, Exhibitions</div>
             </div>
             <div class="item">
