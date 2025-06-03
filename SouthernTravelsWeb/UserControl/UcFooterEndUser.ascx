@@ -867,33 +867,6 @@
             e.preventDefault();
         });
 
-        /*$('.linkqck').click(function(e) {
-        $(".qckenqwrap").show().addClass('qe_open').animate({
-        right: "35px"
-              
-        }, 300, function() {
-
-            });
-
-
-
-            e.preventDefault();
-        });
-
-
-        $('.closebtn a').click(function(e) {
-
-        $(".qckenqwrap").removeClass('qe_open').animate({
-        right: "-300px"
-               
-                
-        }, 300, function() {
-                
-        });
-
-
-            e.preventDefault();
-        });*/
 
 
         $('.placescoveredtbl .pcwrap ul li a').click(function(e) {
