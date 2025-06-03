@@ -16,15 +16,15 @@ label {
 
 @font-face {
     font-family: centurygothic;
-    src: url(../fonts/GOTHIC_0.eot?v=4.2.0);
-    src: url(../fonts/GOTHIC_0.eot?#iefix&v=4.2.0) format('embedded-opentype'), url(../fonts/GOTHIC_0.woff?v=4.2.0) format('woff'), url(../fonts/GOTHIC_0.ttf?v=4.2.0) format('truetype');
+    src: url(/Assets/fonts/GOTHIC_0.eot?v=4.2.0);
+    src: url(/Assets/fonts/GOTHIC_0.eot?#iefix&v=4.2.0) format('embedded-opentype'), url(/Assets/fonts/GOTHIC_0.woff?v=4.2.0) format('woff'), url(/Assets/fonts/GOTHIC_0.ttf?v=4.2.0) format('truetype');
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
 }
 
 @font-face {
     font-family: centurygothic-bold;
-    src: url(../fonts/gothicb.woff?v=4.2.0) format('woff'), url(../fonts/gothicb.ttf?v=4.2.0) format('truetype');
+    src: url(/Assets/fonts/gothicb.woff?v=4.2.0) format('woff'), url(/Assets/fonts/gothicb.ttf?v=4.2.0) format('truetype');
 }
 
 .sticky {
@@ -88,7 +88,7 @@ input[type=submit] {
     }
 
 header {
-    background: url(../images/hero-bg.jpg) 0 30% no-repeat;
+    background: url(/Assets/images/hero-bg.jpg) 0 30% no-repeat;
     background-size: cover;
     min-height: 600px
 }

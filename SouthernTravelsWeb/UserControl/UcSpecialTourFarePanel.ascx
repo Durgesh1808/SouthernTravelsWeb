@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UcSpecialTourFarePanel.ascx.cs" Inherits="SouthernTravelsWeb.UserControl.UcSpecialTourFarePanel" %>
- <link href="Assets/fonts/rupee.css" rel="stylesheet" type="text/css" />
+ <link href="Assets/css/rupee.css" rel="stylesheet" type="text/css" />
            
 <div id ="tdPanel" runat="server"  >
     <asp:Literal runat="server" ID="litSpecialTourFarePanel">

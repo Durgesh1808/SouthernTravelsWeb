@@ -34,13 +34,14 @@
     <meta property="business:contact_data:country_name" content="India" />
     <meta name="facebook-domain-verification" content="ikm4u1i0f5ikimuz9h5z0j15tfm28k" />
     <meta name="google-site-verification" content="FlFqlfXz_UJT9317cQ0Om_W2GK0KM6eAtiteItxOKcQ" />
-
+      <%: Styles.Render("~/Content/assetscss") %>
+    <%: Scripts.Render("~/bundles/assetsjs") %>
     <!-- Styles -->
     <link rel="shortcut icon" href="Assets/images/favicon.ico" />
-    <link href="Assets/css/myStyle.css" rel="stylesheet" />
+<%--    <link href="Assets/css/myStyle.css" rel="stylesheet" />--%>
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
-    <script src="Assets/js/myJs.js"></script>
+<%--    <script src="Assets/js/myJs.js"></script>--%>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Google Tag Manager -->
     <script>        (function (w, d, s, l, i) {
@@ -443,7 +444,7 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
     <!-- Google Tag Manager (noscript) -->
     
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXRG7KM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+height="0" width="0" style="display:none;visibility:hidden" async></iframe></noscript>
 
     
     <!-- End Google Tag Manager (noscript) -->
@@ -1081,7 +1082,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Footer Start -->
     <UCFooter:UCFooterEndUser ID="UCFooter" runat="server" />
     <!-- Footer Start -->
-    <script src="Assets/js/jquery.newsTicker.js"></script>
+<%--    <script src="Assets/js/jquery.newsTicker.js"></script>--%>
     <script>
         $(document).ready(function () {
             $('#blogLoader').show(); 
