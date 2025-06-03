@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UcSpecialFarePaneltable.ascx.cs" Inherits="SouthernTravelsWeb.UserControl.UcSpecialFarePaneltable" %>
 
     
-    <link href="Assets/fonts/rupee.css" rel="stylesheet" type="text/css" />
+    <link href="Assets/css/rupee.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
      .tablewrap td{border-bottom-color: #e9e9e9!important;}
     </style>

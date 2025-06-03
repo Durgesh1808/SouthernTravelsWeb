@@ -247,6 +247,7 @@ namespace SouthernTravelsWeb.UserControl
         protected void btnSubmit_click(object sender, EventArgs e)
         {
             string prefixText = "";
+            btnSubmit.Attributes["aria-label"] = "Search";
             prefixText = txtSearch.Text.Trim();
             Response.Redirect("SearchResult.aspx?prefixText=" + prefixText);
 

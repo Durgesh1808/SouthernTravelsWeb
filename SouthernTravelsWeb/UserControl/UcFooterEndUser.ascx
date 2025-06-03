@@ -4,8 +4,8 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <script src="/Assets/js/jquery-scrolltofixed.js" type="text/javascript"></script>
-<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onloadCallbackF&render=explicit"
-    async defer></script>
+<%--<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onloadCallbackF&render=explicit"
+     defer></script>--%>
 
     <style>
         
@@ -115,6 +115,23 @@
 
 
 <script type="text/javascript">
+    let captchaLoaded = false;
+
+    window.addEventListener('DOMContentLoaded', function () {
+        const captchaInput = document.getElementById('txtCaptcha');
+
+        if (captchaInput) {
+            captchaInput.addEventListener('focus', function () {
+                if (!captchaLoaded) {
+                    const script = document.createElement('script');
+                    script.src = 'https://www.google.com/recaptcha/api.js';
+                    document.body.appendChild(script);
+                    captchaLoaded = true;
+                }
+            });
+        }
+    });
+
     function isNumberKey(evt) {
         var charCode = (evt.which) ? evt.which : event.keyCode
         if (charCode > 31 && (charCode < 48 || charCode > 57))
@@ -569,21 +586,64 @@
         </ul>
       </div>
       <div class="col-sm-4 col-md-2">
-        <h4>Connect with us</h4>
-        <ul class="footer-social-links">
-            <li><a href="https://api.whatsapp.com/send?phone=917466006600" class="wa">Whatsapp</a></li>
-          <li><a href="https://www.facebook.com/SouthernTravels/" class="fb">Facebook</a></li>
-          <li><a href="https://twitter.com/happyholidaying" class="tw">Twitter</a></li>
-          <li><a href="https://plus.google.com/b/105500167792879378506/105500167792879378506/posts" class="gplus">Google+</a></li>
-          <%--<li><a href="https://plus.google.com/u/0/108785452021940174807/posts" class="gplus">Google+</a></li>--%>
-          <li><a href="https://www.youtube.com/southerntravels" class="yt">YouTube</a></li>
-          <li class="footer_app_icon"><span class="smalltext1">Book ticket faster. <br />Download our mobile app</span></li>
-          <li class="footer_app_icon"><a href="https://play.google.com/store/apps/details?id=com.virtupaper.android.user.c620" target="_blank">  <img src="Assets/images/icon_gplay.png" loading="lazy" alt="Google Play Icon" />
-</a></li>
-          <li class="footer_app_icon"><a href="https://itunes.apple.com/us/app/southern-travels/id1434666186?mt=8" target="_blank"><img src="Assets/images/icon_ios.png"   loading="lazy"/></a></li>
-        </ul>
-    
-      </div>
+          <h4>Connect with us</h4>
+          <ul class="footer-social-links">
+            <!-- WhatsApp -->
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=917466006600" class="wa" target="_blank" aria-label="Chat with us on WhatsApp">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <!-- Facebook -->
+            <li>
+              <a href="https://www.facebook.com/SouthernTravels/" class="fb" target="_blank" aria-label="Visit us on Facebook">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <!-- Twitter -->
+            <li>
+              <a href="https://twitter.com/happyholidaying" class="tw" target="_blank" aria-label="Follow us on Twitter">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <!-- Google+ (deprecated, but kept if still needed) -->
+            <li>
+              <a href="https://plus.google.com/b/105500167792879378506/105500167792879378506/posts" class="gplus" target="_blank" aria-label="Visit us on Google Plus">
+                <i class="fab fa-google-plus-g" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <!-- YouTube -->
+            <li>
+              <a href="https://www.youtube.com/southerntravels" class="yt" target="_blank" aria-label="Watch our videos on YouTube">
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <!-- Mobile App Info -->
+            <li class="footer_app_icon">
+              <span class="smalltext1">Book ticket faster. <br />Download our mobile app</span>
+            </li>
+
+            <!-- Google Play Store -->
+            <li class="footer_app_icon">
+              <a href="https://play.google.com/store/apps/details?id=com.virtupaper.android.user.c620" target="_blank" aria-label="Download on Google Play Store">
+                <img src="Assets/images/icon_gplay.png" loading="lazy" alt="Google Play Icon" />
+              </a>
+            </li>
+
+            <!-- Apple App Store -->
+            <li class="footer_app_icon">
+              <a href="https://itunes.apple.com/us/app/southern-travels/id1434666186?mt=8" target="_blank" aria-label="Download on Apple App Store">
+                <img src="Assets/images/icon_ios.png" loading="lazy" alt="Apple App Store Icon" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
     </div>
   </div>
 </footer>

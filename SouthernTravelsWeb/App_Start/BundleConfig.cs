@@ -31,10 +31,20 @@ namespace SouthernTravelsWeb
                     "~/Scripts/WebForms/MsAjax/MicrosoftAjaxTimer.js",
                     "~/Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js"));
 
-            // Use the Development version of Modernizr to develop with and learn from. Then, when you’re
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
+
+            //  custom JS files bundle - all JS files inside Assets/js folder
+            bundles.Add(new ScriptBundle("~/bundles/assetsjs").IncludeDirectory(
+                "~/Assets/js", "*.js", true));  // true = include subfolders if any
+
+            //  custom CSS files bundle - all CSS files inside Assets/css folder
+            bundles.Add(new StyleBundle("~/Content/assetscss").IncludeDirectory(
+                "~/Assets/css", "*.css", true));  // true = include subfolders if any
+
+            // Enable bundling and minification even in debug mode
+            BundleTable.EnableOptimizations = true;
         }
 
         public static void RegisterJQueryScriptManager()

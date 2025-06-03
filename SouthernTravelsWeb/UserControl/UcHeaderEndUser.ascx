@@ -197,27 +197,58 @@
 <asp:Literal ID="litNotification" runat="server"></asp:Literal>
 <!-- end top note -->
 <div class="sociallinksright">
-    <ul>
-        <li><a href="https://api.whatsapp.com/send?phone=917466006600" target="_blank" class="wa">
-        </a></li>
-        <li><a href="https://www.facebook.com/SouthernTravels/" target="_blank" class="fb"></a>
-        </li>
-        <li><a href="https://www.instagram.com/southerntravelsofficial/" target="_blank"
-            class="instagram"></a></li>
-        <li><a href="https://www.linkedin.com/company/southern-travels-pvt-ltd" target="_blank"
-            class="linkedin"></a></li>
-        <li><a href="https://twitter.com/TravelsSouthern" target="_blank" class="tw"></a>
-        </li>
-        <%--<li><a href="https://plus.google.com/u/0/108785452021940174807/posts" target="_blank"
-            class="gplus"></a></li>
-        
-        <li><a href="https://plus.google.com/b/105500167792879378506/105500167792879378506/posts"
-            target="_blank" class="gplus"></a></li>--%>
-        <li><a href="https://www.youtube.com/southerntravels" target="_blank" class="yt"></a>
-        </li>
-        <li><a href="#" class="quick_link linkqck"></a></li>
-    </ul>
+  <ul>
+    <!-- WhatsApp -->
+    <li>
+      <a href="https://api.whatsapp.com/send?phone=917466006600" target="_blank" class="wa" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    <!-- Facebook -->
+    <li>
+      <a href="https://www.facebook.com/SouthernTravels/" target="_blank" class="fb" aria-label="Visit us on Facebook">
+        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    <!-- Instagram -->
+    <li>
+      <a href="https://www.instagram.com/southerntravelsofficial/" target="_blank" class="instagram" aria-label="Follow us on Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    <!-- LinkedIn -->
+    <li>
+      <a href="https://www.linkedin.com/company/southern-travels-pvt-ltd" target="_blank" class="linkedin" aria-label="Connect with us on LinkedIn">
+        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    <!-- Twitter -->
+    <li>
+      <a href="https://twitter.com/TravelsSouthern" target="_blank" class="tw" aria-label="Follow us on Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    <!-- YouTube -->
+    <li>
+      <a href="https://www.youtube.com/southerntravels" target="_blank" class="yt" aria-label="Subscribe to our YouTube channel">
+        <i class="fab fa-youtube" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    <!-- Quick Enquiry -->
+    <li>
+      <a href="#" class="quick_link linkqck" aria-label="Quick Enquiry">
+        <i class="fas fa-comment-dots" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
 </div>
+
 <div class="headertop">
     <nav class="navbar navbar-inverse">
         <div class="container">
@@ -326,7 +357,8 @@
                                                             Display="Dynamic" ErrorMessage="Only alphanumeric, # and sapce are allowed."
                                                             ValidationExpression="^[0-9a-zA-Z #,-/]+$" ValidationGroup="Sear"></asp:RegularExpressionValidator>                                                            
                  
-                 <asp:Button ID="btnSubmit" runat="server"  CssClass="searchbtn" OnClick="btnSubmit_click" ValidationGroup="Sear"></asp:Button>
+                <asp:Button ID="btnSubmit" runat="server" CssClass="searchbtn" Text="" OnClick="btnSubmit_click" ValidationGroup="Sear" />
+
               </div>
               
                 <div class="downloadbtn posrel navwrap bgnone"><a href="#" class="commonbtn dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">e-Brochure <span class="caret"></span></a>
