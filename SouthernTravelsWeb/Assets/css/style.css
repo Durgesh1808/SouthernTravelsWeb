@@ -406,7 +406,7 @@ label.readonlytext {
         top: 6px;
         right: 0;
         border: none;
-        background: url(../images/icon-search.png) center 3px no-repeat
+        background: url(/Assets/images/icon-search.png) center 3px no-repeat
     }
 
 .downloadbtn {
@@ -734,7 +734,7 @@ p.visitblog {
     .formwrap .btn-group .btn .caret {
         width: 10px;
         height: 8px;
-        background: url(../images/caret-arrow.png) no-repeat;
+        background: url(/Assets/images/caret-arrow.png) no-repeat;
         border: 0
     }
 
@@ -823,7 +823,7 @@ iframe {
         }
 
             .sociallinksright ul li a {
-                background: url(../images/social-icons.png) no-repeat;
+                background: url(/Assets/images/social-icons.png) no-repeat;
                 width: 43px;
                 height: 43px;
                 display: block;
@@ -1005,7 +1005,7 @@ iframe {
         }
 
 #intlpkg {
-    background: url(../images/intl-pkg-bg.jpg) no-repeat;
+    background: url(/Assets/images/intl-pkg-bg.jpg) no-repeat;
     background-size: cover
 }
 
@@ -1015,7 +1015,7 @@ section#fho {
 
     section#fho:after {
         content: '';
-        background: url(../images/intl-pkg-bg.jpg) no-repeat;
+        background: url(/Assets/images/intl-pkg-bg.jpg) no-repeat;
         position: absolute;
         left: 0;
         top: 0px;
@@ -1236,7 +1236,7 @@ p.visitblog {
 }
 
     p.visitblog a {
-        background: url(../images/dblarrow.png) right center no-repeat;
+        background: url(/Assets/images/dblarrow.png) right center no-repeat;
         display: inline-block;
         padding: 0 20px 0 0;
         color: #f1562b
@@ -1280,7 +1280,7 @@ footer h4 {
 .footer-social-links li a {
     padding: 7px 0 0 55px;
     display: inline-block;
-    background: url(../images/fotter-social-icons.png) no-repeat;
+    background: url(/Assets/images/fotter-social-icons.png) no-repeat;
     height: 35px
 }
 
@@ -1768,7 +1768,7 @@ p.nightjourney {
         top: -7px;
         left: -2px;
         text-align: center;
-        background: url(../images/day-bg.png) no-repeat;
+        background: url(/Assets/images/day-bg.png) no-repeat;
         padding: 6px 5px 0 0;
         color: #fff
     }
@@ -1858,12 +1858,12 @@ p.nightstay {
 }
 
 p.nightjourney {
-    background: url(../images/icon-njourney.png) 10px 7px no-repeat;
+    background: url(/Assets/images/icon-njourney.png) 10px 7px no-repeat;
     border-radius: 4px
 }
 
 p.nightstay {
-    background: url(../images/icon-nstay.png) 10px 7px no-repeat;
+    background: url(/Assets/images/icon-nstay.png) 10px 7px no-repeat;
     border: 1px solid #dbdbdb;
     border-radius: 4px
 }
@@ -2174,7 +2174,7 @@ p.nightstay {
         float: left;
         margin: 0 0 0 20px;
         padding: 6px 0 0 30px;
-        background: url(../images/icon-chair.png) no-repeat;
+        background: url(/Assets/images/icon-chair.png) no-repeat;
         font-size: 14px;
         height: 23px
     }
@@ -2276,17 +2276,17 @@ p.nightstay {
 }
 
 .TB_avbl {
-    background: url(../images/set_arngnt.png) 0 -130px no-repeat rgba(0, 0, 0, 0);
+    background: url(/Assets/images/set_arngnt.png) 0 -130px no-repeat rgba(0, 0, 0, 0);
     color: #e28d07
 }
 
 .TB_Bkd {
-    background: url(../images/set_arngnt.png) no-repeat rgba(0, 0, 0, 0);
+    background: url(/Assets/images/set_arngnt.png) no-repeat rgba(0, 0, 0, 0);
     color: #ffd4c9
 }
 
 .TB_selctd {
-    background: url(../images/set_arngnt.png) 0 -65px no-repeat rgba(0, 0, 0, 0);
+    background: url(/Assets/images/set_arngnt.png) 0 -65px no-repeat rgba(0, 0, 0, 0);
     color: #fff
 }
 
@@ -2534,7 +2534,7 @@ p.nightstay {
 }
 
     .calanderwrap .td_seatavail:hover .seats {
-        background: url(../images/icon-chair-small-hover.png) no-repeat;
+        background: url(/Assets/images/icon-chair-small-hover.png) no-repeat;
         color: #fff
     }
 
@@ -2544,7 +2544,7 @@ p.nightstay {
 }
 
     .calanderwrap .td_seatavail.active .seats {
-        background: url(../images/icon-chair-small-hover.png) no-repeat;
+        background: url(/Assets/images/icon-chair-small-hover.png) no-repeat;
         color: #fff
     }
 
@@ -2573,7 +2573,7 @@ p.nightstay {
 .calanderwrap .tablewrap .seats {
     padding: 0 0 0 22px;
     display: inline;
-    background: url(../images/icon-chair-small.png) 0 -35px no-repeat;
+    background: url(/Assets/images/icon-chair-small.png) 0 -35px no-repeat;
     text-align: center
 }
 
@@ -2597,7 +2597,7 @@ p.nightstay {
 }
 
 .tblcalH {
-    background: url(../images/calender_hbg.gif) repeat-x;
+    background: url(/Assets/images/calender_hbg.gif) repeat-x;
     height: 42px;
     font-size: 18px;
     line-height: 42px;
@@ -2636,7 +2636,7 @@ p.nightstay {
     .tblcal tr th {
         width: 77px;
         float: left;
-        background: url(../images/cal_grad.gif) top left repeat-x;
+        background: url(/Assets/images/cal_grad.gif) top left repeat-x;
         color: #df411a;
         font-size: 14px
     }
@@ -2654,11 +2654,11 @@ p.nightstay {
 }
 
     .tblcdate tr td {
-        background: url(../images/date_grad.gif) top left repeat-x
+        background: url(/Assets/images/date_grad.gif) top left repeat-x
     }
 
         .tblcdate tr td.hL {
-            background: url(../images/date_hbg.gif) repeat-x
+            background: url(/Assets/images/date_hbg.gif) repeat-x
         }
 
         .tblcdate tr td a {
@@ -2682,7 +2682,7 @@ p.nightstay {
         .tblcdate tr td.selected a,
         .tblcdate tr td:hover a {
             color: #FFF;
-            background: url(../images/date_hgrad.gif) repeat-x;
+            background: url(/Assets/images/date_hgrad.gif) repeat-x;
             text-decoration: none
         }
 
@@ -2948,7 +2948,7 @@ ul.searchcatlist {
             color: #fff;
             font-size: 21px;
             padding: 4px 15px;
-            background: url(../images/custom-arrow.png) right center no-repeat #f1562b;
+            background: url(/Assets/images/custom-arrow.png) right center no-repeat #f1562b;
             height: 40px
         }
 
@@ -3259,7 +3259,7 @@ ul.sublist {
     }
 
 .commonlist ul {
-    list-style-image: url(../images/list-icon.png);
+    list-style-image: url(/Assets/images/list-icon.png);
     margin: 0;
     padding: 0 0 0 20px
 }
@@ -3524,19 +3524,19 @@ ul.sublist li::before {
         }
 
     .tarifftab .nav-tabs li a.link_delux {
-        background-image: url(../images/icon-delux.jpg)
+        background-image: url(/Assets/images/icon-delux.jpg)
     }
 
     .tarifftab .nav-tabs li a.link_super {
-        background-image: url(../images/icon-superdelux.jpg)
+        background-image: url(/Assets/images/icon-superdelux.jpg)
     }
 
     .tarifftab .nav-tabs li a.link_executive {
-        background-image: url(../images/icon-executiveroom.jpg)
+        background-image: url(/Assets/images/icon-executiveroom.jpg)
     }
 
     .tarifftab .nav-tabs li a.link_royal {
-        background-image: url(../images/icon-royalst.jpg)
+        background-image: url(/Assets/images/icon-royalst.jpg)
     }
 
     .nav-tabs > li.active > i,
@@ -3577,7 +3577,7 @@ ul.sublist li::before {
         }
 
 .restaurant-bg {
-    background: url(../images/restraurant-bg.jpg) no-repeat;
+    background: url(/Assets/images/restraurant-bg.jpg) no-repeat;
     background-size: cover;
     padding: 70px 0 !important
 }
@@ -3637,7 +3637,7 @@ ul.sublist li::before {
         }
 
         .tab_accessibility address i {
-            background: url(../images/address-icon.png) no-repeat;
+            background: url(/Assets/images/address-icon.png) no-repeat;
             width: 22px;
             height: 20px;
             display: block
@@ -3780,7 +3780,7 @@ ul.sublist li::before {
     color: #fff;
     font-size: 15px;
     padding: 4px 15px;
-    background: url(../images/custom-arrow.png) right center no-repeat #f1562b;
+    background: url(/Assets/images/custom-arrow.png) right center no-repeat #f1562b;
     height: 30px
 }
 
@@ -3891,7 +3891,7 @@ ul.sublist li::before {
         }
 
         .contact-tabspace address i {
-            background: url(../images/address-icon.png) no-repeat;
+            background: url(/Assets/images/address-icon.png) no-repeat;
             width: 22px;
             height: 20px;
             display: block
@@ -3965,7 +3965,7 @@ ul.sublist li::before {
 
                     .contact-tabspace .sales-agent .nav-agent .nav li:hover,
                     .contact-tabspace .tab-content .sales-agent .nav-agent .nav li.active {
-                        background: url(../images/right-active.png) 100% center no-repeat #fbbf00;
+                        background: url(/Assets/images/right-active.png) 100% center no-repeat #fbbf00;
                         margin-right: -9px;
                         position: relative;
                         z-index: 1;
