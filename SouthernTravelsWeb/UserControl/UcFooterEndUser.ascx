@@ -3,7 +3,7 @@
     TagPrefix="uc1" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
-<script src="/Assets/js/jquery-scrolltofixed.js" type="text/javascript"></script>
+<%--<script src="/Assets/js/jquery-scrolltofixed.js" type="text/javascript"></script>--%>
 <%--<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onloadCallbackF&render=explicit"
      defer></script>--%>
 

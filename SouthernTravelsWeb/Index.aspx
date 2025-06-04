@@ -34,8 +34,7 @@
     <meta property="business:contact_data:country_name" content="India" />
     <meta name="facebook-domain-verification" content="ikm4u1i0f5ikimuz9h5z0j15tfm28k" />
     <meta name="google-site-verification" content="FlFqlfXz_UJT9317cQ0Om_W2GK0KM6eAtiteItxOKcQ" />
-      <%: Styles.Render("~/Content/assetscss") %>
-    <%: Scripts.Render("~/bundles/assetsjs") %>
+      
     <!-- Styles -->
     <link rel="shortcut icon" href="Assets/images/favicon.ico" />
 <%--    <link href="Assets/css/myStyle.css" rel="stylesheet" />--%>

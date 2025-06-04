@@ -3,37 +3,38 @@
 <meta charset="utf-8">
 <meta https-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+      <%: Styles.Render("~/Content/mainCss") %>
+<%: Scripts.Render("~/bundles/mainJs") %>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
 <!-- Bootstrap Core CSS -->
 <link href="Assets/css/bootstrap.min.css" rel="stylesheet">
 <!-- End Google Tag Manager -->
 <!-- Custom CSS -->
-<link href="Assets/css/style.css" rel="stylesheet">
+<%--<link href="Assets/css/style.css" rel="stylesheet">
 <link href="Assets/css/bootstrap-select.css" rel="stylesheet">
-<link href="Assets/css/font-awesome.css" rel="stylesheet">
+<link href="Assets/css/font-awesome.css" rel="stylesheet">--%>
 <%--<link href="Assets/css/bootstrap-datepicker.css" rel="stylesheet">--%>
 <!-- Custom Fonts -->
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet'
     type='text/css'>
 <!-- Owl Carousel Assets -->
-<link href="Assets/css/owl-carousel/owl.carousel.css" rel="stylesheet">
-<link href="Assets/css/owl-carousel/owl.theme.css" rel="stylesheet">
+<%--<link href="Assets/css/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="Assets/css/owl-carousel/owl.theme.css" rel="stylesheet">--%>
 
-<script src="Assets/js/jquery-2.2.0.min.js"></script>
+<%--script src="Assets/js/jquery-2.2.0.min.js"></script>
 
-<script src="Assets/js/bootstrap.min.js"></script>
+<%--<script src="Assets/js/bootstrap.min.js"></script>--%>
 
-<script src="Assets/js/owl-carousel/owl.carousel.min.js"></script>
+<%--<script src="Assets/js/owl-carousel/owl.carousel.min.js"></script>--%>
 
-<script src="Assets/js/bootstrap-select.min.js"></script>
+<%--<script src="Assets/js/bootstrap-select.min.js"></script>
 
-<link href="Assets/css/animate.css" rel="stylesheet">
+<link href="Assets/css/animate.css" rel="stylesheet">--%>
 
 <%--<script type="text/javascript" src="Assets/js/bootstrap-datepicker.js"></script>--%>
 
-<link href="/Assets/css/query-ui.css" rel="stylesheet" />
+<%--<link href="/Assets/css/query-ui.css" rel="stylesheet" />--%>
 <style>
     .dropdown-big
     {
@@ -179,9 +180,9 @@
     });
 </script>
 
-<script src="Assets/js/jquery-ui.js"></script>
+<%--<script src="Assets/js/jquery-ui.js"></script>
 
-<script src="Assets/js/language.js" type="text/javascript"></script>
+<script src="Assets/js/language.js" type="text/javascript"></script>--%>
 
 <script type="text/javascript">
     function f1(lang) {
@@ -1210,7 +1211,7 @@
     });
 </script>
 
-<script src="Assets/js/jquery.newsTicker.js"></script>
+<%--<script src="Assets/js/jquery.newsTicker.js"></script>--%>
 
 <script>
 
