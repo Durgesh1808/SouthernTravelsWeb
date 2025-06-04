@@ -418,7 +418,7 @@
       <div class="intlbox intlbox-home">
                    <a href="http://www.southerntravelsindia.com/Holiday-Packages-Itinerary-Delhi---Jaipur---Delhi_176">
                 	<div class="imgsection">
-                 <img src="images/spl-jaipuragra-tour.jpg"></div>
+                 <img src="images/spl-jaipuragra-tour.jpg" alt="jaipuragra" loading="lazy"/></div>
                  <div class="textsection"><h3>Jaipur <br />[01Night / 02Days tour]</h3></div>
                     </a>
                 </div>
@@ -429,7 +429,7 @@
                 
                    <a href="http://www.southerntravelsindia.com/Holiday-Packages-Itinerary-Delhi---Jaipur---Fatehpur-Sikri----Agra---Mathura---Delhi_177">
                 	<div class="imgsection">
-                 <img src="images/spl-jaipur-tour.jpg"></div>
+                 <img src="images/spl-jaipur-tour.jpg" alt="jaipur" loading="lazy"/></div>
                  <div class="textsection"><h3>Jaipur & Agra<br /> [02Nights / 03Days tour]</h3></div>
                  
                     </a>
@@ -446,7 +446,7 @@
                 
                    <a href="http://www.southerntravelsindia.com/Holiday-Packages-Itinerary-Delhi---Bharatpur---Delhi_178">
                 	<div class="imgsection">
-                 <img src="images/spl-bharatpur-tour.jpg"></div>
+                 <img src="images/spl-bharatpur-tour.jpg"  alt="bharatpur" loading="lazy"/></div>
                  <div class="textsection"><h3>Bharatpur<br /> [01Night / 02Days]</h3></div>
                  
                     </a>
@@ -463,7 +463,7 @@
                 
                    <a href="http://www.southerntravelsindia.com/Holiday-Packages-Itinerary-Delhi---Ranthambore---Delhi_179">
                 	<div class="imgsection">
-                 <img src="images/spl-ranthambore-tour.jpg"></div>
+                 <img src="images/spl-ranthambore-tour.jpg"  alt="ranthambore" loading="lazy"/></div>
                  <div class="textsection"><h3>Ranthambore <br />[01Night / 02Days]</h3></div>
                  
                     </a>

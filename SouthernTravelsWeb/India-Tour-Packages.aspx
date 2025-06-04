@@ -73,7 +73,7 @@
             <div class="tourlistwrap">
             
             <div class="imgsection">
-        	<img src="Assets/images/fdt.jpg" class="img-responsive" loading="lazy"/></div>
+        	<img src="Assets/images/fdt.jpg" class="img-responsive" loading="lazy" alt="fdt"/></div>
             
             <div class="heading"><h2 class="title">Tours from <span>New Delhi</span> </h2></div>
             
@@ -101,7 +101,7 @@
             <div class="tourlistwrap">
             
             <div class="imgsection">
-        	<img src="Assets/images/fdt-2.jpg" class="img-responsive" loading="lazy"/></div>
+        	<img src="Assets/images/fdt-2.jpg" class="img-responsive" loading="lazy" alt="fdt2"/></div>
             
             <div class="heading"><h2 class="title">Tours from <span>Hyderabad</span> </h2></div>
             

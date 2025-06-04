@@ -202,7 +202,7 @@
 </li><li><a href="https://api.addthis.com/oexchange/0.8/forward/print/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-5073e7951ddeab53&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/print.png" border="0" alt="Print"/></a>
 </li><li><a href="https://www.addthis.com/bookmark.php?source=tbx32nj-1.0&v=300&url=http%3A%2F%2Fwww.addthis.com&pubid=ra-570f1ce0bd2fe442&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/addthis.png" border="0" alt="Addthis"/></a>
 </li></ul>--%>
-                    <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5073e7951ddeab53"></script>
+<%--                    <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-5073e7951ddeab53"></script>--%>
 
                
             </h1>
@@ -365,7 +365,7 @@
     <div id="myMap" style="position: relative; width: 100%; height: 245px; float: left;">
 
         <script type="text/javascript">
-            var PathL = "<center><img alt='' src='";
+            var PathL = "<center><img alt='' loading='lazy' src='";
             PathL += "Assets/images/loader.gif'/><br/></center>";
             document.write('<div id="loading" style="position: absolute; float: right; z-index: 2; margin-left: 110px; margin-top:100px;"> ' + PathL + '</div>');
         </script>

@@ -99,7 +99,7 @@
            <div class="container">
             <div class="row rowgap">
               <div class="col-md-3">
-					<img src="Assets/images/hotel-southern.jpg" class="img-responsive" loading="lazy"/>           
+					<img src="Assets/images/hotel-southern.jpg" class="img-responsive" loading="lazy"  alt="hotel-southern"/>           
               </div>
               <div class="col-md-9">
               	<h3 class="title">Welcome to <span>Hotel Southern, New Delhi</span></h3>
@@ -150,8 +150,8 @@
                 <div class="row rowgap">
                 	<div class="col-md-8">
                     	<div class="hotel_slider owl-carousel">
-                        <div class="item"><img src="Assets/images/hotels/deluxe1.jpg" class="img-responsive" loading="lazy"/></div>
-                        <div class="item"><img src="Assets/images/hotels/deluxe2.jpg" class="img-responsive" loading="lazy"/></div>
+                        <div class="item"><img src="Assets/images/hotels/deluxe1.jpg" class="img-responsive" loading="lazy" alt="hotel-deluxe1"/></div>
+                        <div class="item"><img src="Assets/images/hotels/deluxe2.jpg" class="img-responsive" loading="lazy" alt="hotel-deluxe2"/></div>
                         </div>
                     </div>
                     
@@ -198,7 +198,7 @@
                 <div class="row rowgap">
                 	<div class="col-md-8">
                     	<div class="hotel_slider owl-carousel">
-                        <div class="item"><img src="Assets/images/hotels/superdeluxe1.jpg" class="img-responsive" loading="lazy"/></div>
+                        <div class="item"><img src="Assets/images/hotels/superdeluxe1.jpg" class="img-responsive" loading="lazy" alt="superdeluxe1"/></div>
                         
                         </div>
                     </div>
@@ -246,9 +246,9 @@
                 <div class="row rowgap">
                 	<div class="col-md-8">
                     	<div class="hotel_slider owl-carousel">
-                        <div class="item"><img src="Assets/images/hotels/executive1.jpg" class="img-responsive" loading="lazy"/></div>
-                        <div class="item"><img src="Assets/images/hotels/executive2.jpg" class="img-responsive" loading="lazy"/></div>
-                        <div class="item"><img src="Assets/images/hotels/executive3.jpg" class="img-responsive" loading="lazy"/></div>
+                        <div class="item"><img src="Assets/images/hotels/executive1.jpg" class="img-responsive" loading="lazy" alt="executive1"/></div>
+                        <div class="item"><img src="Assets/images/hotels/executive2.jpg" class="img-responsive" loading="lazy" alt="executive2"/></div>
+                        <div class="item"><img src="Assets/images/hotels/executive3.jpg" class="img-responsive" loading="lazy" alt="executive3"/></div>
                         </div>
                     </div>
                     
@@ -296,9 +296,9 @@
                 <div class="row rowgap">
                 	<div class="col-md-8">
                     	<div class="hotel_slider owl-carousel">
-                        <div class="item"><img src="Assets/images/hotels/royal1.jpg" class="img-responsive" loading="lazy"/></div>
-                        <div class="item"><img src="Assets/images/hotels/royal2.jpg" class="img-responsive" loading="lazy"/></div>
-                        <div class="item"><img src="Assets/images/hotels/royal3.jpg" class="img-responsive" loading="lazy"/></div>
+                        <div class="item"><img src="Assets/images/hotels/royal1.jpg" class="img-responsive" loading="lazy" alt="royal1"/></div>
+                        <div class="item"><img src="Assets/images/hotels/royal2.jpg" class="img-responsive" loading="lazy" alt="royal2"/></div>
+                        <div class="item"><img src="Assets/images/hotels/royal3.jpg" class="img-responsive" loading="lazy" alt="royal3"/></div>
                         </div>
                     </div>
                     
@@ -427,7 +427,7 @@
           		<%--<h2 class="title showonmobile">Restaurants</h2>--%>
                 <div class="container restaurants">
                 	<div class="row">
-                    <div class="col-md-5"><img src="Assets/images/restaurants.jpg" class="img-responsive" loading="lazy"/></div>
+                    <div class="col-md-5"><img src="Assets/images/restaurants.jpg" class="img-responsive" loading="lazy" alt="restaurants"/></div>
                     <div class="col-md-7">
                     	<div class="rastraucontent">
                         	<h2 class="title"><span>Restaurants</span></h2>
@@ -526,7 +526,7 @@
               <div class="container">
                 <div class="row">
                   <div class="col-md-5">
-                   <img src="Assets/images/conference.jpg" class="img-responsive"  loading="lazy"/>
+                   <img src="Assets/images/conference.jpg" class="img-responsive"  loading="lazy" alt="conference"/>
                    
                   </div>
                   <div class="col-md-7">

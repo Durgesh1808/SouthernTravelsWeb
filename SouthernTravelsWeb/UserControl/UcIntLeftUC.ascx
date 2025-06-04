@@ -112,7 +112,11 @@
                 var hdnParentId = LinkId.substring(0, LinkId.lastIndexOf("repCalendarEventReply")) + "RegionIndex";
                 var defaultShowhdn = LinkId.replace("hdnCountryRegion", "CountryIndex");
                 var dafaultCountryShown = LinkId.substring(0, LinkId.lastIndexOf("repCalendarEventReply")) + "aSelRegion";
-                document.getElementById(dafaultCountryShown).setAttribute("class", "cSelected");
+                var element = document.getElementById(dafaultCountryShown);
+                if (element) {
+                    element.setAttribute("class", "cSelected");
+                }
+                //document.getElementById(dafaultCountryShown).setAttribute("class", "cSelected");
                 defaultShow = document.getElementById(hdnParentId).value;
                 defaultChildShow = document.getElementById(defaultShowhdn).value;
                 //alert(defaultShow);

@@ -19,9 +19,9 @@
               <div class="imgsection">
                   <asp:HiddenField ID="hdHolidayType" runat="server" Value='<%# Eval("HolidayType")%>'/>
                   <asp:HiddenField ID="hdTourType" runat="server" Value='<%# Eval("TourType")%>'/>
-                <span class="customtag2"><asp:Literal ID="ltrTourTypeText" runat="server" Text ='<%# Eval("HolidayType")%>'></asp:Literal><img src="Assets/images/custom-arrow.png" loading="lazy"/></span> 
+                <span class="customtag2"><asp:Literal ID="ltrTourTypeText" runat="server" Text ='<%# Eval("HolidayType")%>'></asp:Literal><img src="Assets/images/custom-arrow.png" loading="lazy" alt="custom-arrow"/></span> 
                
-               <img src="Assets/images/EntityImage/<%# Eval("MainImg")%>"  width="365px" height="380px" /> </div>
+            <img src="Assets/images/EntityImage/<%# Eval("MainImg") %>" width="365px" height="380px" alt='<%# Eval("TourType") %>' />
               <div class="textsection">
                 <asp:Literal ID="ltrTourName" runat="server"></asp:Literal><%--<%# Eval("HolidayType")%>--%>
                

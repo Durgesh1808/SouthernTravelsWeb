@@ -101,7 +101,7 @@
               <div class="aboutus">
                 <div class="row">
                   <div class="col-md-2">
-                    <div class="vision"> <img src="Assets/images/about/vision.jpg" class="img-responsive" loading="lazy"/> </div>
+                    <div class="vision"> <img src="Assets/images/about/vision.jpg" class="img-responsive" loading="lazy" alt="vision"/> </div>
                   </div>
                   <div class="col-md-10">
                     <div class="vision">
@@ -112,7 +112,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-2">
-                    <div class="vision"> <img src="Assets/images/about/mission.jpg" class="img-responsive"  loading="lazy"/> </div>
+                    <div class="vision"> <img src="Assets/images/about/mission.jpg" class="img-responsive"  loading="lazy" alt="mission"/> </div>
                   </div>
                   <div class="col-md-10">
                     <div class="vision">
@@ -123,7 +123,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-2">
-                    <div class="vision"> <img src="Assets/images/about/approach.jpg" class="img-responsive" loading="lazy"/> </div>
+                    <div class="vision"> <img src="Assets/images/about/approach.jpg" class="img-responsive" loading="lazy" alt="approach"/> </div>
                   </div>
                   <div class="col-md-10">
                     <div class="vision">
@@ -134,7 +134,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-2">
-                    <div class="vision"> <img src="Assets/images/about/comfort.jpg" class="img-responsive" loading="lazy"/> </div>
+                    <div class="vision"> <img src="Assets/images/about/comfort.jpg" class="img-responsive" loading="lazy" alt="comfort"/> </div>
                   </div>
                   <div class="col-md-10">
                     <div class="vision">
@@ -145,7 +145,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-2">
-                    <div class="vision"> <img src="Assets/images/about/convenience.jpg" class="img-responsive" loading="lazy"/> </div>
+                    <div class="vision"> <img src="Assets/images/about/convenience.jpg" class="img-responsive" loading="lazy"  alt="convenience"/> </div>
                   </div>
                   <div class="col-md-10">
                     <div class="vision">
@@ -169,7 +169,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-3">
-                      <div class="service"> <img src="Assets/images/about/services.jpg" class="img-responsive" loading="lazy"/> </div>
+                      <div class="service"> <img src="Assets/images/about/services.jpg" class="img-responsive" loading="lazy" alt="services"/> </div>
                     </div>
                     <div class="col-md-9">
                       <div class="ourservices">
@@ -267,7 +267,7 @@
 
                 <div class="row rowgap">
                   <div class="col-md-3">
-                    <div class="social"> <img src="Assets/images/about/KerlaChiefMinistersDistressReliefFund.jpg" class="img-responsive" style="max-width: 93%;" loading="lazy"/> </div>
+                    <div class="social"> <img src="Assets/images/about/KerlaChiefMinistersDistressReliefFund.jpg" class="img-responsive" style="max-width: 93%;" loading="lazy" alt="KerlaChiefMinistersDistressReliefFund"/> </div>
                   </div>
                   <div class="col-md-9">
                     <div class="row">
@@ -291,7 +291,7 @@
 
                 <div class="row rowgap">
                   <div class="col-md-3">
-                    <div class="social"> <img src="Assets/images/about/socialservice.jpg" class="img-responsive" loading="lazy"/> </div>
+                    <div class="social"> <img src="Assets/images/about/socialservice.jpg" class="img-responsive" loading="lazy" alt="socialservice"/> </div>
                   </div>
                   <div class="col-md-9">
                     <div class="row">
@@ -319,7 +319,7 @@
                 
                   <div class="row">
                   <div class="col-md-3">
-                    <div class="social"> <img src="Assets/images/about/plantatree.jpg" class="img-responsive" loading="lazy"/> </div>
+                    <div class="social"> <img alt="plantatree"  src="Assets/images/about/plantatree.jpg" class="img-responsive" loading="lazy"/> </div>
                   </div>
                   <div class="col-md-9">
                     <div class="row">
@@ -349,7 +349,7 @@
                 <div class="row rowgap">
                 
                  <div class="col-md-1">
-                    	 <img src="Assets/images/about/awards.jpg" class="img-responsive imagebrdr8px award-pic" loading="lazy"/>
+                    	 <img alt="awards"  src="Assets/images/about/awards.jpg" class="img-responsive imagebrdr8px award-pic" loading="lazy"/>
                     </div>
                 
                   <div class="col-md-11">
@@ -364,8 +364,8 @@
                   <div class="row rowgap">
                     <div class="col-md-12 text-center">
                      <div class="posrel">  
-                     <span class="customtag2">2015 <img src="Assets/images/custom-arrow.png" loading="lazy"/></span>  
-                      <img src="Assets/images/about/award_2015.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
+                     <span class="customtag2">2015 <img alt="custom"  src="Assets/images/custom-arrow.png" loading="lazy"/></span>  
+                      <img alt="award_2015"  src="Assets/images/about/award_2015.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
                       
                       <div>
                       <p>We won National Tourism Award consecutively for the 8th time from the Ministry of Tourism, Govt. of India, as 
@@ -383,8 +383,8 @@ Managing Director and Shri A. V. Praveen Kumar - Joint Managing Director<br>
                     
                   <div class="col-md-6 text-center">
                      <div class="posrel">    
-                     <span class="customtag2">2015 <img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
-                      <img src="Assets/images/about/award_2015_2.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
+                     <span class="customtag2">2015 <img alt="custom"  src="Assets/images/custom-arrow.png" loading="lazy"/></span>
+                      <img alt="award_2015_2"  src="Assets/images/about/award_2015_2.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
                         <div>
                       <p>Won "BEST TOUR OPERATOR" Award for Tourism Excellence by 
 Department of Tourism. Govt. of Telangana on 27th September, 2015. 
@@ -396,8 +396,8 @@ Hon'ble Minister for Panchayat Raj & Information Technology.</p>
                     
                   <div class="col-md-6 text-center"> 
                   <div class="posrel">
-                  <span class="customtag2">2014 <img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
-                  <img src="Assets/images/about/award_2014.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
+                  <span class="customtag2">2014 <img alt="arrow"  src="Assets/images/custom-arrow.png" loading="lazy"/></span>
+                  <img alt="award_2014"  src="Assets/images/about/award_2014.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
                   </div>
                     <div class="awardspara">
                       <p>We won the National Tourism Award continuously for the 
@@ -424,8 +424,8 @@ Director</p>
                   
                   <div class="col-md-6 text-center"> 
                   <div class="posrel">
-                  <span class="customtag2">2013 <img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
-                  <img src="Assets/images/about/award_2013.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
+                  <span class="customtag2">2013 <img alt="custom-arrow"  src="Assets/images/custom-arrow.png" loading="lazy"/></span>
+                  <img alt="award_2013"  src="Assets/images/about/award_2013.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
                     <div class="awardspara">
                       <p>We won National Tourism Award consecutively for the 
 6th time from the Ministry of Tourism, Govt. of India, as 
@@ -442,8 +442,8 @@ Director.</p>
                   <div class="col-md-6 text-center"> 
                   
                    <div class="posrel">
-                  <span class="customtag2">2013 <img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
-                  <img src="Assets/images/about/award_2013_2.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
+                  <span class="customtag2">2013 <img alt="custom-arrow."  src="Assets/images/custom-arrow.png" loading="lazy"/></span>
+                  <img alt="award_2013_2"  src="Assets/images/about/award_2013_2.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
                     <div class="awardspara">
                       <p>We won National Tourism Award from the Ministry of 
 Tourism, Govt. of India, as the "Best Tour Operator for 
@@ -465,8 +465,8 @@ Shri A. V. Praveen Kumar - Joint Managing Director.</p>
                   <div class="col-md-6 text-center"> 
                   
                    <div class="posrel">
-                  <span class="customtag2">2012 <img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
-                  <img src="Assets/images/about/award_2012.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
+                  <span class="customtag2">2012 <img alt="custom-arrow"  src="Assets/images/custom-arrow.png" loading="lazy"/></span>
+                  <img alt="award_2012"  src="Assets/images/about/award_2012.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
                     <div class="awardspara">
                       <p>
                       We won National Tourism Award for the consecutive time from Ministry of Tourism, Government of India, at a function held at Vigyan Bhavan on 29th February, 2012. The award was presented by Hon'ble President of India,
@@ -484,8 +484,8 @@ Praveen Kumar - Joint Managing Director.
                   
                   
                     <div class="posrel">
-                  <span class="customtag2">2011 <img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
-                  <img src="Assets/images/about/award_2011.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
+                  <span class="customtag2">2011 <img alt="custom-arrow"  src="Assets/images/custom-arrow.png" loading="lazy"/></span>
+                  <img alt="award_2011"  src="Assets/images/about/award_2011.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
                     <div class="awardspara">
                       <p>
                       	We won National Tourism Award for the fourth time from 
@@ -503,8 +503,8 @@ Shri A.V. Praveen Kumar - Joint Managing Director.
                   <div class="col-md-6 text-center"> 
                   
                    <div class="posrel">
-                  <span class="customtag2">2010 <img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
-                  <img src="Assets/images/about/award_2010.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
+                  <span class="customtag2">2010 <img alt="custom-arrow"  src="Assets/images/custom-arrow.png" loading="lazy"/></span>
+                  <img alt="award_2010"  src="Assets/images/about/award_2010.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
                     <div class="awardspara">
                       <p>Our company received National Tourism Award on 3-3-2010 at Vigyan Bhavan, New Delhi as the Best Domestic Tour Operator" securing the FIRST position from Ministry of Tourism,
 Govt. of India. New Delhi. The Award was presented to us before a galaxy of important invited audience by Dr. Hamid Anson, Honourable Vice President of India. The function was presided over
@@ -516,8 +516,8 @@ by Kumari Selja, Minister for Tourism, Housing & Urban Poverty Alleviation, Govt
                   <div class="col-md-6 text-center"> 
                   
                      <div class="posrel">
-                  <span class="customtag2">2009 <img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
-                  <img src="Assets/images/about/award_2009.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
+                  <span class="customtag2">2009 <img alt="custom-arrow"  src="Assets/images/custom-arrow.png" loading="lazy"/></span>
+                  <img alt="award_2009"  src="Assets/images/about/award_2009.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
                     <div class="awardspara">
                       <p>Our company received National Tourism Award on 24-2-2009 at Hotel Ashok, New Delhi
 as the 'Best Domestic Tour Operator" in India from Ministry of Tourism,
@@ -537,8 +537,8 @@ The function was presided over by Smt. Ambika Soni, Minister for Tourism & Cultu
                   
                   <div class="col-md-6 text-center"> 
                    <div class="posrel">
-                  <span class="customtag2">2009 <img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
-                  <img src="Assets/images/about/award_2009_2.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
+                  <span class="customtag2">2009 <img alt="custom-arrow"  src="Assets/images/custom-arrow.png" loading="lazy"/></span>
+                  <img alt="award_2009_2"  src="Assets/images/about/award_2009_2.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
                     <div class="awardspara">
                       <p>Our company won the Excellency Award in Tourism (Travel Agent and Tour Operator) from the Department of Tourism, Govt. of Andhra Pradesh. The Award was presented by our Honourable Chief Minister, Dr. K. Rosaiah, in the presence of Dr. Geetha Reddy, Minister for Tourism on 27-0-2010.</p>
                     </div>
@@ -547,8 +547,8 @@ The function was presided over by Smt. Ambika Soni, Minister for Tourism & Cultu
                   </div>
                   <div class="col-md-6 text-center"> 
                     <div class="posrel">
-                  <span class="customtag2">2008 <img src="Assets/images/custom-arrow.png" loading="lazy"/></span>
-                  <img src="Assets/images/about/award_2008.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
+                  <span class="customtag2">2008 <img alt="custom-arrow"  src="Assets/images/custom-arrow.png" loading="lazy"/></span>
+                  <img alt="award_2008"  src="Assets/images/about/award_2008.jpg" class="img-responsive imagebrdr8px" loading="lazy"/></div>
                     <div class="awardspara">
                       <p>Our company received National Tourism Award on 27-2-2008 at Vigyan Bhavan, New Delhi as the "Best Domestic Tour Operator" in India from Ministry of Tourism, Govt. of India, New Delhi. The Award was presented to us before a galaxy of important invited audience by Sri Pranab Mukherjee, Minister for External Affairs. The function was presided over by Smt.
 Ambika Soni, Minister for Tourism & Culture, Govt. of India.</p>
@@ -570,7 +570,7 @@ Ambika Soni, Minister for Tourism & Culture, Govt. of India.</p>
               <div class="board">
                 <div class="row">
                   <div class="col-md-12 text-center">
-                    <img src="Assets/images/about/directors.jpg" class="imagebrdr8px img-responsive displayinline" loading="lazy"/>
+                    <img alt="directors"  src="Assets/images/about/directors.jpg" class="imagebrdr8px img-responsive displayinline" loading="lazy"/>
                   </div>
                  
                 </div>
@@ -583,7 +583,7 @@ Ambika Soni, Minister for Tourism & Culture, Govt. of India.</p>
                   <div class="col-md-3 text-center"> 
                   
              <!--     <a class="directorlink"> -->
-                  <img src="Assets/images/about/avrao.jpg" class="imagebrdr8px" loading="lazy"/>
+                  <img alt="avrao"  src="Assets/images/about/avrao.jpg" class="imagebrdr8px" loading="lazy"/>
                     <div class="brdrdiv">
                     <h4>Mr. A.V. Rao</h4>
                    <p>Chairman  <%--(M.A.)--%></p>
@@ -593,7 +593,7 @@ Ambika Soni, Minister for Tourism & Culture, Govt. of India.</p>
                   </div>
                   <div class="col-md-3 text-center"> 
                   
-                  <img src="Assets/images/about/akmohan.jpg" class="imagebrdr8px" loading="lazy"/>
+                  <img alt="akmohan"  src="Assets/images/about/akmohan.jpg" class="imagebrdr8px" loading="lazy"/>
                      <div class="brdrdiv">
                     <h4>Mr. A. Krishna Mohan</h4>
                     <p>Managing Director </p>
@@ -605,7 +605,7 @@ Ambika Soni, Minister for Tourism & Culture, Govt. of India.</p>
                   </div>
                   <div class="col-md-3 text-center"> 
                     <!--     <a class="directorlink"> -->
-                  <img src="Assets/images/about/director4.jpg" class="imagebrdr8px" loading="lazy"/>
+                  <img alt="director4"  src="Assets/images/about/director4.jpg" class="imagebrdr8px" loading="lazy"/>
                     <div class="brdrdiv">
                     <h4>Ms. Divya Alapati</h4>
                     <p>Director<br>
@@ -634,7 +634,7 @@ Ambika Soni, Minister for Tourism & Culture, Govt. of India.</p>
                 
                 <div class="row">
                   <div class="teamwrap">
-                    <div class="col-md-12"> <img src="Assets/images/about/team.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
+                    <div class="col-md-12"> <img alt="team"  src="Assets/images/about/team.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
                       <div class="text-center">
                         <h3 class="title"><span>Southern Travels Team, New Delhi</span></h3>
                       </div>
@@ -644,13 +644,13 @@ Ambika Soni, Minister for Tourism & Culture, Govt. of India.</p>
                 
                 <div class="row">
                   <div class="teamwrap">
-                    <div class="col-md-6"> <img src="Assets/images/about/team-hyderabad.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
+                    <div class="col-md-6"> <img alt="hyderabad"  src="Assets/images/about/team-hyderabad.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
                       <div class="text">
                         <h3 class="title"><span>Southern Travels Team, Hyderabad</span> </h3>
                         
                       </div>
                     </div>
-                    <div class="col-md-6"><img src="Assets/images/about/team-warangal.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
+                    <div class="col-md-6"><img alt="warangal"  src="Assets/images/about/team-warangal.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
                       <div class="text">
                         <h3 class="title"><span>Southern Travels Team, Warangal</span> </h3>
                       
@@ -661,13 +661,13 @@ Ambika Soni, Minister for Tourism & Culture, Govt. of India.</p>
                 
                   <div class="row">
                   <div class="teamwrap">
-                    <div class="col-md-6"> <img src="Assets/images/about/team-rajahmundry.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
+                    <div class="col-md-6"> <img alt="rajahmundry"  src="Assets/images/about/team-rajahmundry.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
                       <div class="text">
                         <h3 class="title"><span>Southern Travels Team, Rajahmundry</span> </h3>
                         
                       </div>
                     </div>
-                    <div class="col-md-6"><img src="Assets/images/about/team-kphb-hyd.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
+                    <div class="col-md-6"><img alt="kphb"  src="Assets/images/about/team-kphb-hyd.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
                       <div class="text">
                         <h3 class="title"><span>Southern Travels Team Kakatpally (KPHB), Hyderabad</span> </h3>
                       
@@ -678,13 +678,13 @@ Ambika Soni, Minister for Tourism & Culture, Govt. of India.</p>
                 
                   <div class="row">
                   <div class="teamwrap">
-                    <div class="col-md-6"> <img src="Assets/images/about/team-chennai.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
+                    <div class="col-md-6"> <img alt="chennai"  src="Assets/images/about/team-chennai.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
                       <div class="text">
                         <h3 class="title"><span>Southern Travels Team, Chennai</span> </h3>
                         
                       </div>
                     </div>
-                    <div class="col-md-6"><img src="Assets/images/about/team-vizag.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
+                    <div class="col-md-6"><img alt="vizag"  src="Assets/images/about/team-vizag.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
                       <div class="text">
                         <h3 class="title"><span>Southern Travels Team, Vizag</span> </h3>
                       
@@ -695,13 +695,13 @@ Ambika Soni, Minister for Tourism & Culture, Govt. of India.</p>
                 
                   <div class="row">
                   <div class="teamwrap">
-                    <div class="col-md-6"> <img src="Assets/images/about/team-coimatore.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
+                    <div class="col-md-6"> <img alt="coimatore"  src="Assets/images/about/team-coimatore.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
                       <div class="text">
                         <h3 class="title"><span>Southern Travels Team, Coimbatore</span> </h3>
                         
                       </div>
                     </div>
-                    <div class="col-md-6"><img src="Assets/images/about/team-vijaywada.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
+                    <div class="col-md-6"><img alt="vijaywada"  src="Assets/images/about/team-vijaywada.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
                       <div class="text">
                         <h3 class="title"><span>Southern Travels Team, Vijaywada</span> </h3>
                       
@@ -712,7 +712,7 @@ Ambika Soni, Minister for Tourism & Culture, Govt. of India.</p>
                 
                   <div class="row">
                   <div class="teamwrap">
-                    <div class="col-md-6"> <img src="Assets/images/about/team-bengaluru.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
+                    <div class="col-md-6"> <img alt="bengaluru"  src="Assets/images/about/team-bengaluru.jpg" class="img-responsive imagebrdr8px" loading="lazy"/>
                       <div class="text">
                         <h3 class="title"><span>Southern Travels Team, Bengaluru</span> </h3>
                         

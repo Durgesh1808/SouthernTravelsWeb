@@ -44,7 +44,12 @@
                 <div class="intlbox">
                    <a href='Assets/images/EntityImage/<%#Eval("ImagePath") %>' data-toggle="lightbox" data-gallery="multiimages" data-title="">
                         <div class="imgsection">
-                            <img src='Assets/images/EntityImage/<%#Eval("ImagePath") %>' class="img-responsive" style="" >
+                        <img 
+                            loading="lazy" 
+                            alt='<%# HttpUtility.HtmlAttributeEncode(Eval("TourName").ToString()) %>' 
+                            src='Assets/images/EntityImage/<%# Eval("ImagePath") %>' 
+                            class="img-responsive" 
+                        />
                             <%--style="width: 229px; height: 239px"--%>
                         </div>
                      <%-- <%# Eval("ImageDescription").ToString().Replace("&nbsp;", "").Trim() == "" ? "" : "<div class=textsection><p>" + Eval("ImageDescription").ToString() + " </p></div>"%>--%>

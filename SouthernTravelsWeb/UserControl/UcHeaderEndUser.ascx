@@ -13,7 +13,7 @@
 <link href="Assets/css/style.css" rel="stylesheet">
 <link href="Assets/css/bootstrap-select.css" rel="stylesheet">
 <link href="Assets/css/font-awesome.css" rel="stylesheet">
-<link href="Assets/css/bootstrap-datepicker.css" rel="stylesheet">
+<%--<link href="Assets/css/bootstrap-datepicker.css" rel="stylesheet">--%>
 <!-- Custom Fonts -->
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet'
     type='text/css'>
@@ -31,7 +31,7 @@
 
 <link href="Assets/css/animate.css" rel="stylesheet">
 
-<script type="text/javascript" src="Assets/js/bootstrap-datepicker.js"></script>
+<%--<script type="text/javascript" src="Assets/js/bootstrap-datepicker.js"></script>--%>
 
 <link href="/Assets/css/query-ui.css" rel="stylesheet" />
 <style>
@@ -295,7 +295,7 @@
                     <div id="langR" class="pull-left">
                         <langbar class="niceform">
               <div class="pull-left ddintl" style="vertical-align:middle;">
-                <select size="1" name="international" id="international" onchange="javascript:convertnew(this.value);">
+                <select size="1" name="international" id="international" onchange="javascript:convertnew(this.value);" aria-label="Select Language">
                   <option value="-2">International</option>
                   <option value="en|en">English</option>
 <%--                  <option value="en|de">German</option>
@@ -315,7 +315,7 @@
                 </select>
               </div>
               <div class="pull-left ddindia">
-                <select  name="domestic" runat="server"  id="domestic" size="1"  onchange="javascript:convertnew(this.value);">
+                <select  name="domestic" runat="server"  id="domestic" size="1"  onchange="javascript:convertnew(this.value);" aria-label="domestic">
                   <option value="-1">Indian</option>
                   <option value="en|en">English</option>
 <%--                  <option value="en|hi">Hindi</option>
@@ -357,7 +357,7 @@
                                                             Display="Dynamic" ErrorMessage="Only alphanumeric, # and sapce are allowed."
                                                             ValidationExpression="^[0-9a-zA-Z #,-/]+$" ValidationGroup="Sear"></asp:RegularExpressionValidator>                                                            
                  
-                <asp:Button ID="btnSubmit" runat="server" CssClass="searchbtn" Text="" OnClick="btnSubmit_click" ValidationGroup="Sear" />
+                  <asp:Button ID="btnSubmit" runat="server" Text="" CssClass="searchbtn" OnClick="btnSubmit_click" ValidationGroup="Sear" />
 
               </div>
               
@@ -391,7 +391,7 @@
                     <div id="Div3" class="pull-left">
                         <langbar class="niceform">
               <div class="pull-left ddintl" style="vertical-align:middle;">
-                <select size="1" name="international" id="Select1" onchange="javascript:convertnew(this.value);">
+                <select size="1" name="international" id="Select1" onchange="javascript:convertnew(this.value);"  aria-label="international">
                   <option value="-2">International</option>
                   <option value="en|en">English</option>
 <%--                  <option value="en|de">German</option>
@@ -411,7 +411,7 @@
                 </select>
               </div>
               <div class="pull-left ddindia">
-                <select  name="domestic" runat="server"  id="Select2" size="1"  onchange="javascript:convertnew(this.value);" >
+                <select  name="domestic" runat="server"  id="Select2" size="1"  onchange="javascript:convertnew(this.value);" aria-label="domestic">
                   <option value="-1">Indian</option>
                   <option value="en|en">English</option>
 <%--                  <option value="en|hi">Hindi</option>

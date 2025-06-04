@@ -42,7 +42,7 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
 <%--    <script src="Assets/js/myJs.js"></script>--%>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <!-- Google Tag Manager -->
     <script>        (function (w, d, s, l, i) {
                      w[l] = w[l] || []; w[l].push({ 'gtm.start':

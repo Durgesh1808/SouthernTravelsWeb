@@ -99,7 +99,7 @@
               <div class="" id="tab_hotelinfo">
                 <div class="container">
                   <div class="row rowgap">
-                    <div class="col-md-3"> <img loading="lazy" src="Assets/images/hotel-st-grand.jpg" class="img-responsive"> </div>
+                    <div class="col-md-3"> <img loading="lazy" src="Assets/images/hotel-st-grand.jpg" class="img-responsive" alt="hotel-st-grand"/> </div>
                     <div class="col-md-9">
                       <h3 class="title">Welcome to <span>Southern Grand, Vijayawada</span></h3>
                       <p>Strategically located in Gandhi Nagar - the heart of Vijayawada, Southern Grand offers you comfortable stay, genuine hospitality, personalized guest service, quality food and a plethora of other amenities at an affordable price.</p>
@@ -146,7 +146,7 @@
                           <div class="row rowgap">
                             <div class="col-md-8">
                               <div class="hotel_slider owl-carousel">
-                                <div class="item"><img loading="lazy" src="Assets/images/hotel-st-grand/deluxe1.jpg" class="img-responsive"></div>
+                                <div class="item"><img loading="lazy" src="Assets/images/hotel-st-grand/deluxe1.jpg" class="img-responsive" alt="deluxe1"/></div>
                                 
                               </div>
                             </div>
@@ -177,9 +177,9 @@
                           <div class="row rowgap">
                             <div class="col-md-8">
                               <div class="hotel_slider owl-carousel">
-                                <div class="item"><img loading="lazy" src="Assets/images/hotel-st-grand/executive1.jpg" class="img-responsive"></div>
-                                <div class="item"><img loading="lazy" src="Assets/images/hotel-st-grand/executive2.jpg" class="img-responsive"></div>
-                                <div class="item"><img loading="lazy" src="Assets/images/hotel-st-grand/executive3.jpg" class="img-responsive"></div>
+                                <div class="item"><img loading="lazy" src="Assets/images/hotel-st-grand/executive1.jpg" class="img-responsive" alt="executive1"/></div>
+                                <div class="item"><img loading="lazy" src="Assets/images/hotel-st-grand/executive2.jpg" class="img-responsive" alt="executive2"/></div>
+                                <div class="item"><img loading="lazy" src="Assets/images/hotel-st-grand/executive3.jpg" class="img-responsive" alt="executive3"/></div>
                               </div>
                             </div>
                             <div class="col-md-4">
@@ -210,7 +210,7 @@
                           <div class="row rowgap">
                             <div class="col-md-8">
                               <div class="hotel_slider owl-carousel">
-                                <div class="item"><img loading="lazy" src="Assets/images/hotel-st-grand/royal1.jpg" class="img-responsive"></div>
+                                <div class="item"><img loading="lazy" src="Assets/images/hotel-st-grand/royal1.jpg" class="img-responsive" alt="royal1"/></div>
                                 
                               </div>
                             </div>
@@ -317,7 +317,7 @@ Above 12 Years - Considered as an Extra Person and will be charged <i class="fa 
           		<%--<h2 class="title showonmobile">Restaurants</h2>--%>
                 <div class="container restaurants">
                 	<div class="row">
-                    <div class="col-md-5"><img loading="lazy" src="Assets/images/restaurants-Vij.jpg" class="img-responsive"></div>
+                    <div class="col-md-5"><img loading="lazy" src="Assets/images/restaurants-Vij.jpg" class="img-responsive" alt="restaurants"/></div>
                     <div class="col-md-7">
                     	<div class="rastraucontent">
                         	<h2 class="title"><span>Restaurants</span></h2>
@@ -419,7 +419,7 @@ Above 12 Years - Considered as an Extra Person and will be charged <i class="fa 
               <div class="container">
                 <div class="row">
                   <div class="col-md-3">
-                   <img loading="lazy" src="Assets/images/hotel-st-grand-conferenceroom.jpg" class="img-responsive">
+                   <img loading="lazy" src="Assets/images/hotel-st-grand-conferenceroom.jpg" class="img-responsive" alt="conferenceroom"/>
                    
                   </div>
                   <div class="col-md-9">

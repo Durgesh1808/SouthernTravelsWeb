@@ -214,7 +214,7 @@
                                    
                                               <div class="newsbox"> 
                                               <%# Convert.ToInt32(Eval("IsImg")) == 1 ? "" : "<div class='video-icon'><img src='images/icon-video.png'></div>" %> 
-                                              <img src='<%# "Assets/images/news-event/thumb/" + Eval("EventImgThumbPath") %>' class="img-responsive"  width="360" height="373" style="width:360px; height:373px">
+                                              <img src='<%# "Assets/images/news-event/thumb/" + Eval("EventImgThumbPath") %>' class="img-responsive"  width="360" height="373" style="width:360px; height:373px" loading="lazy"/>
                                                 <div class="newstext">
                                                   <h4><%# Eval("EventDesc") %></h4>
                                                 </div>
