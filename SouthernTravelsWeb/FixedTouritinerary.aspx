@@ -33,7 +33,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-WXRG7KM');</script>
     <!-- End Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10777805346"></script>
+<script src="https://www.googletagmanager.com/gtag/js?id=AW-10777805346" defer></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -355,7 +355,7 @@ src="https://www.facebook.com/tr?id=520605323053563&ev=PageView&noscript=1"
     }); /* ================================================	center modal popup ============================================*/
 </script>
 
-    <script type="text/javascript">
+    <script type="text/javascript" defer>
         $(function () {
             $('.tabsection_inner .nav-tabs li a').on('click', function (e) {
                 //alert('');

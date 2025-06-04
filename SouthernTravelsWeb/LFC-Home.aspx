@@ -118,7 +118,7 @@
                 </div>
             </div>
             <div class="widgetHandle">
-                <img loading="lazy" src="Assets/images/widget-icon-inactive.jpg" id="widgetHandle" class="iconInactive"></div>
+                <img loading="lazy" src="Assets/images/widget-icon-inactive.jpg" id="widgetHandle" class="iconInactive" alt="inactive"/></div>
         </div>
     </div>
     <!-- Footer Start -->

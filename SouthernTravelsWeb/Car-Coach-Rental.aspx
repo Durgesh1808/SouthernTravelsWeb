@@ -107,17 +107,17 @@
         <div class="row rowgap">
         	<div class="col-md-4">
             	<div>
-                <p class="posrel imgsection"><img loading="lazy" src="Assets/images/car-coach/car-sedan.jpg" alt="car-sedan" class="img-responsive imgborder3px" loading="lazy" />
+                <p class="posrel imgsection"><img  src="Assets/images/car-coach/car-sedan.jpg" alt="car-sedan" class="img-responsive imgborder3px" loading="lazy" />
                 </p>
                 <div class="carcoachbox">
                 	<h3 class="title mrgnbtmno"><span>Car (Economy) Sedan</span></h3>
                     <p>Tata Indigo/Swift Dzire/Toyota Etios</p>
                     <ul class="sublist">
                     <li>Air-Condition (cool + Warm)</li>
-<li>Audio System</li>
-<li>Comfortable Seats</li>
-<li>Spacious leg space</li>
-<li>Driver + 4 Seating</li>
+                    <li>Audio System</li>
+                    <li>Comfortable Seats</li>
+                    <li>Spacious leg space</li>
+                    <li>Driver + 4 Seating</li>
                     </ul>
                     </div>
                     <p><a href="javascript:void(0);" class="commonbtn">Book now</a></p>
@@ -133,10 +133,10 @@
                     <p>Toyota Innova (6 / 7 seater)</p>
                     <ul class="sublist">
                     <li>Air-Condition(Cool + Warm)</li>
-<li>Audio System</li>
-<li>Comfortable Seats (6 - Seater Bucket seating, 7 - Seater Sofa Seating)</li>
-<li>Spacious leg space</li>
-<li>Driver + (6 / 7 Seating)</li>
+                    <li>Audio System</li>
+                    <li>Comfortable Seats (6 - Seater Bucket seating, 7 - Seater Sofa Seating)</li>
+                    <li>Spacious leg space</li>
+                    <li>Driver + (6 / 7 Seating)</li>
                     </ul>
                     </div>
                      <p><a href="Enquiryform.aspx?Type=Car&Text=Car (Deluxe), SUV" class="commonbtn">Book now</a></p>
@@ -145,18 +145,18 @@
             
            	<div class="col-md-4">
             	<div>
-                <p class="posrel imgsection"><img src="Assets/images/car-coach/car-luxury.jpg" alt="car-luxury" class="img-responsive imgborder3px" loading="lazy" />
+                <p class="posrel imgsection"><img src="Assets/images/car-coach/car-luxury.jpg" alt="car-luxury" class="img-responsive imgborder3px" loading="lazy"  />
                 </p>
                 <div class="carcoachbox">
                 	<h3 class="title mrgnbtmno"><span>Car (Luxury)</span></h3>
                     <p>Skoda Superb / Toyota Camry / Toyota Fortuner / BMW / Mercedes Benz / Audi Car / Land Rover </p>
                     <ul class="sublist">
-                  <li>  Air-Condition(Cool + Warm)</li>
-<li>Bluetooth Audio Streaming, Ipad / MP3 Media interface</li>
-<li>LCD Screen Video system</li>
-<li>Spacious leg space, Arm Rest</li>
-<li>Adjustable Power seats</li>
-<li>Navigation System</li>
+                    <li>  Air-Condition(Cool + Warm)</li>
+                    <li>Bluetooth Audio Streaming, Ipad / MP3 Media interface</li>
+                    <li>LCD Screen Video system</li>
+                    <li>Spacious leg space, Arm Rest</li>
+                    <li>Adjustable Power seats</li>
+                    <li>Navigation System</li>
                     </ul>
                     </div>
                      <p><a href="Enquiryform.aspx?Type=Car?Text=Car (Luxury)" class="commonbtn">Book now</a></p>
@@ -173,13 +173,13 @@
                 	<h3 class="title mrgnbtmno"><span>Tempo Traveller</span></h3>
                     <p>9+1 Seater</p>
                     <ul class="sublist">
-                   <li>Fully Air-Condition(Cool + Warm)</li>
-<li>Audio System</li>
-<li>Equipped with LCD Screen</li>
-<li>Maharaja Seats (1 X 1)</li>
-<li>Spacious leg space with foot rest</li>
-<li>Luxurious Interior </li>
-<li>Fixed Glasses </li>
+                    <li>Fully Air-Condition(Cool + Warm)</li>
+                    <li>Audio System</li>
+                    <li>Equipped with LCD Screen</li>
+                    <li>Maharaja Seats (1 X 1)</li>
+                    <li>Spacious leg space with foot rest</li>
+                    <li>Luxurious Interior </li>
+                    <li>Fixed Glasses </li>
                     </ul>
                     </div>
                     <p><a href="Enquiryform.aspx?Type=car&Text=Tempo Traveller : 9+1 Seater" class="commonbtn">Book now</a></p>
@@ -194,13 +194,13 @@
                 	<h3 class="title mrgnbtmno"><span>Hi-Tech Coaches</span></h3>
                     <p>35 / 40 / 45 Seater</p>
                     <ul class="sublist">
-                   <li>Fully Air-Condition (Cool + Warm)</li>
-<li>Audio System</li>
-<li>Equipped with LCD Screen</li>
-<li>Comfortable Seats with fully push back (2 X 2)</li>
-<li>Spacious leg space with foot rest</li>
-<li>Air Suspension</li>
-<li>Mike System</li>
+                    <li>Fully Air-Condition (Cool + Warm)</li>
+                    <li>Audio System</li>
+                    <li>Equipped with LCD Screen</li>
+                    <li>Comfortable Seats with fully push back (2 X 2)</li>
+                    <li>Spacious leg space with foot rest</li>
+                    <li>Air Suspension</li>
+                    <li>Mike System</li>
                     </ul>
                     </div>
                      <p><a href="Enquiryform.aspx?Type=car&Text=Hi-Tech Coaches : 35 / 40 / 45 Seater" class="commonbtn">Book now</a></p>
@@ -215,13 +215,13 @@
                 	<h3 class="title mrgnbtmno"><span>Mini - Coaches</span></h3>
                     <p>25 / 27  Seater </p>
                     <ul class="sublist">
-                 <li>Fully Air-Condition (Cool + Warm)</li>
-<li>Audio System</li>
-<li>Video System</li>
-<li>Comfortable Seats with  push back (2 X 2)</li>
-<li>Spacious leg space with foot rest</li>
-<li>Air Suspension</li>
-<li>Mike System</li>
+                     <li>Fully Air-Condition (Cool + Warm)</li>
+                    <li>Audio System</li>
+                    <li>Video System</li>
+                    <li>Comfortable Seats with  push back (2 X 2)</li>
+                    <li>Spacious leg space with foot rest</li>
+                    <li>Air Suspension</li>
+                    <li>Mike System</li>
                     </ul>
                     </div>
                      <p><a href="Enquiryform.aspx?Type=car&Text=Mini - Coaches : 25 / 27  Seater" class="commonbtn">Book now</a></p>
@@ -238,15 +238,15 @@
                 	<h3 class="title mrgnbtmno"><span>Volvo Coach</span></h3>
                     <p>45 Seater</p>
                     <ul class="sublist">
-                  <li>Fully Air-Condition(Cool + Warm)</li>
-<li>Audio System</li>
-<li>Equipped with LCD Screen</li>
-<li>Reclaining Seats (2 X 2)</li>
-<li>Spacious leg space with foot rest</li>
-<li>Hydraulic Retrader</li>
-<li>Full Air Suspension</li>
-<li>Luxurious Interior </li>
-<li>Fixed Glasses </li>
+                   <li>Fully Air-Condition(Cool + Warm)</li>
+                    <li>Audio System</li>
+                    <li>Equipped with LCD Screen</li>
+                    <li>Reclaining Seats (2 X 2)</li>
+                    <li>Spacious leg space with foot rest</li>
+                    <li>Hydraulic Retrader</li>
+                    <li>Full Air Suspension</li>
+                    <li>Luxurious Interior </li>
+                    <li>Fixed Glasses </li>
                     </ul>
                     </div>
                     <p><a href="Enquiryform.aspx?Type=car&Text=Volvo Coach : 45 Seater" class="commonbtn">Book now</a></p>
@@ -261,19 +261,18 @@
                 	<h3 class="title mrgnbtmno"><span>Volvo Multi Axle Coach</span></h3>
                     <p>53 Seater</p>
                     <ul class="sublist">
-                   <li>Fully Air-Condition(Cool + Warm)</li>
-<li>Audio System</li>
-<li>Equipped with LCD Screen</li>
-<li>Reclaining Seats (2 X 2)</li>
-<li>Spacious leg space with foot rest</li>
-<li>Hydraulic Retrader</li>
-<li>Full Air Multi - Axle Suspension</li>
-<li>Luxurious Interior </li>
-<li>Fixed Glasses </li>
+                    <li>Fully Air-Condition(Cool + Warm)</li>
+                    <li>Audio System</li>
+                    <li>Equipped with LCD Screen</li>
+                    <li>Reclaining Seats (2 X 2)</li>
+                    <li>Spacious leg space with foot rest</li>
+                    <li>Hydraulic Retrader</li>
+                    <li>Full Air Multi - Axle Suspension</li>
+                    <li>Luxurious Interior </li>
+                    <li>Fixed Glasses </li>
                     </ul>
                     </div>
                      <p><a href="Enquiryform.aspx?Type=car&Text=Volvo Multi Axle Coach : 53 Seater" class="commonbtn">Book now</a></p>
-                     <%--<p><a href="javascript:void(0);" class="commonbtn">Book now</a></p>--%>
                 </div>Assets/images/facebox/closelabel.png
             </div>
             

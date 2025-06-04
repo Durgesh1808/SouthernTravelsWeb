@@ -97,12 +97,23 @@ namespace SouthernTravelsWeb
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
+            string tourId = null;
 
+            // Try to get from RouteData first
+            if (Page.RouteData.Values["tourId"] != null)
+            {
+                tourId = Page.RouteData.Values["tourId"].ToString();
+            }
+            // If not in RouteData, try QueryString
+            else if (Request.QueryString["TourID"] != null)
+            {
+                tourId = Request.QueryString["TourID"];
+            }
             Form1.Action = Request.RawUrl;
             clsAdo pClsObj = null;
             string pURL = Request.Url.ToString();
             btnFaceBook_BookFixed.Attributes["style"] = "visibility: hidden";
-            CheckIntlEBKTourIDs(Convert.ToString(Page.RouteData.Values["tourId"]));
+            CheckIntlEBKTourIDs(tourId);
             if (!IsPostBack)
             {
                 short pinDex = 0;
@@ -111,9 +122,9 @@ namespace SouthernTravelsWeb
                 ddlPickUp.SelectedIndex = pinDex;
                 hidDepTime.Value = "";
                 hidPickupPlace.Value = "";
-                CheckIntlEBKTourIDs(Convert.ToString(Page.RouteData.Values["tourId"]));
-                FTFarePane91.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
-                ViewState["ptourid"] = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+                CheckIntlEBKTourIDs(tourId);
+                FTFarePane91.fldTourID = ClsCommon.ConvertStringint(tourId);
+                ViewState["ptourid"] = ClsCommon.ConvertStringint(tourId);
                 FTFarePane91.fldJourneyDate = Convert.ToString(Page.RouteData.Values["jdate"]);
                 if (Request.QueryString["ltc"] != null)
                 {
@@ -127,21 +138,21 @@ namespace SouthernTravelsWeb
 
             }
             ucItinerary.fldTourType = TOURTYPE.FIXED_TOUR;
-            ucItinerary.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
-            UCCityWisePlaceDisplay1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            ucItinerary.fldTourID = ClsCommon.ConvertStringint(tourId);
+            UCCityWisePlaceDisplay1.fldTourID = ClsCommon.ConvertStringint(tourId);
             UCCityWisePlaceDisplay1.fldTourTypeID = ClsCommon.ConvertStringint(TOURTYPE.FIXED_TOUR);
-            ucTourShortInfo1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            ucTourShortInfo1.fldTourID = ClsCommon.ConvertStringint(tourId);
             ucTourShortInfo1.fldTourTypeID = ClsCommon.ConvertStringint(TOURTYPE.FIXED_TOUR);
             ucTourShortInfo1.fldTourType = "Fixed Departure";
             ucTourShortInfo1.fldCanBook = true;
             ucTourShortInfo1.fldIsShow = false;
             ucTourShortInfo1.fldClass = "active";
-            ucMatchingTour1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            ucMatchingTour1.fldTourID = ClsCommon.ConvertStringint(tourId);
             ucMatchingTour1.fldTourType = ClsCommon.ConvertStringint(TOURTYPE.FIXED_TOUR);
             UCTourInfo1.fldTourType = TOURTYPE.FIXED_TOUR;
-            UCTourInfo1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            UCTourInfo1.fldTourID = ClsCommon.ConvertStringint(tourId);
             UCTourGallery1.fldTourType = TOURTYPE.FIXED_TOUR;
-            UCTourGallery1.fldTourID = ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]);
+            UCTourGallery1.fldTourID = ClsCommon.ConvertStringint(tourId);
             //Session["Panel2Step"] = null;
             if (Session["Panel2Step"] != null)
             {
@@ -166,7 +177,7 @@ namespace SouthernTravelsWeb
                 }
                 if (!Page.IsPostBack)
                 {
-                    CheckIntlEBKTourIDs(Convert.ToString(Page.RouteData.Values["tourId"]));
+                    CheckIntlEBKTourIDs(tourId);
                     try
                     {
                         string sTourshortcode = GetTourShortCodeByTourID(Convert.ToString(ViewState["ptourid"]));
@@ -264,8 +275,8 @@ namespace SouthernTravelsWeb
             {
                 try
                 {
-                    ModifyMetaTag(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]));
-                    BindTourItenerary(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]));
+                    ModifyMetaTag(ClsCommon.ConvertStringint(tourId));
+                    BindTourItenerary(ClsCommon.ConvertStringint(tourId));
 
                     divPickupPoint.Visible = true;
 
@@ -305,14 +316,14 @@ namespace SouthernTravelsWeb
                         }
                     }
 
-                    if (Convert.ToString(Page.RouteData.Values["tourId"]) != "")
+                    if (Convert.ToString(tourId) != "")
                     {
                         if (Page.RouteData.Values["jdate"] != null && Page.RouteData.Values["jdate"] != "")
                         {
                             discount.Value = validateDiscount(fldQStrJDate);
 
                             string acnonac = DataLib.getvacantseats(ClsCommon.ConvertStringint(DataLib.
-                                funClear(Page.RouteData.Values["tourId"]?.ToString())), Convert.ToString(
+                                funClear(tourId?.ToString())), Convert.ToString(
                                 Page.RouteData.Values["jdate"]).Replace("-", "/"));
 
                             string[] ac = acnonac.Split('^');
@@ -340,7 +351,7 @@ namespace SouthernTravelsWeb
                             service.Value = Convert.ToString(pClsObj.fnGetServiceTaxValue("LTC"));
                             List<GetOverrideServiceTax_SPResult> lResult = null;
                             lResult = pClsObj.fnGetOverrideServiceTax(1, ClsCommon.ConvertStringint(
-                                Page.RouteData.Values["tourId"]), "");
+                                tourId), "");
                             if (lResult != null && lResult.Count > 0)
                             {
                                 service.Value = lResult[0].NewTax.ToString();
@@ -349,14 +360,14 @@ namespace SouthernTravelsWeb
                         else
                         {
                             service.Value = pClsObj.fnGetServiceTaxIsAcc(ClsCommon.ConvertStringint(
-                                Page.RouteData.Values["tourId"]));
+                                tourId));
                         }
 
                         credit.Value = DataLib.GetserviceTax("CC");
                         hdServiceChargeTax.Value = Convert.ToString(pClsObj.fnGetServiceTaxValue("SCTax"));
                         if (!Page.IsPostBack)
                         {
-                            CheckIntlEBKTourIDs(Convert.ToString(Page.RouteData.Values["tourId"]));
+                            CheckIntlEBKTourIDs(Convert.ToString(tourId));
                             BindPlace();
                             Page.ClientScript.RegisterStartupScript(Type.GetType("System.String"), "addScript", "Getfare()", true);
 
@@ -379,40 +390,40 @@ namespace SouthernTravelsWeb
                             Session["EndUserId"] = "EndUser";
                             if (Session["EndUserId"] != null)
                                 sess.Value = "1";
-                            if ((Page.RouteData.Values["tourId"] != null) &&
+                            if ((tourId != null) &&
                                ((Request.QueryString["combination"] == null) || Request.QueryString["combination"] == "0"))
                             {
                                 #region Optimize Code
 
                                 #endregion
 
-                                string str = pClsObj.fnGetCombinationTour(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]));
+                                string str = pClsObj.fnGetCombinationTour(ClsCommon.ConvertStringint(tourId));
                                 if (str == "0")
                                 {
                                     // For Single Tour
                                     fillddlJdate(ClsCommon.ConvertStringint(DataLib.funClear(
-                                         Page.RouteData.Values["tourId"]?.ToString())), 0);
+                                         tourId?.ToString())), 0);
                                     //Geting a Dispatur Time
                                     Dispup(ClsCommon.ConvertStringint(DataLib.funClear(
-                                         Page.RouteData.Values["tourId"]?.ToString())), "N");
-                                    hidTourId.Value = DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString());
+                                         tourId?.ToString())), "N");
+                                    hidTourId.Value = DataLib.funClear(tourId?.ToString());
                                     combination.Value = "N";
                                 }
                                 else
                                 {
                                     #region Optimize Code
                                     fillddlJdate(ClsCommon.ConvertStringint(DataLib.funClear(
-                                     Page.RouteData.Values["tourId"]?.ToString())), 0);
+                                     tourId?.ToString())), 0);
 
                                     //Geting a Dipatur Time [Need To ] combinationtour Y/N
                                     Dispup(ClsCommon.ConvertStringint(DataLib.funClear(
-                                         Page.RouteData.Values["tourId"]?.ToString())), "N");
+                                         tourId?.ToString())), "N");
 
                                     // For Multiple Tour Associated.
 
                                     fillddlJdate(ClsCommon.ConvertStringint(str), 1);
                                     Dispup(ClsCommon.ConvertStringint(str), "Y");
-                                    hidTourId.Value = DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString());
+                                    hidTourId.Value = DataLib.funClear(tourId?.ToString());
                                     hidTourId1.Value = str;
                                     ViewState["OT"] = hidTourId.Value;
                                     ViewState["NT"] = hidTourId1.Value;
@@ -420,12 +431,12 @@ namespace SouthernTravelsWeb
                                     #endregion
                                 }
                             }
-                            if ((Page.RouteData.Values["tourId"] != null) &&
+                            if ((tourId != null) &&
                                 ((combination.Value != null) && combination.Value != "0"))
                             {
-                                fillddlJdate(ClsCommon.ConvertStringint(DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString())), 0);
-                                Dispup(ClsCommon.ConvertStringint(DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString())), "N");
-                                hidTourId.Value = DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString());
+                                fillddlJdate(ClsCommon.ConvertStringint(DataLib.funClear(tourId?.ToString())), 0);
+                                Dispup(ClsCommon.ConvertStringint(DataLib.funClear(tourId?.ToString())), "N");
+                                hidTourId.Value = DataLib.funClear(tourId?.ToString());
                             }
                             else
                             {
@@ -455,7 +466,7 @@ namespace SouthernTravelsWeb
                         if (Page.RouteData.Values["jdate"] != null && Page.RouteData.Values["jdate"] != "")
                         {
                             table5.Visible = true;
-                            int tourid = ClsCommon.ConvertStringint(DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString()));
+                            int tourid = ClsCommon.ConvertStringint(DataLib.funClear(tourId?.ToString()));
                             getfaregrid(fldQStrJDate, tourid);
                             AssignOrderID();
 
@@ -501,8 +512,19 @@ namespace SouthernTravelsWeb
             DataLib.vacentSeatNumber = new List<int>();
             DataLib.occupiedSeatNumber = new List<int>();
             DataLib.bus_vac_Number = new List<string>();
+            string tourId = null;
 
-            if (IsHelicopterAvailable(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]), Convert.ToString(Page.RouteData.Values["jdate"])) == false)
+            // Try to get from RouteData first
+            if (Page.RouteData.Values["tourId"] != null)
+            {
+                tourId = Page.RouteData.Values["tourId"].ToString();
+            }
+            // If not in RouteData, try QueryString
+            else if (Request.QueryString["TourID"] != null)
+            {
+                tourId = Request.QueryString["TourID"];
+            }
+            if (IsHelicopterAvailable(ClsCommon.ConvertStringint(tourId), Convert.ToString(Page.RouteData.Values["jdate"])) == false)
             {
                 ClsCommon.ShowAlert("The Helicopter tickets are not available on this date. Please choose other date");
                 return;
@@ -531,7 +553,7 @@ namespace SouthernTravelsWeb
             AssignValue();
             AssignOrderID();
             orderid = OrderIDH.Value;
-            Tourno = ClsCommon.ConvertStringint(DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString()));
+            Tourno = ClsCommon.ConvertStringint(DataLib.funClear(tourId?.ToString()));
             ViewState["pickUpIndex"] = ddlPickUp.SelectedValue;
             lblPickupPlace.Text = hidPickupPlace.Value;
             lblDepTime.Text = hidDepTime.Value;
@@ -748,7 +770,7 @@ namespace SouthernTravelsWeb
                             //hlmsgerr.NavigateUrl = "bookedtour.aspx?orderid=" + strEncrypt;
                             Session["Panel2Step"] = "Panel2Step";
                             hlmsgerr.NavigateUrl = "Booking-" + Convert.ToString(hdfTourName.Value) + "_" + RemoveSlashAmp(strEncrypt) + "_" +
-                                Page.RouteData.Values["tourId"] + "_" + Page.RouteData.Values["jdate"];
+                                tourId + "_" + Page.RouteData.Values["jdate"];
                             //hlmsgerr.NavigateUrl = "Fixed-Departure-Booking_Availability-" + Convert.ToString(hdfTourName.Value).Replace(" ", "-") + "_" + RemoveSlashAmp(strEncrypt);
 
                         }
@@ -893,8 +915,20 @@ namespace SouthernTravelsWeb
             chkbus1 = chkbus1.Replace(",,", ",").TrimStart(',').TrimEnd(',');
             ViewState["chkbusno"] = chkbus1;
             int availaseat, serialno = 0;
+            string tourId = null;
+
+            // Try to get from RouteData first
+            if (Page.RouteData.Values["tourId"] != null)
+            {
+                tourId = Page.RouteData.Values["tourId"].ToString();
+            }
+            // If not in RouteData, try QueryString
+            else if (Request.QueryString["TourID"] != null)
+            {
+                tourId = Request.QueryString["TourID"];
+            }
             string avail = ChekAvailability1(seatnumbers.Length,
-                Convert.ToInt32(DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString())), fldDDLJDate);
+                Convert.ToInt32(DataLib.funClear(tourId?.ToString())), fldDDLJDate);
             string[] ss = avail.Split('-');
             if (ss.Length > 1)
             {
@@ -909,7 +943,7 @@ namespace SouthernTravelsWeb
                 {
                     string ser = "", bt = "", bno = "";
                     avail = ChekAvailabilitymultiple(seatnumbers.Length,
-                        Convert.ToInt32(DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString())), fldDDLJDate);
+                        Convert.ToInt32(DataLib.funClear(tourId?.ToString())), fldDDLJDate);
                     ss = avail.Split('-');
                     if (ss.Length > 1)
                     {
@@ -951,7 +985,7 @@ namespace SouthernTravelsWeb
                             strEncrypt = DataLib.TripleDESEncode(orderid, endecript);
                             Session["Panel2Step"] = "Panel2Step";
                             hlmsgerr.NavigateUrl = "Booking-" + Convert.ToString(hdfTourName.Value) + "_" + RemoveSlashAmp(strEncrypt) + "_" +
-                                Page.RouteData.Values["tourId"] + "_" + RemoveSlashAmp(Request.QueryString["jdate"]); ;
+                                tourId + "_" + RemoveSlashAmp(Request.QueryString["jdate"]); ;
                         }
                         else
                         {
@@ -1025,11 +1059,11 @@ namespace SouthernTravelsWeb
                         AssignValue();
                         AssignOrderID();
                         if (!(Request.QueryString["Rowid"] == null))
-                            updatebook(Convert.ToInt32(DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString())),
+                            updatebook(Convert.ToInt32(DataLib.funClear(tourId?.ToString())),
                                 seatnumbers.Length, fldDDLJDate, OrderIDH.Value, ClsCommon.ConvertStringint(DataLib.funClear(
                                 Request.QueryString["Rowid"])), sno);
                         else
-                            insertbook(Convert.ToInt32(DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString())),
+                            insertbook(Convert.ToInt32(DataLib.funClear(tourId?.ToString())),
                                 seatnumbers.Length, fldDDLJDate, OrderIDH.Value, sno);
                     }
                 }
@@ -1057,7 +1091,7 @@ namespace SouthernTravelsWeb
                         strEncrypt = DataLib.TripleDESEncode(orderid, endecript);
                         Session["Panel2Step"] = "Panel2Step";
                         hlmsgerr.NavigateUrl = "Booking-" + Convert.ToString(hdfTourName.Value) + "_" + RemoveSlashAmp(strEncrypt) + "_" +
-                                Page.RouteData.Values["tourId"] + "_" + RemoveSlashAmp(Request.QueryString["jdate"]); ;
+                                tourId + "_" + RemoveSlashAmp(Request.QueryString["jdate"]); ;
 
                     }
                     else
@@ -1083,7 +1117,7 @@ namespace SouthernTravelsWeb
 
                 if (!(Request.QueryString["Rowid"] == null))
                 {
-                    updatebook(ClsCommon.ConvertStringint(DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString())),
+                    updatebook(ClsCommon.ConvertStringint(DataLib.funClear(tourId?.ToString())),
                         seatnumbers.Length, fldDDLJDate, OrderIDH.Value,
                         ClsCommon.ConvertStringint(DataLib.funClear(Request.QueryString["Rowid"])),
                         Convert.ToString(serialno));
@@ -1091,7 +1125,7 @@ namespace SouthernTravelsWeb
                 }
                 else
                 {
-                    insertbook(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]), seatnumbers.Length,
+                    insertbook(ClsCommon.ConvertStringint(tourId), seatnumbers.Length,
                         fldDDLJDate, OrderIDH.Value,
                         Convert.ToString(serialno));
                     Session["Panel2Step"] = "Panel2Step";
@@ -2139,14 +2173,26 @@ namespace SouthernTravelsWeb
         protected void hlback_Click(object sender, EventArgs e)
         {
             Session["Panel2Step"] = "Panel2Step";
+            string tourId = null;
+
+            // Try to get from RouteData first
+            if (Page.RouteData.Values["tourId"] != null)
+            {
+                tourId = Page.RouteData.Values["tourId"].ToString();
+            }
+            // If not in RouteData, try QueryString
+            else if (Request.QueryString["TourID"] != null)
+            {
+                tourId = Request.QueryString["TourID"];
+            }
             strEncrypt = DataLib.TripleDESEncode(OrderIDH.Value, endecript);
             if ((Request.QueryString["ltc"] == null) && (Request.QueryString["ltc"] != "0"))
             {
-                Response.Redirect("TourBooking.aspx?orderid=" + strEncrypt + "&TourID=" + Page.RouteData.Values["tourId"]);
+                Response.Redirect("TourBooking.aspx?orderid=" + strEncrypt + "&TourID=" + tourId);
             }
             else
             {
-                Response.Redirect("TourBooking.aspx?orderid=" + strEncrypt + "&TourID=" + Page.RouteData.Values["tourId"]);
+                Response.Redirect("TourBooking.aspx?orderid=" + strEncrypt + "&TourID=" + tourId);
 
             }
         }
@@ -2599,13 +2645,25 @@ namespace SouthernTravelsWeb
 
                 strEncrypt = DataLib.TripleDESEncode(orderid, endecript);
                 Session["Panel2Step"] = "Panel2Step";
+                string tourId = null;
+
+                // Try to get from RouteData first
+                if (Page.RouteData.Values["tourId"] != null)
+                {
+                    tourId = Page.RouteData.Values["tourId"].ToString();
+                }
+                // If not in RouteData, try QueryString
+                else if (Request.QueryString["TourID"] != null)
+                {
+                    tourId = Request.QueryString["TourID"];
+                }
                 if ((Request.QueryString["ltc"] == null) && (Request.QueryString["ltc"] != "0"))
 
-                    Response.Redirect("TourBooking.aspx?orderid=" + RemoveSlashAmp(strEncrypt) + "&TourID=" + Page.RouteData.Values["tourId"] + "&jdate=" +
+                    Response.Redirect("TourBooking.aspx?orderid=" + RemoveSlashAmp(strEncrypt) + "&TourID=" + tourId + "&jdate=" +
                          Page.RouteData.Values["jdate"].ToString().Split(' ')[0].ToString());
 
                 else
-                    Response.Redirect("TourBooking.aspx?orderid=" + RemoveSlashAmp(strEncrypt) + "&TourID=" + Page.RouteData.Values["tourId"] + "&jdate=" +
+                    Response.Redirect("TourBooking.aspx?orderid=" + RemoveSlashAmp(strEncrypt) + "&TourID=" + tourId + "&jdate=" +
                         Page.RouteData.Values["jdate"].ToString().Split(' ')[0].ToString());
 
 
@@ -3166,12 +3224,24 @@ namespace SouthernTravelsWeb
             try
             {
                 pClsObj = new clsAdo();
+                string tourId = null;
+
+                // Try to get from RouteData first
+                if (Page.RouteData.Values["tourId"] != null)
+                {
+                    tourId = Page.RouteData.Values["tourId"].ToString();
+                }
+                // If not in RouteData, try QueryString
+                else if (Request.QueryString["TourID"] != null)
+                {
+                    tourId = Request.QueryString["TourID"];
+                }
                 if (Request.QueryString["ltc"] != null)
                 {
                     tax = Convert.ToDecimal(DataLib.GetserviceTax("LTC"));
                     List<GetOverrideServiceTax_SPResult> lResult = null;
                     lResult = pClsObj.fnGetOverrideServiceTax(1, ClsCommon.ConvertStringint(
-                        Page.RouteData.Values["tourId"]), "");
+                        tourId), "");
                     if (lResult != null && lResult.Count > 0)
                     {
                         tax = Convert.ToDecimal(lResult[0].NewTax.ToString());
@@ -3263,13 +3333,25 @@ namespace SouthernTravelsWeb
                             ".aspx?TourName=" + strEncrypt + "\"> Send Request</a> Click here";
                     if ((Request.QueryString["RowId"] != null) || Request.QueryString["OrderId"] != null)
                     {
+                        string tourId = null;
+
+                        // Try to get from RouteData first
+                        if (Page.RouteData.Values["tourId"] != null)
+                        {
+                            tourId = Page.RouteData.Values["tourId"].ToString();
+                        }
+                        // If not in RouteData, try QueryString
+                        else if (Request.QueryString["TourID"] != null)
+                        {
+                            tourId = Request.QueryString["TourID"];
+                        }
                         orderid = Convert.ToString(Request.QueryString["OrderId"]);
                         hlmsgerr.Text = "Click here to choose another tour.";
                         strEncrypt = DataLib.TripleDESEncode(orderid, endecript);
 
                         Session["Panel2Step"] = "Panel2Step";
                         hlmsgerr.NavigateUrl = "Booking-" + Convert.ToString(hdfTourName.Value) + "_" + RemoveSlashAmp(strEncrypt) + "_" +
-                                Page.RouteData.Values["tourId"] + "_" + Page.RouteData.Values["jdate"]; ;
+                                tourId + "_" + Page.RouteData.Values["jdate"]; ;
                       
 
                     }
@@ -3369,11 +3451,23 @@ namespace SouthernTravelsWeb
         }
         private void refresh()
         {
+            string tourId = null;
+
+            // Try to get from RouteData first
+            if (Page.RouteData.Values["tourId"] != null)
+            {
+                tourId = Page.RouteData.Values["tourId"].ToString();
+            }
+            // If not in RouteData, try QueryString
+            else if (Request.QueryString["TourID"] != null)
+            {
+                tourId = Request.QueryString["TourID"];
+            }
             btncheckavail.Enabled = false;
             AssignValue();
             AssignOrderID();
             orderid = OrderIDH.Value;
-            Tourno = ClsCommon.ConvertStringint(DataLib.funClear(Page.RouteData.Values["tourId"]?.ToString()));
+            Tourno = ClsCommon.ConvertStringint(DataLib.funClear(tourId?.ToString()));
         }
         private void AssignOrderID()
         {
@@ -3432,12 +3526,24 @@ namespace SouthernTravelsWeb
         }
         private string validateDiscount(DateTime pJDate)
         {
+            string tourId = null;
+
+            // Try to get from RouteData first
+            if (Page.RouteData.Values["tourId"] != null)
+            {
+                tourId = Page.RouteData.Values["tourId"].ToString();
+            }
+            // If not in RouteData, try QueryString
+            else if (Request.QueryString["TourID"] != null)
+            {
+                tourId = Request.QueryString["TourID"];
+            }
             clsAdo pClsObj = null;
             try
             {
                 string validateDiscount = "";
                 pClsObj = new clsAdo();
-                validateDiscount = pClsObj.fnValidateDiscount(pJDate, ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]));
+                validateDiscount = pClsObj.fnValidateDiscount(pJDate, ClsCommon.ConvertStringint(tourId));
                 return validateDiscount;
             }
 
@@ -3454,11 +3560,23 @@ namespace SouthernTravelsWeb
         private string ChkBusType(DateTime pJDate)
         {
             clsAdo pClsObj = null;
+            string tourId = null;
+
+            // Try to get from RouteData first
+            if (Page.RouteData.Values["tourId"] != null)
+            {
+                tourId = Page.RouteData.Values["tourId"].ToString();
+            }
+            // If not in RouteData, try QueryString
+            else if (Request.QueryString["TourID"] != null)
+            {
+                tourId = Request.QueryString["TourID"];
+            }
             try
             {
                 string ChkBusType = "";
                 pClsObj = new clsAdo();
-                ChkBusType = pClsObj.fnChkBusType(pJDate, ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]));
+                ChkBusType = pClsObj.fnChkBusType(pJDate, ClsCommon.ConvertStringint(tourId));
                 return ChkBusType;
             }
             finally
@@ -3541,6 +3659,18 @@ namespace SouthernTravelsWeb
 
         private void BindPlace()
         {
+            string tourId = null;
+
+            // Try to get from RouteData first
+            if (Page.RouteData.Values["tourId"] != null)
+            {
+                tourId = Page.RouteData.Values["tourId"].ToString();
+            }
+            // If not in RouteData, try QueryString
+            else if (Request.QueryString["TourID"] != null)
+            {
+                tourId = Request.QueryString["TourID"];
+            }
             if (Page.RouteData.Values["jdate"] != null && Page.RouteData.Values["jdate"] != "")
             {
                 string[] lJDate = Page.RouteData.Values["jdate"].ToString().Split('/');
@@ -3553,7 +3683,7 @@ namespace SouthernTravelsWeb
             {
                 lGetPlaceName = new List<GetTourPlaceInfo_SPResult>();
 
-                lGetPlaceName = objOther.fnGetTourPlaceInfo(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]), 1).ToList();
+                lGetPlaceName = objOther.fnGetTourPlaceInfo(ClsCommon.ConvertStringint(tourId), 1).ToList();
                 if (lGetPlaceName != null && lGetPlaceName.Count > 0)
                 {
 
@@ -3595,12 +3725,23 @@ namespace SouthernTravelsWeb
         {
             List<TourItenerary_SPResult> lGetResult = null;
             clsAdo objOther = new clsAdo();
+            string tourId = null;
 
+            // Try to get from RouteData first
+            if (Page.RouteData.Values["tourId"] != null)
+            {
+                tourId = Page.RouteData.Values["tourId"].ToString();
+            }
+            // If not in RouteData, try QueryString
+            else if (Request.QueryString["TourID"] != null)
+            {
+                tourId = Request.QueryString["TourID"];
+            }
             try
             {
                 lGetResult = new List<TourItenerary_SPResult>();
 
-                lGetResult = objOther.fnGetTourItenerary(ClsCommon.ConvertStringint(Page.RouteData.Values["tourId"]), 1).ToList();
+                lGetResult = objOther.fnGetTourItenerary(ClsCommon.ConvertStringint(tourId), 1).ToList();
                 if (lGetResult != null && lGetResult.Count > 0)
                 {ltrNotes.Text = lGetResult[0].Notes.ToString().Replace("<p>", "").Replace("</p>", "").Replace("color: #ffffff", "color: #000000");
 

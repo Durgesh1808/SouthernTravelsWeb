@@ -277,14 +277,14 @@
     <div class="row careers">
       <div class="col-md-6">
         <div class="row rowgap">
-          <div class="col-md-4"><img src="Assets/images/career-ourmotto.jpg" class="img-responsive" loading="lazy"/></div>
+          <div class="col-md-4"><img src="Assets/images/career-ourmotto.jpg" class="img-responsive" loading="lazy" alt="ourmotto"/></div>
           <div class="col-md-8">
             <h2 class="title mrgntopno">Our <span>Motto</span></h2>
             <p>Our motto is to enrich people's lives with minimum of hassles, by creating and providing them, with a unique travel experience which, they can cherish throughout their lives.</p>
           </div>
         </div>
         <div class="row rowgap">
-          <div class="col-md-4"><img src="Assets/images/career-values.jpg" class="img-responsive" loading="lazy"/></div>
+          <div class="col-md-4"><img src="Assets/images/career-values.jpg" class="img-responsive" loading="lazy" alt="career-values"/></div>
           <div class="col-md-8">
             <h2 class="title mrgntopno">Our <span>Values Include</span></h2>
             <ul class="sublist">

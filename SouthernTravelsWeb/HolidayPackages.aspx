@@ -29,7 +29,7 @@
 
     </script>
     <!-- Google Tag Manager -->
-    <script>
+    <script type="text/javascript" defer>
         (function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({ 'gtm.start':
         new Date().getTime(), event: 'gtm.js'
@@ -39,7 +39,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-T9VTF6H');
 
     </script>
-    <script type="text/javascript">
+    <script type="text/javascript" defer>
         var $zoho = $zoho || {}; $zoho.salesiq = $zoho.salesiq || { widgetcode: "f9285012553db7ccdec3cf907b30482c1f0e0a2bd9e18f0f2b52a1810adb9374cd30ce7a28be5ad051877c21011ab9a5", values: {}, ready: function () { } }; var d = document; s = d.createElement("script"); s.type = "text/javascript"; s.id = "zsiqscript"; s.defer = true; s.src = "https://salesiq.zoho.com/widget"; t = d.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t); d.write("<div id='zsiqwidget'></div>");
     </script>
     <script src="https://cdn.pagesense.io/js/southerntravels/95bf3c0ba74f44f9baed4ddf90896ba3.js"></script>

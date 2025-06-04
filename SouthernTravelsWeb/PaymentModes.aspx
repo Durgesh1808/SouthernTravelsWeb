@@ -55,7 +55,7 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
       <div class="col-md-12">
       	  <div class="weaccept">
                     <h2 class="title"><span>Credit card</span> and <span>Debit Card</span></h2>
-                    <p><a><img loading="lazy" src="Assets/images/paymentmodes/visa_logo.jpg"></a> <a><img loading="lazy" src="Assets/images/paymentmodes/Maestro_logo.jpg"></a>  <a><img loading="lazy" src="Assets/images/paymentmodes/MasterCard_Logo.jpg"></a> <a><img loading="lazy" src="Assets/images/paymentmodes/amex-card.jpg"></a> </p>
+                    <p><a><img loading="lazy" src="Assets/images/paymentmodes/visa_logo.jpg" alt="paymentmodes"/></a> <a><img loading="lazy" src="Assets/images/paymentmodes/Maestro_logo.jpg" alt="paymentmodes"/></a>  <a><img loading="lazy" src="Assets/images/paymentmodes/MasterCard_Logo.jpg" alt="paymentmodes"/></a> <a><img loading="lazy" src="Assets/images/paymentmodes/amex-card.jpg" alt="paymentmodes"/></a> </p>
                   </div>
                   </div>
       </div>

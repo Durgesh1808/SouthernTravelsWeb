@@ -737,7 +737,7 @@
     <div class="container">
         <div class="formwrap pull-right">
             <p class="closebtn">
-                <a href="#"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                <a href="#" aria-label="Close popup"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                 </a>
             </p>
              <div class="heading">
