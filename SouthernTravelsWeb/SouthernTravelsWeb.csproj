@@ -135,6 +135,7 @@
     <Content Include="AsyncPages\News.aspx" />
     <Content Include="Car-Coach-Rental.aspx" />
     <Content Include="Career.aspx" />
+    <Content Include="CareerThankYou.aspx" />
     <Content Include="company-profile.aspx" />
     <Content Include="contact-us.aspx" />
     <Content Include="Contact.aspx" />
@@ -251,6 +252,7 @@
     <Content Include="HtmlPages\SouthernTravelHotels.htm" />
     <Content Include="SpecialTouritinerary.aspx" />
     <Content Include="Terms-Conditions.aspx" />
+    <Content Include="ThankYou.aspx" />
     <Content Include="TourBooking.aspx" />
     <Content Include="UserControl\UcBlog.ascx" />
     <Content Include="UserControl\UcBlogInnerPages.ascx" />
@@ -348,6 +350,13 @@
     </Compile>
     <Compile Include="Career.aspx.designer.cs">
       <DependentUpon>Career.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CareerThankYou.aspx.cs">
+      <DependentUpon>CareerThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CareerThankYou.aspx.designer.cs">
+      <DependentUpon>CareerThankYou.aspx</DependentUpon>
     </Compile>
     <Compile Include="company-profile.aspx.cs">
       <DependentUpon>company-profile.aspx</DependentUpon>
@@ -657,6 +666,13 @@
     </Compile>
     <Compile Include="Terms-Conditions.aspx.designer.cs">
       <DependentUpon>Terms-Conditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThankYou.aspx.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThankYou.aspx.designer.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
     </Compile>
     <Compile Include="TourBooking.aspx.cs">
       <DependentUpon>TourBooking.aspx</DependentUpon>
