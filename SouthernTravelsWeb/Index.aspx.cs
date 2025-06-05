@@ -117,7 +117,7 @@ namespace SouthernTravelsWeb
                     lMail = new System.Net.Mail.MailMessage();
                     lSmtp = new SmtpClient();
                     lSmtp.UseDefaultCredentials = false;
-                    lMail.From = new MailAddress("support@southerntravels.com");//pFrom
+                    lMail.From = new MailAddress(ConfigurationManager.AppSettings["SupportEmail"]);//pFrom
                     lMail.To.Add(pTO);
                     //lMail.CC.Add(pFrom);
                     lMail.Subject = pSubject;

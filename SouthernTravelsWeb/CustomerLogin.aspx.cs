@@ -218,11 +218,13 @@ namespace SouthernTravelsWeb
                     param3[0] = new SqlParameter("@password", ViewState["strPass"].ToString());
                     param3[1] = new SqlParameter("@email", txtmail.Text.Replace("'", "''").Trim().ToString());
                     param3[2] = new SqlParameter("@rowid", rowid);
+                    string supportEmail = ConfigurationManager.AppSettings["SupportEmail"];
+
                     int val = DataLib.InsStoredProcData(StoredProcedures.customer_updatepassword, param3);
                     try
                     {
                         if (isemail.Value == "Y")
-                            ClsCommon.sendmail(txtmail.Text, "", "", "support@southerntravels.in", "Southern Travels – Your new password", strToSend, "");
+                            ClsCommon.sendmail(txtmail.Text, "", "", supportEmail, "Southern Travels – Your new password", strToSend, "");
 
                         if (strMobile != "")
                         {
@@ -279,7 +281,10 @@ namespace SouthernTravelsWeb
                     strToSend = strToSend.Replace("#membername#", dt.Rows[0]["Fname"].ToString());
                     strToSend = strToSend.Replace("#MemberUserName#", dt.Rows[0]["UserId"].ToString());
                     strToSend = strToSend.Replace("#MemberPassword#", ViewState["Spass"].ToString());
-                    ClsCommon.sendmail(email, "", "", "support@southerntravels.in", "Your reset password.", strToSend);
+                    string supportEmail = ConfigurationManager.AppSettings["SupportEmail"];
+                    //ClsCommon.sendmail(email, "", "", "support@southerntravels.in", "Your reset password.", strToSend);
+                    ClsCommon.SendMail(email, "", "", supportEmail, "Your reset password.", strToSend);
+
                     ClientScript.RegisterStartupScript(typeof(string), "stsrtupSend7", "<script>alert('You will get the new Password shortly on your registered Mail id');window.location.href='index.aspx'</script>");
                 }
                 else

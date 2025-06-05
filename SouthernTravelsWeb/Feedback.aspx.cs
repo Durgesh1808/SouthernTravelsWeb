@@ -17,7 +17,7 @@ namespace SouthernTravelsWeb
         #region "Event(s)"
         protected void Page_Load(object sender, EventArgs e)
         {
-            divrecaptcha.Attributes.Add("data-sitekey", System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
+            //divrecaptcha.Attributes.Add("data-sitekey", System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
             txtMobile.Attributes.Add("onkeypress", "return chkNumeric(event);");
             txtPax.Attributes.Add("onkeypress", "return chkNumeric(event);");
             btnSend.Attributes.Add("onclick", "javascript:return fnFeedbackVal();");
@@ -32,7 +32,7 @@ namespace SouthernTravelsWeb
             {
                 return;
             }
-            SaveComment();
+                SaveComment();
         }
 
         #endregion
@@ -42,11 +42,14 @@ namespace SouthernTravelsWeb
             txtFullName.Text = ""; txtFeedEmail.Text = ""; txtMobile.Text = ""; txtComments.Text = "";
             txtPlace.Text = ""; rbtntourtype.SelectedValue = null; txtTourName.Text = "";
             txtPax.Text = ""; txtarrival.Value = ""; txtPnr.Text = ""; txtTicket.Text = "";
+            txtCaptcha.Text = "";
         }
         protected void SaveComment()
         {
-            bool lFlag = reCaptcha();
-            if (lFlag)
+            //bool lFlag = reCaptcha();
+            //if (lFlag)
+            //{
+            if (Convert.ToString(Session["CaptchaImageText"]) == Convert.ToString(txtCaptcha.Text.Trim()))
             {
                 DateTime Adate;
                 string sDepDate = this.txtarrival.Value.ToString().Replace("'", "''");
@@ -75,7 +78,6 @@ namespace SouthernTravelsWeb
                                 if (lhdFeedRatID.Value != "0")
                                 {
                                     HiddenField lhdFeedOptID = (HiddenField)gvFeed.FindControl("hdFeedOptID");
-                                    //HiddenField lhdFeedRatID = (HiddenField)gvFeed.Cells[Ctr].Controls[1];
                                     lhdFeedRatID = (HiddenField)gvFeed.FindControl("hdnRating");
 
 
@@ -97,16 +99,35 @@ namespace SouthernTravelsWeb
                         if (lStatus > 0)
                         {
                             ClearComment();
-                            ClientScript.RegisterStartupScript(this.GetType(), "alrt", "alert('Thank you for your valuable feedback and time.');", true);
+                            string script = "Swal.fire({ icon: 'success', title: 'Thank you!', text: 'Thank you for your valuable feedback and time.', timer: 3000, confirmButtonColor: '#f2572b' });";
+                            ClientScript.RegisterStartupScript(this.GetType(), "swal", script, true);
                         }
                         else
                         {
-                            ClientScript.RegisterStartupScript(this.GetType(), "alrt", "alert('Error for sending feedback.');", true);
+                            string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Error for sending feedback..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                            ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
                         }
                     }
                     finally
                     {
                     }
+                }
+            }
+
+            else
+            {
+                if (!string.IsNullOrEmpty(txtCaptcha.Text))
+                {
+                    //ClsCommon.ShowAlert("Please Enter Valid Captcha");
+                    string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Please Enter Valid Captcha..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                    ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
+                    return;
+                }
+                else
+                {
+                    string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Please Enter  Captcha..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                    ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
+                    return;
                 }
             }
         }
@@ -308,70 +329,70 @@ namespace SouthernTravelsWeb
         public bool reCaptcha()
         {
             bool lFlag = false;
-            var sb = new System.Text.StringBuilder();
-            sb.Append("https://www.google.com/recaptcha/api/siteverify?secret=");
+            //var sb = new System.Text.StringBuilder();
+            //sb.Append("https://www.google.com/recaptcha/api/siteverify?secret=");
 
-            //our secret key
-            var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"]; //"6LesfBwTAAAAAPKzkHq9ny59cb_BtZa1D6ZLLBGf";
-            sb.Append(secretKey);
+            ////our secret key
+            //var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"]; //"6LesfBwTAAAAAPKzkHq9ny59cb_BtZa1D6ZLLBGf";
+            //sb.Append(secretKey);
 
-            //response from recaptch control
-            sb.Append("&");
-            sb.Append("response=");
-            var reCaptchaResponse = Request["g-recaptcha-response"];
-            sb.Append(reCaptchaResponse);
+            ////response from recaptch control
+            //sb.Append("&");
+            //sb.Append("response=");
+            //var reCaptchaResponse = Request["g-recaptcha-response"];
+            //sb.Append(reCaptchaResponse);
 
-            //client ip address
-            //---- This Ip address part is optional. If you donot want to send IP address you can
-            //---- Skip(Remove below 4 lines)
-            sb.Append("&");
-            sb.Append("remoteip=");
-            var clientIpAddress = GetUserIp();
-            sb.Append(clientIpAddress);
+            ////client ip address
+            ////---- This Ip address part is optional. If you donot want to send IP address you can
+            ////---- Skip(Remove below 4 lines)
+            //sb.Append("&");
+            //sb.Append("remoteip=");
+            //var clientIpAddress = GetUserIp();
+            //sb.Append(clientIpAddress);
 
-            //make the api call and determine validity
-            using (var client = new System.Net.WebClient())
-            {
-                var uri = sb.ToString();
-                var json = client.DownloadString(uri);
-                var serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(RecaptchaApiResponse));
-                var ms = new System.IO.MemoryStream(System.Text.Encoding.Unicode.GetBytes(json));
-                var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
+            ////make the api call and determine validity
+            //using (var client = new System.Net.WebClient())
+            //{
+            //    var uri = sb.ToString();
+            //    var json = client.DownloadString(uri);
+            //    var serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(RecaptchaApiResponse));
+            //    var ms = new System.IO.MemoryStream(System.Text.Encoding.Unicode.GetBytes(json));
+            //    var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
 
-                //--- Check if we are able to call api or not.
-                if (result == null)
-                {
-                    MessageLabel.Text = "Captcha was unable to make the api call";
-                }
-                else // If Yes
-                {
-                    //api call contains errors
-                    if (result.ErrorCodes != null)
-                    {
-                        if (result.ErrorCodes.Count > 0)
-                        {
-                            foreach (var error in result.ErrorCodes)
-                            {
-                                MessageLabel.Text = "Captcha is required.";
-                            }
-                        }
-                    }
-                    else //api does not contain errors
-                    {
-                        if (!result.Success) //captcha was unsuccessful for some reason
-                        {
-                            MessageLabel.Text = "Captcha did not pass, please try again.";
-                        }
-                        else //---- If successfully verified. Do your rest of logic.
-                        {
-                            MessageLabel.Text = "Captcha cleared ";
-                            lFlag = true;
-                        }
-                    }
+            //    //--- Check if we are able to call api or not.
+            //    if (result == null)
+            //    {
+            //        MessageLabel.Text = "Captcha was unable to make the api call";
+            //    }
+            //    else // If Yes
+            //    {
+            //        //api call contains errors
+            //        if (result.ErrorCodes != null)
+            //        {
+            //            if (result.ErrorCodes.Count > 0)
+            //            {
+            //                foreach (var error in result.ErrorCodes)
+            //                {
+            //                    MessageLabel.Text = "Captcha is required.";
+            //                }
+            //            }
+            //        }
+            //        else //api does not contain errors
+            //        {
+            //            if (!result.Success) //captcha was unsuccessful for some reason
+            //            {
+            //                MessageLabel.Text = "Captcha did not pass, please try again.";
+            //            }
+            //            else //---- If successfully verified. Do your rest of logic.
+            //            {
+            //                MessageLabel.Text = "Captcha cleared ";
+            //                lFlag = true;
+            //            }
+            //        }
 
-                }
+            //    }
 
-            }
+            //}
             return lFlag;
         }
         [System.Runtime.Serialization.DataContract]
@@ -417,21 +438,21 @@ namespace SouthernTravelsWeb
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.AddWithValue("@pFullName", pFullName);
-                        cmd.Parameters.AddWithValue("@pEmailID", pEmailID);
-                        cmd.Parameters.AddWithValue("@pContactNo", pContactNo);
-                        cmd.Parameters.AddWithValue("@pComment", pComment);
-                        cmd.Parameters.AddWithValue("@pPlace", pPlace);
-                        cmd.Parameters.AddWithValue("@pTourType", pTourType);
-                        cmd.Parameters.AddWithValue("@pTourName", pTourName);
-                        cmd.Parameters.AddWithValue("@Noofpax", Noofpax);
-                        cmd.Parameters.AddWithValue("@JournyDate", JournyDate);
-                        cmd.Parameters.AddWithValue("@pPNR", pPNR);
-                        cmd.Parameters.AddWithValue("@pTicketNo", pTicketNo);
-                        cmd.Parameters.AddWithValue("@pFeedBackList", pFeedBackList);
-                        cmd.Parameters.AddWithValue("@pFeedType", pFeedType);
+                        cmd.Parameters.AddWithValue("@I_FullName", pFullName);
+                        cmd.Parameters.AddWithValue("@I_Email", pEmailID);
+                        cmd.Parameters.AddWithValue("@I_ContactNumber", pContactNo);
+                        cmd.Parameters.AddWithValue("@I_Comments", pComment);
+                        cmd.Parameters.AddWithValue("@I_Place", pPlace);
+                        cmd.Parameters.AddWithValue("@I_TourType", pTourType);
+                        cmd.Parameters.AddWithValue("@I_TourName", pTourName);
+                        cmd.Parameters.AddWithValue("@I_NoOfPax", Noofpax);
+                        cmd.Parameters.AddWithValue("@I_JourntDate", JournyDate);
+                        cmd.Parameters.AddWithValue("@I_PNRNo", pPNR);
+                        cmd.Parameters.AddWithValue("@I_TicketNo", pTicketNo);
+                        cmd.Parameters.AddWithValue("@I_FeedBackList", pFeedBackList);
+                        cmd.Parameters.AddWithValue("@I_FeedType", pFeedType);
 
-                        SqlParameter outputStatus = new SqlParameter("@pStatus", SqlDbType.Int)
+                        SqlParameter outputStatus = new SqlParameter("@O_ReturnValues", SqlDbType.Int)
                         {
                             Direction = ParameterDirection.Output
                         };
@@ -465,7 +486,7 @@ namespace SouthernTravelsWeb
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         // Output parameter
-                        SqlParameter statusParam = new SqlParameter("@pStatus", SqlDbType.Int)
+                        SqlParameter statusParam = new SqlParameter("@O_ReturnValue", SqlDbType.Int)
                         {
                             Direction = ParameterDirection.Output
                         };

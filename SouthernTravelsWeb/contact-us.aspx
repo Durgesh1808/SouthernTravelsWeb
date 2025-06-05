@@ -580,10 +580,37 @@ src="https://www.facebook.com/tr?id=520605323053563&ev=PageView&noscript=1"
     </div>
     
     <div class="row">
-    	<div class="col-md-6">
+    	<%--<div class="col-md-6">
     	 <div class="g-recaptcha" runat="server" id="divrecaptcha" ></div>
                              </div>
-                              <asp:Label ID="MessageLabel" runat="server" CssClass="txt" ForeColor="red"></asp:Label>
+                              <asp:Label ID="MessageLabel" runat="server" CssClass="txt" ForeColor="red"></asp:Label>--%>
+          <div class="col-md-12">
+             <ul class="row" style="list-style-type: none; padding-left: 0;">
+             <li >
+                 <div id="dvCaptchaF">
+                 </div>
+ 
+         
+        
+                     <div class="col-md-3">
+                     <asp:TextBox ID="txtCaptcha" runat="server" ValidationGroup="FOO" autocomplete="off" Width="114px" placeholder="Enter Captcha"
+                         AutoCompleteType="None" MaxLength="10" CssClass="form-control"></asp:TextBox>
+                      </div>
+                      <div class="col-md-2" style="margin-left: 49px;">
+                       <img src="JpegImage.aspx?cache=1394701635527" id="captchImg" alt="captcha" width="110px" loading="lazy" />
+                      </div>
+                      <div class="col-md-2" style="margin-left: 53px;">
+                       <img id="refresh_captcha" src="Assets/images/captcha_refresh.jpg" alt="captcha_refresh" style="height:28px; cursor:pointer;" loading="lazy"/>
+                      </div>
+     
+             
+                    <asp:RequiredFieldValidator ID="RequiredFieldtxtCaptcha" CssClass="errorMessage" ValidationGroup="FOO" ForeColor="Red"
+                    runat="server" ControlToValidate="txtCaptcha" Display="Dynamic" ErrorMessage="Enter Captcha"></asp:RequiredFieldValidator>
+         
+         
+             </li>
+         </ul>
+   </div>
     	</div>
      <div class="row">
     	<div class="col-md-6">
@@ -2277,6 +2304,10 @@ src="https://www.facebook.com/tr?id=520605323053563&ev=PageView&noscript=1"
             a.src = document.location.protocol + "//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/9178.js?" + Math.floor(new Date().getTime() / 3600000);
             a.async = true; a.type = "text/javascript"; b.parentNode.insertBefore(a, b)
         }, 1);
+        $('#refresh_captcha').click(function (e) {
+            $('#captchImg').attr('src', 'JpegImage.aspx?cache=' + new Date().getTime());
+            e.preventDefault();
+        });
     </script>
 
 </body>

@@ -258,22 +258,22 @@ namespace SouthernTravelsWeb
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
 
         /// <summary>
-        /// divrecaptcha control.
+        /// txtCaptcha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divrecaptcha;
+        protected global::System.Web.UI.WebControls.TextBox txtCaptcha;
 
         /// <summary>
-        /// MessageLabel control.
+        /// RequiredFieldtxtCaptcha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MessageLabel;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldtxtCaptcha;
 
         /// <summary>
         /// btnSubmitQuery control.

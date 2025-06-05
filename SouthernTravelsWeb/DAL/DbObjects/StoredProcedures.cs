@@ -116,6 +116,9 @@ namespace SouthernTravelsWeb.DAL.DbObjects
         public const string insertbook_sp = "insertbook_sp";
         public const string Updatebook_sp = "Updatebook_sp";
         public const string GetNewsUpdate_SP = "GetNewsUpdate_SP";
+        public const string EnquiryTable_Entry_SP = "EnquiryTable_Entry_SP";
+        public const string sp_InsertEmailLog = "sp_InsertEmailLog";
+        
     }
 
 

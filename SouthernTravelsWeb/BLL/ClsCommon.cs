@@ -17,6 +17,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 using System.Web.Mail;
+using System.Web.Services.Description;
 using System.Web.UI;
 namespace SouthernTravelsWeb.BLL
 {
@@ -43,6 +44,21 @@ namespace SouthernTravelsWeb.BLL
 
         public string ErrDesc;
     }
+    public enum MailRequestFrom
+    {
+        Agent,
+        Website,
+        Admin,
+        Branch
+    }
+    public enum MailStatus
+    {
+        Sent,
+        Failed,
+        Queued,
+        Bounced
+    }
+
     public enum pbException
     {
         [Description("Success")]
@@ -866,95 +882,95 @@ namespace SouthernTravelsWeb.BLL
             return dsResult;
         }
 
-         public static void sendmail(
-            string pTO, string pBCC, string pCC,
-            string pFrom, string pSubject, string pBody,
-            string pFromName = null)
-        {
-            try
-            {
-                // Ensure TLS 1.2 or higher for secure connections
-                System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+        // public static void sendmail(
+        //    string pTO, string pBCC, string pCC,
+        //    string pFrom, string pSubject, string pBody,
+        //    string pFromName = null)
+        //{
+        //    try
+        //    {
+        //        // Ensure TLS 1.2 or higher for secure connections
+        //        System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
 
-                // Read config
-                bool useAuthMail = ConfigurationSettings.AppSettings["AuthMail"]?.ToUpper() == "TRUE";
-                string smtpHost = ConfigurationSettings.AppSettings["SmtpHost"];
-                string smtpPortStr = ConfigurationSettings.AppSettings["SmtpPort"];
-                int smtpPort = 25;
-                if (!string.IsNullOrEmpty(smtpPortStr) && int.TryParse(smtpPortStr, out int port))
-                    smtpPort = port;
+        //        // Read config
+        //        bool useAuthMail = ConfigurationSettings.AppSettings["AuthMail"]?.ToUpper() == "TRUE";
+        //        string smtpHost = ConfigurationSettings.AppSettings["SmtpHost"];
+        //        string smtpPortStr = ConfigurationSettings.AppSettings["SmtpPort"];
+        //        int smtpPort = 25;
+        //        if (!string.IsNullOrEmpty(smtpPortStr) && int.TryParse(smtpPortStr, out int port))
+        //            smtpPort = port;
 
-                // If TO email ends with @temp.com, redirect TO to BCC address
-                if (!string.IsNullOrEmpty(pTO) && pTO.ToLower().EndsWith("@temp.com"))
-                {
-                    pTO = pBCC;
-                }
+        //        // If TO email ends with @temp.com, redirect TO to BCC address
+        //        if (!string.IsNullOrEmpty(pTO) && pTO.ToLower().EndsWith("@temp.com"))
+        //        {
+        //            pTO = pBCC;
+        //        }
 
-                using (var mail = new System.Net.Mail.MailMessage())
-                {
-                    // From Address
-                    var fromAddress = !string.IsNullOrEmpty(pFromName)
-                        ? new System.Net.Mail.MailAddress(pFrom, pFromName)
-                        : new System.Net.Mail.MailAddress(pFrom);
+        //        using (var mail = new System.Net.Mail.MailMessage())
+        //        {
+        //            // From Address
+        //            var fromAddress = !string.IsNullOrEmpty(pFromName)
+        //                ? new System.Net.Mail.MailAddress(pFrom, pFromName)
+        //                : new System.Net.Mail.MailAddress(pFrom);
 
-                    mail.From = fromAddress;
+        //            mail.From = fromAddress;
 
-                    // Add TO recipients
-                    if (!string.IsNullOrEmpty(pTO))
-                    {
-                        foreach (var toAddr in pTO.Split(new[] { ';', ',' }, StringSplitOptions.RemoveEmptyEntries))
-                            mail.To.Add(toAddr.Trim());
-                    }
+        //            // Add TO recipients
+        //            if (!string.IsNullOrEmpty(pTO))
+        //            {
+        //                foreach (var toAddr in pTO.Split(new[] { ';', ',' }, StringSplitOptions.RemoveEmptyEntries))
+        //                    mail.To.Add(toAddr.Trim());
+        //            }
 
-                    // Add BCC recipients
-                    if (!string.IsNullOrEmpty(pBCC))
-                    {
-                        foreach (var bccAddr in pBCC.Split(new[] { ';', ',' }, StringSplitOptions.RemoveEmptyEntries))
-                            mail.Bcc.Add(bccAddr.Trim());
-                    }
+        //            // Add BCC recipients
+        //            if (!string.IsNullOrEmpty(pBCC))
+        //            {
+        //                foreach (var bccAddr in pBCC.Split(new[] { ';', ',' }, StringSplitOptions.RemoveEmptyEntries))
+        //                    mail.Bcc.Add(bccAddr.Trim());
+        //            }
 
-                    // Add CC recipients
-                    if (!string.IsNullOrEmpty(pCC))
-                    {
-                        foreach (var ccAddr in pCC.Split(new[] { ';', ',' }, StringSplitOptions.RemoveEmptyEntries))
-                            mail.CC.Add(ccAddr.Trim());
-                    }
+        //            // Add CC recipients
+        //            if (!string.IsNullOrEmpty(pCC))
+        //            {
+        //                foreach (var ccAddr in pCC.Split(new[] { ';', ',' }, StringSplitOptions.RemoveEmptyEntries))
+        //                    mail.CC.Add(ccAddr.Trim());
+        //            }
 
-                    mail.Subject = pSubject;
-                    mail.Body = pBody;
-                    mail.IsBodyHtml = true;
+        //            mail.Subject = pSubject;
+        //            mail.Body = pBody;
+        //            mail.IsBodyHtml = true;
 
-                    using (var smtpClient = new System.Net.Mail.SmtpClient(smtpHost, smtpPort))
-                    {
-                        if (useAuthMail)
-                        {
-                            // Use authentication settings from config based on 'from' email
-                            string smtpUser = ConfigurationSettings.AppSettings[$"{pFrom.ToLower()}_username"];
-                            string smtpPass = ConfigurationSettings.AppSettings[$"{pFrom.ToLower()}_password"];
+        //            using (var smtpClient = new System.Net.Mail.SmtpClient(smtpHost, smtpPort))
+        //            {
+        //                if (useAuthMail)
+        //                {
+        //                    // Use authentication settings from config based on 'from' email
+        //                    string smtpUser = ConfigurationSettings.AppSettings[$"{pFrom.ToLower()}_username"];
+        //                    string smtpPass = ConfigurationSettings.AppSettings[$"{pFrom.ToLower()}_password"];
 
-                            if (!string.IsNullOrEmpty(smtpUser) && !string.IsNullOrEmpty(smtpPass))
-                            {
-                                smtpClient.Credentials = new System.Net.NetworkCredential(smtpUser, smtpPass);
-                                smtpClient.EnableSsl = true;
-                            }
-                        }
-                        else
-                        {
-                            // No authentication, or use default credentials
-                            smtpClient.UseDefaultCredentials = true;
-                            smtpClient.EnableSsl = false;
-                        }
+        //                    if (!string.IsNullOrEmpty(smtpUser) && !string.IsNullOrEmpty(smtpPass))
+        //                    {
+        //                        smtpClient.Credentials = new System.Net.NetworkCredential(smtpUser, smtpPass);
+        //                        smtpClient.EnableSsl = true;
+        //                    }
+        //                }
+        //                else
+        //                {
+        //                    // No authentication, or use default credentials
+        //                    smtpClient.UseDefaultCredentials = true;
+        //                    smtpClient.EnableSsl = false;
+        //                }
 
-                        smtpClient.Send(mail);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Ideally log this exception somewhere
-                // For now, silent catch like your original, but consider logging!
-            }
-        }
+        //                smtpClient.Send(mail);
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Ideally log this exception somewhere
+        //        // For now, silent catch like your original, but consider logging!
+        //    }
+        //}
 
 
         /// <summary>
@@ -968,9 +984,135 @@ namespace SouthernTravelsWeb.BLL
         /// <param name="pBody"></param>
         /// <param name="pFromName"></param>
         /// <param name="pFileName"></param>
-        public static void sendmail(string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName, string pFileName)
+        public static void sendmail(string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName, string pFilePath)
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+            try
+            {
+                if (pTO.ToLower().EndsWith("@temp.com"))
+                {
+                    pTO = pBCC;
+                }
+
+                string persistMail = ConfigurationManager.AppSettings["PersistMailORSmtpHost"]?.ToUpper();
+                string authMail = ConfigurationManager.AppSettings["AuthMail"]?.ToUpper();
+
+                if (persistMail == "TRUE")
+                {
+                    MailSend(pTO, pBCC, pCC, pFrom, pSubject, pBody, pFromName);
+                }
+                else if (authMail == "TRUE")
+                {
+                    AuthMail(pTO, pBCC, pCC, pFrom, pSubject, pBody, pFromName);
+                }
+                else
+                {
+                    using (System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage())
+                    {
+                        mail.From = new MailAddress(pFrom, pFromName);
+                        mail.To.Add(pTO);
+                        if (!string.IsNullOrEmpty(pBCC))
+                            mail.Bcc.Add(pBCC);
+                        if (!string.IsNullOrEmpty(pCC))
+                            mail.CC.Add(pCC);
+
+                        mail.Subject = pSubject;
+                        mail.Body = pBody;
+                        mail.IsBodyHtml = true;
+
+                        string smtpHost = ConfigurationManager.AppSettings["SmtpHost"];
+                        if (!string.IsNullOrEmpty(smtpHost))
+                        {
+                            using (SmtpClient smtp = new SmtpClient(smtpHost))
+                            {
+                                smtp.Send(mail);
+                            }
+                        }
+                        else
+                        {
+                            throw new Exception("SMTP host not configured.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log or handle the exception properly (e.g., write to log file or email admin)
+                // Example:
+                System.Diagnostics.Debug.WriteLine("Email error: " + ex.ToString());
+            }
+        }
+
+        public static void SendMail(string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody)
+        {
+            // Force TLS 1.2
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+            try
+            {
+                // If TO ends with @temp.com, override it with BCC
+                if (!string.IsNullOrEmpty(pTO) && pTO.ToLower().EndsWith("@temp.com"))
+                {
+                    pTO = pBCC;
+                }
+
+                string persistMail = ConfigurationManager.AppSettings["PersistMailORSmtpHost"]?.ToUpper();
+                string authMail = ConfigurationManager.AppSettings["AuthMail"]?.ToUpper();
+
+                if (persistMail == "TRUE")
+                {
+                    MailSend(pTO, pBCC, pCC, pFrom, pSubject, pBody, "");
+                }
+                else if (authMail == "TRUE")
+                {
+                    AuthMail(pTO, pBCC, pCC, pFrom, pSubject, pBody, "");
+                }
+                else
+                {
+                    using (System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage())
+                    {
+                        mail.From = new MailAddress(pFrom);
+                        mail.To.Add(pTO);
+
+                        if (!string.IsNullOrEmpty(pBCC))
+                            mail.Bcc.Add(pBCC);
+
+                        if (!string.IsNullOrEmpty(pCC))
+                            mail.CC.Add(pCC);
+
+                        mail.Subject = pSubject;
+                        mail.Body = pBody;
+                        mail.IsBodyHtml = true;
+
+                        string smtpHost = ConfigurationManager.AppSettings["SmtpHost"];
+                        if (!string.IsNullOrEmpty(smtpHost))
+                        {
+                            using (SmtpClient smtp = new SmtpClient(smtpHost))
+                            {
+                                smtp.Send(mail);
+                            }
+                        }
+                        else
+                        {
+                            throw new Exception("SMTP host not configured.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log the exception or show a meaningful message
+                System.Diagnostics.Debug.WriteLine("SendMail Exception: " + ex.ToString());
+            }
+        }
+        public static void sendmail(string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName)
+        {
+            // Ensure TLS 1.2 is used
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            MailStatus statusEnum = MailStatus.Sent; // or MailStatus.Failed if caught in catch
+            MailRequestFrom requestFromEnum = MailRequestFrom.Website;
+            string errorMessage = "";
             try
             {
                 if (pTO.ToLower().EndsWith("@temp.com"))
@@ -981,27 +1123,77 @@ namespace SouthernTravelsWeb.BLL
                 if (ConfigurationManager.AppSettings["PersistMailORSmtpHost"]?.ToUpper() == "TRUE")
                 {
                     MailSend(pTO, pBCC, pCC, pFrom, pSubject, pBody, pFromName);
+                    //LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
+
+                    return;
                 }
-                else if (ConfigurationManager.AppSettings["AuthMail"]?.ToUpper() == "TRUE")
+
+                if (ConfigurationManager.AppSettings["AuthMail"]?.ToUpper() == "TRUE")
                 {
-                    AuthMail(pTO, pBCC, pCC, pFrom, pSubject, pBody, pFromName, pFileName);
+                    AuthMail(pTO, pBCC, pCC, pFrom, pSubject, pBody, pFromName);
+                    //LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
+
+                    return;
                 }
-                else
+
+                using (System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage())
                 {
-                    SendSmtpMail(pTO, pBCC, pCC, pFrom, pSubject, pBody, pFromName, pFileName);
+                    mail.From = new MailAddress(pFrom, pFromName);
+
+                    // Multiple recipients (comma-separated)
+                    foreach (var address in pTO.Split(new[] { ";" }, StringSplitOptions.RemoveEmptyEntries))
+                        mail.To.Add(address);
+
+                    if (!string.IsNullOrEmpty(pCC))
+                    {
+                        foreach (var address in pCC.Split(new[] { ";" }, StringSplitOptions.RemoveEmptyEntries))
+                            mail.CC.Add(address);
+                    }
+
+                    if (!string.IsNullOrEmpty(pBCC))
+                    {
+                        foreach (var address in pBCC.Split(new[] { ";" }, StringSplitOptions.RemoveEmptyEntries))
+                            mail.Bcc.Add(address);
+                    }
+
+                    mail.Subject = pSubject;
+                    mail.Body = pBody;
+                    mail.IsBodyHtml = true;
+
+                    using (SmtpClient smtp = new SmtpClient())
+                    {
+                        string smtpHost = ConfigurationManager.AppSettings["SmtpHost"];
+                        if (!string.IsNullOrEmpty(smtpHost))
+                        {
+                            smtp.Host = smtpHost;
+                        }
+                       smtp.Send(mail);
+                    }
                 }
             }
             catch (Exception ex)
             {
-                // Optional: log exception
+                statusEnum = MailStatus.Failed;
+                errorMessage = ex.ToString();
+                LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
+
+                // Consider logging the error
+            }
+            finally
+            {
+                LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
             }
         }
+
         public static void MailSend(string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName)
         {
             SendSmtpMail(pTO, pBCC, pCC, pFrom, pSubject, pBody, pFromName, null);
         }
         public static void AuthMail(string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName, string pFileName = null)
         {
+            MailStatus statusEnum = MailStatus.Sent; // or MailStatus.Failed if caught in catch
+            MailRequestFrom requestFromEnum = MailRequestFrom.Website;
+            string errorMessage = "";
             try
             {
                 string smtpHost = ConfigurationManager.AppSettings["AuthMailSmtpIP"];
@@ -1013,9 +1205,17 @@ namespace SouthernTravelsWeb.BLL
             }
             catch (Exception ex)
             {
-                // Optional: log exception
+                statusEnum = MailStatus.Failed;
+                errorMessage = ex.ToString();
+                LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
             }
+            finally
+            {
+                LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
+            }
+
         }
+
 
         private static void SendSmtpMail(
     string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName,
@@ -1026,8 +1226,14 @@ namespace SouthernTravelsWeb.BLL
     string smtpPass = null,
     bool enableSsl = false)
         {
-            using (System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage())
+            System.Net.Mail.MailMessage mail = null;
+            SmtpClient smtp = null;
+            MailStatus statusEnum = MailStatus.Sent; // or MailStatus.Failed if caught in catch
+            MailRequestFrom requestFromEnum = MailRequestFrom.Website;
+            string errorMessage = "";
+            try
             {
+                mail = new System.Net.Mail.MailMessage();
                 mail.From = new MailAddress(pFrom, pFromName);
 
                 foreach (var addr in pTO.Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries))
@@ -1053,20 +1259,44 @@ namespace SouthernTravelsWeb.BLL
                 smtpHost = smtpHost ?? ConfigurationManager.AppSettings["SmtpHost"];
                 smtpPort = smtpPort == 0 ? Convert.ToInt32(ConfigurationManager.AppSettings["SmtpPort"] ?? "25") : smtpPort;
 
-                using (SmtpClient smtp = new SmtpClient(smtpHost, smtpPort))
+                smtp = new SmtpClient(smtpHost, smtpPort)
                 {
-                    smtp.EnableSsl = enableSsl;
+                    EnableSsl = enableSsl
+                };
 
-                    if (!string.IsNullOrWhiteSpace(smtpUser))
-                        smtp.Credentials = new NetworkCredential(smtpUser, smtpPass);
-                    else
-                        smtp.UseDefaultCredentials = true;
+                if (!string.IsNullOrWhiteSpace(smtpUser))
+                    smtp.Credentials = new NetworkCredential(smtpUser, smtpPass);
+                else
+                    smtp.UseDefaultCredentials = true;
 
-                    smtp.Send(mail);
+                smtp.Send(mail);
+            }
+            catch (Exception ex)
+            {
+                statusEnum = MailStatus.Failed;
+                errorMessage = ex.ToString();
+                LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
+            }
+            finally
+            {
+                // Dispose explicitly if needed (MailMessage attachments can lock files)
+                if (mail != null)
+                {
+                    foreach (var attachment in mail.Attachments)
+                    {
+                        attachment.Dispose();
+                    }
+                    mail.Dispose();
                 }
+
+                if (smtp != null)
+                {
+                    smtp.Dispose();
+                }
+                LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
+
             }
         }
-
 
         public DataTable fnGetMetaTagForTours(int? TourTypeId, int? TourId, int? CountryId, int? ZoneId)
         {
@@ -1239,7 +1469,8 @@ namespace SouthernTravelsWeb.BLL
 
                     // Send error email
                     string to = ConfigurationManager.AppSettings["errormail"];
-                    ClsCommon.sendmail(to, "", "", "tickets1@southerntravels.com",
+                    string ticketEmail = ConfigurationManager.AppSettings["TicketEmail"];
+                    ClsCommon.sendmail(to, "", "", ticketEmail,
                         "Error Has Been Caught in Application_Error event", error, "");
                 }
                 catch (Exception ex)
@@ -1939,6 +2170,36 @@ bool lIsHDFC, bool lIsPayU, string lPayMode)
             }
 
             return result;
+        }
+
+        // Save the email log 
+        public static  void LogEmailToDB(int userId, string sender, string recipient, string cc, string bcc,
+                                     string subject, string body, string status, string errorMessage,
+                                     string messageId, string attachments, string requestFrom)
+        {
+            string connStr = DataLib.getConnectionString();
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            using (SqlCommand cmd = new SqlCommand(StoredProcedures.sp_InsertEmailLog, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@userid", userId);
+                cmd.Parameters.AddWithValue("@sender", (object)sender ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@recipient", (object)recipient ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@cc", (object)cc ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@bcc", (object)bcc ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@subject", (object)subject ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@body", (object)body ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@status", (object)status ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@error_message", (object)errorMessage ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@message_id", (object)messageId ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@attachments", (object)attachments ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@requestfrom", (object)requestFrom ?? DBNull.Value); // New parameter
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
         }
 
     }

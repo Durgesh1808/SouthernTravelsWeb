@@ -147,7 +147,10 @@ namespace SouthernTravelsWeb.UserControl
             {
                 //Add TLS 1.2
                 System.Net.ServicePointManager.SecurityProtocol = (System.Net.SecurityProtocolType)(3072);
-
+                MailStatus statusEnum = MailStatus.Sent; // or MailStatus.Failed if caught in catch
+                MailRequestFrom requestFromEnum = MailRequestFrom.Website;
+                string errorMessage = "";
+                //ClsCommon clsCommon = new ClsCommon();
                 System.Net.Mail.MailMessage lMail = null;
                 SmtpClient lSmtp = null;
                 try
@@ -155,7 +158,7 @@ namespace SouthernTravelsWeb.UserControl
                     lMail = new System.Net.Mail.MailMessage();
                     lSmtp = new SmtpClient();
                     lSmtp.UseDefaultCredentials = false;
-                    lMail.From = new MailAddress("support@southerntravels.com");//pFrom
+                    lMail.From = new MailAddress(ConfigurationManager.AppSettings["SupportEmail"]);//pFrom
                     lMail.To.Add(pTO);
                     //lMail.CC.Add(pFrom);
                     lMail.Subject = pSubject;
@@ -182,14 +185,19 @@ namespace SouthernTravelsWeb.UserControl
                     }
 
                     lSmtp.Send(lMail);
+                    ClsCommon.LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
 
                 }
                 catch (Exception ex)
                 {
+                    statusEnum = MailStatus.Failed;
+                    errorMessage = ex.ToString();
+                    ClsCommon.LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
                     Response.Write(ex.Message);
                 }
                 finally
                 {
+                    //ClsCommon.LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
                     if (lMail != null)
                     {
                         lMail = null;
@@ -198,6 +206,7 @@ namespace SouthernTravelsWeb.UserControl
                     {
                         lSmtp = null;
                     }
+
                 }
             }
             catch (Exception ex)

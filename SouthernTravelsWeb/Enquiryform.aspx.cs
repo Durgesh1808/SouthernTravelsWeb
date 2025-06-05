@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Net;
 using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
@@ -15,7 +16,7 @@ namespace SouthernTravelsWeb
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            divrecaptcha.Attributes.Add("data-sitekey", System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
+            //divrecaptcha.Attributes.Add("data-sitekey", System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
             if (!IsPostBack)
             {
                 if (Request.QueryString["Text"] != null)
@@ -54,8 +55,10 @@ namespace SouthernTravelsWeb
             {
                 if (FormIsValid())
                 {
-                    bool lFlag = reCaptcha();
-                    if (lFlag)
+                    //bool lFlag = reCaptcha();
+                    //if (lFlag)
+                    //{
+                    if (Convert.ToString(Session["CaptchaImageText"]) == Convert.ToString(txtCaptcha.Text.Trim()))
                     {
                         string refno = DataLib.Code("GenEnq");
                         string sArrivalDate = this.txtarrival.Value.ToString().Replace("'", "''");
@@ -199,70 +202,66 @@ namespace SouthernTravelsWeb
                     }
                     else
                     {
+                        if (!string.IsNullOrEmpty(txtCaptcha.Text))
+                        {
+                            //ClsCommon.ShowAlert("Please Enter Valid Captcha");
+                            string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Please Enter Valid Captcha..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                            ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
+                            return;
+                        }
+                        else
+                        {
+                            //ClsCommon.ShowAlert("Please Enter  Captcha");
+                            string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Please Enter  Captcha..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                            ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
+                            return;
+                        }
                     }
 
                 }
+           
             }
         }
         private void MailSend(string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName)
         {
+            MailStatus statusEnum = MailStatus.Sent; // or MailStatus.Failed if caught in catch
+            MailRequestFrom requestFromEnum = MailRequestFrom.Website;
+            string errorMessage = "";
             try
             {
+                string smtpEmail = ConfigurationManager.AppSettings["EnquiryEmailIn"];
+                string smtpPassword = ConfigurationManager.AppSettings["EnquiryEmailInPassword"];
+                string smtpAddress = ConfigurationManager.AppSettings["AuthMailSmtpIP"];
+                int smtpPort = int.Parse(ConfigurationManager.AppSettings["AuthMailSmtpPort"]);
 
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(pFrom, pFromName);
+                mail.To.Add(pTO);
+                if (!string.IsNullOrEmpty(pCC)) mail.CC.Add(pCC);
+                if (!string.IsNullOrEmpty(pBCC)) mail.Bcc.Add(pBCC);
+                mail.Subject = pSubject;
+                mail.Body = pBody;
+                mail.IsBodyHtml = true;
 
-                MailMessage lMail = null;
-                SmtpClient lSmtp = null;
-                try
+                SmtpClient smtp = new SmtpClient(smtpAddress, smtpPort)
                 {
-                    lMail = new MailMessage();
-                    lSmtp = new SmtpClient();
-                    lMail.From = new MailAddress(pFrom);
-                    lMail.To.Add(pTO);
-                    lMail.Subject = pSubject;
-                    lMail.IsBodyHtml = true;
-                    lMail.Body = pBody;
-                    lMail.ReplyTo = new MailAddress(pFromName);
-                    string smtpEmail = "";
-                    string smtpPassword = "";
-                    smtpEmail = "enquiry@southerntravels.in";
-                    smtpPassword = ">6BTuWZE";
+                    Credentials = new NetworkCredential(smtpEmail, smtpPassword),
+                    EnableSsl = true
+                };
 
-                    string smtpAddress = "smtp.gmail.com";
-                    string smtpPort = "587";
-                    if (smtpEmail != "")
-                    {
-                        lSmtp.Host = smtpAddress;
-                        lSmtp.Port = Convert.ToInt32(smtpPort);
-                        lSmtp.Credentials = new System.Net.NetworkCredential(smtpEmail, smtpPassword);
-                        lSmtp.EnableSsl = true;
-                    }
-                    else
-                    {
-                        lSmtp = new SmtpClient(smtpAddress);
-                    }
-
-                    lSmtp.Send(lMail);
-
-                }
-                catch (Exception ex)
-                {
-                    Response.Write(ex.Message);
-                }
-                finally
-                {
-                    if (lMail != null)
-                    {
-                        lMail = null;
-                    }
-                    if (lSmtp != null)
-                    {
-                        lSmtp = null;
-                    }
-                }
+                smtp.Send(mail);
             }
             catch (Exception ex)
             {
-                Response.Write(ex.Message);
+                statusEnum = MailStatus.Failed;
+                errorMessage = ex.ToString();
+               ClsCommon.LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
+
+                // Consider logging the error
+            }
+            finally
+            {
+                ClsCommon.LogEmailToDB(0, pFrom, pTO, pCC, pBCC, pSubject, pBody, statusEnum.ToString(), errorMessage, "", "", requestFromEnum.ToString());
             }
         }
         private bool FormIsValid()
@@ -280,7 +279,9 @@ namespace SouthernTravelsWeb
             {
                 lblMsgTour.Text = "Select tour of your choice";
                 ret = false;
-                ClientScript.RegisterStartupScript(GetType(), "response", "<script>alert('Select tour of your choice.');</script>");
+                string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Select tour of your choice..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
+                //ClientScript.RegisterStartupScript(GetType(), "response", "<script>alert('Select tour of your choice.');</script>");
             }
             else
             {
@@ -311,78 +312,79 @@ namespace SouthernTravelsWeb
             txtDept.Value = "";
             txtarrival.Value = "";
             ChkInterest.SelectedIndex = -1;
+            txtCaptcha.Text = "";
         }
 
-        public bool reCaptcha()
-        {
-            bool lFlag = false;
-            //start building recaptch api call
-            var sb = new System.Text.StringBuilder();
-            sb.Append("https://www.google.com/recaptcha/api/siteverify?secret=");
+        //public bool reCaptcha()
+        //{
+        //    bool lFlag = false;
+        //    //start building recaptch api call
+        //    var sb = new System.Text.StringBuilder();
+        //    sb.Append("https://www.google.com/recaptcha/api/siteverify?secret=");
 
-            //our secret key
-            var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"]; //"6LesfBwTAAAAAPKzkHq9ny59cb_BtZa1D6ZLLBGf";
-            sb.Append(secretKey);
+        //    //our secret key
+        //    var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"]; //"6LesfBwTAAAAAPKzkHq9ny59cb_BtZa1D6ZLLBGf";
+        //    sb.Append(secretKey);
 
-            //response from recaptch control
-            sb.Append("&");
-            sb.Append("response=");
-            var reCaptchaResponse = Request["g-recaptcha-response"];
-            sb.Append(reCaptchaResponse);
+        //    //response from recaptch control
+        //    sb.Append("&");
+        //    sb.Append("response=");
+        //    var reCaptchaResponse = Request["g-recaptcha-response"];
+        //    sb.Append(reCaptchaResponse);
 
-            //client ip address
-            //---- This Ip address part is optional. If you donot want to send IP address you can
-            //---- Skip(Remove below 4 lines)
-            sb.Append("&");
-            sb.Append("remoteip=");
-            var clientIpAddress = GetUserIp();
-            sb.Append(clientIpAddress);
+        //    //client ip address
+        //    //---- This Ip address part is optional. If you donot want to send IP address you can
+        //    //---- Skip(Remove below 4 lines)
+        //    sb.Append("&");
+        //    sb.Append("remoteip=");
+        //    var clientIpAddress = GetUserIp();
+        //    sb.Append(clientIpAddress);
 
-            //make the api call and determine validity
-            using (var client = new System.Net.WebClient())
-            {
-                var uri = sb.ToString();
-                var json = client.DownloadString(uri);
-                var serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(RecaptchaApiResponse));
-                var ms = new System.IO.MemoryStream(System.Text.Encoding.Unicode.GetBytes(json));
-                var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
+        //    //make the api call and determine validity
+        //    using (var client = new System.Net.WebClient())
+        //    {
+        //        var uri = sb.ToString();
+        //        var json = client.DownloadString(uri);
+        //        var serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(RecaptchaApiResponse));
+        //        var ms = new System.IO.MemoryStream(System.Text.Encoding.Unicode.GetBytes(json));
+        //        var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
 
-                //--- Check if we are able to call api or not.
-                if (result == null)
-                {
-                    MessageLabel.Text = "Captcha was unable to make the api call";
-                }
-                else // If Yes
-                {
-                    //api call contains errors
-                    if (result.ErrorCodes != null)
-                    {
-                        if (result.ErrorCodes.Count > 0)
-                        {
-                            foreach (var error in result.ErrorCodes)
-                            {
-                                MessageLabel.Text = "Captcha is required.";
-                            }
-                        }
-                    }
-                    else //api does not contain errors
-                    {
-                        if (!result.Success) //captcha was unsuccessful for some reason
-                        {
-                            MessageLabel.Text = "Captcha did not pass, please try again.";
-                        }
-                        else //---- If successfully verified. Do your rest of logic.
-                        {
-                            MessageLabel.Text = "Captcha cleared ";
-                            lFlag = true;
-                        }
-                    }
+        //        //--- Check if we are able to call api or not.
+        //        if (result == null)
+        //        {
+        //            MessageLabel.Text = "Captcha was unable to make the api call";
+        //        }
+        //        else // If Yes
+        //        {
+        //            //api call contains errors
+        //            if (result.ErrorCodes != null)
+        //            {
+        //                if (result.ErrorCodes.Count > 0)
+        //                {
+        //                    foreach (var error in result.ErrorCodes)
+        //                    {
+        //                        MessageLabel.Text = "Captcha is required.";
+        //                    }
+        //                }
+        //            }
+        //            else //api does not contain errors
+        //            {
+        //                if (!result.Success) //captcha was unsuccessful for some reason
+        //                {
+        //                    MessageLabel.Text = "Captcha did not pass, please try again.";
+        //                }
+        //                else //---- If successfully verified. Do your rest of logic.
+        //                {
+        //                    MessageLabel.Text = "Captcha cleared ";
+        //                    lFlag = true;
+        //                }
+        //            }
 
-                }
+        //        }
 
-            }
-            return lFlag;
-        }
+        //    }
+        //    return lFlag;
+        //}
         [System.Runtime.Serialization.DataContract]
         public class RecaptchaApiResponse
         {

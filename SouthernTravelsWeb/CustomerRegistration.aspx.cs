@@ -20,7 +20,7 @@ namespace SouthernTravelsWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             btnsubmit.Attributes.Add("onclick", "javascript:return validatesubmit();");
-            divrecaptcha.Attributes.Add("data-sitekey", System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
+            //divrecaptcha.Attributes.Add("data-sitekey", System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
             if (Request.QueryString["fb"] != null)
             {
                 if (Convert.ToString(Request.QueryString["fb"]) == "y")
@@ -39,12 +39,13 @@ namespace SouthernTravelsWeb
         }
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-            bool lFlag = reCaptcha();
-            //if ((this.Session["CaptchaImageText"] != null) && (this.txtCaptchImage.Text.ToString() == this.Session["CaptchaImageText"].ToString()))
-            //    valid = "true";
-            if (lFlag)
+            //bool lFlag = reCaptcha();
+            ////if ((this.Session["CaptchaImageText"] != null) && (this.txtCaptchImage.Text.ToString() == this.Session["CaptchaImageText"].ToString()))
+            ////    valid = "true";
+            //if (lFlag)
+            //{
+            if (Convert.ToString(Session["CaptchaImageText"]) == Convert.ToString(txtCaptcha.Text.Trim()))
             {
-
                 string add1, add2, alterno, city, country, email, fname, lname, mobile, pincode, state;
                 add1 = DataLib.funClear(Convert.ToString(txtAddress1.Value));
                 add2 = DataLib.funClear(Convert.ToString(txtAddress2.Value));
@@ -116,6 +117,20 @@ namespace SouthernTravelsWeb
             }
             else
             {
+                if (!string.IsNullOrEmpty(txtCaptcha.Text))
+                {
+                    ClsCommon.ShowAlert("Please Enter Valid Captcha");
+                    //string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Please Enter Valid Captcha..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                    //ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
+                    return;
+                }
+                else
+                {
+                    ClsCommon.ShowAlert("Please Enter  Captcha");
+                    //string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Please Enter  Captcha..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                    //ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
+                    return;
+                }
             }
         }
 
@@ -195,7 +210,7 @@ namespace SouthernTravelsWeb
             try
             {
                 string pTO = lemailId;
-                string pFrom = "info@southerntravels.in";
+                string pFrom = ConfigurationManager.AppSettings["InfoEmail"];
                 string pSubject = "Your Southern Travels Account Details.";
                 string pBody = strToSend;
                 ClsCommon.sendmail(pTO, "", "", pFrom, pSubject, pBody, "");
@@ -219,71 +234,71 @@ namespace SouthernTravelsWeb
             {
             }
         }
-        public bool reCaptcha()
-        {
-            bool lFlag = false;
+        //public bool reCaptcha()
+        //{
+        //    bool lFlag = false;
 
-            var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"];
-            var reCaptchaResponse = Request["g-recaptcha-response"];
+        //    var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"];
+        //    var reCaptchaResponse = Request["g-recaptcha-response"];
 
-            if (string.IsNullOrEmpty(secretKey))
-            {
-                MessageLabel.Text = "Secret key is not configured.";
-                return false;
-            }
+        //    if (string.IsNullOrEmpty(secretKey))
+        //    {
+        //        MessageLabel.Text = "Secret key is not configured.";
+        //        return false;
+        //    }
 
-            if (string.IsNullOrEmpty(reCaptchaResponse))
-            {
-                MessageLabel.Text = "Captcha response is empty.";
-                return false;
-            }
+        //    if (string.IsNullOrEmpty(reCaptchaResponse))
+        //    {
+        //        MessageLabel.Text = "Captcha response is empty.";
+        //        return false;
+        //    }
 
-            var sb = new System.Text.StringBuilder();
-            sb.Append("https://www.google.com/recaptcha/api/siteverify?secret=");
-            sb.Append(HttpUtility.UrlEncode(secretKey));
+        //    var sb = new System.Text.StringBuilder();
+        //    sb.Append("https://www.google.com/recaptcha/api/siteverify?secret=");
+        //    sb.Append(HttpUtility.UrlEncode(secretKey));
 
-            sb.Append("&response=");
-            sb.Append(HttpUtility.UrlEncode(reCaptchaResponse));
+        //    sb.Append("&response=");
+        //    sb.Append(HttpUtility.UrlEncode(reCaptchaResponse));
 
-            var clientIpAddress = GetUserIp();
-            if (!string.IsNullOrEmpty(clientIpAddress))
-            {
-                sb.Append("&remoteip=");
-                sb.Append(HttpUtility.UrlEncode(clientIpAddress));
-            }
+        //    var clientIpAddress = GetUserIp();
+        //    if (!string.IsNullOrEmpty(clientIpAddress))
+        //    {
+        //        sb.Append("&remoteip=");
+        //        sb.Append(HttpUtility.UrlEncode(clientIpAddress));
+        //    }
 
-            using (var client = new System.Net.WebClient())
-            {
-                var uri = sb.ToString();
-                var json = client.DownloadString(uri);
+        //    using (var client = new System.Net.WebClient())
+        //    {
+        //        var uri = sb.ToString();
+        //        var json = client.DownloadString(uri);
 
-                var serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(RecaptchaApiResponse));
-                using (var ms = new System.IO.MemoryStream(System.Text.Encoding.UTF8.GetBytes(json)))
-                {
-                    var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
+        //        var serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(RecaptchaApiResponse));
+        //        using (var ms = new System.IO.MemoryStream(System.Text.Encoding.UTF8.GetBytes(json)))
+        //        {
+        //            var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
 
-                    if (result == null)
-                    {
-                        MessageLabel.Text = "Captcha was unable to make the api call";
-                    }
-                    else if (result.ErrorCodes != null && result.ErrorCodes.Count > 0)
-                    {
-                        MessageLabel.Text = "Captcha error: " + string.Join(", ", result.ErrorCodes);
-                    }
-                    else if (!result.Success)
-                    {
-                        MessageLabel.Text = "Captcha did not pass, please try again.";
-                    }
-                    else
-                    {
-                        MessageLabel.Text = "Captcha cleared";
-                        lFlag = true;
-                    }
-                }
-            }
+        //            if (result == null)
+        //            {
+        //                MessageLabel.Text = "Captcha was unable to make the api call";
+        //            }
+        //            else if (result.ErrorCodes != null && result.ErrorCodes.Count > 0)
+        //            {
+        //                MessageLabel.Text = "Captcha error: " + string.Join(", ", result.ErrorCodes);
+        //            }
+        //            else if (!result.Success)
+        //            {
+        //                MessageLabel.Text = "Captcha did not pass, please try again.";
+        //            }
+        //            else
+        //            {
+        //                MessageLabel.Text = "Captcha cleared";
+        //                lFlag = true;
+        //            }
+        //        }
+        //    }
 
-            return lFlag;
-        }
+        //    return lFlag;
+        //}
 
         [DataContract]
         public class RecaptchaApiResponse

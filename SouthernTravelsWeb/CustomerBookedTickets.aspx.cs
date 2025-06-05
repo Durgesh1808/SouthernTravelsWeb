@@ -146,8 +146,10 @@ namespace SouthernTravelsWeb
                         strToSend = strToSend.Replace("#Cname#", dtcheck.Tables[0].Rows[0]["firstname"].ToString());
                         strToSend = strToSend.Replace("#ticketno#", ticketcode);
                         strToSend = strToSend.Replace("#address#", address);
+                        string alertEmail = ConfigurationManager.AppSettings["AlertEmail"];
+                        //ClsCommon.sendmail(alertEmail, "", "", custmail, "Request for LTC/LFC Certificate", strToSend);
+                        ClsCommon.SendMail(alertEmail, "", "", custmail, "Request for LTC/LFC Certificate", strToSend);
 
-                        ClsCommon.sendmail("alerts@southerntravels.in", "", "", custmail, "Request for LTC/LFC Certificate", strToSend);
                         ClientScript.RegisterStartupScript(GetType(), "eligibleforLTC", "<script>alert('Your Request Sent Successfully');</script>");
                     }
                     else if (pStatus == 1)
