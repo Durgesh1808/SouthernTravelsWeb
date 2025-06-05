@@ -2,6 +2,7 @@
 using SouthernTravelsWeb.DAL.DbObjects;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace SouthernTravelsWeb
         #region "Event(s)"
         protected void Page_Load(object sender, EventArgs e)
         {
-            divrecaptcha.Attributes.Add("data-sitekey", System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
+            //divrecaptcha.Attributes.Add("data-sitekey", System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
             txtMobile.Attributes.Add("onkeypress", "return chkNumeric(event);");
             btnSend.Attributes.Add("onclick", "javascript:return fnFeedbackVal();");
             if (!IsPostBack)
@@ -65,12 +66,15 @@ namespace SouthernTravelsWeb
         protected void ClearComment()
         {
             txtFullName.Text = ""; txtFeedEmail.Text = ""; txtMobile.Text = ""; txtComments.Text = "";
-            ddlPurpose.SelectedIndex = -1;
+            ddlPurpose.SelectedIndex = -1; txtCaptcha.Text="";
+
         }
         protected void SaveComment()
         {
-            bool lFlag = reCaptcha();
-            if (lFlag)
+            //bool lFlag = reCaptcha();
+            //if (lFlag)
+            //{
+            if (Convert.ToString(Session["CaptchaImageText"]) == Convert.ToString(txtCaptcha.Text.Trim()))
             {
                 string lFileName = "", lFileExtension = "";
                 if (flUpload.HasFile)
@@ -103,6 +107,24 @@ namespace SouthernTravelsWeb
                 finally
                 {
                    
+                }
+            }
+
+            else
+            {
+                if (!string.IsNullOrEmpty(txtCaptcha.Text))
+                {
+                    ClsCommon.ShowAlert("Please Enter Valid Captcha");
+                    //string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Please Enter Valid Captcha..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                    //ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
+                    return;
+                }
+                else
+                {
+                    ClsCommon.ShowAlert("Please Enter  Captcha");
+                    //string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Please Enter  Captcha..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                    //ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
+                    return;
                 }
             }
         }
@@ -202,12 +224,12 @@ namespace SouthernTravelsWeb
 
             if (pSendAttachment)
             {
-                ClsCommon.sendmail("support@southerntravels.com", "", "", "enquiry@southerntravels.com", "Contact US " + Contact_USNo, mailbody, "", pFilePath);
+                ClsCommon.sendmail(ConfigurationManager.AppSettings["SupportEmail"], "", "", ConfigurationManager.AppSettings["EnquiryEmail"], "Contact US " + Contact_USNo, mailbody, "", pFilePath);
             }
             else
             {
                 //ClsCommon.sendmail("support@southerntravels.com", "", "", "enquiry@southerntravels.com", "Contact US " + Contact_USNo, mailbody, txtFeedEmail.Text);
-                MailSend("support@southerntravels.com", "", "", "enquiry@southerntravels.com", "Contact US " + Contact_USNo, mailbody, txtFeedEmail.Text);
+                MailSend(ConfigurationManager.AppSettings["SupportEmail"], "", "", ConfigurationManager.AppSettings["EnquiryEmail"], "Contact US " + Contact_USNo, mailbody, txtFeedEmail.Text);
             }
         }
         private void MailSend(string pTO, string pBCC, string pCC, string pFrom, string pSubject, string pBody, string pFromName)
@@ -230,7 +252,7 @@ namespace SouthernTravelsWeb
                     lMail.ReplyTo = new MailAddress(pFromName);
                     string smtpEmail = "";
                     string smtpPassword = "";
-                    smtpEmail = "enquiry@southerntravels.com";
+                    smtpEmail = ConfigurationManager.AppSettings["EnquiryEmail"];
                     smtpPassword = ">6BTuWZE";
 
                     string smtpAddress = "smtp.gmail.com";
@@ -301,76 +323,76 @@ namespace SouthernTravelsWeb
                 contactus.Attributes.Add("class", "tab-pane in active");
             }
         }
-        public bool reCaptcha()
-        {
-            bool lFlag = false;
-            //start building recaptch api call
-            var sb = new System.Text.StringBuilder();
-            sb.Append("https://www.google.com/recaptcha/api/siteverify?secret=");
+        //public bool reCaptcha()
+        //{
+        //    bool lFlag = false;
+        //    //start building recaptch api call
+        //    var sb = new System.Text.StringBuilder();
+        //    sb.Append("https://www.google.com/recaptcha/api/siteverify?secret=");
 
-            //our secret key
-            var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"]; //"6LesfBwTAAAAAPKzkHq9ny59cb_BtZa1D6ZLLBGf";
-            sb.Append(secretKey);
+        //    //our secret key
+        //    var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"]; //"6LesfBwTAAAAAPKzkHq9ny59cb_BtZa1D6ZLLBGf";
+        //    sb.Append(secretKey);
 
-            //response from recaptch control
-            sb.Append("&");
-            sb.Append("response=");
-            var reCaptchaResponse = Request["g-recaptcha-response"];
-            sb.Append(reCaptchaResponse);
+        //    //response from recaptch control
+        //    sb.Append("&");
+        //    sb.Append("response=");
+        //    var reCaptchaResponse = Request["g-recaptcha-response"];
+        //    sb.Append(reCaptchaResponse);
 
-            //client ip address
-            //---- This Ip address part is optional. If you donot want to send IP address you can
-            //---- Skip(Remove below 4 lines)
-            sb.Append("&");
-            sb.Append("remoteip=");
-            var clientIpAddress = GetUserIp();
-            sb.Append(clientIpAddress);
+        //    //client ip address
+        //    //---- This Ip address part is optional. If you donot want to send IP address you can
+        //    //---- Skip(Remove below 4 lines)
+        //    sb.Append("&");
+        //    sb.Append("remoteip=");
+        //    var clientIpAddress = GetUserIp();
+        //    sb.Append(clientIpAddress);
 
-            //make the api call and determine validity
-            using (var client = new System.Net.WebClient())
-            {
-                var uri = sb.ToString();
-                var json = client.DownloadString(uri);
-                var serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(RecaptchaApiResponse));
-                var ms = new System.IO.MemoryStream(System.Text.Encoding.Unicode.GetBytes(json));
-                var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
+        //    //make the api call and determine validity
+        //    using (var client = new System.Net.WebClient())
+        //    {
+        //        var uri = sb.ToString();
+        //        var json = client.DownloadString(uri);
+        //        var serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(RecaptchaApiResponse));
+        //        var ms = new System.IO.MemoryStream(System.Text.Encoding.Unicode.GetBytes(json));
+        //        var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
 
-                //--- Check if we are able to call api or not.
-                if (result == null)
-                {
-                    MessageLabel.Text = "Captcha was unable to make the api call";
-                }
-                else // If Yes
-                {
-                    //api call contains errors
-                    if (result.ErrorCodes != null)
-                    {
-                        if (result.ErrorCodes.Count > 0)
-                        {
-                            foreach (var error in result.ErrorCodes)
-                            {
-                                MessageLabel.Text = "Captcha is required.";
-                            }
-                        }
-                    }
-                    else //api does not contain errors
-                    {
-                        if (!result.Success) //captcha was unsuccessful for some reason
-                        {
-                            MessageLabel.Text = "Captcha did not pass, please try again.";
-                        }
-                        else //---- If successfully verified. Do your rest of logic.
-                        {
-                            MessageLabel.Text = "Captcha cleared ";
-                            lFlag = true;
-                        }
-                    }
+        //        //--- Check if we are able to call api or not.
+        //        if (result == null)
+        //        {
+        //            MessageLabel.Text = "Captcha was unable to make the api call";
+        //        }
+        //        else // If Yes
+        //        {
+        //            //api call contains errors
+        //            if (result.ErrorCodes != null)
+        //            {
+        //                if (result.ErrorCodes.Count > 0)
+        //                {
+        //                    foreach (var error in result.ErrorCodes)
+        //                    {
+        //                        MessageLabel.Text = "Captcha is required.";
+        //                    }
+        //                }
+        //            }
+        //            else //api does not contain errors
+        //            {
+        //                if (!result.Success) //captcha was unsuccessful for some reason
+        //                {
+        //                    MessageLabel.Text = "Captcha did not pass, please try again.";
+        //                }
+        //                else //---- If successfully verified. Do your rest of logic.
+        //                {
+        //                    MessageLabel.Text = "Captcha cleared ";
+        //                    lFlag = true;
+        //                }
+        //            }
 
-                }
+        //        }
 
-            }
-            return lFlag;
-        }
+        //    }
+        //    return lFlag;
+        //}
         [System.Runtime.Serialization.DataContract]
         public class RecaptchaApiResponse
         {
@@ -453,21 +475,21 @@ namespace SouthernTravelsWeb
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         // Input Parameters
-                        cmd.Parameters.AddWithValue("@FullName", pFullName);
-                        cmd.Parameters.AddWithValue("@EmailID", pEmailID);
-                        cmd.Parameters.AddWithValue("@ContactNo", pContactNo);
-                        cmd.Parameters.AddWithValue("@Comment", pComment);
-                        cmd.Parameters.AddWithValue("@Purpose", pPurpose);
-                        cmd.Parameters.AddWithValue("@FileName", pFileName);
+                        cmd.Parameters.AddWithValue("@I_FullName", pFullName);
+                        cmd.Parameters.AddWithValue("@I_Email", pEmailID);
+                        cmd.Parameters.AddWithValue("@I_ContactNumber", pContactNo);
+                        cmd.Parameters.AddWithValue("@I_Comments", pComment);
+                        cmd.Parameters.AddWithValue("@I_Purpose", pPurpose);
+                        cmd.Parameters.AddWithValue("@I_FileName", pFileName);
 
                         // Output Parameters
-                        SqlParameter outContactNo = new SqlParameter("@OutContactNo", SqlDbType.VarChar, 50)
+                        SqlParameter outContactNo = new SqlParameter("@O_ContactUSNo", SqlDbType.VarChar, 50)
                         {
                             Direction = ParameterDirection.Output
                         };
                         cmd.Parameters.Add(outContactNo);
 
-                        SqlParameter outStatus = new SqlParameter("@Status", SqlDbType.Int)
+                        SqlParameter outStatus = new SqlParameter("@O_ReturnValues", SqlDbType.Int)
                         {
                             Direction = ParameterDirection.Output
                         };

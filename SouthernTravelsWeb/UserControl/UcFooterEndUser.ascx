@@ -829,9 +829,7 @@
                 <li >
                     <div id="dvCaptchaF">
                     </div>
-                    <%--<asp:TextBox ID="txtCaptchaF" runat="server" Style="display: none" />--%>
-                    <%--<asp:RequiredFieldValidator ID="rfvCaptchaF" ValidationGroup="FOO" ErrorMessage="Captcha validation is required."
-                        ControlToValidate="txtCaptchaF" runat="server" ForeColor="Red" Display="Dynamic" />--%>
+                
                         
                        
                         <div class="col-md-3">

@@ -68,9 +68,7 @@ namespace SouthernTravelsWeb
                 "~/Assets/css/bootstrap-datepicker.css"
             ));
 
-            bundles.Add(new ScriptBundle("~/bundles/scrolltofixedJs").Include(
-                "~/Assets/js/jquery-scrolltofixed.js"
-            ));
+          
 
             // Enable bundling and minification even in debug mode
             BundleTable.EnableOptimizations = true;

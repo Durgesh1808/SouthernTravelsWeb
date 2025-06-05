@@ -49,24 +49,21 @@ namespace SouthernTravelsWeb.BLL
         /// <param name="pCaptcha"></param>
         /// <returns> Identity value of Success Full Insertion of Record </returns>
         public static int EnquiryTable_Entry(string pDescription, string pName, string pEmail, string pPhone,
-     string pFax, string pStreet, string pCity, string pZIP, string pCountry, int pAdults, int pChild,
-     DateTime pArrivalDate, DateTime pDeptDate, string pRequestType, string pRefNo, string pCaptcha)
+         string pFax, string pStreet, string pCity, string pZIP, string pCountry, int pAdults, int pChild,
+         DateTime pArrivalDate, DateTime pDeptDate, string pRequestType, string pRefNo, string pCaptcha)
         {
             int insertedId = 0;
-            string connStr =DataLib.getConnectionString(); // Use your configured connection string
+            string connStr = DataLib.getConnectionString();
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 try
                 {
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO Enq_tbl " +
-                        "(Description, Name, Email, Phone, Fax, Street, City, Zip, Country, Adults, Child, ArrivalDate, DepDate, EnqType, RefNo, Captcha, PanNo) " +
-                        "OUTPUT INSERTED.ID " +  // Assuming the table has an IDENTITY column named ID
-                        "VALUES (@Description, @Name, @Email, @Phone, @Fax, @Street, @City, @Zip, @Country, @Adults, @Child, @ArrivalDate, @DepDate, @EnqType, @RefNo, @Captcha, @PanNo)", conn))
+                    using (SqlCommand cmd = new SqlCommand(StoredProcedures.EnquiryTable_Entry_SP, conn))
                     {
-                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                        // Add parameters
+                        // Input parameters
                         cmd.Parameters.AddWithValue("@Description", pDescription);
                         cmd.Parameters.AddWithValue("@Name", pName);
                         cmd.Parameters.AddWithValue("@Email", pEmail);
@@ -83,21 +80,31 @@ namespace SouthernTravelsWeb.BLL
                         cmd.Parameters.AddWithValue("@EnqType", pRequestType);
                         cmd.Parameters.AddWithValue("@RefNo", pRefNo);
                         cmd.Parameters.AddWithValue("@Captcha", pCaptcha);
-                        cmd.Parameters.AddWithValue("@PanNo", ""); // Hardcoded as in original code
+                        cmd.Parameters.AddWithValue("@PanNo", ""); // Default/empty
+
+                        // Output parameter
+                        SqlParameter outputIdParam = new SqlParameter("@InsertedID", SqlDbType.Int)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(outputIdParam);
 
                         conn.Open();
-                        // Execute and get the auto-generated ID
-                        insertedId = Convert.ToInt32(cmd.ExecuteScalar());
+                        cmd.ExecuteNonQuery();
+
+                        insertedId = (int)outputIdParam.Value;
                     }
                 }
                 catch (Exception ex)
                 {
-                    // Handle or log the error
+                    // Handle exception (e.g., log it)
                     insertedId = 0;
                 }
             }
+
             return insertedId;
         }
+
 
 
         public static int EnquiryTable_Entry(string pDescription, string pName, string pEmail, string pPhone,
@@ -133,7 +140,7 @@ namespace SouthernTravelsWeb.BLL
                         cmd.Parameters.AddWithValue("@type", pRequestType ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@refno", pRefNo ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@captcha", pCaptcha ?? (object)DBNull.Value);
-                        cmd.Parameters.AddWithValue("@PanNo", pPanNo ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@I_PanNo", pPanNo ?? (object)DBNull.Value);
 
                         // Output parameter
                         SqlParameter outParam = new SqlParameter("@res", SqlDbType.Int)

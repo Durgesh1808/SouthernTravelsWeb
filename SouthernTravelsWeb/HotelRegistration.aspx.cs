@@ -24,7 +24,7 @@ namespace SouthernTravelsWeb
         #region "Page Events"
         protected void Page_Load(object sender, EventArgs e)
         {
-            divrecaptcha.Attributes.Add("data-sitekey", System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
+            //divrecaptcha.Attributes.Add("data-sitekey", System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Sitekey"]);
 
             this.btnSubmit.Attributes.Add("onclick", "javascript:return fnHotelVal();");
             if (!IsPostBack)
@@ -46,55 +46,75 @@ namespace SouthernTravelsWeb
         {
             if (!Page.IsValid)
                 return;
-            bool lFlag = reCaptcha();
-            if (!lFlag)
+            //bool lFlag = reCaptcha();
+            //if (!lFlag)
+            //{
+            //    return;
+            //}
+            if (Convert.ToString(Session["CaptchaImageText"]) == Convert.ToString(txtCaptcha.Text.Trim()))
             {
-                return;
-            }
 
-            string vendorType = ddlVendorType.SelectedValue;
-            string ChainName = txtChainName.Text.Trim();
-            string HotelName = txtHotelName.Text.Trim();
+                string vendorType = ddlVendorType.SelectedValue;
+                string ChainName = txtChainName.Text.Trim();
+                string HotelName = txtHotelName.Text.Trim();
 
-            Decimal Tax = ConvertStringDecimal(txtTax.Text.Trim());
-            Decimal LuxuryTax = ConvertStringDecimal(txtLuxuryTax.Text.Trim());
-            Decimal ServiceTax = ConvertStringDecimal(txtServiceTax.Text.Trim());
+                Decimal Tax = ConvertStringDecimal(txtTax.Text.Trim());
+                Decimal LuxuryTax = ConvertStringDecimal(txtLuxuryTax.Text.Trim());
+                Decimal ServiceTax = ConvertStringDecimal(txtServiceTax.Text.Trim());
 
-            string Address = txtAddress.Text.Trim();
-            string StdCode = txtStdCode.Text.Trim();
-            string PhoneNO = txtHotelPhoneNo.Text.Trim();
-            string Mobile = txtMobile.Text.Trim();
-            string ContactPerson = txtContactPerson.Text.Trim();
+                string Address = txtAddress.Text.Trim();
+                string StdCode = txtStdCode.Text.Trim();
+                string PhoneNO = txtHotelPhoneNo.Text.Trim();
+                string Mobile = txtMobile.Text.Trim();
+                string ContactPerson = txtContactPerson.Text.Trim();
 
-            string Designation = txtDesignation.Text.Trim();
-            string Email = txtEmailId.Text.Trim();
-            string PanNO = txtPanNo.Text.Trim();
-            string Category = ddlCategory.SelectedValue;
+                string Designation = txtDesignation.Text.Trim();
+                string Email = txtEmailId.Text.Trim();
+                string PanNO = txtPanNo.Text.Trim();
+                string Category = ddlCategory.SelectedValue;
 
-            int NoOfRoom = ConvertStringToInt(txtNOOfRooms.Text.Trim());
-            int State = ConvertStringToInt(ddlState.SelectedValue);
-            string City = txtCity.Text.Trim().Trim();
-            string GeneralIfo = txtGeneralInfo.Text.Trim().Trim();
+                int NoOfRoom = ConvertStringToInt(txtNOOfRooms.Text.Trim());
+                int State = ConvertStringToInt(ddlState.SelectedValue);
+                string City = txtCity.Text.Trim().Trim();
+                string GeneralIfo = txtGeneralInfo.Text.Trim().Trim();
 
-            int Status = SaveVendorHotel(vendorType, ChainName, HotelName, Tax, LuxuryTax,
-                ServiceTax, Address, StdCode, PhoneNO,
-                Mobile, ContactPerson, Designation, Email, PanNO, Category, NoOfRoom, State,
-               City, GeneralIfo);
+                int Status = SaveVendorHotel(vendorType, ChainName, HotelName, Tax, LuxuryTax,
+                    ServiceTax, Address, StdCode, PhoneNO,
+                    Mobile, ContactPerson, Designation, Email, PanNO, Category, NoOfRoom, State,
+                   City, GeneralIfo);
 
-            if (Status > 0)
-            {
-                ClientScript.RegisterStartupScript(GetType(), "Save", "<script>alert('Your query has been submitted successfully. Our executive will soon be in touch with you.');</Script>");
-                SendMeailToSouthern(Status);
-                SendMeailToVendor(Status);
-                Clear();
-            }
-            else if (Status == -2)
-            {
-                ClientScript.RegisterStartupScript(GetType(), "Save", "<script>alert('Your email id is already registered. Please try with some other email id');</Script>");
+                if (Status > 0)
+                {
+                    ClientScript.RegisterStartupScript(GetType(), "Save", "<script>alert('Your query has been submitted successfully. Our executive will soon be in touch with you.');</Script>");
+                    SendMeailToSouthern(Status);
+                    SendMeailToVendor(Status);
+                    Clear();
+                }
+                else if (Status == -2)
+                {
+                    ClientScript.RegisterStartupScript(GetType(), "Save", "<script>alert('Your email id is already registered. Please try with some other email id');</Script>");
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(GetType(), "Save", "<script>alert('Please try again.');</Script>");
+                }
             }
             else
             {
-                ClientScript.RegisterStartupScript(GetType(), "Save", "<script>alert('Please try again.');</Script>");
+                if (!string.IsNullOrEmpty(txtCaptcha.Text))
+                {
+                    ClsCommon.ShowAlert("Please Enter Valid Captcha");
+                    //string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Please Enter Valid Captcha..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                    //ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
+                    return;
+                }
+                else
+                {
+                    ClsCommon.ShowAlert("Please Enter  Captcha");
+                    //string script = "Swal.fire({ icon: 'warning', title: 'Oops...', text: 'Please Enter  Captcha..', timer: 3000,confirmButtonColor: '#f2572b' });";
+                    //ClientScript.RegisterStartupScript(this.GetType(), "swalWarning", script, true);
+                    return;
+                }
             }
 
         }
@@ -174,7 +194,7 @@ namespace SouthernTravelsWeb
 
             string SouthernemailId = ConfigurationManager.AppSettings["VendorHotelRegMail"].ToString();// will be get from web config
 
-            string FromemailId = "info@southerntravels.in";
+            string FromemailId = ConfigurationManager.AppSettings["InfoEmail"];
             string EnquiryNo = GetEqnuiryNo(Hotelid);
             string subject = EnquiryNo + "-" + txtHotelName.Text + "(" + ddlCategory.SelectedValue + ") Registration";
 
@@ -195,7 +215,7 @@ namespace SouthernTravelsWeb
 
             try
             {
-                ClsCommon.sendmail(SouthernemailId, "", "", FromemailId, subject, strTable.ToString(), "info@southerntravels.in");
+                ClsCommon.sendmail(SouthernemailId, "", "", FromemailId, subject, strTable.ToString(), FromemailId);
                 //  MailSend(txtEmailId.Text, "", "", FromemailId, subject, strTable.ToString(), "enquiry@southerntravels.in");
             }
             catch (Exception ex)
@@ -211,12 +231,12 @@ namespace SouthernTravelsWeb
 
             strTable = strTable.Replace("#VendorName", txtContactPerson.Text);
 
-            string FromemailId = "info@southerntravels.in";
+            string FromemailId = ConfigurationManager.AppSettings["InfoEmail"];
             string EnquiryNo = GetEqnuiryNo(HotelId);
             string subject = EnquiryNo + "-" + txtHotelName.Text + "(" + ddlCategory.SelectedValue + ") " + "Registration In Southern";
             try
             {
-                ClsCommon.sendmail(txtEmailId.Text, "", "", FromemailId, subject, strTable.ToString(), "info@southerntravels.in");
+                ClsCommon.sendmail(txtEmailId.Text, "", "", FromemailId, subject, strTable.ToString(), FromemailId);
                 // MailSend(txtEmailId.Text, "", "", FromemailId, subject, strTable.ToString(), txtEmailId.Text);
             }
             catch (Exception ex)
@@ -255,78 +275,80 @@ namespace SouthernTravelsWeb
             txtMobile.Text = "";
             ddlCategory.SelectedValue = "";
             txtContactPerson.Text = "";
+            txtCaptcha.Text = "";
+
         }
         #endregion
-        public bool reCaptcha()
-        {
-            bool lFlag = false;
-            //start building recaptch api call
-            var sb = new System.Text.StringBuilder();
-            sb.Append("https://www.google.com/recaptcha/api/siteverify?secret=");
+        //public bool reCaptcha()
+        //{
+        //    bool lFlag = false;
+        //    //start building recaptch api call
+        //    var sb = new System.Text.StringBuilder();
+        //    sb.Append("https://www.google.com/recaptcha/api/siteverify?secret=");
 
-            //our secret key
-            var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"]; //"6LesfBwTAAAAAPKzkHq9ny59cb_BtZa1D6ZLLBGf";
-            sb.Append(secretKey);
+        //    //our secret key
+        //    var secretKey = System.Configuration.ConfigurationManager.AppSettings["GooglereCaptcha_Secretkey"]; //"6LesfBwTAAAAAPKzkHq9ny59cb_BtZa1D6ZLLBGf";
+        //    sb.Append(secretKey);
 
-            //response from recaptch control
-            sb.Append("&");
-            sb.Append("response=");
-            var reCaptchaResponse = Request["g-recaptcha-response"];
-            sb.Append(reCaptchaResponse);
+        //    //response from recaptch control
+        //    sb.Append("&");
+        //    sb.Append("response=");
+        //    var reCaptchaResponse = Request["g-recaptcha-response"];
+        //    sb.Append(reCaptchaResponse);
 
-            //client ip address
-            //---- This Ip address part is optional. If you donot want to send IP address you can
-            //---- Skip(Remove below 4 lines)
-            sb.Append("&");
-            sb.Append("remoteip=");
-            var clientIpAddress = GetUserIp();
-            sb.Append(clientIpAddress);
+        //    //client ip address
+        //    //---- This Ip address part is optional. If you donot want to send IP address you can
+        //    //---- Skip(Remove below 4 lines)
+        //    sb.Append("&");
+        //    sb.Append("remoteip=");
+        //    var clientIpAddress = GetUserIp();
+        //    sb.Append(clientIpAddress);
 
-            //make the api call and determine validity
-            using (var client = new System.Net.WebClient())
-            {
-                var uri = sb.ToString();
-                var json = client.DownloadString(uri);
-                var serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(RecaptchaApiResponse));
-                var ms = new System.IO.MemoryStream(System.Text.Encoding.Unicode.GetBytes(json));
-                var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
+        //    //make the api call and determine validity
+        //    using (var client = new System.Net.WebClient())
+        //    {
+        //        var uri = sb.ToString();
+        //        var json = client.DownloadString(uri);
+        //        var serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(RecaptchaApiResponse));
+        //        var ms = new System.IO.MemoryStream(System.Text.Encoding.Unicode.GetBytes(json));
+        //        var result = serializer.ReadObject(ms) as RecaptchaApiResponse;
 
-                //--- Check if we are able to call api or not.
-                if (result == null)
-                {
-                    MessageLabel.Text = "Captcha was unable to make the api call";
-                }
-                else // If Yes
-                {
-                    //api call contains errors
-                    if (result.ErrorCodes != null)
-                    {
-                        if (result.ErrorCodes.Count > 0)
-                        {
-                            foreach (var error in result.ErrorCodes)
-                            {
-                                MessageLabel.Text = "Captcha is required.";
-                            }
-                        }
-                    }
-                    else //api does not contain errors
-                    {
-                        if (!result.Success) //captcha was unsuccessful for some reason
-                        {
-                            MessageLabel.Text = "Captcha did not pass, please try again.";
-                        }
-                        else //---- If successfully verified. Do your rest of logic.
-                        {
-                            MessageLabel.Text = "Captcha cleared ";
-                            lFlag = true;
-                        }
-                    }
+        //        //--- Check if we are able to call api or not.
+        //        if (result == null)
+        //        {
+        //            MessageLabel.Text = "Captcha was unable to make the api call";
+        //        }
+        //        else // If Yes
+        //        {
+        //            //api call contains errors
+        //            if (result.ErrorCodes != null)
+        //            {
+        //                if (result.ErrorCodes.Count > 0)
+        //                {
+        //                    foreach (var error in result.ErrorCodes)
+        //                    {
+        //                        MessageLabel.Text = "Captcha is required.";
+        //                    }
+        //                }
+        //            }
+        //            else //api does not contain errors
+        //            {
+        //                if (!result.Success) //captcha was unsuccessful for some reason
+        //                {
+        //                    MessageLabel.Text = "Captcha did not pass, please try again.";
+        //                }
+        //                else //---- If successfully verified. Do your rest of logic.
+        //                {
+        //                    MessageLabel.Text = "Captcha cleared ";
+        //                    lFlag = true;
+        //                }
+        //            }
 
-                }
+        //        }
 
-            }
-            return lFlag;
-        }
+        //    }
+        //    return lFlag;
+        //}
         [System.Runtime.Serialization.DataContract]
         public class RecaptchaApiResponse
         {

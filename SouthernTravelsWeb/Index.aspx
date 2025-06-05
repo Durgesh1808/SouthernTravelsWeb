@@ -1131,15 +1131,11 @@ height="0" width="0" style="display:none;visibility:hidden" async></iframe></nos
                                         
         }
         $(document).ready(function ($) {
-            window.addEventListener("load", function () {
-                setTimeout(function () {
-                    var popup = document.getElementById("DivHmPopup");
-                    popup.style.display = "block";
+            var popup = document.getElementById("DivHmPopup");
+            popup.style.display = "block";
 
-                    // Now safely apply jQuery animation class
-                    $('#DivHmPopup').addClass('qe_open slideInRight');
-                }, 3000); // Show after 3 seconds
-            });
+            // Now safely apply jQuery animation class
+            $('#DivHmPopup').addClass('qe_open slideInRight');
             $('body').addClass('formOpen');
             checkCookie();
 

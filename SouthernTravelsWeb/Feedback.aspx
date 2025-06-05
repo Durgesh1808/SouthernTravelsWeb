@@ -16,6 +16,7 @@
     <link href="Assets/css/star-rating.css" rel="stylesheet" type="text/css" />
     <script src="Assets/js/jquery-2.2.0.min.js"></script>
     <script src="Assets/js/star-rating.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         .radiobtnwrap
         {
@@ -593,9 +594,37 @@
         
       </div>
 <div class="row rowgap">
-        <div class="col-md-12">
+     <%--   <div class="col-md-12">
          <div class="g-recaptcha" runat="server" id="divrecaptcha" ></div>
-                             <asp:Label ID="MessageLabel" runat="server" CssClass="txt" ForeColor="red"></asp:Label></div></div>
+                             <asp:Label ID="MessageLabel" runat="server" CssClass="txt" ForeColor="red"></asp:Label></div>--%>
+     <div class="col-md-12">
+       <ul class="row" style="list-style-type: none; padding-left: 0;">
+       <li >
+           <div id="dvCaptchaF">
+           </div>
+       
+               
+              
+               <div class="col-md-3">
+               <asp:TextBox ID="txtCaptcha" runat="server" ValidationGroup="FOO" autocomplete="off" Width="114px" placeholder="Enter Captcha"
+                   AutoCompleteType="None" MaxLength="10" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="col-md-2" style="margin-left: 49px;">
+                 <img src="JpegImage.aspx?cache=1394701635527" id="captchImg" alt="captcha" width="110px" loading="lazy" />
+                </div>
+                <div class="col-md-2" style="margin-left: 53px;">
+                 <img id="refresh_captcha" src="Assets/images/captcha_refresh.jpg" alt="captcha_refresh" style="height:28px; cursor:pointer;" loading="lazy"/>
+                </div>
+           
+                   
+              <asp:RequiredFieldValidator ID="RequiredFieldtxtCaptcha" CssClass="errorMessage" ValidationGroup="FOO" ForeColor="Red"
+              runat="server" ControlToValidate="txtCaptcha" Display="Dynamic" ErrorMessage="Enter Captcha"></asp:RequiredFieldValidator>
+               
+               
+       </li>
+   </ul>
+         </div>
+</div>
         <div class="row">
         <div class="col-md-12">
         <asp:Button runat="server" ID="btnSend" CssClass="commonbtn" Text="Submit"
@@ -666,3 +695,9 @@
     </form>
 </body>
 </html>
+<script type="text/javascript">
+    $('#refresh_captcha').click(function (e) {
+        $('#captchImg').attr('src', 'JpegImage.aspx?cache=' + new Date().getTime());
+        e.preventDefault();
+    });
+</script>

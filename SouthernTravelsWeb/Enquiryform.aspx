@@ -20,6 +20,8 @@
     <meta content="index,follow" name="robots" />
     <meta content="Designed www.Sirez.com" name="Author" />
     <script src="Assets/js/jquery-2.2.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script type="text/javascript">
 
         $(function () {
@@ -296,17 +298,43 @@
     
     
     
-     <div class="col-md-6">     
+   <%--  <div class="col-md-6">     
                              <div class="g-recaptcha" runat="server" id="divrecaptcha" ></div>
                              </div>
      
      <div class="col-md-6">
                                     <asp:Label ID="MessageLabel" runat="server" CssClass="txt" ForeColor="red"></asp:Label>
                                     <br />
-     </div>
+     </div>--%>
    
     
-	
+	       <div class="col-md-12">
+          <ul class="row" style="list-style-type: none; padding-left: 0;">
+          <li >
+              <div id="dvCaptchaF">
+              </div>
+ 
+      
+     
+                  <div class="col-md-3">
+                  <asp:TextBox ID="txtCaptcha" runat="server" ValidationGroup="FOO" autocomplete="off" Width="114px" placeholder="Enter Captcha"
+                      AutoCompleteType="None" MaxLength="10" CssClass="form-control"></asp:TextBox>
+                   </div>
+                   <div class="col-md-2" style="margin-left: 49px;">
+                    <img src="JpegImage.aspx?cache=1394701635527" id="captchImg" alt="captcha" width="110px" loading="lazy" />
+                   </div>
+                   <div class="col-md-2" style="margin-left: 53px;">
+                    <img id="refresh_captcha" src="Assets/images/captcha_refresh.jpg" alt="captcha_refresh" style="height:28px; cursor:pointer;" loading="lazy"/>
+                   </div>
+  
+          
+                 <asp:RequiredFieldValidator ID="RequiredFieldtxtCaptcha" CssClass="errorMessage" ValidationGroup="FOO" ForeColor="Red"
+                 runat="server" ControlToValidate="txtCaptcha" Display="Dynamic" ErrorMessage="Enter Captcha"></asp:RequiredFieldValidator>
+      
+      
+          </li>
+      </ul>
+</div>
     <div class="row mrgnbtminput"><div class="col-md-12">
     <p class="mrgnbtmno">**This helps Southern Travels prevent automated Enquiries. </p>
 	<p class="mrgnbtmno">***Please give your Phone no. or Mobile no. or both </p>
@@ -354,7 +382,10 @@
         ga('create', 'UA-4994177-1', 'auto');
         ga('require', 'displayfeatures');
         ga('send', 'pageview');
- 
+        $('#refresh_captcha').click(function (e) {
+            $('#captchImg').attr('src', 'JpegImage.aspx?cache=' + new Date().getTime());
+            e.preventDefault();
+        });
     </script>
 </body>
 </html>
