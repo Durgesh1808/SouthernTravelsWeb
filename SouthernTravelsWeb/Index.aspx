@@ -440,7 +440,9 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
       padding: 5px 0;
       font-size: 16px;
     }
-
+        #nt-example1 li a {
+    color: #f1572b !important;
+}
     @keyframes scroll-up {
       0% { transform: translateY(0); }
       100% { transform: translateY(-50%); } /* Adjust based on content length */
