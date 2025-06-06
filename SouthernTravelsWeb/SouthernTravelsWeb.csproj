@@ -108,7 +108,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="AgentRegistrationEnq.aspx" />
     <Content Include="Assets\css\animate.css" />
     <Content Include="Assets\css\bootstrap-datepicker.css" />
@@ -138,7 +137,6 @@
     <Content Include="CareerThankYou.aspx" />
     <Content Include="company-profile.aspx" />
     <Content Include="contact-us.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -163,7 +161,6 @@
     <Content Include="CustomerProfile.aspx" />
     <Content Include="CustomerRegistration.aspx" />
     <Content Include="CustomerSplBookings.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="Enquiryform.aspx" />
     <Content Include="FAQs.aspx" />
     <Content Include="favicon.ico" />
@@ -288,7 +285,6 @@
     <Content Include="UserControl\UcTourItinerary.ascx" />
     <Content Include="UserControl\UcTourLink.ascx" />
     <Content Include="UserControl\UcTourShortInfo.ascx" />
-    <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -302,13 +298,6 @@
       <DependentUpon>AgentRegistrationEnq.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AsyncPages\Blogs.aspx.cs">
       <DependentUpon>Blogs.aspx</DependentUpon>
@@ -372,13 +361,6 @@
     <Compile Include="contact-us.aspx.designer.cs">
       <DependentUpon>contact-us.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="CustomerBookedTickets.aspx.cs">
       <DependentUpon>CustomerBookedTickets.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -432,13 +414,6 @@
     <Compile Include="DAL\DbObjects\StoredProcedures.cs" />
     <Compile Include="DAL\DbObjects\Functions.cs" />
     <Compile Include="DAL\SqlDb.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DTO\ClsBlog.cs" />
     <Compile Include="DTO\customer_loginResult.cs" />
     <Compile Include="DTO\FeedBackHierarchy_spResult.cs" />
@@ -917,20 +892,11 @@
     <Compile Include="UserControl\UcTourShortInfo.ascx.designer.cs">
       <DependentUpon>UcTourShortInfo.ascx</DependentUpon>
     </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
-    <Folder Include="App_Data\" />
     <Folder Include="Assets\fonts\" />
     <Folder Include="Assets\images\" />
-    <Folder Include="Utility\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
