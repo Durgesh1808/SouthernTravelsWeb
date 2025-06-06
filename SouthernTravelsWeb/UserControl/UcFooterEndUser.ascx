@@ -591,34 +591,34 @@
             <!-- WhatsApp -->
             <li>
               <a href="https://api.whatsapp.com/send?phone=917466006600" class="wa" target="_blank" aria-label="Chat with us on WhatsApp">
-                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>Whatsapp
               </a>
             </li>
 
             <!-- Facebook -->
             <li>
-              <a href="https://www.facebook.com/SouthernTravels/" class="fb" target="_blank" aria-label="Visit us on Facebook">
+              <a href="https://www.facebook.com/SouthernTravels/" class="fb" target="_blank" aria-label="Visit us on Facebook">Facebook
                 <i class="fab fa-facebook-f" aria-hidden="true"></i>
               </a>
             </li>
 
             <!-- Twitter -->
             <li>
-              <a href="https://twitter.com/happyholidaying" class="tw" target="_blank" aria-label="Follow us on Twitter">
+              <a href="https://twitter.com/happyholidaying" class="tw" target="_blank" aria-label="Follow us on Twitter">Twitter
                 <i class="fab fa-twitter" aria-hidden="true"></i>
               </a>
             </li>
 
             <!-- Google+ (deprecated, but kept if still needed) -->
             <li>
-              <a href="https://plus.google.com/b/105500167792879378506/105500167792879378506/posts" class="gplus" target="_blank" aria-label="Visit us on Google Plus">
+              <a href="https://plus.google.com/b/105500167792879378506/105500167792879378506/posts" class="gplus" target="_blank" aria-label="Visit us on Google Plus">Google
                 <i class="fab fa-google-plus-g" aria-hidden="true"></i>
               </a>
             </li>
 
             <!-- YouTube -->
             <li>
-              <a href="https://www.youtube.com/southerntravels" class="yt" target="_blank" aria-label="Watch our videos on YouTube">
+              <a href="https://www.youtube.com/southerntravels" class="yt" target="_blank" aria-label="Watch our videos on YouTube">YouTube
                 <i class="fab fa-youtube" aria-hidden="true"></i>
               </a>
             </li>
