@@ -609,12 +609,12 @@
               </a>
             </li>
 
-            <!-- Google+ (deprecated, but kept if still needed) -->
+          <%--  <!-- Google+ (deprecated, but kept if still needed) -->
             <li>
               <a href="https://plus.google.com/b/105500167792879378506/105500167792879378506/posts" class="gplus" target="_blank" aria-label="Visit us on Google Plus">Google
                 <i class="fab fa-google-plus-g" aria-hidden="true"></i>
               </a>
-            </li>
+            </li>--%>
 
             <!-- YouTube -->
             <li>
