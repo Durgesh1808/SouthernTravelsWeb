@@ -6,7 +6,7 @@
         <asp:TemplateField HeaderStyle-Width="60%"  ItemStyle-Width="60%">
             <ItemTemplate>
                 <asp:HyperLink ID="lbtnTour" runat="server">
-                    <asp:Label ID="lblTourName" runat="server"  Text='<%# System.Threading.Thread.CurrentThread
+                    <asp:Label ID="lblTourName" runat="server" CssClass="tour-name" Text='<%# System.Threading.Thread.CurrentThread
                                                 .CurrentCulture.TextInfo.ToTitleCase(Convert.ToString(Eval("TourName")).Length > 25 ? Convert.ToString(Eval("TourName")).Substring(0, (Convert.ToString(Eval("TourName")).Substring(0, 25).LastIndexOf(" ") > 0 ? Convert.ToString(Eval("TourName")).Substring(0, 25).LastIndexOf(" ") : Convert.ToString(Eval("TourName")).Substring(0, 25).LastIndexOf("-"))).ToLower() + " ..."  : Convert.ToString(Eval("TourName")).ToLower())%>'
                         ToolTip='<%# System.Threading.Thread.CurrentThread
                                                 .CurrentCulture.TextInfo.ToTitleCase(Convert.ToString(DataBinder.Eval(Container.DataItem,"TourName")).ToLower()) %>'>
