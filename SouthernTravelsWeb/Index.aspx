@@ -148,6 +148,16 @@ j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; 
         {
             opacity: .8;
         }
+   .tour-name {
+    color: white !important;
+}
+
+.tour-name:hover {
+    color: white !important;
+}
+
+
+
         #onloadmodal .close, .modal-package-container .close
         {
             position: absolute;
@@ -644,7 +654,7 @@ height="0" width="0" style="display:none;visibility:hidden" async></iframe></nos
                    <a href="InternationalTours_Offer2-NorthAmerica%E2%80%93Newyork-BestOfAmerica14Days13Nights_181">
                 	<div class="imgsection">
                 	<span class="customtag2">Fixed Tours<img src="Assets/images/custom-arrow.png"  alt="custom-arrow" title="custom-arrow" loading="lazy"/></span>
-                 <img src="Assets/images/intl-pkg/1.webp"  alt="pkg" title="pkg"  loading="lazy"/></div>
+                 <img src="Assets/images/intl-pkg/1.jpg"  alt="pkg" title="pkg"  loading="lazy"/></div>
                  <uc3:UCImageStrip ID="UCImageStrip1" runat="server" fldTourID="181" fldTourType="INTERNATIONAL_TOUR" />
                     </a>
                         
